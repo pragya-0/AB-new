@@ -1,17 +1,16 @@
 export default function MediaHeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f8f8f8] px-5 pt-20 pb-36">
-      <div className="absolute right-[-120px] top-[-120px] h-[620px] w-[620px] rounded-full bg-[#1b5cff]/14 blur-[140px]" />
-      <div className="absolute bottom-[-160px] left-[45%] h-[420px] w-[720px] rounded-full bg-[#1b5cff]/10 blur-[150px]" />
+    <section className="relative overflow-hidden bg-[#f8f8f8] px-5 pt-20 pb-24">
+      <div className="absolute right-[-120px] top-[-120px] h-[680px] w-[680px] rounded-full bg-[#1b5cff]/18 blur-[170px]" />
+      <div className="absolute bottom-[-160px] left-[45%] h-[460px] w-[760px] rounded-full bg-[#1b5cff]/12 blur-[170px]" />
 
       <div className="relative z-10 mx-auto grid max-w-[1740px] items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
-        {/* Left */}
-        <div className="max-w-[650px]">
-          <p className="mb-6 text-[15px] font-bold uppercase tracking-[0.45em] text-[#1b5cff]">
+        <div className="max-w-[700px]">
+          <p className="mb-6 text-[14px] font-bold uppercase tracking-[0.45em] text-[#1b5cff]">
             Press & Media
           </p>
 
-          <h2 className="text-[56px] font-bold leading-[0.98] tracking-[-0.055em] text-black sm:text-[68px] xl:text-[82px]">
+          <h2 className="text-[60px] font-black leading-[0.95] tracking-[-0.06em] text-black sm:text-[72px] xl:text-[88px]">
             Stories,
             <br />
             Recognition &
@@ -19,7 +18,7 @@ export default function MediaHeroSection() {
             <span className="text-[#1b5cff]">Global Conversations</span>
           </h2>
 
-          <p className="mt-8 max-w-[620px] text-[20px] leading-[1.9] text-[#5c6673]">
+          <p className="mt-8 max-w-[640px] text-[20px] leading-[2] text-[#5c6673]">
             Over the years, Arijit Bhattacharyya&apos;s work in
             entrepreneurship, emerging technologies and global innovation has
             been featured across leading newspapers, television channels and
@@ -37,22 +36,19 @@ export default function MediaHeroSection() {
           </div>
         </div>
 
-        {/* Right */}
-        <div className="relative flex min-h-[640px] items-center justify-center">
-          <div className="absolute h-[570px] w-[570px] rounded-full bg-[#1b5cff]/24 blur-[95px]" />
-          <div className="absolute h-[520px] w-[520px] rounded-full border border-[#1b5cff]/15" />
+        <div className="relative flex min-h-[660px] items-center justify-center">
+          <div className="absolute h-[610px] w-[610px] rounded-full bg-[#1b5cff]/28 blur-[150px]" />
+          <div className="absolute h-[535px] w-[535px] rounded-full border border-[#1b5cff]/15" />
 
-          {/* Main Oval Image */}
-          <div className="relative z-10 overflow-hidden rounded-[48%] border border-white bg-white p-3 shadow-[0_35px_100px_rgba(27,92,255,0.28)]">
+          <div className="relative z-10 overflow-hidden rounded-[48%] border border-white bg-white p-3 shadow-[0_45px_120px_rgba(27,92,255,0.32)]">
             <img
               src="/assets/press/vr.jpg"
               alt="Arijit Bhattacharyya"
-              className="h-[620px] w-[520px] scale-[1.18] object-cover object-[center_28%]"
+              className="h-[620px] w-[520px] scale-[1.24] object-cover object-[center_24%]"
             />
           </div>
 
-          {/* Top Left Card */}
-          <div className="absolute left-[-2%] top-[105px] z-20 rotate-[-11deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
+          <div className="absolute left-[4%] top-[78px] z-20 rotate-[-10deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
             <img
               src="/assets/press/economic-times.jpg"
               alt="Economic Times"
@@ -60,8 +56,7 @@ export default function MediaHeroSection() {
             />
           </div>
 
-          {/* Top Right Card */}
-          <div className="absolute right-[0%] top-[105px] z-20 rotate-[10deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
+          <div className="absolute right-[5%] top-[82px] z-20 rotate-[10deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
             <img
               src="/assets/press/timesofindia-s.jpg"
               alt="Times of India"
@@ -69,8 +64,7 @@ export default function MediaHeroSection() {
             />
           </div>
 
-          {/* Bottom Left CNBC */}
-          <div className="absolute bottom-[92px] left-[5%] z-20 rotate-[-8deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
+          <div className="absolute bottom-[72px] left-[8%] z-20 rotate-[-8deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
             <img
               src="/assets/press/cnbc.jpg"
               alt="CNBC"
@@ -78,13 +72,12 @@ export default function MediaHeroSection() {
             />
           </div>
 
-          {/* Bottom Right TV9 */}
-        <div className="absolute bottom-[115px] right-[5%] z-20 rotate-[10deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
-           <img
-  src="/assets/press/TV9-2.png"
-  alt="TV9 Bangla"
-  className="h-[160px] w-[130px] object-cover object-[82%_center]"
-/>
+          <div className="absolute bottom-[82px] right-[6%] z-20 rotate-[10deg] overflow-hidden rounded-[18px] bg-white p-2 shadow-[0_25px_65px_rgba(0,0,0,0.22)]">
+            <img
+              src="/assets/press/TV9-2.png"
+              alt="TV9 Bangla"
+              className="h-[160px] w-[130px] object-cover object-[82%_center]"
+            />
           </div>
         </div>
       </div>
