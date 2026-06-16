@@ -21,7 +21,7 @@ export default function Navbar() {
             {/* Menu */}
             <nav className="hidden items-center gap-8 lg:flex">
               {[
-                "About",
+                "Bio",
                 "Ventures",
                 "Books",
                 "Media",
