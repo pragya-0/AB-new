@@ -40,7 +40,7 @@ export default function GameWorldsSection() {
 
         <div className="grid gap-5 lg:grid-cols-4">
           {gameWorldCards.map((card, index) => {
-            const Icon = card.icon;
+      
 
             return (
               <article

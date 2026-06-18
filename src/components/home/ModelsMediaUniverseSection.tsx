@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 const mediaImages = {
-  main: "/assets/gallery/model-team-02.jpeg",
+  main: "/assets/gallery/Subhasree_Arijit.jpg",
   topRight: "/assets/gallery/model-runway-01.jpeg",
   middleRight: "/assets/gallery/model-team-01.jpeg",
   bottomLeft: "/assets/gallery/model-work-01.jpeg",
@@ -16,36 +16,12 @@ const mediaImages = {
 };
 
 const capabilities = [
-  {
-    title: "Films & Media Shoots",
-    text: "Concept to camera-ready production.",
-    icon: Clapperboard,
-  },
-  {
-    title: "Models & Talent",
-    text: "Discovering, grooming and creating faces.",
-    icon: UserRound,
-  },
-  {
-    title: "Creative Characters",
-    text: "Transforming people into memorable roles.",
-    icon: Gamepad2,
-  },
-  {
-    title: "Brand Campaigns",
-    text: "Visual identities, faces and promotional stories.",
-    icon: Image,
-  },
-  {
-    title: "Music & Video",
-    text: "Performance-led visuals that create impact.",
-    icon: Play,
-  },
-  {
-    title: "Media Production",
-    text: "Shoots, sets, campaigns and creative execution.",
-    icon: Video,
-  },
+  { title: "Films & Media Shoots", text: "Concept to camera-ready production.", icon: Clapperboard },
+  { title: "Models & Talent", text: "Discovering, grooming and creating faces.", icon: UserRound },
+  { title: "Creative Characters", text: "Transforming people into memorable roles.", icon: Gamepad2 },
+  { title: "Brand Campaigns", text: "Visual identities, faces and promotional stories.", icon: Image },
+  { title: "Music & Video", text: "Performance-led visuals that create impact.", icon: Play },
+  { title: "Media Production", text: "Shoots, sets, campaigns and creative execution.", icon: Video },
 ];
 
 export default function ModelsMediaUniverseSection() {
@@ -100,47 +76,29 @@ export default function ModelsMediaUniverseSection() {
             <div className="col-span-4 row-span-2 overflow-hidden rounded-[26px]">
               <img
                 src={mediaImages.main}
-                alt="Models and media universe"
+                alt="Subhasree and Arijit"
                 className="h-full min-h-[430px] w-full object-cover object-center"
               />
             </div>
 
             <div className="col-span-2 overflow-hidden rounded-[24px]">
-              <img
-                src={mediaImages.topRight}
-                alt="Runway and model showcase"
-                className="h-[210px] w-full object-cover object-center"
-              />
+              <img src={mediaImages.topRight} alt="Runway and model showcase" className="h-[210px] w-full object-cover object-center" />
             </div>
 
             <div className="col-span-2 overflow-hidden rounded-[24px]">
-              <img
-                src={mediaImages.middleRight}
-                alt="Model and creative team"
-                className="h-[210px] w-full object-cover object-center"
-              />
+              <img src={mediaImages.middleRight} alt="Model and creative team" className="h-[210px] w-full object-cover object-center" />
             </div>
 
             <div className="col-span-2 overflow-hidden rounded-[22px]">
-              <img
-                src={mediaImages.bottomLeft}
-                alt="Creative work"
-                className="h-[180px] w-full object-cover object-center"
-              />
+              <img src={mediaImages.bottomLeft} alt="Creative work" className="h-[180px] w-full object-cover object-center" />
             </div>
 
             <div className="col-span-2 overflow-hidden rounded-[22px]">
-              <img
-                src={mediaImages.bottomMiddle}
-                alt="Media shoot"
-                className="h-[180px] w-full object-cover object-center"
-              />
+              <img src={mediaImages.bottomMiddle} alt="Media shoot" className="h-[180px] w-full object-cover object-center" />
             </div>
 
             <div className="col-span-2 overflow-hidden rounded-[22px] bg-[#02050b] p-8 text-white">
-              <p className="text-[44px] font-black leading-none text-[#4d8cff]">
-                350+
-              </p>
+              <p className="text-[44px] font-black leading-none text-[#4d8cff]">350+</p>
               <p className="mt-3 text-sm font-black uppercase tracking-[0.18em] text-white/80">
                 Talent Network
               </p>
@@ -151,21 +109,11 @@ export default function ModelsMediaUniverseSection() {
         <div className="mt-14 grid gap-4 rounded-[30px] border border-black/8 bg-white/82 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl md:grid-cols-2 lg:grid-cols-6">
           {capabilities.map((item) => {
             const Icon = item.icon;
-
             return (
-              <div
-                key={item.title}
-                className="border-black/10 p-5 lg:border-r last:border-r-0"
-              >
+              <div key={item.title} className="border-black/10 p-5 lg:border-r last:border-r-0">
                 <Icon className="mb-5 h-8 w-8 text-[#0057ff]" />
-
-                <h3 className="text-[17px] font-black tracking-[-0.03em] text-black">
-                  {item.title}
-                </h3>
-
-                <p className="mt-3 text-[14px] leading-6 text-black/58">
-                  {item.text}
-                </p>
+                <h3 className="text-[17px] font-black tracking-[-0.03em] text-black">{item.title}</h3>
+                <p className="mt-3 text-[14px] leading-6 text-black/58">{item.text}</p>
               </div>
             );
           })}
