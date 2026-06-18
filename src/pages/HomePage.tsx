@@ -11,6 +11,8 @@ import GlobalEventsSection from "../components/home/GlobalEventsSection";
 import GovernmentLeadershipSection from "../components/home/GovernmentLeadershipSection";
 import JourneyTimelineSection from "../components/home/JourneyTimelineSection";
 import CreativeUniverseSection from "../components/home/CreativeUniverseSection";
+import ModelsMediaUniverseSection from "../components/home/ModelsMediaUniverseSection";
+import GameWorldsSection from "../components/home/GameWorldsSection";
 
 export default function HomePage() {
   return (
@@ -39,6 +41,10 @@ export default function HomePage() {
 
       <JourneyTimelineSection />
       <CreativeUniverseSection />
+
+<GameWorldsSection />
+
+<ModelsMediaUniverseSection />
     </>
     
   );
