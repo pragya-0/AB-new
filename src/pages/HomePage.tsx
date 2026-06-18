@@ -9,6 +9,8 @@ import ThoughtLeadershipSection from "../components/home/ThoughtLeadershipSectio
 import BooksSection from "../components/home/BooksSection";
 import GlobalEventsSection from "../components/home/GlobalEventsSection";
 import GovernmentLeadershipSection from "../components/home/GovernmentLeadershipSection";
+import JourneyTimelineSection from "../components/home/JourneyTimelineSection";
+import CreativeUniverseSection from "../components/home/CreativeUniverseSection";
 
 export default function HomePage() {
   return (
@@ -34,6 +36,10 @@ export default function HomePage() {
       <GlobalEventsSection />
 
       <GovernmentLeadershipSection />
+
+      <JourneyTimelineSection />
+      <CreativeUniverseSection />
     </>
+    
   );
 }
