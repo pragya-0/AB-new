@@ -35,12 +35,12 @@ export default function GovernmentLeadershipSection() {
               Policy & Institutional Leadership
             </p>
 
-            <h2 className="text-[42px] font-black leading-[1.02] tracking-[-0.06em] text-white md:text-[64px]">
+            <h2 className="max-w-[900px] text-5xl font-black leading-tight tracking-[-0.06em] text-white lg:text-6xl">
               Influencing Innovation, Education & Global Ecosystems
             </h2>
           </div>
 
-          <p className="max-w-[620px] text-[17px] leading-8 text-white/62 lg:justify-self-end">
+          <p className="max-w-[620px] text-lg leading-8 text-white/62 lg:justify-self-end">
             Collaborating with government-backed initiatives, educational
             leaders, investors and global innovation bodies to accelerate
             entrepreneurship, deep technology and economic development.
@@ -49,15 +49,15 @@ export default function GovernmentLeadershipSection() {
 
         <article className="mb-8 grid overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.045] shadow-[0_30px_110px_rgba(0,87,255,0.14)] lg:grid-cols-[0.85fr_1.15fr]">
           <div className="flex flex-col justify-center p-8 md:p-12">
-            <p className="mb-5 text-xs font-black uppercase tracking-[0.3em] text-[#4d8cff]">
+            <p className="mb-5 text-sm font-black uppercase tracking-[0.3em] text-[#4d8cff]">
               National Innovation
             </p>
 
-            <h3 className="text-[36px] font-black leading-[1.02] tracking-[-0.055em] text-white md:text-[52px]">
+            <h3 className="max-w-[760px] text-[36px] font-black leading-[1.02] tracking-[-0.055em] text-white md:text-[52px]">
               Union Government Innovation Ecosystem
             </h3>
 
-            <p className="mt-6 max-w-[620px] text-[17px] leading-8 text-white/64">
+            <p className="mt-6 max-w-[620px] text-lg leading-8 text-white/64">
               Participation in national innovation and startup ecosystem
               conversations connected with India’s technology, entrepreneurship
               and Startup India growth.
@@ -103,7 +103,7 @@ export default function GovernmentLeadershipSection() {
               </div>
 
               <div className="p-7">
-                <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-[#4d8cff]">
+                <p className="mb-4 text-sm font-black uppercase tracking-[0.28em] text-[#4d8cff]">
                   {card.eyebrow}
                 </p>
 

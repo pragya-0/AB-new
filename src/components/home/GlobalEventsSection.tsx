@@ -36,11 +36,11 @@ function EventCard({ event }: { event: EventItem }) {
       </div>
 
       <div className="p-8">
-        <h3 className="text-[32px] font-black leading-[0.95] tracking-[-0.06em] text-black md:text-[38px]">
+        <h3 className="text-[28px] font-black leading-[1.04] tracking-[-0.05em] text-black md:text-[34px]">
           {event.title}
         </h3>
 
-        <p className="mt-5 text-[16px] leading-8 text-black/60">
+        <p className="mt-5 text-lg leading-8 text-black/60">
           {event.subtitle}
         </p>
 
@@ -53,7 +53,7 @@ function EventCard({ event }: { event: EventItem }) {
 function SectionLabel({ children }: { children: string }) {
   return (
     <div className="mb-10 mt-24">
-      <p className="text-[14px] font-black uppercase tracking-[0.35em] text-[#0057ff]">
+      <p className="text-sm font-black uppercase tracking-[0.35em] text-[#0057ff]">
         {children}
       </p>
     </div>
@@ -77,12 +77,12 @@ export default function GlobalEventsSection() {
               Global Speaking
             </p>
 
-            <h2 className="max-w-[760px] text-[42px] font-black leading-[1.03] tracking-[-0.06em] text-black md:text-[64px]">
+            <h2 className="max-w-[760px] text-5xl font-black leading-tight tracking-[-0.06em] text-black lg:text-6xl">
               Ideas Shared Across Global Stages
             </h2>
           </div>
 
-          <p className="max-w-[620px] text-[17px] leading-8 text-black/62 lg:justify-self-end">
+          <p className="max-w-[620px] text-lg leading-8 text-black/62 lg:justify-self-end">
             From AI and blockchain to entrepreneurship, deeptech and startup
             ecosystems, Arijit Bhattacharyya has spoken across international
             platforms, universities and innovation forums.
@@ -111,15 +111,15 @@ export default function GlobalEventsSection() {
                 </div>
               )}
 
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.3em] text-[#0057ff]">
+              <p className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-[#0057ff]">
                 Featured Stage
               </p>
 
-              <h3 className="text-[42px] font-black leading-[0.98] tracking-[-0.06em] text-black md:text-[58px]">
+              <h3 className="max-w-[760px] text-[36px] font-black leading-[1.02] tracking-[-0.055em] text-black md:text-[52px]">
                 {featuredGlobalEvent.title}
               </h3>
 
-              <p className="mt-6 max-w-[540px] text-[17px] leading-8 text-black/62">
+              <p className="mt-6 max-w-[540px] text-lg leading-8 text-black/62">
                 {featuredGlobalEvent.subtitle}
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function GlobalEventsSection() {
         </div>
 
         <div className="mt-20 text-center">
-          <p className="mx-auto mb-6 max-w-[720px] text-[17px] leading-8 text-black/55">
+          <p className="mx-auto mb-6 max-w-[720px] text-lg leading-8 text-black/55">
             From TEDx and Digital Bridge Kazakhstan to IIT Dhanbad, XLRI and
             international AI forums across Asia, Europe and Africa.
           </p>
