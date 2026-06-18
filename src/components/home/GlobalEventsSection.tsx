@@ -122,8 +122,6 @@ export default function GlobalEventsSection() {
               <p className="mt-6 max-w-[540px] text-[17px] leading-8 text-black/62">
                 {featuredGlobalEvent.subtitle}
               </p>
-
-              <WatchLink url={featuredGlobalEvent.videoUrl} />
             </div>
           </div>
         </article>
