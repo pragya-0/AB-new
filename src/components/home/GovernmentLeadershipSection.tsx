@@ -1,16 +1,16 @@
 const leadershipCards = [
   {
     eyebrow: "Africa Investment",
-    title: "Ghana Investor Summit",
+    title: "Ghana Investor Summit with Vice President",
     description:
-      "Africa-focused investor and business summit platform connecting entrepreneurship, global capital and innovation ecosystems.",
+      "Africa-focused investor and business summit platform with the Vice President, connecting entrepreneurship, global capital and innovation ecosystems.",
     image: "/assets/speaking/ghana.jpg",
   },
   {
     eyebrow: "Global Diplomacy",
-    title: "Liberia Leadership Meeting",
+    title: "Ambassador of Liberia",
     description:
-      "International collaboration around youth development, entrepreneurship, diplomacy and global partnerships.",
+      "International collaboration with the Ambassador of Liberia around youth development, entrepreneurship, diplomacy and global partnerships.",
     image: "/assets/speaking/Liberia.png",
   },
   {
