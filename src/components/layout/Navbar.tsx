@@ -1,53 +1,51 @@
+const navLinks = [
+  { label: "Bio", href: "/bio" },
+  { label: "Ecosystem", href: "/ecosystem" },
+  { label: "Technology", href: "/technology" },
+  { label: "Creative", href: "/creative" },
+  { label: "Media", href: "/media" },
+  { label: "Speaking", href: "/speaking" },
+  { label: "Books", href: "/books" },
+  { label: "Podcast", href: "/podcast" },
+  { label: "Blog", href: "/blog" },
+];
+
 export default function Navbar() {
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="bg-gradient-to-r from-[#0057ff] via-[#0078ff] to-[#00b7d8] py-1.5 text-center text-[13px] font-medium tracking-wide text-white">
-        29+ Years of Innovation • Global Entrepreneur • AI • VR • Gaming •
-        Blockchain
+      <div className="bg-gradient-to-r from-[#0057ff] via-[#0078ff] to-[#00b7d8] py-1.5 text-center text-[13px] font-semibold tracking-wide text-white">
+        29+ Years of Innovation • Founder of Virtualinfocom • Global Speaker •
+        AI • Gaming • DeepTech
       </div>
 
-      {/* Navbar */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
         <div className="mx-auto max-w-[1700px] px-6 lg:px-10">
-          <div className="flex h-[78px] items-center justify-between">
-            {/* Logo */}
-            <a href="#" className="text-white">
-              <h1 className="text-[28px] font-black tracking-[0.08em] lg:text-[31px]">
+          <div className="flex h-[78px] items-center justify-between gap-8">
+            <a href="/" className="shrink-0 text-white">
+              <h1 className="text-[24px] font-black tracking-[0.08em] lg:text-[27px]">
                 ARIJIT BHATTACHARYYA
               </h1>
             </a>
 
-            {/* Menu */}
-            <nav className="hidden items-center gap-8 lg:flex">
-              {[
-                "Bio",
-                "Ventures",
-                "Books",
-                "Media",
-                "Speaking",
-                "Blog",
-                "Contact",
-              ].map((item) => (
+            <nav className="hidden flex-1 items-center justify-center gap-9 lg:flex">
+              {navLinks.map((item) => (
                 <a
-                  key={item}
-                  href="#"
-                  className="text-[15px] font-medium text-white/78 transition hover:text-white"
+                  key={item.label}
+                  href={item.href}
+                  className="text-[15px] font-semibold text-white/78 transition duration-300 hover:text-white"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </nav>
 
-            {/* Right Side */}
-            <div className="hidden items-center gap-6 lg:flex">
-              <button className="text-[15px] font-medium text-white transition hover:text-[#2f7cff]">
-                Search
-              </button>
-
-              <button className="rounded-full bg-[#0057ff] px-8 py-3.5 text-[15px] font-bold text-white transition hover:bg-[#1672ff]">
-                START HERE
-              </button>
+            <div className="hidden shrink-0 lg:flex">
+              <a
+                href="/speaking"
+                className="rounded-full bg-[#0057ff] px-8 py-3.5 text-[14px] font-black uppercase tracking-[0.16em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#1672ff]"
+              >
+                Invite To Speak
+              </a>
             </div>
           </div>
         </div>
