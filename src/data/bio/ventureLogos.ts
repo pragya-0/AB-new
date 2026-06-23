@@ -1,0 +1,25 @@
+﻿import { venturePath } from "./bioAssets";
+
+export const ventureLogos = [
+  ["Virtualinfocom", `${venturePath}venture-virtualinfocom.png`, "Games, VR, AR, animation"],
+  ["World Leader Summit", `${venturePath}venture-wls.png`, "Leadership and global network"],
+  ["EntrepreneursFace", `${venturePath}venture-entrepreneursface.png`, "Startup visibility"],
+  ["Coinnovate Ventures", `${venturePath}venture-coininnovate.png`, "Investment and acceleration"],
+  ["DeepTechKnowledge", `${venturePath}venture-deeptech.png`, "AI and deeptech education"],
+  ["GlamWorldFace", `${venturePath}venture-glamworld.png`, "Models, media and creative"],
+  ["8Metals", `${venturePath}venture-8metals.png`, "Industry and business"],
+  ["Virtual Game Developer", `${venturePath}venture-virtualgame.png`, "Game development"],
+  ["Animation Reviews", `${venturePath}new-animaition-rev-iw-and-game-dance-logo.png`, "Animation reviews"],
+  ["Sports Zone", `${venturePath}sports-zone.png`, "Sports community"],
+  ["Cyber Security", `${venturePath}Cyber-Security.png`, "Security and deeptech"],
+  ["Cosplay Seller", `${venturePath}cosplay.png`, "Cosplay and creative"],
+  ["Animgaming", `${venturePath}animgaming.png`, "Gaming and animation"],
+  ["SuperHero Inc", `${venturePath}im-super-heroC.png`, "Superheroes and IP"],
+  ["Glam World", `${venturePath}glam-world.png`, "Fashion and models"],
+  ["WLS Network", `${venturePath}logo.jpg`, "Global network"],
+  ["DeepTech Platform", `${venturePath}DeepTeckKnowledge.jpg.jpeg`, "Knowledge platform"],
+  ["Funding Network", `${venturePath}logo1.jpg`, "Startup funding"],
+  ["Virtualinfocom Studio", `${venturePath}final-new.png`, "Since 1998"],
+  ["Founder Community", `${venturePath}logo (2).png`, "Entrepreneur ecosystem"],
+  ["Future Ventures", `${venturePath}logo (3).png`, "New ventures"],
+];
