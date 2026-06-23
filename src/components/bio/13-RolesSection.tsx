@@ -5,6 +5,8 @@ import { fadeUp } from "./bioMotion";
 const careerHighlights = [
   "National Startup India Award Jury",
   "Top 50 Blockchain Thought Leader",
+  "Digital Human Pioneer",
+  "Mentor to 7000+ Startups Across Global Ecosystems",
   "Creator of MAKAUT Game Development Syllabus",
   "Consultant, Asian Development Bank",
   "Director Innovation, Private Office of HH Sheikh Ahmed",

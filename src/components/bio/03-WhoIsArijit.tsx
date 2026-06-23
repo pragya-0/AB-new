@@ -6,8 +6,8 @@ const identities = [
   {
     title: "Technologist",
     line: "Building products and platforms through AI, VR, games and emerging technologies.",
-    text: "The technology side of Arijit’s journey spans game development, immersive media, blockchain systems, digital humans and AI-led innovation.",
-    roles: "AI • VR / AR • Gaming • Blockchain",
+    text: "Programming since the mid-1990s across BASIC, C, C++, game engines, AI systems and emerging technologies. His work also spans immersive media, blockchain systems, digital humans and AI-led innovation.",
+    roles: "AI • VR / AR • Gaming • Blockchain • Digital Humans",
   },
   {
     title: "Entrepreneur",
@@ -18,17 +18,16 @@ const identities = [
   {
     title: "Public Voice",
     line: "Sharing ideas across institutions, summits and global platforms.",
-    text: "As a speaker and advisor, he brings technology, entrepreneurship and future-thinking conversations to public stages and international forums.",
-    roles: "Speaker • TEDx • Advisor • Global Forums",
+    text: "As a speaker and advisor, he brings technology, entrepreneurship and future-thinking conversations to public stages, business diplomacy platforms and international forums.",
+    roles: "Speaker • TEDx • Advisor • Global Forums • Diplomacy",
   },
   {
     title: "Creator",
     line: "Turning imagination into books, characters, stories and visual worlds.",
-    text: "Beyond business, the creative side includes books, drawings, comics, superheroes, media stories and original storytelling universes.",
-    roles: "Books • Art • Comics • Characters",
+    text: "Beyond business, the creative side includes books, drawings, comics, superheroes, media stories, digital-human characters and original storytelling universes.",
+    roles: "Books • Art • Comics • Characters • Creative IP",
   },
 ];
-
 export default function WhoIsArijit() {
   return (
 <BioSectionShell

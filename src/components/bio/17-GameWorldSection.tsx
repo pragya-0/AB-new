@@ -84,7 +84,7 @@ export default function GameWorldSection() {
       dark
       eyebrow="Creative Universe"
       title="Featured AI Films, Comics & Character Worlds"
-      text="A tighter Bio snapshot of Arijit Bhattacharyya’s cinematic IP archive across AI-led films, mythology worlds, comics, superheroes and game characters."
+      text="A tighter Bio snapshot of Arijit Bhattacharyya's cinematic IP archive across AI-led films, mythology worlds, comics, superheroes, digital humans and game characters."
     >
       <div className="space-y-10 pt-10 md:pt-14">
         <motion.article
@@ -95,7 +95,7 @@ export default function GameWorldSection() {
             <SmartImage
               src={`${gamePath}comics-img5.jpg`}
               fallbacks={[`${gamePath}comics-img6.jpg`, `${gamePath}comics-img4.jpg`]}
-              alt="Creative Universe"
+              alt="Arijit Bhattacharyya creative universe of AI films comics and game characters"
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
@@ -110,9 +110,15 @@ export default function GameWorldSection() {
                 Films. Games. Comics. Characters. Worlds.
               </h3>
 
-              <p className="mt-6 max-w-[760px] text-[16px] leading-8 text-white/72">
+              <p className="mt-6 max-w-[780px] text-[16px] leading-8 text-white/72">
                 A cinematic archive connecting mythology-led films, superhero IP,
-                VR gaming, model-to-character work and AI-powered storytelling.
+                VR gaming, model-to-character work, digital-human creation and
+                AI-powered storytelling.
+              </p>
+
+              <p className="mt-5 max-w-[760px] text-[12px] font-black uppercase leading-6 tracking-[0.22em] text-[#8bb7ff]/90">
+                Including early Gen AI movie initiatives and mythology-inspired
+                AI storytelling projects.
               </p>
             </div>
           </div>
@@ -131,9 +137,9 @@ export default function GameWorldSection() {
               AI-Led Films & Mythology Worlds
             </h3>
 
-            <p className="mt-5 max-w-[860px] text-[16px] leading-8 text-white/64">
+            <p className="mt-5 max-w-[880px] text-[16px] leading-8 text-white/64">
               Featured cinematic concepts from mythology, fantasy, action,
-              futuristic stories and AI-led film development.
+              futuristic stories and early Gen AI film development.
             </p>
           </div>
 
@@ -177,7 +183,8 @@ export default function GameWorldSection() {
 
             <p className="mt-5 max-w-[860px] text-[16px] leading-8 text-white/64">
               Original comic universes, game characters, model-to-character
-              transformations and digital storytelling created across decades.
+              transformations, digital humans and visual storytelling created
+              across decades.
             </p>
           </div>
 
