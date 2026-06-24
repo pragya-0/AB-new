@@ -11,31 +11,40 @@ const navLinks = [
   { label: "Drawing", href: "/drawing" },
 ];
 
+const exploreLinks = [
+  { label: "Virtual Reality", href: "/virtual-reality" },
+  { label: "Media Entertainment", href: "/media" },
+  { label: "Photography", href: "/photography" },
+  { label: "Blog", href: "/blog" },
+  { label: "Books", href: "/books" },
+  { label: "Podcast", href: "/podcast" },
+];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <div className="bg-gradient-to-r from-[#0052D4] via-[#4364F7] to-[#6FB1FC] py-1.5 text-center text-[13px] font-semibold tracking-wide text-white">
+      <div className="bg-gradient-to-r from-[#0052D4] via-[#4364F7] to-[#6FB1FC] px-4 py-1.5 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-white sm:text-[12px] md:text-[13px] md:tracking-[0.18em]">
         29+ Years of Innovation • Founder of Virtualinfocom • Global Speaker •
         AI • Gaming • DeepTech
       </div>
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
-        <div className="mx-auto max-w-[1700px] px-6 lg:px-10">
-          <div className="flex h-[82px] items-center justify-between gap-8">
+        <div className="mx-auto max-w-[1700px] px-5 sm:px-6 lg:px-10">
+          <div className="flex h-[72px] items-center justify-between gap-5 md:h-[82px] lg:gap-8">
             <a href="/" className="shrink-0 text-white">
-              <h1 className="text-[24px] font-black tracking-[0.08em] lg:text-[27px]">
+              <h1 className="text-[18px] font-extrabold uppercase leading-none tracking-[0.08em] sm:text-[22px] lg:text-[26px]">
                 ARIJIT BHATTACHARYYA
               </h1>
             </a>
 
-            <nav className="hidden flex-1 items-center justify-center gap-8 lg:flex">
+            <nav className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8">
               {navLinks.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-[15px] font-semibold text-white/78 transition duration-300 hover:text-white"
+                  className="text-[15px] font-semibold tracking-[-0.01em] text-white/80 transition duration-300 hover:text-white"
                 >
                   {item.label}
                 </a>
@@ -44,10 +53,10 @@ export default function Navbar() {
 
             <button
               onClick={() => setMenuOpen(true)}
-              className="hidden text-white transition hover:text-[#6FB1FC] lg:flex"
+              className="flex text-white transition hover:text-[#6FB1FC]"
               aria-label="Open menu"
             >
-              <Menu size={34} strokeWidth={2.2} />
+              <Menu size={32} strokeWidth={2.1} />
             </button>
           </div>
         </div>
@@ -60,68 +69,67 @@ export default function Navbar() {
             onClick={() => setMenuOpen(false)}
           />
 
-          <div className="fixed right-0 top-0 z-[100] h-screen w-[420px] overflow-y-auto bg-gradient-to-b from-[#0052D4] via-[#4364F7] to-[#6FB1FC] p-10 text-white shadow-2xl">
+          <aside className="fixed right-0 top-0 z-[100] h-screen w-full max-w-[420px] overflow-y-auto bg-gradient-to-b from-[#0052D4] via-[#4364F7] to-[#6FB1FC] p-7 text-white shadow-2xl sm:p-10">
             <button
               onClick={() => setMenuOpen(false)}
-              className="absolute right-6 top-6"
+              className="absolute right-6 top-6 transition hover:opacity-70"
               aria-label="Close menu"
             >
               <X size={32} />
             </button>
 
-            <div className="mt-16 flex flex-col gap-8">
-              <a
-                href="/virtual-reality"
-                className="text-[28px] font-semibold transition hover:translate-x-2"
-              >
-                Virtual Reality
-              </a>
+            <div className="mt-14 space-y-9">
+              <div>
+                <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/65">
+                  Main
+                </p>
 
-              <a
-                href="/media"
-                className="text-[28px] font-semibold transition hover:translate-x-2"
-              >
-                Media Entertainment
-              </a>
+                <div className="grid gap-4">
+                  {navLinks.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-[22px] font-bold leading-[1.05] tracking-[-0.03em] transition hover:translate-x-2 sm:text-[26px]"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
 
-              <a
-                href="/photography"
-                className="text-[28px] font-semibold transition hover:translate-x-2"
-              >
-                Photography
-              </a>
+              <div className="h-px bg-white/20" />
 
-              <a
-                href="/blog"
-                className="text-[28px] font-semibold transition hover:translate-x-2"
-              >
-                Blog
-              </a>
+              <div>
+                <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/65">
+                  Explore
+                </p>
 
-              <a
-                href="/books"
-                className="text-[28px] font-semibold transition hover:translate-x-2"
-              >
-                Books
-              </a>
+                <div className="grid gap-4">
+                  {exploreLinks.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-[20px] font-bold leading-[1.05] tracking-[-0.03em] text-white/90 transition hover:translate-x-2 sm:text-[24px]"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
 
-              <a
-                href="/podcast"
-                className="text-[28px] font-semibold transition hover:translate-x-2"
-              >
-                Podcast
-              </a>
-
-              <div className="my-4 h-px bg-white/20" />
+              <div className="h-px bg-white/20" />
 
               <a
                 href="/speaking"
-                className="rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center text-[16px] font-black uppercase tracking-[0.18em] transition hover:bg-white/20"
+                onClick={() => setMenuOpen(false)}
+                className="block rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center text-[12px] font-bold uppercase tracking-[0.18em] transition hover:bg-white/20"
               >
-                Invite To Speak
+                Connect With Arijit
               </a>
             </div>
-          </div>
+          </aside>
         </>
       )}
     </>

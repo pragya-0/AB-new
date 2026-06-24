@@ -9,6 +9,7 @@ import MediaPage from "./pages/MediaPage";
 import PressPage from "./pages/PressPage";
 import SpeakingPage from "./pages/SpeakingPage";
 import VenturesPage from "./pages/VenturesPage";
+import TechnologyPage from "./pages/TechnologyPage";
 
 export default function App() {
   return (
@@ -25,7 +26,7 @@ export default function App() {
         <Route path="/speaking" element={<SpeakingPage />} />
         <Route path="/ecosystem" element={<VenturesPage />} />
         <Route path="/ventures" element={<VenturesPage />} />
-        <Route path="/technology" element={<VenturesPage />} />
+        <Route path="/technology" element={<TechnologyPage />} />
         <Route path="/podcast" element={<MediaPage />} />
       </Routes>
     </BrowserRouter>
