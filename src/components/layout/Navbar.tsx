@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
+const mainLinks = [
   { label: "Bio", href: "/bio" },
   { label: "Latest Speaks", href: "/speaking" },
   { label: "Technology", href: "/technology" },
@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Drawing", href: "/drawing" },
 ];
 
-const exploreLinks = [
+const secondaryLinks = [
   { label: "Virtual Reality", href: "/virtual-reality" },
   { label: "Media Entertainment", href: "/media" },
   { label: "Photography", href: "/photography" },
@@ -19,6 +19,8 @@ const exploreLinks = [
   { label: "Books", href: "/books" },
   { label: "Podcast", href: "/podcast" },
 ];
+
+const allLinks = [...mainLinks, ...secondaryLinks];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,7 +42,7 @@ export default function Navbar() {
             </a>
 
             <nav className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8">
-              {navLinks.map((item) => (
+              {mainLinks.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
@@ -55,6 +57,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(true)}
               className="flex text-white transition hover:text-[#6FB1FC]"
               aria-label="Open menu"
+              aria-expanded={menuOpen}
             >
               <Menu size={32} strokeWidth={2.1} />
             </button>
@@ -79,13 +82,13 @@ export default function Navbar() {
             </button>
 
             <div className="mt-14 space-y-9">
-              <div>
+              <div className="lg:hidden">
                 <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/65">
                   Main
                 </p>
 
                 <div className="grid gap-4">
-                  {navLinks.map((item) => (
+                  {allLinks.map((item) => (
                     <a
                       key={item.label}
                       href={item.href}
@@ -98,20 +101,18 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="h-px bg-white/20" />
-
-              <div>
+              <div className="hidden lg:block">
                 <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/65">
                   Explore
                 </p>
 
                 <div className="grid gap-4">
-                  {exploreLinks.map((item) => (
+                  {secondaryLinks.map((item) => (
                     <a
                       key={item.label}
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="text-[20px] font-bold leading-[1.05] tracking-[-0.03em] text-white/90 transition hover:translate-x-2 sm:text-[24px]"
+                      className="text-[22px] font-bold leading-[1.05] tracking-[-0.03em] text-white/90 transition hover:translate-x-2 sm:text-[26px]"
                     >
                       {item.label}
                     </a>
@@ -122,7 +123,7 @@ export default function Navbar() {
               <div className="h-px bg-white/20" />
 
               <a
-                href="/speaking"
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="block rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center text-[12px] font-bold uppercase tracking-[0.18em] transition hover:bg-white/20"
               >

@@ -1,6 +1,5 @@
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-
 import MetaTags from "../components/common/MetaTags";
 
 import BioHero from "../components/bio/01-BioHero";
@@ -18,12 +17,12 @@ import MentoringSection from "../components/bio/12-MentoringSection";
 import RolesSection from "../components/bio/13-RolesSection";
 import StoriesRecognitionSection from "../components/bio/14-StoriesRecognitionSection";
 import PressNewsSection from "../components/bio/15-PressNewsSection";
-
 import GameWorldSection from "../components/bio/17-GameWorldSection";
 import BooksSection from "../components/bio/18-BooksSection";
 import IndustriesSection from "../components/bio/19-IndustriesSection";
 import PhilanthropySection from "../components/bio/20-PhilanthropySection";
 import LegacySection from "../components/bio/21-LegacySection";
+import LegacyBiographyArchive from "../components/bio/22-LegacyBiographyArchive";
 
 import DrawingSection from "../components/bio/DrawingSection";
 import PhotographySection from "../components/bio/PhotographySection";
@@ -44,29 +43,29 @@ export default function BioPage() {
       <RidingTigerSection />
       <WhoIsArijit />
 
+      <RolesSection />
+      <LatestSpeaksSection />
+      <BooksSection />
+
       <FounderEcosystem />
       <VentureLogoStrip />
+      <MentoringSection />
+
       <OriginStory />
       <JourneyTimeline />
-
       <GlobalImpact />
       <InfluenceSection />
-      <LatestSpeaksSection />
-
-      <MentoringSection />
-      <RolesSection />
 
       <StoriesRecognitionSection />
       <PressNewsSection />
 
-      
       <DrawingSection />
       <GameWorldSection />
       <PhotographySection />
 
-      <BooksSection />
       <IndustriesSection />
       <PhilanthropySection />
+      <LegacyBiographyArchive />
       <LegacySection />
 
       <Footer />
