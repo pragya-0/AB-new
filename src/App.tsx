@@ -11,6 +11,7 @@ import SpeakingPage from "./pages/SpeakingPage";
 import VenturesPage from "./pages/VenturesPage";
 import TechnologyPage from "./pages/TechnologyPage";
 import MentoringPage from "./pages/MentoringPage";
+import DrawingPage from "./pages/DrawingPage";
 
 export default function App() {
   return (
@@ -30,6 +31,11 @@ export default function App() {
         <Route path="/ventures" element={<VenturesPage />} />
         <Route path="/investments" element={<VenturesPage />} />
 
+        {/* Creative */}
+        <Route path="/drawing" element={<DrawingPage />} />
+        <Route path="/creative" element={<GalleryPage />} />
+        <Route path="/photography" element={<GalleryPage />} />
+
         {/* Media & Press */}
         <Route path="/press" element={<PressPage />} />
         <Route path="/media" element={<MediaPage />} />
@@ -38,11 +44,6 @@ export default function App() {
         {/* Content */}
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/books" element={<BooksPage />} />
-
-        {/* Creative */}
-        <Route path="/creative" element={<GalleryPage />} />
-        <Route path="/photography" element={<GalleryPage />} />
-        <Route path="/drawing" element={<GalleryPage />} />
       </Routes>
     </BrowserRouter>
   );
