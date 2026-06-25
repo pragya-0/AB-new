@@ -12,6 +12,7 @@ import VenturesPage from "./pages/VenturesPage";
 import TechnologyPage from "./pages/TechnologyPage";
 import MentoringPage from "./pages/MentoringPage";
 import DrawingPage from "./pages/DrawingPage";
+import VRPage from "./pages/VRPage";
 
 export default function App() {
   return (
@@ -25,6 +26,10 @@ export default function App() {
         <Route path="/speaking" element={<SpeakingPage />} />
         <Route path="/technology" element={<TechnologyPage />} />
         <Route path="/mentoring" element={<MentoringPage />} />
+
+        {/* Virtual Reality */}
+        <Route path="/vr" element={<VRPage />} />
+        <Route path="/virtual-reality" element={<VRPage />} />
 
         {/* Ventures / Ecosystem */}
         <Route path="/ecosystem" element={<VenturesPage />} />
