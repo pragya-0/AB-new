@@ -13,25 +13,18 @@ export default function DrawingPage() {
   return (
     <main className="min-h-screen bg-white font-sans text-[#03070d]">
       <MetaTags
-        title="Drawing, Pencil Works, Watercolour & Digital Art | Arijit Bhattacharyya"
-        description="Explore Arijit Bhattacharyya's drawing portfolio including pencil works, watercolour paintings, comics, digital superhero art, character design, concept art and visual storytelling."
-        image="/assets/Drawing/Pencil/Mother Teresa.jpg"
+        title="Drawing | Pencil Works, Water Color, Comics & Digital Superhero | Arijit Bhattacharyya"
+        description="Drawing portfolio of Arijit Bhattacharyya featuring pencil works, water color paintings, comics, digital superhero art, Indian artist sketches, character design and visual storytelling."
+        image="/assets/Drawing/Pencil/susmita-sen.jpg"
       />
 
       <Navbar />
-
       <DrawingHero />
-
       <PencilWorks />
-
       <WaterColorGallery />
-
       <ComicsUniverse />
-
       <DigitalArt />
-
       <ArtisticJourney />
-
       <Footer />
     </main>
   );
