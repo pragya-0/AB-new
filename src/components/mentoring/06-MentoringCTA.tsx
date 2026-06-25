@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Eye, Globe2, Mail, MessageCircle } from "lucide-react";
 import { fadeUp } from "../bio/bioMotion";
 
 const asset = "/assets/mentoring/";
@@ -28,6 +28,24 @@ const expertise = [
   "Partnership Development",
 ];
 
+const philosophyPoints = [
+  {
+    icon: Eye,
+    title: "See Blind Spots",
+    text: "Identify growth risks, missed opportunities and decision gaps before they become expensive mistakes.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Communicate Clearly",
+    text: "Shape ideas, pitches and business stories so founders can explain value in a short span of time.",
+  },
+  {
+    icon: Globe2,
+    title: "Build Global Access",
+    text: "Connect with partners, ecosystems, investors and business networks across relevant markets.",
+  },
+];
+
 export default function MentoringCTA() {
   return (
     <section className="relative overflow-hidden bg-[#03070d] px-5 py-12 text-white sm:px-6 md:px-10 md:py-16">
@@ -43,19 +61,51 @@ export default function MentoringCTA() {
           <div className="grid lg:grid-cols-[1.02fr_0.98fr] lg:items-stretch">
             <div className="p-6 sm:p-7 md:p-9 xl:p-11">
               <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.34em] text-[#8bb7ff]">
-                Get In Touch
+                Straight From The Heart
               </p>
 
               <h2 className="max-w-[900px] text-[38px] font-extrabold leading-[0.96] tracking-[-0.05em] text-white sm:text-[46px] md:text-[56px] xl:text-[64px]">
                 Looking for the right partner to scale your business?
               </h2>
 
-              <p className="mt-6 max-w-[820px] text-[15px] font-normal leading-[1.75] tracking-[-0.01em] text-white/70 md:text-[17px]">
-                Whether you're entering a new market, raising capital, upgrading
-                technology, building partnerships or expanding internationally,
-                mentoring engagements help founders and leadership teams move
-                faster with fewer blind spots.
+              <p className="mt-6 max-w-[840px] text-[15px] font-normal leading-[1.75] tracking-[-0.01em] text-white/70 md:text-[17px]">
+                I have been mentoring startup founders, mid-level companies and
+                growth-stage businesses for many years. When we meet, I expect
+                founders to come prepared with real questions and real
+                challenges.
               </p>
+
+              <p className="mt-4 max-w-[840px] text-[15px] font-normal leading-[1.75] tracking-[-0.01em] text-white/66 md:text-[17px]">
+                My role is not to tell you what you want to hear. My role is to
+                help you identify blind spots, improve decision-making,
+                strengthen leadership, sharpen communication and accelerate
+                growth with fewer wasted moves.
+              </p>
+
+              <div className="mt-7 grid gap-3 md:grid-cols-3">
+                {philosophyPoints.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <article
+                      key={item.title}
+                      className="rounded-[20px] border border-white/10 bg-black/20 p-4"
+                    >
+                      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0057ff]/18 ring-1 ring-[#58a0ff]/25">
+                        <Icon size={21} className="text-[#8bb7ff]" />
+                      </div>
+
+                      <h3 className="text-[18px] font-bold leading-[1.05] tracking-[-0.03em] text-white">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-3 text-[13px] font-normal leading-6 text-white/62">
+                        {item.text}
+                      </p>
+                    </article>
+                  );
+                })}
+              </div>
 
               <div className="mt-7 flex flex-wrap gap-2">
                 {expertise.map((item) => (
@@ -74,8 +124,8 @@ export default function MentoringCTA() {
                 </h3>
 
                 <p className="mt-4 max-w-[720px] text-[15px] font-normal leading-7 text-white/64 md:text-[16px]">
-                  For founders exploring expansion opportunities, partnerships
-                  or ecosystem access in international markets.
+                  For founders exploring expansion opportunities, partnerships,
+                  office setup or ecosystem access in international markets.
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -91,17 +141,17 @@ export default function MentoringCTA() {
               </div>
             </div>
 
-            <div className="relative min-h-[440px] overflow-hidden bg-[#05070c] sm:min-h-[520px] lg:min-h-0">
+            <div className="relative min-h-[500px] overflow-hidden bg-[#05070c] sm:min-h-[580px] lg:min-h-0">
               <img
                 src={`${asset}banner6-1.jpg`}
                 alt="Arijit Bhattacharyya mentoring advisory connect for business growth fundraising technology transformation and global expansion"
                 className="absolute inset-0 h-full w-full object-contain object-center"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/10 to-black/0 lg:bg-gradient-to-l lg:from-black/72 lg:via-black/14 lg:to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/76 via-black/10 to-black/0 lg:bg-gradient-to-l lg:from-black/76 lg:via-black/14 lg:to-transparent" />
 
               <div className="absolute bottom-5 left-5 right-5 md:bottom-7 md:left-7 md:right-7">
-                <div className="rounded-[24px] border border-white/10 bg-black/45 p-5 backdrop-blur-md md:p-6">
+                <div className="rounded-[24px] border border-white/10 bg-black/48 p-5 backdrop-blur-md md:p-6">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#8bb7ff]">
                     Contact
                   </p>
@@ -112,8 +162,8 @@ export default function MentoringCTA() {
 
                   <p className="mt-4 text-[14px] font-normal leading-7 text-white/70 md:text-[15px]">
                     Discuss mentoring, business growth, fundraising,
-                    international expansion, technology transformation or
-                    strategic partnerships.
+                    international expansion, technology transformation,
+                    executive presence or strategic partnerships.
                   </p>
 
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

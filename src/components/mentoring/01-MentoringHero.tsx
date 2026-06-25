@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const asset = "/assets/mentoring/";
@@ -26,20 +27,42 @@ const proofStats = [
   ["60+", "Countries Travelled"],
 ];
 
-const visualProof = [
+const heroSlides = [
+  {
+    image: "banner3.jpg",
+    title: "Helping founders see blind spots, structure growth and go global.",
+    eyebrow: "Business Mentoring / Scaleup / Funding",
+    alt: "Arijit Bhattacharyya mentoring session business growth startup advisory scaleup funding grants private equity and global expansion",
+    fit: "contain",
+  },
   {
     image: "Dubai-Arijit.jpg",
-    title: "Global Business",
-    text: "International scaleup, market-entry and private-equity conversations.",
+    title: "International scaleup, market-entry and private-equity conversations.",
+    eyebrow: "Global Business / Market Entry",
+    alt: "Arijit Bhattacharyya global business mentoring market entry private equity and international scaleup conversation",
+    fit: "contain",
   },
   {
     image: "public-speaker.jpg",
-    title: "Founder Guidance",
-    text: "Mentoring through real stages, forums, leadership rooms and business networks.",
+    title: "Mentoring through real stages, founder rooms and business networks.",
+    eyebrow: "Founder Guidance / Leadership Rooms",
+    alt: "Arijit Bhattacharyya public speaking and mentoring founders in leadership rooms and business networks",
+    fit: "cover",
   },
 ];
 
 export default function MentoringHero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const currentSlide = heroSlides[activeSlide];
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length);
+    }, 4200);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-[#03070d] px-5 py-14 text-white sm:px-6 md:px-10 md:py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(0,87,255,0.20),transparent_32%),radial-gradient(circle_at_82%_20%,rgba(111,177,252,0.14),transparent_34%)]" />
@@ -64,11 +87,11 @@ export default function MentoringHero() {
               Mentoring Sessions Since 2006
             </p>
 
-            <h1 className="max-w-[820px] text-[50px] font-extrabold leading-[0.92] tracking-[-0.06em] text-white sm:text-[62px] md:text-[76px] xl:text-[84px]">
+            <h1 className="max-w-[780px] text-[42px] font-bold leading-[0.96] tracking-[-0.055em] text-white sm:text-[52px] md:text-[64px] xl:text-[72px]">
               Gain experience not shared in books.
             </h1>
 
-            <p className="mt-7 max-w-[780px] text-[18px] font-normal leading-[1.75] tracking-[-0.01em] text-white/70">
+            <p className="mt-7 max-w-[780px] text-[17px] font-normal leading-[1.75] tracking-[-0.01em] text-white/70 md:text-[18px]">
               Arijit Bhattacharyya is a Business Scalability Expert,
               Technologist, Digital Media Expert and Finance & Growth Consultant
               helping corporates, startups, SMEs, MSMEs and manufacturing
@@ -117,55 +140,62 @@ export default function MentoringHero() {
           <motion.div {...fadeUp} className="relative">
             <div className="absolute -inset-5 rounded-[44px] bg-[#0057ff]/16 blur-3xl" />
 
-            <div className="relative grid gap-5">
-              <div className="relative overflow-hidden rounded-[30px] border border-white/12 bg-[#07101f] p-2 shadow-[0_38px_120px_rgba(0,87,255,0.22)] md:rounded-[42px]">
-                <img
-                  src={`${asset}banner3.jpg`}
-                  alt="Arijit Bhattacharyya mentoring session business growth startup advisory scaleup funding grants private equity and global expansion"
-                  className="h-[360px] w-full rounded-[24px] object-contain object-center sm:h-[470px] md:h-[600px] md:rounded-[34px]"
-                />
+            <div className="relative overflow-hidden rounded-[30px] border border-white/12 bg-[#07101f] p-2 shadow-[0_38px_120px_rgba(0,87,255,0.22)] md:rounded-[42px]">
+              <div className="relative h-[460px] overflow-hidden rounded-[24px] bg-[#03070d] sm:h-[560px] md:h-[660px] md:rounded-[34px]">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentSlide.image}
+                    src={`${asset}${currentSlide.image}`}
+                    alt={currentSlide.alt}
+                    initial={{ opacity: 0, scale: 1.04 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.985 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className={`absolute inset-0 h-full w-full ${
+                      currentSlide.fit === "cover"
+                        ? "object-cover"
+                        : "object-contain"
+                    } object-center`}
+                  />
+                </AnimatePresence>
 
-                <div className="pointer-events-none absolute inset-x-2 bottom-2 h-[44%] rounded-b-[24px] bg-gradient-to-t from-black/88 via-black/40 to-transparent md:rounded-b-[34px]" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-gradient-to-t from-black/92 via-black/46 to-transparent" />
 
                 <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#8bb7ff]">
-                    Business Mentoring / Scaleup / Funding
-                  </p>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentSlide.title}
+                      initial={{ opacity: 0, y: 14 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                    >
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#8bb7ff]">
+                        {currentSlide.eyebrow}
+                      </p>
 
-                  <h2 className="mt-3 max-w-[640px] text-[28px] font-bold leading-[1.05] tracking-[-0.03em] text-white md:text-[34px]">
-                    Helping founders see blind spots, structure growth and go
-                    global.
-                  </h2>
-                </div>
-              </div>
+                      <h2 className="mt-3 max-w-[760px] text-[28px] font-bold leading-[1.05] tracking-[-0.03em] text-white md:text-[38px]">
+                        {currentSlide.title}
+                      </h2>
+                    </motion.div>
+                  </AnimatePresence>
 
-              <div className="grid gap-5 md:grid-cols-2">
-                {visualProof.map((item) => (
-                  <article
-                    key={item.title}
-                    className="group overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.045] p-2 transition duration-300 hover:-translate-y-1 hover:border-[#58a0ff]/45"
-                  >
-                    <div className="relative h-[240px] overflow-hidden rounded-[20px] bg-[#07101f] sm:h-[280px] xl:h-[260px]">
-                      <img
-                        src={`${asset}${item.image}`}
-                        alt={`Arijit Bhattacharyya mentoring ${item.title.toLowerCase()} business growth and advisory proof`}
-                        className="h-full w-full object-contain object-center p-2 transition duration-700 group-hover:scale-[1.015]"
+                  <div className="mt-6 flex items-center gap-3">
+                    {heroSlides.map((slide, index) => (
+                      <button
+                        key={slide.image}
+                        type="button"
+                        onClick={() => setActiveSlide(index)}
+                        aria-label={`Show ${slide.eyebrow}`}
+                        className={`h-2.5 rounded-full transition duration-300 ${
+                          activeSlide === index
+                            ? "w-10 bg-[#58a0ff]"
+                            : "w-2.5 bg-white/35 hover:bg-white/60"
+                        }`}
                       />
-
-                      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-black/88 via-black/42 to-transparent" />
-
-                      <div className="absolute bottom-5 left-5 right-5">
-                        <h3 className="text-[24px] font-bold leading-[1.05] tracking-[-0.03em] text-white md:text-[28px]">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-3 text-[14px] font-normal leading-6 text-white/70">
-                          {item.text}
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                ))}
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

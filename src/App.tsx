@@ -13,30 +13,37 @@ import TechnologyPage from "./pages/TechnologyPage";
 import MentoringPage from "./pages/MentoringPage";
 
 export default function App() {
-return ( <BrowserRouter> <Routes>
-<Route path="/" element={<HomePage />} />
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Homepage */}
+        <Route path="/" element={<HomePage />} />
 
+        {/* Core Pages */}
+        <Route path="/bio" element={<BioPage />} />
+        <Route path="/speaking" element={<SpeakingPage />} />
+        <Route path="/technology" element={<TechnologyPage />} />
+        <Route path="/mentoring" element={<MentoringPage />} />
 
-    <Route path="/bio" element={<BioPage />} />
-    <Route path="/speaking" element={<SpeakingPage />} />
-    <Route path="/technology" element={<TechnologyPage />} />
-    <Route path="/mentoring" element={<MentoringPage />} />
+        {/* Ventures / Ecosystem */}
+        <Route path="/ecosystem" element={<VenturesPage />} />
+        <Route path="/ventures" element={<VenturesPage />} />
+        <Route path="/investments" element={<VenturesPage />} />
 
-    <Route path="/ecosystem" element={<VenturesPage />} />
-    <Route path="/ventures" element={<VenturesPage />} />
+        {/* Media & Press */}
+        <Route path="/press" element={<PressPage />} />
+        <Route path="/media" element={<MediaPage />} />
+        <Route path="/podcast" element={<MediaPage />} />
 
-    <Route path="/press" element={<PressPage />} />
-    <Route path="/media" element={<MediaPage />} />
-    <Route path="/podcast" element={<MediaPage />} />
+        {/* Content */}
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/books" element={<BooksPage />} />
 
-    <Route path="/blog" element={<BlogPage />} />
-    <Route path="/books" element={<BooksPage />} />
-
-    <Route path="/creative" element={<GalleryPage />} />
-    <Route path="/photography" element={<GalleryPage />} />
-  </Routes>
-</BrowserRouter>
-
-
-);
+        {/* Creative */}
+        <Route path="/creative" element={<GalleryPage />} />
+        <Route path="/photography" element={<GalleryPage />} />
+        <Route path="/drawing" element={<GalleryPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }

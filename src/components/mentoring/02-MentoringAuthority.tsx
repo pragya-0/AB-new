@@ -130,7 +130,7 @@ export default function MentoringAuthority() {
             {...fadeUp}
             className="overflow-hidden rounded-[32px] border border-[#d8e7ff] bg-[#07101f] p-2 shadow-[0_28px_90px_rgba(0,87,255,0.12)]"
           >
-            <div className="relative h-[420px] overflow-hidden rounded-[26px] bg-[#03070d] sm:h-[480px] xl:h-[590px]">
+            <div className="relative h-[360px] overflow-hidden rounded-[26px] bg-[#03070d] sm:h-[420px] xl:h-[500px]">
               <img
                 src={`${asset}Arijit-Bhattacharya.png`}
                 alt="Arijit Bhattacharyya global scaleup program business matchmaking mentoring"
@@ -174,30 +174,30 @@ export default function MentoringAuthority() {
                 <AuthorityCard key={item.title} item={item} />
               ))}
             </motion.div>
-
-            <motion.article
-              {...fadeUp}
-              className="overflow-hidden rounded-[26px] border border-[#0057ff]/20 bg-[#0057ff]/10 p-5 shadow-[0_18px_55px_rgba(0,87,255,0.08)] md:p-6"
-            >
-              <div className="grid gap-5 md:grid-cols-[0.36fr_1fr] md:items-center">
-                <div>
-                  <div className="mb-5 h-[3px] w-14 rounded-full bg-[#0057ff]" />
-                  <h3 className="text-[24px] font-bold leading-[1.05] tracking-[-0.03em] text-[#07101f] md:text-[30px]">
-                    {bankingCard.title}
-                  </h3>
-                </div>
-
-                <p className="text-[15px] font-normal leading-[1.7] text-[#475569] md:text-[17px]">
-                  {bankingCard.text}
-                </p>
-              </div>
-            </motion.article>
           </div>
         </div>
 
         <motion.article
           {...fadeUp}
-          className="mt-6 overflow-hidden rounded-[30px] border border-[#d8e7ff] bg-[#07101f] p-6 text-white shadow-[0_24px_80px_rgba(0,87,255,0.12)] sm:p-7 md:rounded-[36px] md:p-8"
+          className="mt-5 overflow-hidden rounded-[28px] border border-[#0057ff]/20 bg-[#0057ff]/10 p-5 shadow-[0_18px_55px_rgba(0,87,255,0.08)] md:p-7"
+        >
+          <div className="grid gap-6 lg:grid-cols-[0.42fr_1fr] lg:items-center">
+            <div>
+              <div className="mb-5 h-[3px] w-14 rounded-full bg-[#0057ff]" />
+              <h3 className="max-w-[620px] text-[30px] font-bold leading-[1.02] tracking-[-0.04em] text-[#07101f] md:text-[42px]">
+                {bankingCard.title}
+              </h3>
+            </div>
+
+            <p className="max-w-[920px] text-[16px] font-normal leading-[1.8] text-[#475569] md:text-[19px]">
+              {bankingCard.text}
+            </p>
+          </div>
+        </motion.article>
+
+        <motion.article
+          {...fadeUp}
+          className="mt-5 overflow-hidden rounded-[30px] border border-[#d8e7ff] bg-[#07101f] p-6 text-white shadow-[0_24px_80px_rgba(0,87,255,0.12)] sm:p-7 md:rounded-[36px] md:p-8"
         >
           <div className="grid gap-7 lg:grid-cols-[0.52fr_1fr] lg:items-center">
             <div>
