@@ -1,106 +1,146 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
-import BioPage from "./pages/BioPage";
-import SpeakingPage from "./pages/SpeakingPage";
-import TechnologyPage from "./pages/TechnologyPage";
-import MentoringPage from "./pages/MentoringPage";
-import VenturesPage from "./pages/VenturesPage";
-import DrawingPage from "./pages/DrawingPage";
-import VRPage from "./pages/VRPage";
-import MediaEntertainmentPage from "./pages/MediaEntertainmentPage";
-import PhotographyPage from "./pages/PhotographyPage";
+const HomePage = lazy(() => import("./pages/HomePage"));
+const BioPage = lazy(() => import("./pages/BioPage"));
+const SpeakingPage = lazy(() => import("./pages/SpeakingPage"));
+const TechnologyPage = lazy(() => import("./pages/TechnologyPage"));
+const MentoringPage = lazy(() => import("./pages/MentoringPage"));
+const VenturesPage = lazy(() => import("./pages/VenturesPage"));
+const DrawingPage = lazy(() => import("./pages/DrawingPage"));
+const VRPage = lazy(() => import("./pages/VRPage"));
 
-import GalleryPage from "./pages/GalleryPage";
-import MediaPage from "./pages/MediaPage";
-import PressPage from "./pages/PressPage";
-import BlogPage from "./pages/BlogPage";
-import BooksPage from "./pages/BooksPage";
+const MediaEntertainmentPage = lazy(
+  () => import("./pages/MediaEntertainmentPage")
+);
+
+const PhotographyPage = lazy(
+  () => import("./pages/PhotographyPage")
+);
+
+const GalleryPage = lazy(() => import("./pages/GalleryPage"));
+
+const MediaPage = lazy(() => import("./pages/MediaPage"));
+
+const PressPage = lazy(() => import("./pages/PressPage"));
+
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+
+const BlogArticlePage = lazy(
+  () => import("./pages/BlogArticlePage")
+);
+
+const BooksPage = lazy(() => import("./pages/BooksPage"));
+
+const ContactRedirect = lazy(
+  () => import("./pages/ContactRedirect")
+);
+
+function PageLoader() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-[#03070d] text-white">
+      <div className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-200">
+        Loading
+      </div>
+    </div>
+  );
+}
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<HomePage />} />
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
 
-        {/* Bio */}
-        <Route path="/bio" element={<BioPage />} />
-        <Route path="/bio.html" element={<BioPage />} />
+          {/* Home */}
+          <Route path="/" element={<HomePage />} />
 
-        {/* Speaking */}
-        <Route path="/speaking" element={<SpeakingPage />} />
-        <Route path="/latest-speaks" element={<SpeakingPage />} />
-        <Route path="/latest-speaks.html" element={<SpeakingPage />} />
+          {/* Bio */}
+          <Route path="/bio" element={<BioPage />} />
+          <Route path="/bio.html" element={<BioPage />} />
 
-        {/* Technology */}
-        <Route path="/technology" element={<TechnologyPage />} />
-        <Route path="/technology.html" element={<TechnologyPage />} />
+          {/* Speaking */}
+          <Route path="/speaking" element={<SpeakingPage />} />
+          <Route path="/latest-speaks" element={<SpeakingPage />} />
+          <Route path="/latest-speaks.html" element={<SpeakingPage />} />
 
-        {/* Mentoring */}
-        <Route path="/mentoring" element={<MentoringPage />} />
-        <Route path="/mentoring.html" element={<MentoringPage />} />
+          {/* Technology */}
+          <Route path="/technology" element={<TechnologyPage />} />
+          <Route path="/technology.html" element={<TechnologyPage />} />
 
-        {/* Virtual Reality */}
-        <Route path="/vr" element={<VRPage />} />
-        <Route path="/virtual-reality" element={<VRPage />} />
-        <Route path="/virtual-reality.html" element={<VRPage />} />
+          {/* Mentoring */}
+          <Route path="/mentoring" element={<MentoringPage />} />
+          <Route path="/mentoring.html" element={<MentoringPage />} />
 
-        {/* Media Entertainment */}
-        <Route
-          path="/media-entertainment"
-          element={<MediaEntertainmentPage />}
-        />
-        <Route
-          path="/media-entertainment.html"
-          element={<MediaEntertainmentPage />}
-        />
+          {/* VR */}
+          <Route path="/vr" element={<VRPage />} />
+          <Route path="/virtual-reality" element={<VRPage />} />
+          <Route path="/virtual-reality.html" element={<VRPage />} />
 
-        {/* Ventures / Ecosystem / Investments */}
-        <Route path="/ecosystem" element={<VenturesPage />} />
-        <Route path="/ecosystem.html" element={<VenturesPage />} />
-        <Route path="/ventures" element={<VenturesPage />} />
-        <Route path="/ventures.html" element={<VenturesPage />} />
-        <Route path="/investments" element={<VenturesPage />} />
-        <Route path="/investments.html" element={<VenturesPage />} />
+          {/* Media Entertainment */}
+          <Route
+            path="/media-entertainment"
+            element={<MediaEntertainmentPage />}
+          />
+          <Route
+            path="/media-entertainment.html"
+            element={<MediaEntertainmentPage />}
+          />
 
-        {/* Drawing */}
-        <Route path="/drawing" element={<DrawingPage />} />
-        <Route path="/drawing.html" element={<DrawingPage />} />
+          {/* Ecosystem */}
+          <Route path="/ecosystem" element={<VenturesPage />} />
+          <Route path="/ecosystem.html" element={<VenturesPage />} />
+          <Route path="/ventures" element={<VenturesPage />} />
+          <Route path="/ventures.html" element={<VenturesPage />} />
+          <Route path="/investments" element={<VenturesPage />} />
+          <Route path="/investments.html" element={<VenturesPage />} />
 
-        {/* Creative */}
-        <Route path="/creative" element={<GalleryPage />} />
-        <Route path="/creative.html" element={<GalleryPage />} />
+          {/* Drawing */}
+          <Route path="/drawing" element={<DrawingPage />} />
+          <Route path="/drawing.html" element={<DrawingPage />} />
 
-        {/* Photography */}
-        <Route path="/photography" element={<PhotographyPage />} />
-        <Route path="/photography.html" element={<PhotographyPage />} />
+          {/* Creative */}
+          <Route path="/creative" element={<GalleryPage />} />
+          <Route path="/creative.html" element={<GalleryPage />} />
 
-        {/* Press */}
-        <Route path="/press" element={<PressPage />} />
-        <Route path="/press-news" element={<PressPage />} />
-        <Route path="/press-news.html" element={<PressPage />} />
+          {/* Photography */}
+          <Route path="/photography" element={<PhotographyPage />} />
+          <Route path="/photography.html" element={<PhotographyPage />} />
 
-        {/* Media */}
-        <Route path="/media" element={<MediaPage />} />
-        <Route path="/media.html" element={<MediaPage />} />
+          {/* Press */}
+          <Route path="/press" element={<PressPage />} />
+          <Route path="/press-news" element={<PressPage />} />
+          <Route path="/press-news.html" element={<PressPage />} />
 
-        {/* Legacy Podcast URL */}
-        <Route path="/podcast" element={<MediaPage />} />
-        <Route path="/podcast.html" element={<MediaPage />} />
+          {/* Media */}
+          <Route path="/media" element={<MediaPage />} />
+          <Route path="/media.html" element={<MediaPage />} />
 
-        {/* Blog */}
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog.html" element={<BlogPage />} />
+          {/* Podcast */}
+          <Route path="/podcast" element={<MediaPage />} />
+          <Route path="/podcast.html" element={<MediaPage />} />
 
-        {/* Books */}
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/books.html" element={<BooksPage />} />
+          {/* Blog */}
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog.html" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogArticlePage />} />
 
-        {/* Legacy Book URLs */}
-        <Route path="/book" element={<BooksPage />} />
-        <Route path="/book.html" element={<BooksPage />} />
-      </Routes>
+          {/* Books */}
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/books.html" element={<BooksPage />} />
+          <Route path="/book" element={<BooksPage />} />
+          <Route path="/book.html" element={<BooksPage />} />
+
+          {/* Contact */}
+          <Route path="/contact" element={<ContactRedirect />} />
+          <Route path="/contact.html" element={<ContactRedirect />} />
+          <Route path="/contact-arijit" element={<ContactRedirect />} />
+          <Route path="/contact-arijit.html" element={<ContactRedirect />} />
+          <Route path="/contact-me" element={<ContactRedirect />} />
+          <Route path="/contact-me.html" element={<ContactRedirect />} />
+
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
