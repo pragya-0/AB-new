@@ -72,7 +72,7 @@ export default function App() {
         <Route path="/creative" element={<GalleryPage />} />
         <Route path="/creative.html" element={<GalleryPage />} />
 
-        {/* Photography (SEO URL from ZIP) */}
+        {/* Photography */}
         <Route path="/photography" element={<PhotographyPage />} />
         <Route path="/photography.html" element={<PhotographyPage />} />
 
@@ -96,6 +96,10 @@ export default function App() {
         {/* Books */}
         <Route path="/books" element={<BooksPage />} />
         <Route path="/books.html" element={<BooksPage />} />
+
+        {/* Legacy Book URLs */}
+        <Route path="/book" element={<BooksPage />} />
+        <Route path="/book.html" element={<BooksPage />} />
       </Routes>
     </BrowserRouter>
   );
