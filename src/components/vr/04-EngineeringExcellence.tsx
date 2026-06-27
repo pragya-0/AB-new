@@ -2,24 +2,57 @@ import { motion } from "framer-motion";
 
 const techGroups = [
   {
-    title: "Graphics & Rendering",
-    items: ["OpenGL", "DirectX", "Ray Tracing", "CUDA", "OpenCL", "HLSL"],
+    title: "AI, GenAI & Software Engineering",
+    items: [
+      "Artificial Intelligence",
+      "GenAI",
+      "LLM",
+      "NLP",
+      "Machine Learning",
+      "Microsoft .NET",
+      "C#",
+      "C++",
+      "Python",
+      "Java",
+    ],
   },
   {
-    title: "Game & XR Systems",
-    items: ["Unity", "Unreal Engine", "VRML", "Motion Capture", "Physics", "Rendering"],
+    title: "XR, Graphics & Simulation",
+    items: [
+      "Unity",
+      "Unreal Engine",
+      "VRML",
+      "OpenGL",
+      "DirectX",
+      "Ray Tracing",
+      "CUDA",
+      "OpenCL",
+      "Motion Capture",
+      "Volume Rendering",
+    ],
   },
   {
-    title: "Development Stack",
-    items: ["C#", "C++", "Python", "Java", "Blender", "3ds Max", "Volume Rendering", "SQL Server"],
+    title: "Enterprise & DeepTech",
+    items: [
+      "Blockchain",
+      "Digital Twins",
+      "IoT",
+      "Robotics",
+      "Smart Cities",
+      "FinTech",
+      "Digital Banking",
+      "Predictive Maintenance",
+      "Azure",
+      "SQL Server",
+    ],
   },
 ];
 
 const engineeringNotes = [
-  "GPU programming and real-time graphics optimization",
-  "Custom rendering pipelines optimized for real-time graphics",
-  "Procedural level generation, soft-body physics and particle systems",
-  "Interactive simulation mechanics for immersive applications",
+  "Building AI, VR, AR and simulation platforms since the early days of immersive computing.",
+  "Experience across Microsoft technologies, .NET, C#, enterprise software and large-scale application architecture.",
+  "Research and development in GPU programming, PowerVR hardware ray tracing, OpenGL, CUDA and advanced rendering pipelines.",
+  "Development spanning blockchain ecosystems, digital twins, IoT, robotics, smart cities and predictive maintenance solutions.",
 ];
 
 export default function EngineeringExcellence() {
@@ -39,12 +72,19 @@ export default function EngineeringExcellence() {
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-700 sm:text-sm">
               Engineering Excellence
             </p>
-            <h2 className="mt-4 max-w-4xl text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+
+            <h2 className="mt-4 max-w-4xl text-[34px] font-extrabold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:text-[44px] md:text-[52px] lg:text-[58px]">
               The engineering depth behind immersive worlds.
             </h2>
           </div>
+
           <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg lg:justify-self-end">
-           Engineering work extended beyond application development into rendering, simulation, GPU programming, physics systems and real-time graphics optimization. This included research on PowerVR hardware ray tracing alongside advanced rendering techniques for immersive environments.
+            Engineering experience spans AI, GenAI, VR, AR, XR, graphics
+            programming, enterprise software, blockchain, robotics, IoT,
+            digital twins, Microsoft technologies, FinTech, digital banking and
+            immersive simulation systems. The work combines research, product
+            engineering and scalable technology architecture across multiple
+            industries.
           </p>
         </motion.div>
 
@@ -58,7 +98,7 @@ export default function EngineeringExcellence() {
               transition={{ duration: 0.45, delay: groupIndex * 0.06 }}
               className="rounded-[1.7rem] border border-slate-200 bg-white p-6 shadow-xl transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_22px_60px_rgba(37,99,235,0.13)]"
             >
-              <h3 className="text-2xl font-bold text-slate-950">
+              <h3 className="text-[24px] font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 md:text-[28px]">
                 {group.title}
               </h3>
 

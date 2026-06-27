@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, PlayCircle, Tv } from "lucide-react";
-import { tvAndVideoCoverage } from "./pressData";
+
+import { completeTvAndVideoCoverage } from "./pressData";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -8,6 +9,18 @@ const fadeUp = {
 };
 
 export default function TVAndVideoCoverage() {
+  const filteredCoverage = completeTvAndVideoCoverage.filter((item) => {
+    const title = item.title.toLowerCase();
+    const publisher = item.publisher.toLowerCase();
+    const outlet = item.outlet.toLowerCase();
+
+    return (
+      !title.includes("mtv") &&
+      !publisher.includes("mtv") &&
+      !outlet.includes("mtv")
+    );
+  });
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white px-5 py-16 text-[#07111f] sm:px-6 lg:px-8 lg:py-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(37,99,235,0.11),transparent_30%),radial-gradient(circle_at_88%_75%,rgba(14,165,233,0.1),transparent_28%)]" />
@@ -33,16 +46,16 @@ export default function TVAndVideoCoverage() {
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-600 sm:text-lg lg:ml-auto">
-            Television interviews, video features, TEDx-style talks and digital media
-            appearances documenting Arijit Bhattacharyya’s work across startups,
-            technology, gaming, AI, education and innovation.
+            Television interviews, video features, TEDx-style talks and digital
+            media appearances documenting Arijit Bhattacharyya’s work across
+            startups, technology, gaming, AI, education and innovation.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {tvAndVideoCoverage.map((item, index) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {filteredCoverage.map((item, index) => (
             <motion.article
-              key={`${item.title}-${item.publisher}`}
+              key={item.id || `${item.title}-${item.publisher}`}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

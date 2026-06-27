@@ -61,19 +61,18 @@ const journey: JourneyItem[] = [
     title: "Smart Cities & Future Technology",
     text: "Innovation platforms exploring smart cities, future technology, urban systems and international collaboration.",
     image: `${speaking}finland.jpg`,
-    alt: "Arijit Bhattacharyya Finland smart city speaker discussing IoT smart cities future technology innovation and digital transformation",
+    alt: "Arijit Bhattacharya Finland smart city speaker discussing IoT smart cities future technology innovation and digital transformation",
     fit: "cover",
   },
 ];
+
 export default function MentoringSection() {
   return (
     <BioSectionShell
       id="global-journey"
       eyebrow="Global Speaking Journey"
-
-title="Speaking Across 25+ Countries on Innovation, Entrepreneurship & Future Technology"
-
-text="From Ghana, Thailand and Dubai to South Korea, Kazakhstan and Finland, Arijit Bhattacharyya has participated in global forums covering artificial intelligence, blockchain, venture capital, startups, smart cities, deep technology and future innovation ecosystems."
+      title="Speaking Across 25+ Countries on Innovation, Entrepreneurship & Future Technology"
+      text="From Ghana, Thailand and Dubai to South Korea, Kazakhstan and Finland, Arijit Bhattacharyya has participated in global forums covering artificial intelligence, blockchain, venture capital, startups, smart cities, deep technology and future innovation ecosystems."
       className="bg-gradient-to-br from-white via-[#f5f9ff] to-[#e8f1ff]"
     >
       <div className="space-y-8">
@@ -84,14 +83,14 @@ text="From Ghana, Thailand and Dubai to South Korea, Kazakhstan and Finland, Ari
             <motion.article
               key={item.place}
               {...fadeUp}
-              className="overflow-hidden rounded-[36px] border border-[#bdd9ff] bg-white shadow-[0_24px_85px_rgba(0,87,255,0.10)]"
+              className="overflow-hidden rounded-[34px] border border-[#bdd9ff] bg-white shadow-[0_24px_85px_rgba(0,87,255,0.10)]"
             >
               <div className="grid lg:grid-cols-2">
                 <div className={imageLeft ? "" : "lg:order-2"}>
-                  <div className="flex h-[380px] items-center justify-center overflow-hidden bg-[#eef5ff] p-4 md:h-[500px]">
+                  <div className="flex h-[320px] items-center justify-center overflow-hidden bg-[#eef5ff] p-4 sm:h-[400px] md:h-[500px]">
                     <SmartImage
                       src={item.image}
-                      alt={item.title}
+                      alt={item.alt}
                       className={`h-full w-full rounded-[26px] ${
                         item.fit === "contain"
                           ? "object-contain"
@@ -101,18 +100,18 @@ text="From Ghana, Thailand and Dubai to South Korea, Kazakhstan and Finland, Ari
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center p-8 text-[#07101f] md:p-12">
-                  <div className="mb-7 h-1.5 w-24 rounded-full bg-[#0057ff]" />
+                <div className="flex flex-col justify-center p-7 text-[#07101f] sm:p-9 md:p-12">
+                  <div className="mb-7 h-1.5 w-24 rounded-full bg-gradient-to-r from-[#0057ff] to-[#69aaff]" />
 
-                  <p className="mb-5 text-[11px] font-black uppercase tracking-[0.32em] text-[#0057ff]">
+                  <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#0057ff]">
                     {item.place}
                   </p>
 
-                  <h3 className="text-[38px] font-black leading-[0.92] tracking-[-0.06em] md:text-[56px]">
+                  <h3 className="text-[32px] font-extrabold leading-[1] tracking-[-0.045em] sm:text-[40px] md:text-[52px]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-6 max-w-[700px] text-[16px] leading-8 text-[#475569]">
+                  <p className="mt-6 max-w-[700px] text-base font-normal leading-8 text-[#475569]">
                     {item.text}
                   </p>
                 </div>

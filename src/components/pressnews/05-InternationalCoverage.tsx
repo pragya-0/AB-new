@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Globe2, MapPin } from "lucide-react";
-import { internationalCoverage } from "./pressData";
+
+import { completeInternationalCoverage } from "./pressData";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -29,21 +30,23 @@ export default function InternationalCoverage() {
             </p>
 
             <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-[-0.035em] text-white sm:text-5xl">
-              Recognition across countries, platforms and innovation ecosystems.
+              Recognition across countries, platforms and innovation
+              ecosystems.
             </h2>
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-300 sm:text-lg lg:ml-auto">
-            From India to China, Nepal, Thailand, Finland, Singapore, UAE and global
-            entrepreneurship networks, the coverage reflects Arijit Bhattacharyya’s work
-            across technology, startups, gaming, diplomacy, education and innovation.
+            From India to China, Nepal, Thailand, Finland, Singapore, UAE and
+            global entrepreneurship networks, the coverage reflects Arijit
+            Bhattacharyya’s work across technology, startups, gaming, diplomacy,
+            education and innovation.
           </p>
         </motion.div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {internationalCoverage.map((item, index) => (
+          {completeInternationalCoverage.map((item, index) => (
             <motion.article
-              key={`${item.country}-${item.title}`}
+              key={item.id || `${item.country}-${item.title}`}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

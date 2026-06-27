@@ -108,39 +108,43 @@ export default function SpeakingTopics() {
                   }`}
                 >
                   <div
-  className={`flex items-center justify-center bg-[#07101f] p-4 ${
-    forum.highlight ? "h-[420px]" : "h-[320px]"
-  }`}
->
+                    className={`flex items-center justify-center bg-[#07101f] p-4 ${
+                      forum.highlight ? "h-[360px] sm:h-[420px]" : "h-[280px] sm:h-[320px]"
+                    }`}
+                  >
                     <SmartImage
                       src={forum.image}
                       alt={`Arijit Bhattacharyya keynote speaker at ${forum.title} on ${forum.meta}`}
-                     className="h-full w-full object-contain"
+                      className={`h-full w-full rounded-[22px] ${
+                        forum.fit === "contain"
+                          ? "object-contain"
+                          : "object-cover object-center"
+                      }`}
                     />
                   </div>
                 </div>
 
-                <div className="rounded-[30px] border border-white/10 bg-white/[0.035] p-7 md:p-8">
-                  <div className="mb-5 inline-flex rounded-full border border-[#2d74ff]/30 bg-[#2d74ff]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#74adff]">
+                <div className="rounded-[30px] border border-white/10 bg-white/[0.035] p-6 md:p-8">
+                  <div className="mb-5 inline-flex rounded-full border border-[#2d74ff]/30 bg-[#2d74ff]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#74adff]">
                     {forum.year}
                   </div>
 
-                  <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-[#74adff]">
+                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#74adff]">
                     {forum.meta}
                   </p>
 
                   <h3
-                    className={`font-black leading-[0.94] tracking-[-0.055em] text-white ${
+                    className={`font-extrabold leading-[1] tracking-[-0.045em] text-white ${
                       forum.highlight
-                        ? "text-[42px] md:text-[62px]"
-                        : "text-[34px] md:text-[46px]"
+                        ? "text-[34px] sm:text-[44px] md:text-[56px]"
+                        : "text-[30px] sm:text-[38px] md:text-[44px]"
                     }`}
                   >
                     {forum.title}
                   </h3>
 
                   {forum.description ? (
-                    <p className="mt-6 max-w-[820px] text-[17px] leading-8 text-white/68">
+                    <p className="mt-6 max-w-[820px] text-base font-normal leading-8 text-white/68 md:text-[17px]">
                       {forum.description}
                     </p>
                   ) : null}

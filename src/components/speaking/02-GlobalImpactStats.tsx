@@ -11,6 +11,7 @@ const featured = {
   description:
     "Exploring how artificial intelligence is reshaping entrepreneurship, education, governance, creativity and the future of business.",
   image: `${thought}genai.jpeg`,
+  alt: "Arijit Bhattacharyya AI speaker on generative intelligence entrepreneurship education governance creativity and future business",
 };
 
 const topics = [
@@ -19,36 +20,42 @@ const topics = [
     description:
       "Digital economies, decentralized systems, tokenization and future financial ecosystems.",
     image: `${thought}blockchain.jpeg`,
+    alt: "Arijit Bhattacharyya blockchain speaker on digital finance decentralized systems tokenization and future financial ecosystems",
   },
   {
     title: "Startup Ecosystems",
     description:
       "Founder communities, innovation networks, accelerators and startup growth pathways.",
     image: `${thought}startup.jpeg`,
+    alt: "Arijit Bhattacharyya entrepreneur speaking on startup ecosystems founders accelerators and innovation networks",
   },
   {
     title: "Gaming, IP & Digital Humans",
     description:
       "Interactive entertainment, virtual characters, storytelling and next-generation digital experiences.",
     image: `${thought}gaming-ip-storytelling.jpeg`,
+    alt: "Arijit Bhattacharyya game development speaker on gaming intellectual property storytelling and digital humans",
   },
   {
     title: "Metaverse, VR & XR",
     description:
       "Immersive technologies transforming learning, collaboration and future experiences.",
     image: `${thought}metaverse-VR.jpg`,
+    alt: "Arijit Bhattacharya virtual reality speaker on metaverse VR XR immersive learning and future experiences",
   },
   {
     title: "Global Business Scaling",
     description:
       "Cross-border growth, international partnerships and global innovation strategies.",
     image: `${thought}global-business-scaling.jpeg`,
+    alt: "Arijit Bhattacharyya global speaker on business scaling international partnerships and innovation strategies",
   },
   {
     title: "Community & Impact",
     description:
       "Technology-enabled communities, inclusion, education and long-term ecosystem development.",
     image: `${thought}community.jpeg`,
+    alt: "Arijit Bhattacharjee innovator speaking on community impact education inclusion and ecosystem development",
   },
 ];
 
@@ -62,36 +69,36 @@ export default function GlobalImpactStats() {
       className="bg-gradient-to-br from-white via-[#f5f9ff] to-[#e8f1ff]"
     >
       <div className="space-y-8">
-       <motion.article
-  {...fadeUp}
-  className="overflow-hidden rounded-[38px] border border-[#bdd9ff] bg-white shadow-[0_35px_120px_rgba(0,87,255,0.14)]"
->
-  <div className="grid lg:grid-cols-[1.25fr_0.75fr]">
-    <div className="relative overflow-hidden bg-[#eef5ff]">
-      <SmartImage
-        src={featured.image}
-        alt={featured.title}
-        className="h-[420px] w-full object-cover object-top md:h-[560px] lg:h-[640px]"
-      />
-    </div>
+        <motion.article
+          {...fadeUp}
+          className="overflow-hidden rounded-[34px] border border-[#bdd9ff] bg-white shadow-[0_32px_100px_rgba(0,87,255,0.14)]"
+        >
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="relative overflow-hidden bg-[#eef5ff]">
+              <SmartImage
+                src={featured.image}
+                alt={featured.alt}
+                className="h-[320px] w-full object-cover object-top sm:h-[420px] md:h-[520px] lg:h-[620px]"
+              />
+            </div>
 
-    <div className="flex flex-col justify-center bg-white p-8 text-[#07101f] md:p-12 lg:p-16">
-      <div className="mb-8 h-1.5 w-24 rounded-full bg-[#0057ff]" />
+            <div className="flex flex-col justify-center bg-white p-7 text-[#07101f] sm:p-9 md:p-12 lg:p-14">
+              <div className="mb-7 h-1.5 w-24 rounded-full bg-gradient-to-r from-[#0057ff] to-[#69aaff]" />
 
-      <p className="mb-5 text-[11px] font-black uppercase tracking-[0.35em] text-[#0057ff]">
-        Featured Topic
-      </p>
+              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#0057ff]">
+                Featured Topic
+              </p>
 
-      <h3 className="max-w-[520px] text-[36px] font-black leading-[0.92] tracking-[-0.055em] md:text-[52px]">
-        {featured.title}
-      </h3>
+              <h3 className="max-w-[560px] text-[32px] font-extrabold leading-[1] tracking-[-0.045em] sm:text-[40px] md:text-[48px]">
+                {featured.title}
+              </h3>
 
-      <p className="mt-6 max-w-[500px] text-[16px] leading-8 text-[#334155]">
-        {featured.description}
-      </p>
-    </div>
-  </div>
-</motion.article>
+              <p className="mt-6 max-w-[560px] text-base font-normal leading-8 text-[#334155]">
+                {featured.description}
+              </p>
+            </div>
+          </div>
+        </motion.article>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {topics.map((topic) => (
@@ -102,16 +109,16 @@ export default function GlobalImpactStats() {
             >
               <SmartImage
                 src={topic.image}
-                alt={topic.title}
-                className="h-[240px] w-full object-cover object-center"
+                alt={topic.alt}
+                className="h-[220px] w-full object-cover object-center sm:h-[250px] lg:h-[270px]"
               />
 
               <div className="p-6 text-[#07101f]">
-                <h3 className="text-[24px] font-black leading-tight tracking-[-0.04em]">
+                <h3 className="text-[23px] font-bold leading-tight tracking-[-0.035em] sm:text-[25px]">
                   {topic.title}
                 </h3>
 
-                <p className="mt-4 text-[15px] leading-7 text-[#475569]">
+                <p className="mt-4 text-[15px] font-normal leading-7 text-[#475569]">
                   {topic.description}
                 </p>
               </div>

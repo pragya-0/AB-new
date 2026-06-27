@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const asset = "/assets/mentoring/";
 
@@ -11,17 +10,8 @@ const fadeUp = {
   transition: { duration: 0.7, ease: "easeOut" as const },
 };
 
-const heroTags = [
-  "Mentoring Since 2006",
-  "Business Scalability",
-  "Private Equity Advisory",
-  "Funding & Grants",
-  "Market Expansion",
-  "Technology Upgrade",
-];
-
 const proofStats = [
-  ["7000+", "Startups Mentored"],
+  ["7100+", "Startups Supported"],
   ["2100+", "Events & Sessions"],
   ["102+", "Countries Connected"],
   ["60+", "Countries Travelled"],
@@ -32,21 +22,21 @@ const heroSlides = [
     image: "banner3.jpg",
     title: "Helping founders see blind spots, structure growth and go global.",
     eyebrow: "Business Mentoring / Scaleup / Funding",
-    alt: "Arijit Bhattacharyya mentoring session business growth startup advisory scaleup funding grants private equity and global expansion",
+    alt: "Arijit Bhattacharyya mentoring session for business scalability startup advisory funding grants private equity readiness and global expansion",
     fit: "contain",
   },
   {
     image: "Dubai-Arijit.jpg",
     title: "International scaleup, market-entry and private-equity conversations.",
     eyebrow: "Global Business / Market Entry",
-    alt: "Arijit Bhattacharyya global business mentoring market entry private equity and international scaleup conversation",
+    alt: "Arijit Bhattacharyya global business mentoring market entry private equity readiness and international scaleup conversation",
     fit: "contain",
   },
   {
     image: "public-speaker.jpg",
     title: "Mentoring through real stages, founder rooms and business networks.",
     eyebrow: "Founder Guidance / Leadership Rooms",
-    alt: "Arijit Bhattacharyya public speaking and mentoring founders in leadership rooms and business networks",
+    alt: "Arijit Bhattacharyya public speaking and mentoring founders in leadership rooms business chambers and startup ecosystems",
     fit: "cover",
   },
 ];
@@ -70,57 +60,32 @@ export default function MentoringHero() {
       <div className="absolute right-[-260px] top-[-220px] h-[620px] w-[620px] rounded-full bg-cyan-400/8 blur-[170px]" />
 
       <div className="relative z-10 mx-auto max-w-[1500px]">
-        <div className="mb-8 flex flex-wrap gap-3">
-          {heroTags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9cc5ff] backdrop-blur"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
         <div className="grid gap-9 xl:grid-cols-[0.82fr_1.18fr] xl:items-center">
           <motion.div {...fadeUp}>
             <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.35em] text-[#7fb8ff] md:text-[12px]">
-              Mentoring Sessions Since 2006
+              Mentoring & Advisory Since 2006
             </p>
 
             <h1 className="max-w-[780px] text-[42px] font-bold leading-[0.96] tracking-[-0.055em] text-white sm:text-[52px] md:text-[64px] xl:text-[72px]">
               Gain experience not shared in books.
             </h1>
 
-            <p className="mt-7 max-w-[780px] text-[17px] font-normal leading-[1.75] tracking-[-0.01em] text-white/70 md:text-[18px]">
+            <p className="mt-7 max-w-[820px] text-[17px] font-normal leading-[1.75] tracking-[-0.01em] text-white/70 md:text-[18px]">
               Arijit Bhattacharyya is a Business Scalability Expert,
-              Technologist, Digital Media Expert and Finance & Growth Consultant
-              helping corporates, startups, SMEs, MSMEs and manufacturing
-              businesses scale, modernize, raise capital, prepare for private
-              equity conversations and expand globally.
+              Technologist, Digital Media Expert, DeepTech Strategist and
+              Finance & Growth Consultant helping corporates, startups, SMEs,
+              MSMEs, manufacturing companies, financial institutions and
+              growth-stage businesses modernize operations, prepare for private
+              equity, adopt AI and expand globally.
             </p>
 
-            <p className="mt-5 max-w-[760px] text-[16px] font-normal leading-[1.75] text-white/62 md:text-[18px]">
+            <p className="mt-5 max-w-[800px] text-[16px] font-normal leading-[1.75] text-white/62 md:text-[18px]">
               His mentoring focuses on business strategy, market entry,
-              fundraising, systems, processes, technology upgrades, AI, AR, VR,
-              XR, game development, animation, movies, digital media and
-              sustainable business models.
+              fundraising, operating-margin improvement, technology
+              modernization, legacy-system modernization, AI, GenAI, AR, VR, XR,
+              blockchain, digital media, gaming, animation and sustainable
+              business models.
             </p>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#0057ff] px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#1672ff]"
-              >
-                Connect With Arijit <ArrowRight size={16} />
-              </a>
-
-              <a
-                href="#mentoring-services"
-                className="inline-flex items-center justify-center rounded-full border border-[#2d74ff]/45 bg-[#0057ff]/10 px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#a8c8ff] transition duration-300 hover:-translate-y-1 hover:bg-[#0057ff] hover:text-white"
-              >
-                Explore Mentoring
-              </a>
-            </div>
 
             <div className="mt-8 grid max-w-[760px] grid-cols-2 gap-px overflow-hidden rounded-[24px] border border-white/10 bg-white/10 sm:grid-cols-4">
               {proofStats.map(([value, label]) => (

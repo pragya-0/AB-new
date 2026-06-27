@@ -13,8 +13,8 @@ export default function VRPage() {
   return (
     <main className="min-h-screen bg-[#03070d] font-sans text-white">
       <MetaTags
-        title="Virtual Reality, AR, XR & Immersive Technology | Arijit Bhattacharyya"
-        description="Explore Arijit Bhattacharyya's work in virtual reality, augmented reality, XR, game development, simulation, immersive technology, 3D characters, VRML, Unity, Unreal, healthcare simulation, defence simulation and digital worlds since 1998."
+        title="VR, AR & AI | Virtual Reality in India & Kolkata | Arijit Bhattacharyya"
+        description="Explore Arijit Bhattacharyya's work in Virtual Reality India, Virtual Reality Kolkata, VR, AR, AI, Mixed Reality, immersive technology, VRML, digital humans, game development, healthcare simulation, defence simulation, banking simulation, recruitment and training, ship and oil-rig simulation, smart cities, robotics, digital twins, Microsoft technologies, Nokia collaborations, Unity, Unreal, OpenGL, CUDA and immersive technology since 1998. Virtual Reality game developer in Kolkata, India."
         image="/assets/thought-leadership/metaverse-VR.jpg"
       />
 

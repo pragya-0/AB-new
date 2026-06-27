@@ -60,9 +60,12 @@ export default function App() {
           <Route path="/bio.html" element={<BioPage />} />
 
           {/* Speaking */}
-          <Route path="/speaking" element={<SpeakingPage />} />
-          <Route path="/latest-speaks" element={<SpeakingPage />} />
-          <Route path="/latest-speaks.html" element={<SpeakingPage />} />
+        <Route path="/speaking" element={<SpeakingPage />} />
+<Route path="/speaking.html" element={<SpeakingPage />} />
+<Route path="/latest-speaks" element={<SpeakingPage />} />
+<Route path="/latest-speaks.html" element={<SpeakingPage />} />
+<Route path="/latest-speeks" element={<SpeakingPage />} />
+<Route path="/latest-speeks.html" element={<SpeakingPage />} />
 
           {/* Technology */}
           <Route path="/technology" element={<TechnologyPage />} />

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import BioSectionShell from "../bio/BioSectionShell";
+import SmartImage from "../bio/SmartImage";
 import { fadeUp } from "../bio/bioMotion";
 
 const asset = "/assets/mentoring/";
@@ -16,73 +17,79 @@ const asset = "/assets/mentoring/";
 const serviceBlocks = [
   {
     icon: Search,
-    eyebrow: "Research",
+    eyebrow: "Market Entry",
     title: "Landscape Study & Market Entry",
-    text: "Find the right market, validate demand and identify the strongest entry route.",
+    text:
+      "Identify the right market, validate demand, understand competition, assess legal and regulatory direction and choose the strongest entry route before spending serious time or capital.",
     points: [
       "Landscape study and market research",
-      "Pitch deck and business plan",
-      "Optimal pilot market selection",
+      "Pilot market selection",
       "Market-entry opportunity analysis",
+      "Legal and regulatory assessment",
     ],
   },
   {
     icon: Scale,
-    eyebrow: "Research",
-    title: "Legal & Regulatory Assessment",
-    text: "Understand legal, regulatory and structural options before entering a new market.",
+    eyebrow: "Investment Readiness",
+    title: "Funding, Grants & Private Equity Preparation",
+    text:
+      "Prepare founders and growth-stage businesses for grants, angel investors, VC conversations, accelerator applications and private-equity style discussions.",
     points: [
-      "Legal and regulatory landscape",
-      "Entry structure options",
-      "Risk and compliance direction",
-      "Regulatory navigation",
+      "Pitch deck and business plan",
+      "Financial model improvement",
+      "Investor narrative and readiness",
+      "Private equity readiness",
     ],
   },
   {
     icon: Handshake,
-    eyebrow: "Matchmaking",
+    eyebrow: "Ecosystem Access",
     title: "Partners, Investors & Corporate Access",
-    text: "Identify local experts, distributors, investors, decision makers and corporate partners.",
+    text:
+      "Map the right partners, corporate decision makers, investors, mentors, accelerators and ecosystem routes for meaningful business growth.",
     points: [
       "Stakeholder identification",
       "Local partner discovery",
       "Investor targeting and introductions",
-      "Top corporate partner shortlist",
+      "Corporate partner shortlist",
     ],
   },
   {
     icon: Target,
     eyebrow: "Service Design",
-    title: "Value Proposition & Product Validation",
-    text: "Shape the right market offer, validate the product and adapt it to local realities.",
+    title: "Product Validation & Founder Readiness",
+    text:
+      "Shape the value proposition, validate the offer, define customer profiles and make the business easier for investors, customers and partners to understand.",
     points: [
       "Product validation",
-      "Local optimization",
-      "Frugal innovation support",
-      "10–15 customer avatar profiles",
+      "Customer avatar profiles",
+      "Accelerator readiness",
+      "Founder message clarity",
     ],
   },
   {
     icon: Cpu,
-    eyebrow: "Technology Growth",
-    title: "Future-Ready Technology Upgrade",
-    text: "Make the business ready for AI, blockchain, VR, AR, apps, IoT and automation.",
+    eyebrow: "Technology Upgrade",
+    title: "AI, DeepTech & Legacy-System Modernization",
+    text:
+      "Help businesses modernize legacy platforms, adopt AI, GenAI, automation, blockchain, VR, AR, apps, IoT and digital operating systems without losing sight of execution.",
     points: [
-      "AI and automation readiness",
-      "Blockchain, VR and AR support",
-      "Website, app and IoT direction",
+      "AI and DeepTech adoption",
       "Legacy-system modernization",
+      "Blockchain, VR and AR support",
+      "IoT, apps and digital systems",
     ],
   },
   {
     icon: Megaphone,
-    eyebrow: "Growth",
-    title: "Brand Amplification & Market Visibility",
-    text: "Increase credibility through branding, influence marketing, media and ecosystem access.",
+    eyebrow: "Business Growth",
+    title: "Brand, Visibility & International Expansion",
+    text:
+      "Improve market visibility, ecosystem positioning, influence strategy and international expansion readiness through clearer storytelling and stronger networks.",
     points: [
       "Digital branding strategy",
-      "Influencer and media access",
-      "Glam World Face network support",
+      "Media and ecosystem access",
+      "Global expansion positioning",
       "Capital and accelerator connect",
     ],
   },
@@ -90,38 +97,36 @@ const serviceBlocks = [
 
 const businessReasons = [
   "Direct access to large-scale projects",
-  "Amplification of expertise and market positioning",
-  "Introductions to local corporate partners",
-  "Access to government decision and policy makers",
-  "Technology update and digital transformation",
-  "Logistical support in setting up operations",
+  "Market positioning and target amplification",
+  "Introductions to corporate partners",
+  "Government and policy ecosystem access",
+  "Technology update and go-digital support",
+  "Logistical support for new-market setup",
+  "Cost reduction and operating-margin improvement",
+  "Business model, pitch and execution clarity",
 ];
 
-const executionProof = [
-  "Mentorship sessions to fine-tune your message",
-  "Presenting to top investors",
-  "Selecting top corporate partners to engage",
-  "Customer profile and persona creation",
-  "Financial model improvement",
-  "Business plan review and implementation",
-];
-
-const seoKeywords = [
-  "Startup incubators in Kolkata",
-  "Arijit Bhattacharyya incubation programme",
-  "Business mentors for startups",
-  "Startup events in Kolkata",
-  "Local investor in Kolkata",
-  "Startup mentors India",
-  "Business mentors in India",
+const ecosystemAccess = [
+  "Seedstars",
+  "Techstars",
+  "Founder Institute",
+  "FasterCapital Dubai",
+  "Business Finland",
+  "Google Business Group",
+  "ICC Startup Pad",
+  "IIM Calcutta Innovation Park",
+  "Startup India",
+  "Smart India Hackathon",
+  "ADB",
+  "IIT / IIM Ecosystems",
 ];
 
 export default function MentoringServices() {
   return (
     <BioSectionShell
       eyebrow="Mentoring Services"
-      title="Research, Matchmaking, Service Design & Technology Growth"
-      text="A structured mentoring and advisory framework for founders, SMEs, MSMEs and growth-stage businesses looking to enter markets, raise capital, build partnerships and modernize with technology."
+      title="Market Entry, Investment Readiness, Service Design & Technology Growth"
+      text="A practical mentoring and advisory framework for founders, SMEs, MSMEs, manufacturing companies and growth-stage businesses looking to enter markets, raise capital, access ecosystems, modernize with technology and scale globally."
     >
       <motion.div
         {...fadeUp}
@@ -134,36 +139,41 @@ export default function MentoringServices() {
               Commercial Advisory Framework
             </p>
 
-            <h3 className="max-w-[760px] text-[34px] font-extrabold leading-[1] tracking-[-0.04em] text-[#07101f] md:text-[46px]">
-              From market research to investor access, the mentoring is built
-              around practical execution.
+            <h3 className="max-w-[780px] text-[34px] font-extrabold leading-[1] tracking-[-0.04em] text-[#07101f] md:text-[46px]">
+              Practical mentoring from market-entry clarity to investor,
+              service-design and technology readiness.
             </h3>
 
-            <p className="mt-5 max-w-[700px] text-[16px] font-normal leading-[1.8] text-[#334155] md:text-[18px]">
-              Research, regulatory assessment, matchmaking, investor
-              presentations, corporate partner access, customer avatars,
-              technology upgrades and brand amplification — structured into one
-              business-growth framework.
+            <p className="mt-5 max-w-[760px] text-[16px] font-normal leading-[1.85] text-[#334155] md:text-[18px]">
+              Research, investment readiness, private equity preparation,
+              ecosystem access, corporate matchmaking, technology upgrade,
+              AI transformation, legacy-system modernization and global
+              expansion — structured as one execution-focused growth framework.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-2">
-              {["Research", "Matchmaking", "Service Design", "Tech Growth"].map(
-                (item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-[#0057ff]/15 bg-[#0057ff]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0057ff]"
-                  >
-                    {item}
-                  </span>
-                )
-              )}
+              {[
+                "Market Entry",
+                "Private Equity Readiness",
+                "Service Design",
+                "AI & DeepTech",
+                "Legacy Modernization",
+                "Ecosystem Access",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-[#0057ff]/15 bg-[#0057ff]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0057ff]"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
 
           <div className="relative min-h-[360px] overflow-hidden bg-[#03070d] sm:min-h-[460px] lg:min-h-full">
-            <img
+            <SmartImage
               src={`${asset}virtual-reality.jpg`}
-              alt="Arijit Bhattacharyya technology mentoring business growth AI VR AR digital transformation advisory"
+              alt="Arijit Bhattacharyya mentoring founders on AI DeepTech legacy-system modernization VR AR business growth and startup advisory"
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
@@ -189,7 +199,7 @@ export default function MentoringServices() {
               <motion.article
                 key={service.title}
                 {...fadeUp}
-                className="group flex min-h-[340px] flex-col bg-white p-5 transition duration-300 hover:bg-[#eef5ff] sm:p-6 md:p-7"
+                className="group flex min-h-[380px] flex-col bg-white p-5 transition duration-300 hover:bg-[#eef5ff] sm:p-6 md:p-7"
               >
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0057ff]/10 ring-1 ring-[#0057ff]/15">
                   <Icon size={28} className="text-[#0057ff]" />
@@ -199,11 +209,11 @@ export default function MentoringServices() {
                   {service.eyebrow}
                 </p>
 
-                <h4 className="text-[24px] font-bold leading-[1.05] tracking-[-0.03em] text-[#07101f] md:text-[28px]">
+                <h4 className="text-[25px] font-bold leading-[1.05] tracking-[-0.03em] text-[#07101f] md:text-[30px]">
                   {service.title}
                 </h4>
 
-                <p className="mt-4 text-[15px] font-normal leading-[1.7] text-[#475569] md:text-[16px]">
+                <p className="mt-4 text-[15px] font-normal leading-[1.75] text-[#475569] md:text-[17px]">
                   {service.text}
                 </p>
 
@@ -211,7 +221,7 @@ export default function MentoringServices() {
                   {service.points.map((point) => (
                     <div
                       key={point}
-                      className="rounded-2xl border border-[#d8e7ff] bg-[#f7fbff] px-4 py-3 text-[13px] font-semibold leading-5 text-[#1e293b]"
+                      className="rounded-2xl border border-[#d8e7ff] bg-[#f7fbff] px-4 py-3 text-[13px] font-semibold leading-5 text-[#1e293b] md:text-[14px]"
                     >
                       {point}
                     </div>
@@ -233,13 +243,14 @@ export default function MentoringServices() {
           </p>
 
           <h3 className="mt-4 max-w-[720px] text-[34px] font-extrabold leading-[1] tracking-[-0.04em] text-[#07101f] md:text-[46px]">
-            Six reasons founders connect.
+            Eight reasons founders and businesses connect.
           </h3>
 
-          <p className="mt-5 text-[16px] font-normal leading-[1.8] text-[#475569] md:text-[18px]">
-            Arijit can provide access to live projects around the world and the
-            opportunity to work closely with fast-moving startups, businesses,
-            partners, investors and innovation networks.
+          <p className="mt-5 text-[16px] font-normal leading-[1.85] text-[#475569] md:text-[18px]">
+            The goal is not just advice. The goal is to improve execution:
+            investor readiness, market entry, partnerships, technology adoption,
+            cost reduction, operating-margin improvement, communication and
+            global business access.
           </p>
         </article>
 
@@ -248,7 +259,7 @@ export default function MentoringServices() {
             {businessReasons.map((reason) => (
               <div
                 key={reason}
-                className="rounded-2xl border border-[#0057ff]/15 bg-white/80 p-4 text-[15px] font-semibold leading-6 text-[#07101f] shadow-[0_14px_45px_rgba(0,87,255,0.08)]"
+                className="rounded-2xl border border-[#0057ff]/15 bg-white/80 p-4 text-[15px] font-semibold leading-6 text-[#07101f] shadow-[0_14px_45px_rgba(0,87,255,0.08)] md:text-[16px]"
               >
                 {reason}
               </div>
@@ -257,51 +268,59 @@ export default function MentoringServices() {
         </article>
       </motion.div>
 
-      <motion.div
-        {...fadeUp}
-        className="mt-7 overflow-hidden rounded-[30px] border border-[#d8e7ff] bg-white p-5 shadow-[0_22px_80px_rgba(0,87,255,0.08)] sm:p-6 md:rounded-[36px] md:p-8"
-      >
-        <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#0057ff]">
-              Execution Support
-            </p>
+     <motion.article
+  {...fadeUp}
+  className="mt-7 overflow-hidden rounded-[30px] border border-[#d8e7ff] bg-white p-5 shadow-[0_22px_80px_rgba(0,87,255,0.08)] sm:p-6 md:rounded-[36px] md:p-8"
+>
+  <div className="grid gap-8 lg:grid-cols-[0.42fr_1fr] lg:items-start">
+    <div>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#0057ff]">
+        Trusted Ecosystems
+      </p>
 
-            <h3 className="mt-4 max-w-[720px] text-[30px] font-extrabold leading-[1] tracking-[-0.04em] text-[#07101f] md:text-[42px]">
-              Practical support from message clarity to investor and partner
-              conversations.
-            </h3>
+      <div className="mt-4 h-1 w-16 rounded-full bg-[#0057ff]" />
+
+      <h3 className="mt-7 max-w-[660px] text-[34px] font-extrabold leading-[1] tracking-[-0.04em] text-[#07101f] md:text-[46px]">
+        Trusted across leading startup, academic and innovation ecosystems.
+      </h3>
+
+      <p className="mt-5 max-w-[680px] text-[16px] font-normal leading-[1.8] text-[#475569] md:text-[18px]">
+        Arijit Bhattacharyya has worked with universities, startup accelerators,
+        government initiatives, business chambers and international innovation
+        platforms supporting founders, SMEs, MSMEs and growth-stage companies.
+      </p>
+    </div>
+
+    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      {ecosystemAccess.map((item) => (
+        <div
+          key={item}
+          className="flex min-h-[104px] items-center rounded-[24px] border border-[#d8e7ff] bg-[#f8fbff] px-5 shadow-[0_14px_45px_rgba(0,87,255,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#0057ff]/35 hover:bg-white"
+        >
+          <div className="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0057ff]/10 text-[18px] font-extrabold text-[#0057ff]">
+            {item.slice(0, 1)}
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {executionProof.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-[#0057ff]/15 bg-[#0057ff]/10 px-3.5 py-2 text-[9px] font-semibold uppercase tracking-[0.14em] text-[#0057ff] sm:text-[10px]"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-7 border-t border-[#d8e7ff] pt-6">
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#0057ff]">
-            Legacy Search Terms Preserved
+          <p className="text-[17px] font-bold leading-[1.15] tracking-[-0.02em] text-[#07101f]">
+            {item}
           </p>
-
-          <div className="flex flex-wrap gap-2">
-            {seoKeywords.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-[#d8e7ff] bg-[#f7fbff] px-3.5 py-2 text-[9px] font-semibold uppercase tracking-[0.13em] text-[#334155] sm:text-[10px]"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
         </div>
-      </motion.div>
+      ))}
+    </div>
+  </div>
+
+  <div className="mt-8 rounded-[26px] border border-[#0057ff]/20 bg-[#07101f] p-5 text-white md:p-7">
+    <h4 className="text-[24px] font-bold leading-[1.05] tracking-[-0.03em] md:text-[32px]">
+      Real relationships. Real access. Real impact.
+    </h4>
+
+    <p className="mt-4 max-w-[980px] text-[15px] font-normal leading-[1.8] text-white/72 md:text-[17px]">
+      These ecosystems help founders and businesses access the right
+      introductions, partnerships, markets, mentors, institutions and growth
+      opportunities.
+    </p>
+  </div>
+</motion.article>
     </BioSectionShell>
   );
 }

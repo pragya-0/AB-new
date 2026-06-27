@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 
+import SmartImage from "../bio/SmartImage";
+
 const stats = [
-  "27+ Years",
+  "29+ Years",
   "Since 1998",
+  "AI Since 2002",
   "VRML Since 2006",
-  "500+ Games, VR & AR",
-  "102+ Countries Network",
+  "500+ Games • VR • AR",
 ];
 
 export default function VRHero() {
@@ -20,29 +22,36 @@ export default function VRHero() {
           transition={{ duration: 0.7 }}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-300 sm:text-sm">
-            Virtual Reality • AR • XR • Immersive Technologies
+            VR • AR • AI • GenAI • Digital Humans • Immersive Technologies
           </p>
 
-          <h1 className="mt-5 max-w-5xl text-4xl font-extrabold leading-[1.03] tracking-tight sm:text-6xl lg:text-7xl">
-            Virtual Reality Before It Became Mainstream.
+          <h1 className="mt-5 max-w-5xl text-[40px] font-extrabold leading-[1.04] tracking-[-0.04em] sm:text-[50px] lg:text-[58px] xl:text-[64px]">
+            VR, AR & AI Before They Became Mainstream.
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Arijit Bhattacharyya’s immersive technology work began at the
-            intersection of games, 3D graphics, simulation and creative IP. He
-            has been programming games, 3D and immersive systems since the late
-            1990s, with VRML work dating back to 2006.
+            Arijit Bhattacharyya has been building immersive technologies since
+            the early days of game development, 3D graphics and VRML. His work
+            spans Virtual Reality, Augmented Reality, XR, Artificial
+            Intelligence, Digital Humans, simulation systems and interactive
+            experiences across entertainment, enterprise and education.
           </p>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Through Virtualinfocom, he has worked across VR games, AR
-            applications, training systems, enterprise simulations and digital
-            characters — including transforming real people, actors, models and
-            celebrities into immersive 3D characters.
+            Through Virtualinfocom, he has delivered VR, AR and AI-driven
+            solutions for healthcare, defence, banking, manufacturing,
+            education, tourism, real estate, recruitment, digital training,
+            movies and global technology ecosystems. His work includes
+            transforming real actors, models and celebrities into digital humans
+            for games, films and immersive experiences.
           </p>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-           His experience spans multiple generations of immersive systems—from early VRML environments and CAVE-style installations to Boom Tube displays, headset-based VR, motion capture, mixed reality and modern XR platforms.
+            The technology journey spans AI since 2002, VRML since 2006, Unity,
+            Unreal, motion capture, digital twins, robotics, blockchain,
+            smart-city technologies, enterprise simulations, Microsoft
+            technologies, Nokia collaborations and modern GenAI-powered
+            immersive systems.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -67,21 +76,21 @@ export default function VRHero() {
 
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-3 shadow-2xl backdrop-blur sm:p-4">
             <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden rounded-[1.5rem] bg-[#05070b] sm:min-h-[560px] lg:min-h-[650px]">
-              <img
+              <SmartImage
                 src="/assets/thought-leadership/metaverse-VR.jpg"
-                alt="Virtual reality, augmented reality and immersive technology visual representing Arijit Bhattacharyya's VR and AR work"
+                alt="Arijit Bhattacharyya VR AR AI GenAI digital humans immersive technology, virtual reality, augmented reality, XR, simulation, robotics and digital twin technologies"
                 className="h-full w-full object-cover opacity-90 transition duration-700 hover:scale-105"
-                loading="eager"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#03070d]/85 via-[#03070d]/20 to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6 rounded-[1.4rem] border border-white/10 bg-[#03070d]/70 p-5 backdrop-blur">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
-                  Immersive Technology
+                  VR • AR • AI • GenAI
                 </p>
+
                 <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">
-                  Games, VR, AR, Simulation, Motion Capture & Digital Humans
+                  Games, AI, VR, AR, XR, Digital Humans & Enterprise Simulation
                 </h2>
               </div>
             </div>
