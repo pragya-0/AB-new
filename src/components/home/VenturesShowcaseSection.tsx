@@ -1,4 +1,16 @@
-const rightVentures = [
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+
+type Venture = {
+  title: string;
+  description: string;
+  image: string;
+  fit: "cover" | "contain";
+  gold?: boolean;
+};
+
+const rightVentures: Venture[] = [
   {
     title: "World Leader Summit",
     description: "Global leadership and international business ecosystem.",
@@ -6,7 +18,7 @@ const rightVentures = [
     fit: "cover",
   },
   {
-    title: "Coininnovateventures",
+    title: "Coinnovate Ventures",
     description: "Blockchain and Web3 innovation platform investing in future.",
     image: "/assets/ventures/venture-coininnovate.png",
     fit: "contain",
@@ -37,7 +49,7 @@ const rightVentures = [
   },
 ];
 
-const eightMetals = {
+const eightMetals: Venture = {
   title: "8Metals",
   description:
     "Exploring advanced materials, symbolic geometry and future scientific thinking.",
@@ -46,114 +58,144 @@ const eightMetals = {
   gold: true,
 };
 
-type Venture = (typeof rightVentures)[number] | typeof eightMetals;
+const featuredVenture: Venture = {
+  title: "Virtualinfocom",
+  description:
+    "A technology incubation and digital transformation company building products, platforms and IPs across emerging technologies.",
+  image: "/assets/ventures/venture-virtualinfocom.png",
+  fit: "contain",
+};
 
-function VentureCard({ venture }: { venture: Venture }) {
-  const isGold = "gold" in venture && venture.gold;
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0 },
+};
+
+function VentureCard({ venture, featured = false }: { venture: Venture; featured?: boolean }) {
+  const isGold = venture.gold === true;
 
   return (
-    <article
-      className={`group overflow-hidden rounded-[22px] border bg-[#070707] transition duration-500 hover:-translate-y-1 ${
+    <motion.article
+      variants={fadeUp}
+      whileHover={{ y: -6 }}
+      transition={{ type: "spring", stiffness: 240, damping: 20 }}
+      className={`group overflow-hidden rounded-[24px] border bg-[#070707] shadow-[0_24px_80px_rgba(0,0,0,0.28)] transition duration-500 ${
         isGold
           ? "border-[#d6a84b]/35 hover:border-[#f5c85a]/80"
           : "border-white/14 hover:border-[#0057ff]/70"
-      }`}
+      } ${featured ? "lg:rounded-[30px]" : ""}`}
     >
-      <div className="relative h-[220px] overflow-hidden bg-black">
+      <div
+        className={`relative overflow-hidden bg-black ${
+          featured ? "h-[300px] sm:h-[380px] lg:h-[430px]" : "h-[210px] sm:h-[230px]"
+        }`}
+      >
         <img
           src={venture.image}
-          alt={venture.title}
-          className={`h-full w-full transition duration-700 group-hover:scale-105 ${
-            venture.fit === "contain"
-              ? "object-contain p-2"
-              : "object-cover"
+          alt={`${venture.title} venture by Arijit Bhattacharyya`}
+          className={`h-full w-full transition duration-700 group-hover:scale-[1.04] ${
+            venture.fit === "contain" ? "object-contain p-4" : "object-cover"
           }`}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/72 via-transparent to-transparent" />
       </div>
 
-      <div className="min-h-[165px] p-6">
-        <h3 className="text-[24px] font-black leading-tight tracking-[-0.04em] text-white">
+      <div className={`${featured ? "p-6 sm:p-8" : "p-6"} min-h-[150px]`}>
+        <p
+          className={`mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] ${
+            isGold ? "text-[#f5c85a]" : "text-blue-300"
+          }`}
+        >
+          Venture Ecosystem
+        </p>
+
+        <h3
+          className={`font-bold leading-tight tracking-[-0.04em] text-white ${
+            featured ? "text-[32px] sm:text-[40px]" : "text-[23px]"
+          }`}
+        >
           {venture.title}
         </h3>
 
-        <p className="mt-3 max-w-[300px] text-[15px] leading-7 text-white/72">
+        <p className="mt-3 max-w-[520px] text-[15px] font-normal leading-7 text-white/70">
           {venture.description}
         </p>
       </div>
-    </article>
+    </motion.article>
   );
 }
 
 export default function VenturesShowcaseSection() {
   return (
-    <section className="relative overflow-hidden bg-black px-5 py-20 text-white md:px-10">
-      <div className="absolute inset-x-0 bottom-0 h-[220px] bg-gradient-to-t from-[#0057ff] via-[#0057ff]/28 to-transparent" />
+    <section className="relative overflow-hidden bg-black px-4 py-18 text-white sm:px-6 sm:py-20 md:px-10 lg:py-24">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[260px] bg-gradient-to-t from-[#0057ff] via-[#0057ff]/24 to-transparent" />
+      <div className="pointer-events-none absolute left-[-240px] top-[18%] h-[520px] w-[520px] rounded-full bg-[#0057ff]/15 blur-[160px]" />
+      <div className="pointer-events-none absolute right-[-220px] top-[-120px] h-[440px] w-[440px] rounded-full bg-cyan-400/10 blur-[150px]" />
 
-      <div className="absolute left-[-240px] top-[18%] h-[520px] w-[520px] rounded-full bg-[#0057ff]/15 blur-[160px]" />
+      <motion.div
+        className="relative z-10 mx-auto max-w-[1500px]"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.18 }}
+        transition={{ staggerChildren: 0.1 }}
+      >
+        {/* Header */}
+        <div className="mb-10 flex flex-col gap-7 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <motion.p
+              variants={fadeUp}
+              className="mb-5 text-[11px] font-semibold uppercase tracking-[0.34em] text-[#4d9cff]"
+            >
+              Ventures
+            </motion.p>
 
-      <div className="relative z-10 mx-auto grid max-w-[1420px] gap-5 lg:grid-cols-[0.82fr_1.18fr]">
-        {/* LEFT COLUMN */}
-        <div>
-          <p className="mb-5 text-xs font-black uppercase tracking-[0.35em] text-[#0066ff]">
-            Ventures
-          </p>
+            <motion.h2
+              variants={fadeUp}
+              className="max-w-[820px] text-[36px] font-extrabold leading-[1.02] tracking-[-0.055em] text-white sm:text-[46px] lg:text-[58px]"
+            >
+              Ventures Built Across Technology, Media & Global Business
+            </motion.h2>
 
-          <h2 className="max-w-[540px] text-[38px] font-black leading-[1.05] tracking-[-0.055em] md:text-[52px]">
-            Ventures Built Across Technology, Media & Global Business
-          </h2>
+            <motion.p
+              variants={fadeUp}
+              className="mt-6 max-w-[720px] text-[16px] font-normal leading-8 text-white/70 sm:text-[17px]"
+            >
+              Over the last 29+ years, Arijit Bhattacharyya has built and
+              supported ventures spanning gaming, AI, blockchain,
+              entrepreneurship, media, global networking and emerging
+              technologies.
+            </motion.p>
+          </div>
 
-          <p className="mt-6 max-w-[520px] text-[16px] leading-8 text-white/72">
-            Over the last 29+ years, Arijit Bhattacharyya has built and
-            supported ventures spanning gaming, AI, blockchain,
-            entrepreneurship, media, global networking and emerging
-            technologies.
-          </p>
+          {/* Only CTA in this section */}
+          <motion.div variants={fadeUp}>
+            <Link
+              to="/ecosystem"
+              aria-label="Explore more ventures by Arijit Bhattacharyya"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0057ff] px-8 py-4 text-[14px] font-bold text-white shadow-[0_18px_55px_rgba(0,87,255,0.35)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#1b6cff] focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto"
+            >
+              Explore More Ventures
+              <ArrowUpRight size={18} />
+            </Link>
+          </motion.div>
+        </div>
 
-          <article className="group mt-8 overflow-hidden rounded-[24px] border border-white/14 bg-[#070707] shadow-[0_35px_100px_rgba(0,87,255,0.22)]">
-            <div className="relative h-[440px] overflow-hidden bg-black">
-              <img
-                src="/assets/ventures/venture-virtualinfocom.png"
-                alt="Virtualinfocom"
-                className="h-full w-full object-contain p-2 transition duration-700 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-              <div className="absolute bottom-0 left-0 p-7">
-                <h3 className="text-[38px] font-black tracking-[-0.055em]">
-                  Virtualinfocom
-                </h3>
-
-                <p className="mt-3 max-w-[460px] text-[15px] leading-7 text-white/78">
-                  A technology incubation and digital transformation company
-                  building products, platforms and IPs across emerging
-                  technologies.
-                </p>
-
-                <button className="mt-7 rounded-full bg-[#0057ff] px-8 py-4 text-sm font-black text-white transition duration-300 hover:-translate-y-1 hover:bg-[#1b6cff]">
-                  Explore More Ventures →
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <div className="mt-5">
+        <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Left Column */}
+          <div className="grid gap-5">
+            <VentureCard venture={featuredVenture} featured />
             <VentureCard venture={eightMetals} />
           </div>
-        </div>
 
-        {/* RIGHT COLUMN */}
-        <div className="grid gap-5 md:grid-cols-2">
-          {rightVentures.map((venture) => (
-            <VentureCard
-              key={venture.title}
-              venture={venture}
-            />
-          ))}
+          {/* Right Column */}
+          <div className="grid gap-5 sm:grid-cols-2">
+            {rightVentures.map((venture) => (
+              <VentureCard key={venture.title} venture={venture} />
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+
 const leadershipCards = [
   {
     eyebrow: "Africa Investment",
@@ -22,42 +26,95 @@ const leadershipCards = [
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0 },
+};
+
+function LeadershipImage({
+  src,
+  alt,
+  large = false,
+}: {
+  src: string;
+  alt: string;
+  large?: boolean;
+}) {
+  return (
+    <div
+      className={`relative flex items-center justify-center overflow-hidden bg-black ${
+        large
+          ? "min-h-[320px] sm:min-h-[420px] lg:min-h-[520px]"
+          : "h-[270px] sm:h-[310px]"
+      }`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="h-full w-full object-contain object-center p-2 opacity-95 transition duration-[6500ms] group-hover:scale-[1.035]"
+      />
+
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/24 via-transparent to-transparent" />
+    </div>
+  );
+}
+
 export default function GovernmentLeadershipSection() {
   return (
-    <section className="relative overflow-hidden bg-[#02050b] px-5 py-24 text-white md:px-10">
-      <div className="absolute left-[-260px] top-[-220px] h-[620px] w-[620px] rounded-full bg-[#0057ff]/16 blur-[180px]" />
-      <div className="absolute right-[-260px] bottom-[-260px] h-[620px] w-[620px] rounded-full bg-[#0057ff]/10 blur-[170px]" />
+    <section className="relative overflow-hidden bg-[#02050b] px-4 py-16 text-white sm:px-6 sm:py-20 md:px-10 md:py-24">
+      <div className="pointer-events-none absolute left-[-260px] top-[-220px] h-[620px] w-[620px] rounded-full bg-[#0057ff]/16 blur-[180px]" />
+      <div className="pointer-events-none absolute bottom-[-260px] right-[-260px] h-[620px] w-[620px] rounded-full bg-[#0057ff]/10 blur-[170px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1500px]">
-        <div className="mb-14 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <motion.div
+        className="relative z-10 mx-auto max-w-[1500px]"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.14 }}
+        transition={{ staggerChildren: 0.08 }}
+      >
+        <div className="mb-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-5 text-sm font-black uppercase tracking-[0.34em] text-[#4d8cff]">
+            <motion.p
+              variants={fadeUp}
+              className="mb-5 text-[11px] font-semibold uppercase tracking-[0.34em] text-[#4d8cff] sm:text-sm"
+            >
               Policy & Institutional Leadership
-            </p>
+            </motion.p>
 
-            <h2 className="max-w-[900px] text-5xl font-black leading-tight tracking-[-0.06em] text-white lg:text-6xl">
+            <motion.h2
+              variants={fadeUp}
+              className="max-w-[900px] text-[36px] font-extrabold leading-[1.04] tracking-[-0.06em] text-white sm:text-[48px] lg:text-[64px]"
+            >
               Influencing Innovation, Education & Global Ecosystems
-            </h2>
+            </motion.h2>
           </div>
 
-          <p className="max-w-[620px] text-lg leading-8 text-white/62 lg:justify-self-end">
+          <motion.p
+            variants={fadeUp}
+            className="max-w-[620px] text-[16px] font-normal leading-8 text-white/62 sm:text-[18px] lg:justify-self-end"
+          >
             Collaborating with government-backed initiatives, educational
             leaders, investors and global innovation bodies to accelerate
             entrepreneurship, deep technology and economic development.
-          </p>
+          </motion.p>
         </div>
 
-        <article className="mb-8 grid overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.045] shadow-[0_30px_110px_rgba(0,87,255,0.14)] lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="flex flex-col justify-center p-8 md:p-12">
-            <p className="mb-5 text-sm font-black uppercase tracking-[0.3em] text-[#4d8cff]">
+        <motion.article
+          variants={fadeUp}
+          whileHover={{ y: -7 }}
+          transition={{ type: "spring", stiffness: 220, damping: 22 }}
+          className="group mb-8 grid overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] shadow-[0_30px_110px_rgba(0,87,255,0.14)] backdrop-blur transition duration-500 hover:border-[#4d8cff]/35 hover:bg-white/[0.065] hover:shadow-[0_45px_140px_rgba(0,87,255,0.22)] sm:rounded-[34px] lg:grid-cols-[0.85fr_1.15fr]"
+        >
+          <div className="flex flex-col justify-center p-6 sm:p-8 md:p-12">
+            <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#4d8cff] sm:text-sm">
               National Innovation
             </p>
 
-            <h3 className="max-w-[760px] text-[36px] font-black leading-[1.02] tracking-[-0.055em] text-white md:text-[52px]">
+            <h3 className="max-w-[760px] text-[32px] font-extrabold leading-[1.03] tracking-[-0.055em] text-white sm:text-[42px] md:text-[52px]">
               Union Government Innovation Ecosystem
             </h3>
 
-            <p className="mt-6 max-w-[620px] text-lg leading-8 text-white/64">
+            <p className="mt-6 max-w-[620px] text-[16px] font-normal leading-8 text-white/64 sm:text-[18px]">
               Participation in national innovation and startup ecosystem
               conversations connected with India’s technology, entrepreneurship
               and Startup India growth.
@@ -68,7 +125,7 @@ export default function GovernmentLeadershipSection() {
                 (item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-[#4d8cff]/35 bg-[#0057ff]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#8bb7ff]"
+                    className="rounded-full border border-[#4d8cff]/35 bg-[#0057ff]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#8bb7ff]"
                   >
                     {item}
                   </span>
@@ -77,48 +134,55 @@ export default function GovernmentLeadershipSection() {
             </div>
           </div>
 
-          <div className="relative min-h-[420px] overflow-hidden bg-black lg:min-h-[520px]">
-            <img
-              src="/assets/speaking/15thJan-2022-goyel.jpg.jpeg"
-              alt="Union Government Innovation Ecosystem"
-              className="h-full w-full object-cover object-center opacity-95"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-          </div>
-        </article>
+          <LeadershipImage
+            src="/assets/speaking/15thJan-2022-goyel.jpg.jpeg"
+            alt="Arijit Bhattacharyya at Union Government Innovation Ecosystem event"
+            large
+          />
+        </motion.article>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 lg:gap-8">
           {leadershipCards.map((card) => (
-            <article
+            <motion.article
               key={card.title}
-              className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,87,255,0.11)] transition duration-500 hover:-translate-y-2 hover:bg-white/[0.07] hover:shadow-[0_38px_110px_rgba(0,87,255,0.22)]"
+              variants={fadeUp}
+              whileHover={{ y: -7 }}
+              transition={{ type: "spring", stiffness: 230, damping: 22 }}
+              className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.045] shadow-[0_24px_80px_rgba(0,87,255,0.11)] transition duration-500 hover:border-[#4d8cff]/35 hover:bg-white/[0.07] hover:shadow-[0_38px_110px_rgba(0,87,255,0.22)] sm:rounded-[30px]"
             >
-              <div className="relative aspect-[16/11] overflow-hidden bg-black">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-full w-full object-cover object-center opacity-95 transition duration-[6500ms] group-hover:scale-[1.06]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/46 via-black/5 to-transparent" />
-              </div>
+              <LeadershipImage
+                src={card.image}
+                alt={`${card.title} with Arijit Bhattacharyya`}
+              />
 
-              <div className="p-7">
-                <p className="mb-4 text-sm font-black uppercase tracking-[0.28em] text-[#4d8cff]">
+              <div className="flex flex-1 flex-col p-6 sm:p-7">
+                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4d8cff] sm:text-sm">
                   {card.eyebrow}
                 </p>
 
-                <h3 className="text-[28px] font-black leading-[1.04] tracking-[-0.05em] text-white md:text-[34px]">
+                <h3 className="text-[26px] font-bold leading-[1.05] tracking-[-0.05em] text-white sm:text-[30px] md:text-[34px]">
                   {card.title}
                 </h3>
 
-                <p className="mt-4 text-[15px] leading-7 text-white/62">
+                <p className="mt-4 flex-1 text-[15px] font-normal leading-7 text-white/62">
                   {card.description}
                 </p>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
-      </div>
+
+        <motion.div variants={fadeUp} className="mt-14 text-center sm:mt-16">
+          <Link
+            to="/speaking"
+            aria-label="Explore Arijit Bhattacharyya policy and institutional speaking work"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#4d8cff]/25 bg-white/[0.06] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.18em] text-[#8bb7ff] shadow-[0_20px_60px_rgba(0,87,255,0.12)] transition duration-300 hover:-translate-y-1 hover:bg-[#0057ff] hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 sm:w-auto sm:px-10 sm:py-5 sm:tracking-[0.25em]"
+          >
+            Explore Speaking Work
+            <ArrowUpRight size={17} />
+          </Link>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -19,7 +19,7 @@ export const gameWorldCards = [
     title: "Movie-Based Games",
     label: "Cinema IP",
     text: "Interactive game experiences connected with films, crime stories and regional entertainment IP.",
-    image: "/assets/gameworlds/WhatsApp Image 2026-06-16 at 19.23.54 (2).jpeg",
+    image: "/assets/media-entertainment/Jeet_Arijit_Bhattacharyya.jpg",
     icon: Clapperboard,
   },
   {
@@ -60,3 +60,4 @@ export const gameWorldStats = [
     icon: Clapperboard,
   },
 ];
+
