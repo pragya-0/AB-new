@@ -2,7 +2,7 @@
 
 const stats = [
   { value: "720+", label: "Videos" },
-  { value: "1.35K", label: "Subscribers" },
+ { value: "Global", label: "LinkedIn & Learning Community" },
   { value: "7000+", label: "Startups Mentored" },
   { value: "60,000+", label: "Students Trained" },
 ];
