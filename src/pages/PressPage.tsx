@@ -47,6 +47,9 @@ export default function PressPage() {
 
     document.title = pressSeo.title;
 
+
+    setMeta("title", pressSeo.metaTitle);
+
     setMeta("description", pressSeo.description);
     setMeta("keywords", pressSeo.keywords);
 

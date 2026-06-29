@@ -106,11 +106,16 @@ export const cnbcAwaazImage = `${pressNewsRoot}cnbc-awaaz-udaan-business-finance
 
 export const pressSeo = {
   title:
-    "Press News | Arijit Bhattacharyya | Media Coverage, TV Interviews, AI, VR, AR, Startup & Global Recognition",
+    "Arijit Bhattacharyya | Press News | Entrepreneurs from Kolkata | AI, VR, AR, Startup & Global Media Coverage",
+
+  metaTitle:
+    "arijit bhattacharyya, entrepreneurs from kolkata, international business development, market entry support, mentor",
+
   description:
-    "Press news, newspaper clippings, television interviews, media stories and verified archive coverage featuring Arijit Bhattacharyya across entrepreneurship, AI, VR, AR, blockchain, startup mentoring, gaming, innovation, finance, media, entertainment technology, Kolkata, India and international business platforms.",
+    "arijit bhattacharyya, international business development, entrepreneurs from kolkata mentor. Press news, newspaper clippings, television interviews, media stories and verified archive coverage featuring Arijit Bhattacharyya across entrepreneurship, AI, VR, AR, blockchain, startup mentoring, gaming, innovation, finance, media, entertainment technology, Kolkata, India and international business platforms.",
+
   keywords:
-    "Arijit Bhattacharyya press, Arijit Bhattacharyya news, Arijit Bhattacharya, Arijit Bhattacharjee, entrepreneur from Kolkata, Kolkata entrepreneur, Indian entrepreneur, angel investor, serial entrepreneur, innovator, AI speaker, VR speaker, AR speaker, blockchain speaker, startup mentor, technology speaker, Virtualinfocom, CNBC Awaaz, Dainik Bhaskar, Hindustan Times, AIMA, IIT ISM, Arka Jain University, East India Startup Showcase, ICC Startup Pad, Indian Chamber of Commerce, ASSOCHAM, Bengal Chamber of Commerce, FICCI Frames, GATO, Axis Bank Evolve, IIM Bodh Gaya, IIM Calcutta VR, Japan gaming industry, Square Enix, China Blockchain RAW 2018, media coverage, press coverage, global recognition",
+    "arijit bhattacharyya, international business development, market entry support, mentor, entrepreneurs from kolkata, Arijit Bhattacharyya press, Arijit Bhattacharyya news, Arijit Bhattacharya, Arijit Bhattacharjee, entrepreneur from Kolkata, Kolkata entrepreneur, Indian entrepreneur, angel investor, serial entrepreneur, innovator, AI speaker, VR speaker, AR speaker, blockchain speaker, startup mentor, technology speaker, Virtualinfocom, CNBC Awaaz, Dainik Bhaskar, Hindustan Times, AIMA, IIT ISM, Arka Jain University, East India Startup Showcase, ICC Startup Pad, Indian Chamber of Commerce, ASSOCHAM, Bengal Chamber of Commerce, FICCI Frames, GATO, Axis Bank Evolve, IIM Bodh Gaya, IIM Calcutta VR, Japan gaming industry, Square Enix, China Blockchain RAW 2018, media coverage, press coverage, global recognition",
 };
 
 export const heroStats: PressStat[] = [
