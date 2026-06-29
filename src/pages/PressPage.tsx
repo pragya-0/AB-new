@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-
+import DigitalFeaturesArchive from "../components/pressnews/03B-DigitalFeaturesArchive";
 import PressHero from "../components/pressnews/01-PressHero";
 import FeaturedStories from "../components/pressnews/02-FeaturedStories";
 import MediaAuthorityGrid from "../components/pressnews/03-MediaAuthorityGrid";
@@ -10,6 +10,8 @@ import TVAndVideoCoverage from "../components/pressnews/04-TVAndVideoCoverage";
 import InternationalCoverage from "../components/pressnews/05-InternationalCoverage";
 import LegacyPressArchive from "../components/pressnews/06-LegacyPressArchive";
 import PressCTA from "../components/pressnews/07-PressCTA";
+import PressTechnologyArchive from "../components/pressnews/08-PressTechnologyArchive";
+
 import { pressSeo } from "../components/pressnews/pressData";
 
 function setMeta(name: string, content: string) {
@@ -40,6 +42,9 @@ function setPropertyMeta(property: string, content: string) {
 
 export default function PressPage() {
   useEffect(() => {
+    const socialImage =
+      "/assets/pressnews/cnbc-awaaz-udaan-business-finance-panel-arijit-bhattacharyya.jpeg";
+
     document.title = pressSeo.title;
 
     setMeta("description", pressSeo.description);
@@ -48,12 +53,12 @@ export default function PressPage() {
     setPropertyMeta("og:title", pressSeo.title);
     setPropertyMeta("og:description", pressSeo.description);
     setPropertyMeta("og:type", "website");
-    setPropertyMeta("og:image", "/assets/pressnews/latest-speaks/TV9.jpg");
+    setPropertyMeta("og:image", socialImage);
 
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", pressSeo.title);
     setMeta("twitter:description", pressSeo.description);
-    setMeta("twitter:image", "/assets/pressnews/latest-speaks/TV9.jpg");
+    setMeta("twitter:image", socialImage);
   }, []);
 
   return (
@@ -62,12 +67,15 @@ export default function PressPage() {
 
       <main className="min-h-screen bg-[#03070d]">
         <PressHero />
-        <FeaturedStories />
-        <MediaAuthorityGrid />
-        <TVAndVideoCoverage />
-        <InternationalCoverage />
-        <LegacyPressArchive />
-        <PressCTA />
+<FeaturedStories />
+<MediaAuthorityGrid />
+<DigitalFeaturesArchive />
+<TVAndVideoCoverage />
+<InternationalCoverage />
+<LegacyPressArchive />
+<PressCTA />
+<PressTechnologyArchive />
+
       </main>
 
       <Footer />

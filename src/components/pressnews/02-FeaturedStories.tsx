@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, BadgeCheck, Globe2, Newspaper } from "lucide-react";
-import { featuredStories, pressPath } from "./pressData";
+import { featuredStories } from "./pressData";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -10,67 +10,105 @@ const fadeUp = {
 
 type Story = (typeof featuredStories)[number];
 
-const imageFallbacksById: Record<string, string[]> = {
-  "brilliantread-interview": [
-    `${pressPath}Dubai-Arijit.jpg`,
-    `${pressPath}ABP_Arijit.jpg`,
-    `${pressPath}Arijit-Bhattacharyya.jpg`,
-  ],
-  "digitalconfex-speaker-profile": [
-    `${pressPath}ABP_Arijit.jpg`,
-    `${pressPath}Dubai-Arijit.jpg`,
-    `${pressPath}china-films.jpg`,
-  ],
-  "diplomatic-club-profile": [
-    `${pressPath}2021/diplomatic-world.jpg`,
-    `${pressPath}diplomatic-world.jpg`,
-    `${pressPath}ABP_Arijit.jpg`,
-  ],
-  "official-profile-pdf": [
-    `${pressPath}china-films.jpg`,
-    `${pressPath}Dubai-Arijit.jpg`,
-    `${pressPath}ABP_Arijit.jpg`,
-  ],
+type StoryCopy = {
+  publisher: string;
+  title: string;
+  summary: string;
+  tags: string[];
+  label: string;
+  imageFallbacks?: string[];
 };
 
-function cleanPublisher(story: Story) {
-  if (story.id === "official-profile-pdf") return "Verified Profile";
-  return story.publisher;
+const preferredStoryOrder = [
+  "cnbc-awaaz-udaan-business-finance-panel",
+  "iit-ism-ciie-coinnovate-mou",
+  "east-india-startup-showcase-2026",
+  "japan-yasuhiro-fukushima-square-enix",
+];
+
+const storyCopyById: Record<string, StoryCopy> = {
+  "cnbc-awaaz-udaan-business-finance-panel": {
+    publisher: "CNBC Awaaz",
+    title: "CNBC Awaaz Udaan Business Feature",
+    summary:
+      "Arijit Bhattacharyya appeared on CNBC Awaaz’s Udaan platform in a business and finance discussion, shown as Founder-Director of Virtualinfocom and positioned within entrepreneurship, enterprise growth and market-facing conversations.",
+    tags: ["Business TV", "Virtualinfocom", "Entrepreneurship"],
+    label: "Business Television",
+    imageFallbacks: [
+      "/assets/pressnews/cnbc-awaaz-udaan-business-finance-panel-arijit-bhattacharyya.jpeg",
+      "/assets/pressnews/01_USE_NOW/TV___Video_Coverage/cnbc-awaaz-udaan-business-finance-panel-arijit-bhattacharyya.jpeg",
+    ],
+  },
+
+  "iit-ism-ciie-coinnovate-mou": {
+    publisher: "IIT ISM / CIIE Foundation",
+    title: "IIT ISM CIIE Foundation MoU Coverage",
+    summary:
+      "Coverage of the collaboration between CIIE IIT ISM Foundation and Coinnovate Ventures, connected with startup mentoring, investor access, innovation culture and entrepreneurship support.",
+    tags: ["IIT ISM", "Coinnovate", "Startup Ecosystem"],
+    label: "Institutional Collaboration",
+    imageFallbacks: [
+      "/assets/pressnews/01_images_preserved_structure/IIT ISM MOU.jpeg",
+      "/assets/pressnews/01_images_preserved_structure/IIT ISM MOU(1).jpeg",
+      "/assets/pressnews/01_USE_NOW/Media___Newspapers___Institutional_Collaboration/iit-ism-ciie-foundation-mou-coinnovate-ventures.jpeg",
+    ],
+  },
+
+  "east-india-startup-showcase-2026": {
+    publisher: "East India Startup Showcase",
+    title: "East India Startup Showcase: ₹4.6 Cr Investor Interest",
+    summary:
+      "Newspaper coverage from Jamshedpur reporting investor interest of ₹4.6 crore across promising startups at the East India Startup Showcase Day, linked with regional startup growth and entrepreneurship development.",
+    tags: ["Startup Capital", "Jamshedpur", "2026"],
+    label: "Newspaper Coverage",
+    imageFallbacks: [
+      "/assets/pressnews/01_images_preserved_structure/1772780640236 (1).jfif.jpeg",
+      "/assets/pressnews/01_USE_NOW/Media___Newspapers___Startup_Ecosystem/East India Startup Showcase Day — Investors Eye Rs 4.6 Cr.jpeg",
+    ],
+  },
+
+  "japan-yasuhiro-fukushima-square-enix": {
+    publisher: "Japan Gaming Industry",
+    title: "Japan Gaming Industry Connection",
+    summary:
+      "An international archive image featuring Arijit Bhattacharyya with Yasuhiro Fukushima, founder of Square Enix, connecting his gaming, IP and entertainment technology journey with Japan’s global game-development ecosystem.",
+    tags: ["Japan", "Square Enix", "Gaming IP"],
+    label: "International Platform",
+    imageFallbacks: [
+      "/assets/pressnews/01_images_preserved_structure/japan.jpg",
+      "/assets/pressnews/01_USE_NOW/International_Coverage___Gaming_Industry/yasuhiro-fukushima-square-enix-japan-arijit.jpg",
+    ],
+  },
+};
+
+function isStory(story: Story | undefined): story is Story {
+  return Boolean(story);
 }
 
-function cleanTitle(story: Story) {
-  if (story.id === "official-profile-pdf") {
-    return "Technology, Startups, AI, VR and Global Innovation";
-  }
-
-  return story.title;
+function getStoryCopy(story: Story): StoryCopy {
+  return (
+    storyCopyById[story.id] ?? {
+      publisher: story.publisher,
+      title: story.title,
+      summary: story.summary,
+      tags: story.tags.slice(0, 3),
+      label: story.eyebrow || story.publisher,
+    }
+  );
 }
 
-function cleanSummary(story: Story) {
-  if (story.id === "official-profile-pdf") {
-    return "A verified profile consolidating Arijit Bhattacharyya’s work across startup mentoring, global speaking, innovation, Asian Development Bank consulting and technology ecosystem building.";
-  }
+function getCuratedStories() {
+  const orderedStories = preferredStoryOrder
+    .map((id) => featuredStories.find((story) => story.id === id))
+    .filter(isStory);
 
-  if (story.id === "digitalconfex-speaker-profile") {
-    return "DigitalConfex profiles Arijit as a serial entrepreneur since 1998, public speaker, AI evangelist, VR specialist, blockchain specialist and global startup ecosystem voice.";
-  }
+  const orderedIds = new Set(orderedStories.map((story) => story.id));
 
-  return story.summary;
-}
+  const remainingStories = featuredStories.filter(
+    (story) => !orderedIds.has(story.id)
+  );
 
-function cleanTags(story: Story) {
-  if (story.id === "official-profile-pdf") {
-    return ["Startup India", "ADB", "Global Speaker"];
-  }
-
-  return story.tags.slice(0, 3);
-}
-
-function shouldShowSourceLink(story: Story) {
-  return ![
-    "digitalconfex-speaker-profile",
-    "official-profile-pdf",
-  ].includes(story.id);
+  return [...orderedStories, ...remainingStories].slice(0, 4);
 }
 
 function StoryImage({
@@ -80,35 +118,63 @@ function StoryImage({
   story: Story;
   className?: string;
 }) {
-  const fallbackImages = imageFallbacksById[story.id] ?? [story.image];
-  const [imageSrc, setImageSrc] = useState(fallbackImages[0]);
-  const [fallbackIndex, setFallbackIndex] = useState(0);
+  const copy = getStoryCopy(story);
 
-  const handleError = () => {
-    const nextIndex = fallbackIndex + 1;
-    const nextImage = fallbackImages[nextIndex];
+  const imageCandidates = useMemo(
+    () =>
+      Array.from(
+        new Set([story.image, ...(copy.imageFallbacks ?? [])].filter(Boolean))
+      ),
+    [story.image, copy.imageFallbacks]
+  );
 
-    if (nextImage) {
-      setFallbackIndex(nextIndex);
-      setImageSrc(nextImage);
-    }
-  };
+  const [imageIndex, setImageIndex] = useState(0);
+  const [hasFailed, setHasFailed] = useState(false);
+
+  useEffect(() => {
+    setImageIndex(0);
+    setHasFailed(false);
+  }, [story.id, story.image]);
+
+  const currentImage = imageCandidates[imageIndex];
+
+  if (hasFailed || !currentImage) {
+    return (
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.5rem] border border-white/10 bg-[#06111f] p-8 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-200">
+          Image path pending
+        </p>
+        <p className="mt-3 max-w-sm text-sm leading-7 text-slate-300">
+          {copy.title}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <img
-      src={imageSrc}
+      src={currentImage}
       alt={story.alt}
       loading="lazy"
-      onError={handleError}
+      onError={() => {
+        if (imageIndex < imageCandidates.length - 1) {
+          setImageIndex((current) => current + 1);
+          return;
+        }
+
+        setHasFailed(true);
+      }}
       className={className}
     />
   );
 }
 
 export default function FeaturedStories() {
-  const stories = featuredStories.slice(0, 4);
+  const stories = getCuratedStories();
   const leadStory = stories[0];
   const otherStories = stories.slice(1);
+
+  const leadCopy = leadStory ? getStoryCopy(leadStory) : null;
 
   return (
     <section
@@ -128,22 +194,23 @@ export default function FeaturedStories() {
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-blue-700 sm:text-sm">
-              Featured Media Stories
+              Featured Coverage
             </p>
 
             <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-[-0.035em] text-[#07111f] sm:text-5xl">
-              Public credibility beyond the website.
+              Selected stories from television, newspapers and global platforms.
             </h2>
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-600 sm:text-lg lg:ml-auto">
-            Independent interviews, speaker profiles and global platform features
-            documenting Arijit Bhattacharyya’s work across entrepreneurship,
-            technology, innovation, investment, mentoring and global speaking.
+            A focused opening set from the wider Press News archive — starting
+            with national business television, institutional collaboration,
+            startup investment coverage and international gaming-industry
+            connections.
           </p>
         </motion.div>
 
-        {leadStory && (
+        {leadStory && leadCopy && (
           <motion.article
             variants={fadeUp}
             initial="hidden"
@@ -162,7 +229,7 @@ export default function FeaturedStories() {
                 />
 
                 <div className="absolute left-5 top-5 flex flex-wrap gap-2">
-                  {cleanTags(leadStory).map((tag) => (
+                  {leadCopy.tags.map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full border border-white/15 bg-black/35 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-blue-100 backdrop-blur"
@@ -176,15 +243,15 @@ export default function FeaturedStories() {
               <div className="flex flex-col justify-center p-7 text-white sm:p-9 lg:p-12">
                 <p className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.24em] text-blue-200">
                   <Newspaper className="mr-2 h-4 w-4" />
-                  {cleanPublisher(leadStory)}
+                  {leadCopy.publisher}
                 </p>
 
                 <h3 className="mt-4 max-w-3xl text-3xl font-extrabold leading-tight tracking-[-0.035em] sm:text-5xl">
-                  {cleanTitle(leadStory)}
+                  {leadCopy.title}
                 </h3>
 
                 <p className="mt-5 max-w-2xl text-sm font-normal leading-7 text-slate-300 sm:text-base">
-                  {cleanSummary(leadStory)}
+                  {leadCopy.summary}
                 </p>
 
                 <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -202,14 +269,14 @@ export default function FeaturedStories() {
                   )}
                 </div>
 
-                {leadStory.url && shouldShowSourceLink(leadStory) && (
+                {leadStory.url && (
                   <a
                     href={leadStory.url}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-8 inline-flex w-fit items-center rounded-full bg-white px-6 py-3 text-sm font-bold text-[#07111f] transition hover:-translate-y-0.5 hover:bg-blue-100"
                   >
-                    Read Featured Story
+                    Open Coverage
                     <ArrowUpRight className="ml-2 h-4 w-4" />
                   </a>
                 )}
@@ -219,68 +286,72 @@ export default function FeaturedStories() {
         )}
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
-          {otherStories.map((story, index) => (
-            <motion.article
-              key={story.id}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.22 }}
-              transition={{
-                duration: 0.56,
-                ease: "easeOut",
-                delay: index * 0.05,
-              }}
-              className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_26px_80px_rgba(15,23,42,0.12)]"
-            >
-              <div className="relative flex h-[230px] items-center justify-center overflow-hidden bg-[#03070d] p-4">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_18%,rgba(37,99,235,0.25),transparent_35%)]" />
+          {otherStories.map((story, index) => {
+            const copy = getStoryCopy(story);
 
-                <StoryImage
-                  story={story}
-                  className="relative max-h-[195px] w-full rounded-2xl object-contain transition duration-700 group-hover:scale-[1.03]"
-                />
-              </div>
+            return (
+              <motion.article
+                key={story.id}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.22 }}
+                transition={{
+                  duration: 0.56,
+                  ease: "easeOut",
+                  delay: index * 0.05,
+                }}
+                className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_26px_80px_rgba(15,23,42,0.12)]"
+              >
+                <div className="relative flex h-[230px] items-center justify-center overflow-hidden bg-[#03070d] p-4">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_18%,rgba(37,99,235,0.25),transparent_35%)]" />
 
-              <div className="p-6">
-                <p className="inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700">
-                  <BadgeCheck className="mr-2 h-4 w-4" />
-                  {cleanPublisher(story)}
-                </p>
-
-                <h3 className="mt-3 text-xl font-bold leading-tight tracking-[-0.025em] text-[#07111f] sm:text-2xl">
-                  {cleanTitle(story)}
-                </h3>
-
-                <p className="mt-3 text-sm font-normal leading-7 text-slate-600">
-                  {cleanSummary(story)}
-                </p>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {cleanTags(story).map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-blue-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-blue-700"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  <StoryImage
+                    story={story}
+                    className="relative max-h-[195px] w-full rounded-2xl object-contain transition duration-700 group-hover:scale-[1.03]"
+                  />
                 </div>
 
-                {story.url && shouldShowSourceLink(story) && (
-                  <a
-                    href={story.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-6 inline-flex items-center text-sm font-bold text-[#07111f] transition hover:text-blue-700"
-                  >
-                    View Feature
-                    <ArrowUpRight className="ml-2 h-4 w-4" />
-                  </a>
-                )}
-              </div>
-            </motion.article>
-          ))}
+                <div className="p-6">
+                  <p className="inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-700">
+                    <BadgeCheck className="mr-2 h-4 w-4" />
+                    {copy.label}
+                  </p>
+
+                  <h3 className="mt-3 text-xl font-bold leading-tight tracking-[-0.025em] text-[#07111f] sm:text-2xl">
+                    {copy.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm font-normal leading-7 text-slate-600">
+                    {copy.summary}
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {copy.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-blue-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-blue-700"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {story.url && (
+                    <a
+                      href={story.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex items-center text-sm font-bold text-[#07111f] transition hover:text-blue-700"
+                    >
+                      Open Coverage
+                      <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </a>
+                  )}
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>

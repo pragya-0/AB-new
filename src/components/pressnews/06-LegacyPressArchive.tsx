@@ -1,33 +1,390 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Archive, Search } from "lucide-react";
-import { legacyPressArchive } from "./pressData";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
-const categories = [
+type ArchiveCategory =
+  | "All"
+  | "Business Chamber"
+  | "Startup"
+  | "Institution"
+  | "Corporate"
+  | "Gaming"
+  | "Creative Media"
+  | "Technology"
+  | "Mentoring";
+
+type ArchiveItem = {
+  id: string;
+  title: string;
+  publisher: string;
+  type: Exclude<ArchiveCategory, "All">;
+  country: string;
+  year?: string;
+  summary: string;
+  image: string;
+  fallbackImages?: string[];
+  alt: string;
+  tags: string[];
+  url?: string;
+};
+
+const categories: ArchiveCategory[] = [
   "All",
-  "Newspaper",
-  "Magazine",
-  "TV",
-  "Interview",
-  "Event",
-  "Award",
-  "International",
-] as const;
+  "Business Chamber",
+  "Startup",
+  "Institution",
+  "Corporate",
+  "Gaming",
+  "Creative Media",
+  "Technology",
+  "Mentoring",
+];
+
+/*
+  Locked no-repeat rule:
+  This archive intentionally avoids images already used in:
+  01-PressHero, 02-FeaturedStories, 03-MediaAuthorityGrid,
+  04-TVAndVideoCoverage and 05-InternationalCoverage.
+*/
+
+const archiveItems: ArchiveItem[] = [
+  {
+    id: "axis-bank-evolve-sme-knowledge-series",
+    title: "Axis Bank Evolve SME Knowledge Series",
+    publisher: "Axis Bank Evolve",
+    type: "Corporate",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Corporate business-ecosystem coverage connected to SME growth, entrepreneurship conversations and Arijit Bhattacharyya’s role in mentoring founders and business communities.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Corporate_Speaking___Business_Ecosystem/axis-bank-evolve-sme-knowledge-series-speaking.jpg",
+    fallbackImages: [
+      "/assets/pressnews/axis-bank-evolve-sme-knowledge-series-speaking.jpg",
+      "/assets/pressnews/01_images_preserved_structure/axis-bank-evolve-sme-knowledge-series-speaking.jpg",
+    ],
+    alt: "Axis Bank Evolve SME Knowledge Series speaking session connected to Arijit Bhattacharyya",
+    tags: ["SME", "Corporate", "Entrepreneurship"],
+  },
+  {
+    id: "calcutta-chamber-of-commerce-business-panel",
+    title: "Calcutta Chamber of Commerce Business Panel",
+    publisher: "Calcutta Chamber of Commerce",
+    type: "Business Chamber",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Business chamber coverage documenting Arijit Bhattacharyya’s participation in industry conversations around enterprise, sustainability, innovation and leadership.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Business_Chamber___Legacy_Press/Calcutta Chamber of Commerce.jpg",
+    fallbackImages: [
+      "/assets/pressnews/Calcutta Chamber of Commerce.jpg",
+      "/assets/pressnews/01_images_preserved_structure/Calcutta Chamber of Commerce.jpg",
+    ],
+    alt: "Calcutta Chamber of Commerce business panel featuring Arijit Bhattacharyya",
+    tags: ["Chamber", "Business", "Leadership"],
+  },
+  {
+    id: "assocham-business-startup-panel",
+    title: "ASSOCHAM Business and Startup Panel",
+    publisher: "ASSOCHAM",
+    type: "Business Chamber",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Industry-platform coverage connected to entrepreneurship, startup development and business community engagement through ASSOCHAM.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Business_Chamber___Legacy_Press/ASSOCHAM Business  Startup Panel.jpg",
+    fallbackImages: [
+      "/assets/pressnews/ASSOCHAM Business  Startup Panel.jpg",
+      "/assets/pressnews/ASSOCHAM Business Startup Panel.jpg",
+      "/assets/pressnews/01_images_preserved_structure/ASSOCHAM Business  Startup Panel.jpg",
+    ],
+    alt: "ASSOCHAM business and startup panel connected to Arijit Bhattacharyya",
+    tags: ["ASSOCHAM", "Startup", "Business"],
+  },
+  {
+    id: "bengal-chamber-speaking-session",
+    title: "Bengal Chamber of Commerce and Industry Session",
+    publisher: "Bengal Chamber",
+    type: "Business Chamber",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "A Bengal Chamber platform reference supporting the archive’s business, technology and industry leadership narrative.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Business_Chamber___Legacy_Press/Bengal Chamber of Commerce & Industry Speaking Session.jpg",
+    fallbackImages: [
+      "/assets/pressnews/Bengal Chamber of Commerce & Industry Speaking Session.jpg",
+      "/assets/pressnews/01_images_preserved_structure/Bengal Chamber of Commerce & Industry Speaking Session.jpg",
+    ],
+    alt: "Bengal Chamber of Commerce and Industry speaking session featuring Arijit Bhattacharyya",
+    tags: ["Bengal Chamber", "Industry", "Business"],
+  },
+  {
+    id: "icc-startup-pad-patna-2016-panel",
+    title: "ICC StartUp Pad Patna 2016 Panel",
+    publisher: "Indian Chamber of Commerce",
+    type: "Startup",
+    country: "India",
+    year: "2016",
+    summary:
+      "Startup ecosystem coverage from ICC StartUp Pad Patna, connected to founder mentoring, entrepreneurship development and early-stage business conversations.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Startup___Business_Ecosystem/ICC StartUp Pad Patna 2016 Panel.jpg",
+    fallbackImages: [
+      "/assets/pressnews/ICC StartUp Pad Patna 2016 Panel.jpg",
+      "/assets/pressnews/01_images_preserved_structure/ICC StartUp Pad Patna 2016 Panel.jpg",
+    ],
+    alt: "ICC StartUp Pad Patna 2016 panel with Arijit Bhattacharyya",
+    tags: ["ICC", "Startup Pad", "Patna"],
+  },
+  {
+    id: "icc-startup-pad-kolkata",
+    title: "ICC Startup Pad Kolkata",
+    publisher: "Indian Chamber of Commerce",
+    type: "Startup",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Kolkata startup-platform coverage showing the founder ecosystem around mentoring, pitching, investment conversations and business-community building.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Startup___Business_Ecosystem/ICC Startup Pad Kolkata.jpg",
+    fallbackImages: [
+      "/assets/pressnews/ICC Startup Pad Kolkata.jpg",
+      "/assets/pressnews/01_images_preserved_structure/ICC Startup Pad Kolkata.jpg",
+    ],
+    alt: "ICC Startup Pad Kolkata event coverage featuring Arijit Bhattacharyya",
+    tags: ["ICC", "Kolkata", "Startup"],
+  },
+  {
+    id: "iift-kolkata-avaan-business-plan",
+    title: "IIFT Kolkata Avaan Business Plan Session",
+    publisher: "IIFT Kolkata",
+    type: "Institution",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Institutional entrepreneurship coverage connected to business-plan development, student founders and startup ecosystem learning at IIFT Kolkata.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Institutional_Talks___Startup_Ecosystem/IIFT Kolkata Avaan Business Plan.png",
+    fallbackImages: [
+      "/assets/pressnews/IIFT Kolkata Avaan Business Plan.png",
+      "/assets/pressnews/01_images_preserved_structure/IIFT Kolkata Avaan Business Plan.png",
+    ],
+    alt: "IIFT Kolkata Avaan Business Plan session connected to Arijit Bhattacharyya",
+    tags: ["IIFT", "Business Plan", "Students"],
+  },
+  {
+    id: "iim-bodh-gaya-yes-2020",
+    title: "IIM Bodh Gaya YES 2020",
+    publisher: "IIM Bodh Gaya",
+    type: "Institution",
+    country: "India",
+    year: "2020",
+    summary:
+      "Institutional platform coverage connected to entrepreneurship, youth enterprise and innovation-led learning at IIM Bodh Gaya.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Institutional_Talks___Startup_Ecosystem/IIM Bodh Gaya YES 2020.jpg",
+    fallbackImages: [
+      "/assets/pressnews/IIM Bodh Gaya YES 2020.jpg",
+      "/assets/pressnews/01_images_preserved_structure/IIM Bodh Gaya YES 2020.jpg",
+    ],
+    alt: "IIM Bodh Gaya YES 2020 session featuring Arijit Bhattacharyya",
+    tags: ["IIM Bodh Gaya", "Youth", "Startup"],
+  },
+  {
+    id: "gato-2017-gaming-for-tomorrow",
+    title: "GATO 2017 Gaming for Tomorrow Panel",
+    publisher: "GATO",
+    type: "Gaming",
+    country: "India",
+    year: "2017",
+    summary:
+      "Gaming and technology coverage connected to Arijit Bhattacharyya’s long-running work in game development, IP, animation and interactive entertainment.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Gaming___Technology/gato-2017-gaming-for-tomorrow-panel.png",
+    fallbackImages: [
+      "/assets/pressnews/gato-2017-gaming-for-tomorrow-panel.png",
+      "/assets/pressnews/01_images_preserved_structure/gato-2017-gaming-for-tomorrow-panel.png",
+    ],
+    alt: "GATO 2017 Gaming for Tomorrow panel connected to Arijit Bhattacharyya",
+    tags: ["Gaming", "Technology", "IP"],
+  },
+  {
+    id: "ficci-frames-2017-mumbai",
+    title: "FICCI FRAMES 2017 Mumbai",
+    publisher: "FICCI FRAMES",
+    type: "Creative Media",
+    country: "India",
+    year: "2017",
+    summary:
+      "Creative media and entertainment-industry platform coverage connected to gaming, animation, digital content and media technology.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Creative_Media___Entertainment_Industry/FICCI FRAMES 2017 Mumbai.jpg",
+    fallbackImages: [
+      "/assets/pressnews/FICCI FRAMES 2017 Mumbai.jpg",
+      "/assets/pressnews/01_images_preserved_structure/FICCI FRAMES 2017 Mumbai.jpg",
+    ],
+    alt: "FICCI FRAMES 2017 Mumbai coverage connected to Arijit Bhattacharyya",
+    tags: ["FICCI", "Media", "Entertainment"],
+  },
+  {
+    id: "odisha-msme-trade-fair-2016",
+    title: "Odisha MSME Trade Fair 2016",
+    publisher: "Odisha MSME Trade Fair",
+    type: "Technology",
+    country: "India",
+    year: "2016",
+    summary:
+      "Technology and business ecosystem coverage around MSMEs, entrepreneurship and leading change through technology.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Technology___Business_Ecosystem/102__odisha.jpg",
+    fallbackImages: [
+      "/assets/pressnews/102__odisha.jpg",
+      "/assets/pressnews/01_images_preserved_structure/102__odisha.jpg",
+    ],
+    alt: "Odisha MSME Trade Fair 2016 technology and business ecosystem coverage with Arijit Bhattacharyya",
+    tags: ["Odisha", "MSME", "Technology"],
+  },
+  {
+    id: "nen-wadhwani-foundation-workshop",
+    title: "NEN Wadhwani Foundation Entrepreneurship Workshop",
+    publisher: "NEN Wadhwani Foundation",
+    type: "Mentoring",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Startup mentoring archive coverage connected to entrepreneurship education, founder development and structured ecosystem support.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Startup_Mentoring___Legacy/NEN Wadhwani Foundation Entrepreneurship Workshop.jpg",
+    fallbackImages: [
+      "/assets/pressnews/NEN Wadhwani Foundation Entrepreneurship Workshop.jpg",
+      "/assets/pressnews/01_images_preserved_structure/NEN Wadhwani Foundation Entrepreneurship Workshop.jpg",
+    ],
+    alt: "NEN Wadhwani Foundation entrepreneurship workshop with Arijit Bhattacharyya",
+    tags: ["NEN", "Wadhwani", "Mentoring"],
+  },
+  {
+    id: "franchise-india-summit-2016",
+    title: "Franchise India Summit 2016",
+    publisher: "Franchise India",
+    type: "Startup",
+    country: "India",
+    year: "2016",
+    summary:
+      "Startup and business ecosystem coverage connected to entrepreneurship, franchise growth, business models and founder-facing platforms.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Startup___Business_Ecosystem/franchise-india-summit-2016.jpg",
+    fallbackImages: [
+      "/assets/pressnews/franchise-india-summit-2016.jpg",
+      "/assets/pressnews/01_images_preserved_structure/franchise-india-summit-2016.jpg",
+    ],
+    alt: "Franchise India Summit 2016 coverage featuring Arijit Bhattacharyya",
+    tags: ["Franchise India", "Startup", "Business"],
+  },
+  {
+    id: "one-day-finance-clinic-startups-msme",
+    title: "One Day Finance Clinic for Startups and MSMEs",
+    publisher: "Startup and MSME Ecosystem",
+    type: "Startup",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Business support coverage connected to startup finance, MSME development, founder guidance and practical entrepreneurship support.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Startup___Business_Ecosystem/one-day-finance-clinic-startups-msme.jpg",
+    fallbackImages: [
+      "/assets/pressnews/one-day-finance-clinic-startups-msme.jpg",
+      "/assets/pressnews/01_images_preserved_structure/one-day-finance-clinic-startups-msme.jpg",
+    ],
+    alt: "One Day Finance Clinic for startups and MSMEs with Arijit Bhattacharyya",
+    tags: ["Finance", "MSME", "Startup"],
+  },
+  {
+    id: "icc-startup-funding-panel",
+    title: "ICC Startup Funding Panel",
+    publisher: "Indian Chamber of Commerce",
+    type: "Startup",
+    country: "India",
+    year: "Legacy",
+    summary:
+      "Startup investment archive coverage connected to funding, founder readiness, investor conversations and ecosystem-building through chamber platforms.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Startup___Investment/icc-startup-funding-panel.jpg",
+    fallbackImages: [
+      "/assets/pressnews/icc-startup-funding-panel.jpg",
+      "/assets/pressnews/01_images_preserved_structure/icc-startup-funding-panel.jpg",
+    ],
+    alt: "ICC startup funding panel connected to Arijit Bhattacharyya",
+    tags: ["Funding", "ICC", "Investment"],
+  },
+];
+
+function ArchiveImage({
+  item,
+  className,
+}: {
+  item: ArchiveItem;
+  className?: string;
+}) {
+  const imageCandidates = useMemo(
+    () =>
+      Array.from(
+        new Set([item.image, ...(item.fallbackImages ?? [])].filter(Boolean))
+      ),
+    [item.image, item.fallbackImages]
+  );
+
+  const [imageIndex, setImageIndex] = useState(0);
+  const [hasFailed, setHasFailed] = useState(false);
+
+  const currentImage = imageCandidates[imageIndex];
+
+  if (hasFailed || !currentImage) {
+    return (
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/10 bg-[#06111f] p-6 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-200">
+          Image path pending
+        </p>
+        <p className="mt-3 max-w-sm text-sm leading-7 text-slate-300">
+          {item.title}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={currentImage}
+      alt={item.alt}
+      loading="lazy"
+      onError={() => {
+        if (imageIndex < imageCandidates.length - 1) {
+          setImageIndex((current) => current + 1);
+          return;
+        }
+
+        setHasFailed(true);
+      }}
+      className={className}
+    />
+  );
+}
 
 export default function LegacyPressArchive() {
-  const [activeCategory, setActiveCategory] =
-    useState<(typeof categories)[number]>("All");
+  const [activeCategory, setActiveCategory] = useState<ArchiveCategory>("All");
   const [query, setQuery] = useState("");
 
   const filteredItems = useMemo(() => {
     const cleanQuery = query.trim().toLowerCase();
 
-    return legacyPressArchive.filter((item) => {
+    return archiveItems.filter((item) => {
       const matchesCategory =
         activeCategory === "All" || item.type === activeCategory;
 
@@ -38,7 +395,7 @@ export default function LegacyPressArchive() {
         item.country,
         item.year,
         item.summary,
-        ...(item.tags ?? []),
+        ...item.tags,
       ]
         .join(" ")
         .toLowerCase();
@@ -73,14 +430,15 @@ export default function LegacyPressArchive() {
             </p>
 
             <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-[-0.035em] text-[#07111f] sm:text-5xl">
-              The original press trail, preserved and organised.
+              Older platforms, chambers and ecosystem moments.
             </h2>
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-600 sm:text-lg lg:ml-auto">
-            Newspaper clippings, television appearances, event coverage, award moments
-            and international press records from the older website are preserved here in
-            a cleaner archive built for search, scanning and credibility.
+            A structured archive of earlier business chambers, startup platforms,
+            institutional sessions, gaming-industry forums and entrepreneurship
+            workshops — kept separate from the featured media and international
+            sections to avoid repetition.
           </p>
         </motion.div>
 
@@ -105,6 +463,7 @@ export default function LegacyPressArchive() {
             </div>
 
             <label className="relative block">
+              <span className="sr-only">Search legacy press archive</span>
               <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
                 value={query}
@@ -117,14 +476,13 @@ export default function LegacyPressArchive() {
         </div>
 
         <p className="mt-6 text-sm font-semibold text-slate-500">
-          Showing {filteredItems.length} of {legacyPressArchive.length} press
-          records.
+          Showing {filteredItems.length} of {archiveItems.length} archive records.
         </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item, index) => (
             <motion.article
-              key={`${item.title}-${item.image}`}
+              key={item.id}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -139,10 +497,8 @@ export default function LegacyPressArchive() {
               <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#03070d] p-4">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(37,99,235,0.25),transparent_36%)]" />
 
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  loading="lazy"
+                <ArchiveImage
+                  item={item}
                   className="relative max-h-[240px] w-full rounded-[1.35rem] object-contain transition duration-700 group-hover:scale-[1.03]"
                 />
 
@@ -171,7 +527,7 @@ export default function LegacyPressArchive() {
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {item.tags?.slice(0, 3).map((tag) => (
+                  {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full bg-blue-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-blue-700"

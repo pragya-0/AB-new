@@ -1,22 +1,200 @@
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Newspaper } from "lucide-react";
-
-import { mediaAuthority, pressPath } from "./pressData";
+import { ArrowUpRight, BadgeCheck, Newspaper } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
-const leadAuthority = {
-  title: "Economic Times & Business Media Recognition",
+type AuthorityItem = {
+  id: string;
+  title: string;
+  publisher: string;
+  summary: string;
+  image: string;
+  fallbackImages?: string[];
+  alt: string;
+  type: string;
+  tags: string[];
+  url?: string;
+};
+
+const leadAuthority: AuthorityItem = {
+  id: "economic-times-business-media",
+  title: "Economic Times Business Media Feature",
   publisher: "Economic Times",
   summary:
-    "Business media coverage documenting Arijit Bhattacharyya’s journey across entrepreneurship, innovation, technology leadership, startup mentoring and ecosystem building.",
-  image: `${pressPath}Arijit-Bhattacharyya-ECONOMICS.jpg`,
+    "Economic Times coverage anchors this media-authority section with a business-facing view of Arijit Bhattacharyya’s work across entrepreneurship, technology leadership, startup mentoring, innovation and ecosystem building.",
+  image: "/assets/pressnews/Arijit-Bhattacharyya-ECONOMICS.jpg",
+  fallbackImages: [
+    "/assets/pressnews/01_images_preserved_structure/Arijit-Bhattacharyya-ECONOMICS.jpg",
+    "/assets/pressnews/economic-times.jpg",
+    "/assets/pressnews/01_images_preserved_structure/economic-times.jpg",
+    "/assets/pressnews/ecotimes.png",
+    "/assets/pressnews/01_images_preserved_structure/ecotimes.png",
+  ],
   alt: "Economic Times business media coverage featuring Arijit Bhattacharyya",
-  tags: ["Business Media", "Entrepreneurship", "Innovation"],
+  type: "Business Media",
+  tags: ["Economic Times", "Entrepreneurship", "Innovation"],
 };
+
+const authorityItems: AuthorityItem[] = [
+  {
+    id: "the-hindu-technology-entrepreneurship",
+    title: "The Hindu Technology & Entrepreneurship Coverage",
+    publisher: "The Hindu",
+    summary:
+      "A national newspaper reference that strengthens the press archive beyond event photographs, connecting Arijit’s work with technology, entrepreneurship and public business discourse.",
+    image: "/assets/pressnews/the-hindu.png",
+    fallbackImages: [
+      "/assets/pressnews/2019/the-hindu.png",
+      "/assets/pressnews/01_images_preserved_structure/the-hindu.png",
+      "/assets/pressnews/01_images_preserved_structure/2019/the-hindu.png",
+    ],
+    alt: "The Hindu newspaper coverage connected to Arijit Bhattacharyya",
+    type: "National Press",
+    tags: ["The Hindu", "Technology", "Entrepreneurship"],
+  },
+  {
+    id: "hindustan-times-startup-media",
+    title: "Hindustan Times Startup & Business Feature",
+    publisher: "Hindustan Times",
+    summary:
+      "Mainstream newspaper coverage associated with startup conversations, entrepreneurship visibility and the wider business ecosystem around Arijit Bhattacharyya’s work.",
+    image: "/assets/pressnews/hindustantimes.png",
+    fallbackImages: [
+      "/assets/pressnews/01_images_preserved_structure/hindustantimes.png",
+      "/assets/pressnews/_hindustan-times-bihar-startup-pad-2016.jpg",
+      "/assets/pressnews/01_USE_NOW/Media___Newspapers___Startup_Ecosystem/_hindustan-times-bihar-startup-pad-2016.jpg",
+    ],
+    alt: "Hindustan Times coverage connected to startup and business ecosystem work by Arijit Bhattacharyya",
+    type: "Newspaper",
+    tags: ["Hindustan Times", "Startup", "Business"],
+  },
+  {
+    id: "times-of-india-mainstream-press",
+    title: "Times of India Mainstream Media Mention",
+    publisher: "Times of India",
+    summary:
+      "A mainstream media reference adding national press credibility to the page while keeping this section focused on recognizable publications and public-facing coverage.",
+    image: "/assets/pressnews/timesofindia-s.jpg",
+    fallbackImages: [
+      "/assets/pressnews/2024/timesofindia-s.jpg",
+      "/assets/pressnews/01_images_preserved_structure/timesofindia-s.jpg",
+      "/assets/pressnews/01_images_preserved_structure/2024/timesofindia-s.jpg",
+    ],
+    alt: "Times of India media coverage connected to Arijit Bhattacharyya",
+    type: "Mainstream Media",
+    tags: ["Times of India", "Press", "India"],
+  },
+  {
+    id: "techsauce-international-startup-platform",
+    title: "Techsauce Global Startup Platform Coverage",
+    publisher: "Techsauce",
+    summary:
+      "An international startup and technology-platform reference that connects Arijit’s public profile with entrepreneurship, innovation and cross-border ecosystem conversations.",
+    image: "/assets/pressnews/2018/tech-sauce.jpg",
+    fallbackImages: [
+      "/assets/pressnews/tech-sauce.jpg",
+      "/assets/pressnews/01_images_preserved_structure/2018/tech-sauce.jpg",
+      "/assets/pressnews/01_images_preserved_structure/tech-sauce.jpg",
+    ],
+    alt: "Techsauce international startup platform coverage featuring Arijit Bhattacharyya",
+    type: "International Platform",
+    tags: ["Techsauce", "Startup", "Global"],
+  },
+  {
+    id: "telegraph-regional-business",
+    title: "The Telegraph Regional Business Coverage",
+    publisher: "The Telegraph",
+    summary:
+      "Regional business-media coverage that widens the archive beyond metro platforms and shows Arijit’s connection with entrepreneurship and business development conversations across eastern India.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Media___Newspapers___Regional_Business/The Telegraph Enabling the Northeast — Agartala 2011.jpg",
+    fallbackImages: [
+      "/assets/pressnews/01_USE_NOW/Media___Newspapers___Regional_Business/The Telegraph Enabling the Northeast - Agartala 2011.jpg",
+      "/assets/pressnews/The Telegraph Enabling the Northeast — Agartala 2011.jpg",
+      "/assets/pressnews/01_images_preserved_structure/The Telegraph Enabling the Northeast — Agartala 2011.jpg",
+    ],
+    alt: "The Telegraph regional business coverage connected to Arijit Bhattacharyya and entrepreneurship in eastern India",
+    type: "Regional Business",
+    tags: ["The Telegraph", "Business", "Eastern India"],
+  },
+  {
+    id: "magazine-feature-global-profile",
+    title: "Magazine Feature on Global Speaking & Innovation",
+    publisher: "Magazine Feature",
+    summary:
+      "A profile-style media feature that supports the wider personal-brand narrative: global speaking, entrepreneurship, technology, mentoring and innovation-led public work.",
+    image:
+      "/assets/pressnews/01_USE_NOW/Media___Newspapers___Magazine_Feature/Magazine Feature.jpg",
+    fallbackImages: [
+      "/assets/pressnews/Magazine Feature.jpg",
+      "/assets/pressnews/01_images_preserved_structure/Magazine Feature.jpg",
+      "/assets/pressnews/magazine-feature.jpg",
+    ],
+    alt: "Magazine feature highlighting global speaking and innovation work by Arijit Bhattacharyya",
+    type: "Magazine",
+    tags: ["Profile", "Speaking", "Innovation"],
+  },
+];
+
+function AuthorityImage({
+  item,
+  className,
+}: {
+  item: AuthorityItem;
+  className?: string;
+}) {
+  const imageCandidates = useMemo(
+    () =>
+      Array.from(
+        new Set([item.image, ...(item.fallbackImages ?? [])].filter(Boolean))
+      ),
+    [item.image, item.fallbackImages]
+  );
+
+  const [imageIndex, setImageIndex] = useState(0);
+  const [hasFailed, setHasFailed] = useState(false);
+
+  useEffect(() => {
+    setImageIndex(0);
+    setHasFailed(false);
+  }, [item.id, item.image]);
+
+  const currentImage = imageCandidates[imageIndex];
+
+  if (hasFailed || !currentImage) {
+    return (
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/10 bg-[#06111f] p-6 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-200">
+          Image path pending
+        </p>
+        <p className="mt-3 max-w-sm text-sm leading-7 text-slate-300">
+          {item.title}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={currentImage}
+      alt={item.alt}
+      loading="lazy"
+      onError={() => {
+        if (imageIndex < imageCandidates.length - 1) {
+          setImageIndex((current) => current + 1);
+          return;
+        }
+
+        setHasFailed(true);
+      }}
+      className={className}
+    />
+  );
+}
 
 export default function MediaAuthorityGrid() {
   return (
@@ -39,15 +217,15 @@ export default function MediaAuthorityGrid() {
             </p>
 
             <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-[-0.035em] text-white sm:text-5xl">
-              Trusted by media, institutions and global platforms.
+              Business media, national press and international platforms.
             </h2>
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-300 sm:text-lg lg:ml-auto">
-            Over nearly three decades, Arijit Bhattacharyya has appeared across
-            newspapers, television, international publications, entrepreneurship
-            platforms and business communities documenting his work across AI,
-            startups, gaming, blockchain, innovation and global leadership.
+            This section moves beyond individual highlights and shows the media
+            layer around Arijit Bhattacharyya’s work — business publications,
+            national newspapers, startup platforms and profile-led coverage
+            connected to technology, entrepreneurship and innovation.
           </p>
         </motion.div>
 
@@ -63,10 +241,8 @@ export default function MediaAuthorityGrid() {
             <div className="relative flex min-h-[340px] items-center justify-center overflow-hidden bg-[#07111f] p-5 sm:min-h-[430px]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_18%,rgba(37,99,235,0.28),transparent_36%)]" />
 
-              <img
-                src={leadAuthority.image}
-                alt={leadAuthority.alt}
-                loading="lazy"
+              <AuthorityImage
+                item={leadAuthority}
                 className="relative max-h-[390px] w-full rounded-[1.7rem] object-contain shadow-2xl transition duration-700 hover:scale-[1.03]"
               />
             </div>
@@ -95,14 +271,26 @@ export default function MediaAuthorityGrid() {
                   </span>
                 ))}
               </div>
+
+              {leadAuthority.url && (
+                <a
+                  href={leadAuthority.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-8 inline-flex w-fit items-center rounded-full bg-white px-6 py-3 text-sm font-bold text-[#07111f] transition hover:-translate-y-0.5 hover:bg-blue-100"
+                >
+                  Open Coverage
+                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {mediaAuthority.map((item, index) => (
+          {authorityItems.map((item, index) => (
             <motion.article
-              key={item.id || item.title}
+              key={item.id}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -117,10 +305,8 @@ export default function MediaAuthorityGrid() {
               <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden bg-[#07111f] p-4">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(37,99,235,0.26),transparent_36%)]" />
 
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  loading="lazy"
+                <AuthorityImage
+                  item={item}
                   className="relative max-h-[235px] w-full rounded-[1.35rem] object-contain transition duration-700 group-hover:scale-[1.03]"
                 />
 
@@ -130,7 +316,8 @@ export default function MediaAuthorityGrid() {
               </div>
 
               <div className="p-6 sm:p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
+                <p className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
+                  <BadgeCheck className="mr-2 h-4 w-4" />
                   {item.publisher}
                 </p>
 
@@ -143,7 +330,7 @@ export default function MediaAuthorityGrid() {
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {item.tags?.slice(0, 3).map((tag) => (
+                  {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-blue-100"
@@ -160,7 +347,7 @@ export default function MediaAuthorityGrid() {
                     rel="noreferrer"
                     className="mt-6 inline-flex items-center text-sm font-bold text-blue-100 transition hover:text-white"
                   >
-                    View Coverage
+                    Open Coverage
                     <ArrowUpRight className="ml-2 h-4 w-4" />
                   </a>
                 )}
