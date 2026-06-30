@@ -1,4 +1,4 @@
-import {  useEffect } from "react";
+﻿import {  useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -13,6 +13,7 @@ import AdvisoryRoles from "../components/speaking/07-AdvisoryRoles";
 import MentoringSection from "../components/speaking/08-MentoringSection";
 import SpeakingTimeline from "../components/speaking/09-SpeakingTimeline";
 
+import MetaTags from "../components/common/MetaTags";
 const pageTitle =
   "Arijit Bhattacharyya | Public Speaker in India, Keynote Speaker, Moderator & Global Panelist";
 
@@ -129,7 +130,13 @@ export default function SpeakingPage() {
     <main className="min-h-screen bg-[#03070d] text-white">
       <SpeakingSEO />
 
-      <Navbar />
+      <MetaTags
+            title={"Public Speakers in India | AI, Innovation & Global Leadership Speaker"}
+            description={"Invite Arijit Bhattacharyya for keynote speaking, AI, technology, startup, innovation, investment, entrepreneurship and global leadership forums across India and international platforms."}
+            image={"/assets/speaking/ghana.jpeg"}
+          />
+
+          <Navbar />
 
       <SpeakingHero />
       <GlobalImpactStats />

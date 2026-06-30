@@ -1,5 +1,6 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+﻿import { lazy, Suspense } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { legacyRedirects } from "./data/legacyRedirects";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const BioPage = lazy(() => import("./pages/BioPage"));
@@ -13,8 +14,6 @@ const MediaEntertainmentPage = lazy(
   () => import("./pages/MediaEntertainmentPage")
 );
 const PhotographyPage = lazy(() => import("./pages/PhotographyPage"));
-const GalleryPage = lazy(() => import("./pages/GalleryPage"));
-const MediaPage = lazy(() => import("./pages/MediaPage"));
 const PressPage = lazy(() => import("./pages/PressPage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = lazy(() => import("./pages/BlogArticlePage"));
@@ -55,7 +54,10 @@ export default function App() {
           <Route path="/latest-speaks.html" element={<SpeakingPage />} />
           <Route path="/latest-speeks" element={<SpeakingPage />} />
           <Route path="/latest-speeks.html" element={<SpeakingPage />} />
-          <Route path="/the-art-of-public-speaking.html" element={<SpeakingPage />} />
+          <Route
+            path="/the-art-of-public-speaking.html"
+            element={<SpeakingPage />}
+          />
 
           {/* Technology / Tech Work / AI / Blockchain Legacy */}
           <Route path="/technology" element={<TechnologyPage />} />
@@ -75,7 +77,10 @@ export default function App() {
             path="/machine-learning-in-gaming.html"
             element={<TechnologyPage />}
           />
-          <Route path="/what-is-cryptocurrency.html" element={<TechnologyPage />} />
+          <Route
+            path="/what-is-cryptocurrency.html"
+            element={<TechnologyPage />}
+          />
           <Route
             path="/India-witnessing-digital-payments.html"
             element={<TechnologyPage />}
@@ -139,37 +144,54 @@ export default function App() {
             element={<VenturesPage />}
           />
 
-          {/* Drawing */}
+          {/* Drawing / Creative */}
           <Route path="/drawing" element={<DrawingPage />} />
           <Route path="/drawing.html" element={<DrawingPage />} />
+          <Route path="/creative" element={<DrawingPage />} />
+          <Route path="/creative.html" element={<DrawingPage />} />
 
-          {/* Creative / Gallery */}
-          <Route path="/creative" element={<GalleryPage />} />
-          <Route path="/creative.html" element={<GalleryPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/gallery.html" element={<GalleryPage />} />
-
-          {/* Photography */}
+          {/* Photography / Gallery */}
           <Route path="/photography" element={<PhotographyPage />} />
           <Route path="/photography.html" element={<PhotographyPage />} />
+          <Route path="/gallery" element={<PhotographyPage />} />
+          <Route path="/gallery.html" element={<PhotographyPage />} />
 
-          {/* Press / Press News */}
+          {/* Press / Press News / Media */}
           <Route path="/press" element={<PressPage />} />
           <Route path="/press.html" element={<PressPage />} />
           <Route path="/press-news" element={<PressPage />} />
           <Route path="/press-news.html" element={<PressPage />} />
+          <Route path="/media" element={<PressPage />} />
+          <Route path="/media.html" element={<PressPage />} />
 
-          {/* Media / Podcast / YouTube */}
-          <Route path="/media" element={<MediaPage />} />
-          <Route path="/media.html" element={<MediaPage />} />
-          <Route path="/podcast" element={<MediaPage />} />
-          <Route path="/podcast.html" element={<MediaPage />} />
-          <Route path="/youtube" element={<MediaPage />} />
-          <Route path="/youtube.html" element={<MediaPage />} />
+          {/* Podcast / YouTube Temporary Safe Routes */}
+          <Route path="/podcast" element={<HomePage />} />
+          <Route path="/podcast.html" element={<HomePage />} />
+          <Route path="/youtube" element={<HomePage />} />
+          <Route path="/youtube.html" element={<HomePage />} />
 
           {/* Blog */}
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog.html" element={<BlogPage />} />
+
+          {legacyRedirects.map(({ from, to }) => (
+            <Route
+              key={from}
+              path={from}
+              element={<Navigate to={to} replace />}
+            />
+          ))}
+
+          {/* Final special-character legacy routes */}
+          <Route
+            path="/Blockchain-Technology’s-Impact-Game-Development.html"
+            element={<Navigate to="/technology" replace />}
+          />
+          <Route
+            path="/blog-Shilpo-Abhijan-West Bengal-2013–passion-to-explore-new-verticals-of-business.html"
+            element={<Navigate to="/blog/shilpo-abhijan" replace />}
+          />
+
           <Route path="/blog/:slug" element={<BlogArticlePage />} />
 
           {/* Books */}

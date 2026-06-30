@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -10,6 +10,7 @@ import TechnologyImpact from "../components/technology/04-ProductsPlatforms";
 import FutureTechVision from "../components/technology/05-FutureTechVision";
 import TechnologyCTA from "../components/technology/06-TechnologyCTA";
 
+import MetaTags from "../components/common/MetaTags";
 const pageTitle =
   "Arijit Bhattacharyya | Technology Entrepreneur, AI, VR, AR, Blockchain & Gaming Innovator";
 
@@ -120,7 +121,13 @@ export default function TechnologyPage() {
     <main className="min-h-screen bg-[#03070d] text-white">
       <TechnologySEO />
 
-      <Navbar />
+      <MetaTags
+            title={"Technology Entrepreneurs in India | AI, VR, Blockchain, Gaming & DeepTech"}
+            description={"Explore Arijit Bhattacharyya's technology work across AI, virtual reality, augmented reality, blockchain, game development, immersive media, cybersecurity and future innovation."}
+            image={"/assets/blog/AI-gaming.jpg"}
+          />
+
+          <Navbar />
 
       <TechnologyHero />
       <TechnologyDomains />

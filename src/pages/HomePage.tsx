@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 
@@ -6,7 +6,7 @@ import HeroSection from "../components/home/HeroSection";
 import AboutPreview from "../components/home/AboutPreview";
 
 import VenturesShowcaseSection from "../components/home/VenturesShowcaseSection";
-import VenturesTimelineSection from "../components/home/VenturesTimelineSection";
+import JourneyTimelineSection from "../components/home/JourneyTimelineSection";
 
 import PressMediaSection from "../components/home/PressMediaSection";
 
@@ -17,8 +17,6 @@ import BooksSection from "../components/home/BooksSection";
 import GlobalEventsSection from "../components/home/GlobalEventsSection";
 
 import GovernmentLeadershipSection from "../components/home/GovernmentLeadershipSection";
-
-import JourneyTimelineSection from "../components/home/JourneyTimelineSection";
 
 import CreativeUniverseSection from "../components/home/CreativeUniverseSection";
 
@@ -32,6 +30,7 @@ import FinalCTA from "../components/home/FinalCTA";
 
 import Footer from "../components/layout/Footer";
 
+import MetaTags from "../components/common/MetaTags";
 const homeSeo = {
   title:
     "Arijit Bhattacharyya, mentor, angel investor, international business developer, entrepreneur of Kolkata",
@@ -93,17 +92,26 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
+      <MetaTags
+            title={"Arijit Bhattacharyya | Founder, Mentor, Angel Investor, Public Speaker"}
+            description={"Official website of Arijit Bhattacharyya, founder, entrepreneur, mentor, angel investor, technology speaker, startup advisor and global innovation leader from India."}
+            image={"/assets/hero/speaking Image.jpeg"}
+          />
+
+          <Navbar />
 
       {/* Hero */}
       <HeroSection />
+      <GovernmentLeadershipSection />
 
       {/* About */}
       <AboutPreview />
 
       {/* Ventures */}
       <VenturesShowcaseSection />
-      <VenturesTimelineSection />
+
+      {/* Founder Journey Timeline */}
+      <JourneyTimelineSection />
 
       {/* Proof */}
       <PressMediaSection />
@@ -114,10 +122,7 @@ export default function HomePage() {
 
       {/* Speaking & Government */}
       <GlobalEventsSection />
-      <GovernmentLeadershipSection />
-
-      {/* Journey */}
-      <JourneyTimelineSection />
+      
 
       {/* Creative Universe */}
       <CreativeUniverseSection />

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -11,6 +11,7 @@ import CurrentRelevance from "../components/blog/06-CurrentRelevance";
 import BlogCTA from "../components/blog/07-BlogCTA";
 import { blogSeo } from "../components/blog/blogData";
 
+import MetaTags from "../components/common/MetaTags";
 function setMeta(name: string, content: string) {
   let tag = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
 
@@ -57,7 +58,13 @@ export default function BlogPage() {
 
   return (
     <>
-      <Navbar />
+      <MetaTags
+            title={"Arijit Bhattacharyya Blog | AI, Startups, VR, Entrepreneurship & Leadership"}
+            description={"Read legacy and current blog articles by Arijit Bhattacharyya on startups, venture capital, AI, blockchain, virtual reality, gaming, leadership, society, culture and entrepreneurship."}
+            image={"/assets/blog/Arijit_Bhattacharyya-blog.jpg"}
+          />
+
+          <Navbar />
 
       <main className="min-h-screen bg-[#03070d]">
         <BlogHero />

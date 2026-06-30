@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -14,6 +14,7 @@ import PressTechnologyArchive from "../components/pressnews/08-PressTechnologyAr
 
 import { pressSeo } from "../components/pressnews/pressData";
 
+import MetaTags from "../components/common/MetaTags";
 function setMeta(name: string, content: string) {
   let tag = document.querySelector<HTMLMetaElement>(`meta[name="${name}"]`);
 
@@ -66,7 +67,13 @@ export default function PressPage() {
 
   return (
     <>
-      <Navbar />
+      <MetaTags
+            title={"Arijit Bhattacharyya | Press News, Media Coverage, Interviews & Recognition"}
+            description={"Press news, media coverage, interviews, TV features, international stories and public recognition of Arijit Bhattacharyya across entrepreneurship, technology, gaming, AI and business."}
+            image={"/assets/pressnews/economic-times.jpg"}
+          />
+
+          <Navbar />
 
       <main className="min-h-screen bg-[#03070d]">
         <PressHero />
