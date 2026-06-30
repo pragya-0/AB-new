@@ -7,7 +7,7 @@ type RecognitionCard = {
   title: string;
   text?: string;
   image: string;
-  type?: "video" | "newspaper" | "document" | "photo";
+  imageMode?: "darkContain" | "lightContain";
 };
 
 const featuredCard: RecognitionCard = {
@@ -16,7 +16,7 @@ const featuredCard: RecognitionCard = {
   text:
     "A keynote presence built around technology, entrepreneurship, innovation and the future of global business.",
   image: "/assets/press/2019/tedx.jpg",
-  type: "video",
+  imageMode: "darkContain",
 };
 
 const premiumCards: RecognitionCard[] = [
@@ -24,13 +24,13 @@ const premiumCards: RecognitionCard[] = [
     source: "The Economic Times",
     title: "Driving Innovation & Entrepreneurial Growth",
     image: "/assets/press/Arijit-Bhattacharyya-ECONOMICS.jpg",
-    type: "newspaper",
+    imageMode: "darkContain",
   },
   {
     source: "Times of India",
     title: "Startups, Innovation & Future Growth",
     image: "/assets/press/2024/timesofindia-B.jpg",
-    type: "newspaper",
+    imageMode: "darkContain",
   },
 ];
 
@@ -39,49 +39,49 @@ const proofCards: RecognitionCard[] = [
     source: "Hindustan Times",
     title: "Startup & Entrepreneurship Coverage",
     image: "/assets/press/hindustan-times-startup.jpg",
-    type: "newspaper",
+    imageMode: "darkContain",
   },
   {
     source: "TV9 Bangla",
     title: "Technology, Leadership & Innovation",
     image: "/assets/press/2022/TV9.jpg",
-    type: "video",
+    imageMode: "darkContain",
   },
   {
     source: "DD Bangla",
     title: "Technology, Innovation & Public Conversation",
     image: "/assets/press/2019/DD-Bangla.jpg",
-    type: "video",
+    imageMode: "darkContain",
   },
   {
     source: "Diplomatic World",
     title: "Global Business Matchmaking",
     image: "/assets/press/2021/diplomatic-world-two.jpg",
-    type: "document",
+    imageMode: "lightContain",
   },
   {
     source: "China Blockchain",
     title: "International Technology & Blockchain Forum",
     image: "/assets/press/2020/China-blockchain.jpg",
-    type: "video",
+    imageMode: "darkContain",
   },
   {
     source: "Josh Talks",
     title: "Ideas, Leadership & Entrepreneurial Journey",
     image: "/assets/press/Joshtalks.jpeg",
-    type: "video",
+    imageMode: "darkContain",
   },
   {
     source: "ABP Bangla",
     title: "Regional Recognition & Public Platform Presence",
     image: "/assets/press/ABP_Arijit.jpg",
-    type: "photo",
+    imageMode: "darkContain",
   },
   {
     source: "Anandabazar",
     title: "Bengali Press Coverage & Public Recognition",
     image: "/assets/press/2024/anandabazar-B.jpg",
-    type: "newspaper",
+    imageMode: "darkContain",
   },
 ];
 
@@ -90,18 +90,12 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
-function imageClass(type?: RecognitionCard["type"]) {
-  if (type === "newspaper") {
-    return "object-contain object-center bg-[#050505] p-2";
-  }
-
-  if (type === "document") {
+function imageClass(imageMode?: RecognitionCard["imageMode"]) {
+  if (imageMode === "lightContain") {
     return "object-contain object-center bg-white p-3";
   }
 
-  // Important: no object-cover here.
-  // This prevents TEDx / TV / photo images from getting half cut.
-  return "object-contain object-center bg-black";
+  return "object-contain object-center bg-black p-2";
 }
 
 function ProofCard({
@@ -128,25 +122,20 @@ function ProofCard({
   return (
     <motion.article
       variants={fadeUp}
-      whileHover={{ y: -6 }}
-      transition={{ type: "spring", stiffness: 230, damping: 22 }}
       className="group overflow-hidden rounded-[24px] border border-white/10 bg-[#0a0a0a] shadow-[0_24px_80px_rgba(0,0,0,0.42)] transition duration-500 hover:border-blue-300/55 hover:shadow-[0_34px_110px_rgba(0,87,255,0.18)] sm:rounded-[28px]"
     >
       <div className={`relative overflow-hidden bg-black ${imageHeight}`}>
         <img
           src={card.image}
           alt={`${card.source} coverage of Arijit Bhattacharyya`}
+          loading="lazy"
           onError={(event) => {
             event.currentTarget.style.opacity = "0";
           }}
-          className={`h-full w-full transition duration-700 group-hover:scale-[1.025] ${imageClass(
-            card.type
+          className={`h-full w-full transition duration-700 group-hover:scale-[1.015] ${imageClass(
+            card.imageMode
           )}`}
         />
-
-        <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/60 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-xl">
-          {card.type}
-        </div>
       </div>
 
       <div className="p-5 sm:p-7">
@@ -213,7 +202,7 @@ export default function RecognitionWall() {
             <Link
               to="/press-news"
               aria-label="View full press news and media coverage of Arijit Bhattacharyya"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0057ff] px-8 py-4 text-[14px] font-bold text-white shadow-[0_20px_55px_rgba(0,87,255,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#1b6cff] focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0057ff] px-8 py-4 text-[14px] font-bold text-white shadow-[0_20px_55px_rgba(0,87,255,0.28)] transition duration-300 hover:bg-[#1b6cff] focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto"
             >
               View Full Press News
               <ArrowUpRight size={18} />

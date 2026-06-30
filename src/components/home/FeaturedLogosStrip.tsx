@@ -64,13 +64,11 @@ function LogoCard({ logo }: { logo: Logo }) {
   return (
     <motion.div
       variants={fadeUp}
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 240, damping: 20 }}
-      className="flex h-[112px] items-center justify-center rounded-[22px] border border-black/[0.06] bg-white px-5 shadow-[0_10px_30px_rgba(15,23,42,0.045)] transition duration-300 hover:shadow-[0_20px_55px_rgba(0,87,255,0.1)] sm:h-[122px] sm:px-8"
+      className="flex h-[112px] items-center justify-center rounded-[22px] border border-black/[0.06] bg-white px-5 shadow-[0_10px_30px_rgba(15,23,42,0.045)] transition-shadow duration-300 hover:shadow-[0_18px_48px_rgba(0,87,255,0.09)] sm:h-[122px] sm:px-8"
     >
       <img
         src={logo.image}
-        alt={`${logo.name} media and platform logo`}
+        alt={`${logo.name} recognition and media platform logo`}
         className={`${logo.height} max-w-[150px] object-contain sm:max-w-[170px]`}
       />
     </motion.div>
@@ -169,18 +167,16 @@ export default function FeaturedLogosStrip() {
           variants={fadeUp}
           className="mx-auto mt-6 max-w-[760px] text-center text-[16px] font-normal leading-8 text-black/60 sm:text-[17px]"
         >
-          Featured by media networks, startup ecosystems, technology platforms
+          Featured by media networks, startup communities, technology platforms
           and global institutions across India and worldwide.
         </motion.p>
 
-        {/* Mobile: static readable grid */}
         <div className="mt-12 grid grid-cols-2 gap-3 md:hidden">
           {allMobileLogos.map((logo) => (
             <LogoCard key={logo.name} logo={logo} />
           ))}
         </div>
 
-        {/* Desktop/tablet: premium marquee */}
         <div className="mt-16 hidden md:block">
           <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.32em] text-black/45">
             Global Media & Platforms
@@ -190,7 +186,7 @@ export default function FeaturedLogosStrip() {
 
         <div className="mt-8 hidden md:block">
           <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.32em] text-black/45">
-            Television, News & Recognition
+            News & Recognition
           </p>
           <LogoMarquee logos={newsLogos} reverse />
         </div>
