@@ -12,7 +12,7 @@ const mainLinks = [
 ];
 
 const secondaryLinks = [
-  { label: "Virtual Reality", href: "/virtual-reality" },
+  { label: "AR VR AI", href: "/virtual-reality" },
   { label: "Media Entertainment", href: "/media-entertainment" },
   { label: "Photography", href: "/photography" },
   { label: "Blog", href: "/blog" },
