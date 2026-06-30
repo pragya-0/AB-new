@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Building2, Globe2, GraduationCap, Mic2 } from "lucide-react";
 
 import SmartImage from "../bio/SmartImage";
@@ -11,54 +11,28 @@ const stats = [
   ["102+", "Country network"],
   ["7000+", "Startups mentored"],
   ["10000+", "Students trained"],
-];
+] as const;
 
-const proofRows = [
+const credibilityCards = [
   {
     icon: GraduationCap,
-    label: "Academic Institutions",
-    items: [
-      "IIM Calcutta",
-      "IIM Ahmedabad",
-      "IIM Bodhgaya",
-      "IIT Kharagpur",
-      "IIT Bombay",
-      "IIT Madras",
-      "IIT Delhi",
-      "IIT Hyderabad",
-      "NIT Trichy",
-      "NIT Silchar",
-    ],
+    title: "Academic Platforms",
+    text: "Speaking, mentoring and resource-person work across management schools, engineering campuses and institutional innovation forums.",
+    chips: ["Universities", "Innovation", "Future Skills"],
   },
   {
     icon: Globe2,
-    label: "Global Forums",
-    items: [
-      "Digital Bridge",
-      "Central Asia",
-      "Kazakhstan",
-      "Dubai",
-      "Ghana Summit",
-      "China VR Festival",
-      "Korea Conference",
-    ],
+    title: "Global Forums",
+    text: "International presence across AI, blockchain, investment, smart cities, gaming, entrepreneurship and future technology platforms.",
+    chips: ["AI", "Investment", "Global"],
   },
   {
     icon: Building2,
-    label: "Industry Bodies & Chambers",
-    items: [
-      "CII",
-      "ICC",
-      "BCC&I",
-      "ASSOCHAM",
-      "FICCI",
-      "IAMAI",
-      "TiE",
-      "Axis Bank",
-      "ICAI",
-    ],
+    title: "Industry & Chambers",
+    text: "Business-facing conversations across chambers, startup ecosystems, investor communities and industry-led innovation programs.",
+    chips: ["Chambers", "Startups", "Investors"],
   },
-];
+] as const;
 
 export default function SpeakingHero() {
   return (
@@ -110,6 +84,7 @@ export default function SpeakingHero() {
                   <p className="text-[30px] font-extrabold leading-none tracking-[-0.05em] text-[#69aaff]">
                     {value}
                   </p>
+
                   <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
                     {label}
                   </p>
@@ -120,16 +95,18 @@ export default function SpeakingHero() {
 
           <motion.div {...fadeUp}>
             <div className="overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_30px_100px_rgba(0,87,255,0.16)]">
-              <SmartImage
-                src={`${speaking}arijit-dubai-ai-blockchain-.jpg.jpeg`}
-                fallbacks={[
-                  `${speaking}arijit-dubai-ai-blockchain-.jpg (1).jpeg`,
-                  `${speaking}dubai-speaker.png`,
-                  `${speaking}1.jpg.jpeg`,
-                ]}
-                alt="Arijit Bhattacharyya keynote speaker and global panelist at Dubai AI Blockchain investment forum"
-                className="h-[320px] w-full rounded-[24px] object-cover object-center sm:h-[430px] md:h-[520px] xl:h-[610px]"
-              />
+              <div className="flex h-[320px] items-center justify-center rounded-[24px] bg-[#07101f] p-3 sm:h-[430px] md:h-[520px] xl:h-[610px]">
+                <SmartImage
+                  src={`${speaking}arijit-dubai-ai-blockchain-.jpg.jpeg`}
+                  fallbacks={[
+                    `${speaking}arijit-dubai-ai-blockchain-.jpg (1).jpeg`,
+                    `${speaking}dubai-speaker.png`,
+                    `${speaking}1.jpg.jpeg`,
+                  ]}
+                  alt="Arijit Bhattacharyya keynote speaker and global panelist at Dubai AI Blockchain investment forum"
+                  className="h-auto max-h-full w-auto max-w-full rounded-[24px] object-contain"
+                />
+              </div>
 
               <div className="grid gap-5 p-5 md:grid-cols-[auto_1fr] md:p-6">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#0057ff]/15 text-[#8fc2ff] ring-1 ring-[#2d74ff]/25">
@@ -155,57 +132,38 @@ export default function SpeakingHero() {
           </motion.div>
         </div>
 
-        <motion.div
-          {...fadeUp}
-          className="mt-12 overflow-hidden rounded-[34px] border border-amber-300/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.055),rgba(255,255,255,0.025))] shadow-[0_30px_100px_rgba(245,158,11,0.08)]"
-        >
-          {proofRows.map(({ icon: Icon, label, items }, rowIndex) => (
-            <div
-              key={label}
-              className={`grid gap-5 p-6 md:grid-cols-[280px_1fr] md:items-start md:p-7 ${
-                rowIndex !== proofRows.length - 1
-                  ? "border-b border-white/10"
-                  : ""
-              }`}
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {credibilityCards.map(({ icon: Icon, title, text, chips }) => (
+            <motion.article
+              key={title}
+              {...fadeUp}
+              className="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-6 shadow-[0_20px_80px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#69aaff]/35 hover:bg-white/[0.055]"
             >
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-300/10 text-amber-200 ring-1 ring-amber-300/25">
-                  <Icon className="h-5 w-5" />
-                </div>
-
-                <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-white md:text-base">
-                  {label}
-                </h2>
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-300/10 text-amber-200 ring-1 ring-amber-300/25">
+                <Icon className="h-5 w-5" />
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                {items.map((item, itemIndex) => (
-                  <motion.span
-                    key={item}
-                    initial={{ opacity: 0.72 }}
-                    animate={{
-                      opacity: [0.72, 1, 0.72],
-                      boxShadow: [
-                        "0 0 0 rgba(245,158,11,0)",
-                        "0 0 28px rgba(245,158,11,0.22)",
-                        "0 0 0 rgba(245,158,11,0)",
-                      ],
-                    }}
-                    transition={{
-                      duration: 2.8,
-                      delay: rowIndex * 0.25 + itemIndex * 0.12,
-                      repeat: Infinity,
-                      repeatDelay: 4,
-                    }}
-                    className="rounded-full border border-amber-300/20 bg-[linear-gradient(135deg,rgba(251,191,36,0.16),rgba(59,130,246,0.08))] px-4 py-2.5 text-sm font-bold leading-none text-amber-50 md:text-[15px]"
+              <h2 className="text-[22px] font-bold leading-[1.06] tracking-[-0.03em] text-white sm:text-[24px]">
+                {title}
+              </h2>
+
+              <p className="mt-4 text-[15px] font-normal leading-7 text-white/66">
+                {text}
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {chips.map((chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-blue-300/15 bg-blue-400/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-blue-100/90"
                   >
-                    {item}
-                  </motion.span>
+                    {chip}
+                  </span>
                 ))}
               </div>
-            </div>
+            </motion.article>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-export const featuredGlobalEvent = {
+﻿export const featuredGlobalEvent = {
   title: "Dubai AI & Blockchain Summit",
   subtitle: "International AI, investment and innovation stage in the UAE.",
   image: "/assets/speaking/arijit-dubai-ai-blockchain-.jpg.jpeg",

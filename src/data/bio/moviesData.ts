@@ -1,4 +1,4 @@
-import { galleryPath } from "./bioAssets";
+﻿import { galleryPath } from "./bioAssets";
 
 export const genAiMovies = [
   ["Ashwathama", "Mythology-inspired Gen AI cinematic universe.", `${galleryPath}ashwathama-poster-vertical.png`],
@@ -17,3 +17,4 @@ export const modelUniverse = [
   ["Photography", "Fashion, people, travel, events and visual storytelling archive.", `${galleryPath}Subhasree_Arijit.jpg`],
   ["Creative Production", "A media universe mixing models, films, games, AI posters and entertainment IP.", `${galleryPath}model-runway-01.jpeg`],
 ];
+

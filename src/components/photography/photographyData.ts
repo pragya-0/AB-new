@@ -1,4 +1,4 @@
-export type PhotographyItem = {
+﻿export type PhotographyItem = {
   category: string;
   src: string;
   alt: string;
@@ -11,3 +11,4 @@ export const photographyItems: PhotographyItem[] = [
 export const photographyCategories = Array.from(
   new Set(photographyItems.map((item) => item.category))
 );
+

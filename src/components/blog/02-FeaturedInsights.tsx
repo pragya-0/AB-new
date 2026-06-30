@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { ArrowDownRight, Search } from "lucide-react";
 import { featuredInsights } from "./blogData";
 

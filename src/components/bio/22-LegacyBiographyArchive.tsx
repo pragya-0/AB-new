@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import { fadeUp } from "./bioMotion";
 
@@ -218,7 +218,7 @@ const archiveSections = [
       "Implemented AI into marketing applications, financial analysis apps, automation, gaming apps and social network applications.",
       "Worked on VR helmet systems, VRML, headset, cave and boomtube-based experiences using latest game engines.",
       "Built AR solutions for healthcare, edtech and real estate.",
-      "Worked on blockchain wallets, Thailand crypto café, smart-home blockchain, fintech blockchain and blockchain real-estate solutions.",
+      "Worked on blockchain wallets, Thailand crypto cafÃ©, smart-home blockchain, fintech blockchain and blockchain real-estate solutions.",
       "Worked on blockchain ecosystems across healthcare, finance and energy.",
       "Worked on crypto exchanges, token ecosystems, blockchain wallets and decentralized business platforms.",
       "Supported blockchain-based gaming and betting ecosystems for international markets.",

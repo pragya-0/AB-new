@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
@@ -94,7 +94,7 @@ const journey: JourneyItem[] = [
     year: "2022",
     title: "Global Summits & Smart Cities",
     text: "The journey moves across global forums, smart-city conversations, deeptech and international platforms.",
-    image: `${speaking}ghana.jpg`,
+    image: `${speaking}ghana.jpeg`,
     tag: "Global Stage",
     meta: "Ghana • Smart Cities • Global Forums",
     chips: ["Global Network", "DeepTech", "Conferences"],

@@ -9,3 +9,4 @@ export const journey = [
   ["2025", "AI Future", "Expanded into Gen AI, AI education, AI films, deeptech learning and creative AI workflows.", `${bio}IMG_1569.JPG.jpeg`],
   ["2026", "8Metals & Future Ventures", "Continued building new business, investment, industrial and global innovation platforms.", `${venturePath}timeline-2026-8metals.png`],
 ];
+

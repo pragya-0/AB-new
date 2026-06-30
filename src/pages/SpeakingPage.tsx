@@ -1,4 +1,4 @@
-﻿import {  useEffect } from "react";
+﻿import { useEffect } from "react";
 
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -8,12 +8,12 @@ import GlobalImpactStats from "../components/speaking/02-GlobalImpactStats";
 import SpeakingTopics from "../components/speaking/03-SpeakingTopics";
 import GlobalForums from "../components/speaking/04-GlobalForums";
 import InstitutionsSection from "../components/speaking/05-InstitutionsSection";
-import MediaAppearances from "../components/speaking/06-MediaAppearances";
 import AdvisoryRoles from "../components/speaking/07-AdvisoryRoles";
 import MentoringSection from "../components/speaking/08-MentoringSection";
 import SpeakingTimeline from "../components/speaking/09-SpeakingTimeline";
 
 import MetaTags from "../components/common/MetaTags";
+
 const pageTitle =
   "Arijit Bhattacharyya | Public Speaker in India, Keynote Speaker, Moderator & Global Panelist";
 
@@ -131,23 +131,19 @@ export default function SpeakingPage() {
       <SpeakingSEO />
 
       <MetaTags
-            title={"Public Speakers in India | AI, Innovation & Global Leadership Speaker"}
-            description={"Invite Arijit Bhattacharyya for keynote speaking, AI, technology, startup, innovation, investment, entrepreneurship and global leadership forums across India and international platforms."}
-            image={"/assets/speaking/ghana.jpeg"}
-          />
-
-          <Navbar />
-
-      <SpeakingHero />
-      <GlobalImpactStats />
-      <SpeakingTopics />
-      <GlobalForums />
-      <InstitutionsSection />
-      <MediaAppearances />
-      <AdvisoryRoles />
-      <MentoringSection />
-      <SpeakingTimeline />
-
+        title="Public Speakers in India | AI, Innovation & Global Leadership Speaker"
+        description="Invite Arijit Bhattacharyya for keynote speaking, AI, technology, startup, innovation, investment, entrepreneurship and global leadership forums across India and international platforms."
+        image="/assets/speaking/ghana.jpeg"
+      />
+<Navbar />
+<SpeakingHero />
+<GlobalImpactStats />       
+<SpeakingTopics />           
+<GlobalForums />             
+<InstitutionsSection />    
+<AdvisoryRoles />          
+<MentoringSection />     
+<SpeakingTimeline />        
       <Footer />
     </main>
   );

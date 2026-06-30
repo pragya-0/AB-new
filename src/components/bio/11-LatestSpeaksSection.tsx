@@ -56,7 +56,7 @@ const featureMoments: FeatureItem[] = [
     badge: "Featured Engagement",
     title: "Ghana Business Summit with Vice President of Ghana",
     text: "International business, investment and leadership platform connected with global entrepreneurship, innovation and business diplomacy.",
-    image: `${speaking}ghana.jpg`,
+    image: `${speaking}ghana.jpeg`,
     meta: "Ghana • Vice President • Business Summit",
     tone: "gold",
     fit: "contain",

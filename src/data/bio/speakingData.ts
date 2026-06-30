@@ -1,4 +1,4 @@
-import { bio } from "./bioAssets";
+﻿import { bio } from "./bioAssets";
 
 export const latestSpeaks = [
   ["Global Speech", "Entrepreneurship, innovation and future-ready industries.", `${bio}IMG_1569.JPG.jpeg`],
@@ -8,3 +8,4 @@ export const latestSpeaks = [
   ["Conference Archive", "Technology, entrepreneurship and cross-border conversations.", `${bio}XIRB8638.JPG.jpeg`],
   ["Public Session", "Education, mentoring, speaking and founder ecosystem building.", `${bio}AZNM6142.JPG.jpeg`],
 ];
+

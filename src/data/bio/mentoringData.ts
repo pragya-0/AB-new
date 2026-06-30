@@ -1,4 +1,4 @@
-import { bio, pressPath } from "./bioAssets";
+﻿import { bio, pressPath } from "./bioAssets";
 
 export const mentoringStats = [
   ["7100+", "Startups Mentored"],
@@ -42,3 +42,4 @@ export const roleBadges = [
   "AWS",
   "Economic Times",
 ];
+

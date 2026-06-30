@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   getCategoryPhotos,
@@ -46,7 +46,8 @@ export default function PhotographyHero() {
         <motion.img
           key={current.src}
           src={current.src}
-          alt={current.alt}
+          alt=""
+          aria-hidden="true"
           loading="eager"
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 0.28, scale: 1.02 }}
@@ -148,7 +149,7 @@ export default function PhotographyHero() {
               animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
               exit={{ opacity: 0, y: -22, rotate: 1.5, scale: 0.97 }}
               transition={{ duration: 0.85, ease: smoothEase }}
-              className="absolute left-1/2 top-0 z-30 w-[82%] -translate-x-1/2 overflow-hidden rounded-[1.7rem] border border-white/15 bg-white/10 p-2 shadow-[0_30px_90px_rgba(0,0,0,.55)] backdrop-blur sm:w-[70%] md:right-4 md:left-auto md:w-[68%] md:translate-x-0 lg:right-8 lg:top-8 lg:w-[64%] lg:rounded-[2rem]"
+              className="absolute left-1/2 top-0 z-30 w-[82%] -translate-x-1/2 overflow-hidden rounded-[1.7rem] border border-white/15 bg-white/10 p-2 shadow-[0_30px_90px_rgba(0,0,0,.55)] backdrop-blur sm:w-[70%] md:left-auto md:right-4 md:w-[68%] md:translate-x-0 lg:right-8 lg:top-8 lg:w-[64%] lg:rounded-[2rem]"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-slate-900 lg:rounded-[1.5rem]">
                 <img
@@ -171,6 +172,7 @@ export default function PhotographyHero() {
                 <img
                   src={nextOne.src}
                   alt=""
+                  aria-hidden="true"
                   loading="lazy"
                   className="h-full w-full object-cover object-center"
                 />
@@ -188,6 +190,7 @@ export default function PhotographyHero() {
                 <img
                   src={nextTwo.src}
                   alt=""
+                  aria-hidden="true"
                   loading="lazy"
                   className="h-full w-full object-cover object-center"
                 />
@@ -195,7 +198,7 @@ export default function PhotographyHero() {
             </motion.figure>
           )}
 
-          <div className="absolute bottom-0 left-1/2 z-40 flex w-[92%] -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-black/25 p-2 backdrop-blur md:bottom-4 md:right-6 md:left-auto md:w-auto md:translate-x-0 lg:bottom-8 lg:right-10">
+          <div className="absolute bottom-0 left-1/2 z-40 flex w-[92%] -translate-x-1/2 gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-black/25 p-2 backdrop-blur md:bottom-4 md:left-auto md:right-6 md:w-auto md:translate-x-0 lg:bottom-8 lg:right-10">
             {slides.slice(0, 6).map((slide, index) => (
               <button
                 key={slide.src}
@@ -211,6 +214,7 @@ export default function PhotographyHero() {
                 <img
                   src={slide.src}
                   alt=""
+                  aria-hidden="true"
                   loading="lazy"
                   className="h-full w-full object-cover object-center"
                 />

@@ -8,3 +8,4 @@
   ["Industrial Transformation", "Manufacturing, oil and gas, steel and real estate"],
   ["Investment Ecosystem", "VC, angel networks, startup acceleration and mentoring"],
 ];
+

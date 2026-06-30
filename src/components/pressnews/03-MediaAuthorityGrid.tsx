@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, BadgeCheck, Newspaper } from "lucide-react";
 
@@ -359,3 +359,4 @@ export default function MediaAuthorityGrid() {
     </section>
   );
 }
+

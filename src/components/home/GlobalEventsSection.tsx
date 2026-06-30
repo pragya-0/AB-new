@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight, PlayCircle } from "lucide-react";
 
@@ -223,3 +223,4 @@ export default function GlobalEventsSection() {
     </section>
   );
 }
+

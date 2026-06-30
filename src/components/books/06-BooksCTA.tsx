@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { ArrowRight, LibraryBig } from "lucide-react";
 import { books } from "./booksData";
 

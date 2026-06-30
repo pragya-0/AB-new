@@ -1,4 +1,4 @@
-import { pressPath, bio } from "./bioAssets";
+﻿import { pressPath, bio } from "./bioAssets";
 
 export const pressNews = [
   ["ABP Bangla", `${pressPath}ABP bangla.png`],
@@ -10,3 +10,4 @@ export const pressNews = [
   ["Commerce Story", `${pressPath}arijit-commerce.jpg`],
   ["Press Archive", `${bio}word5.jpg`],
 ];
+

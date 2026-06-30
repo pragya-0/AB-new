@@ -1,4 +1,4 @@
-export const identityCards = [
+﻿export const identityCards = [
   ["Serial Entrepreneur", "Building technology, media, education, startup and global innovation platforms since 1998."],
   ["Angel Investor", "Connected with startup investment, founder mentoring and business matchmaking ecosystems."],
   ["Global VC", "Working with global startup, investor and innovation networks across countries."],
@@ -16,3 +16,4 @@ export const identityCards = [
   ["AI Specialist", "Building and teaching AI-led innovation, automation, media and startup workflows."],
   ["Blockchain Specialist", "Working across blockchain, digital economy and future finance conversations."],
 ];
+

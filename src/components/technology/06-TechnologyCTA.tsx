@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 
 import BioSectionShell from "../bio/BioSectionShell";
 import SmartImage from "../bio/SmartImage";
@@ -35,7 +35,7 @@ const forums: ForumItem[] = [
     meta: "Ghana • Business • Technology • Growth",
     text:
       "Global business, innovation and investment ecosystem conversations connecting technology, founders and emerging-market growth.",
-    image: `${speaking}ghana.jpg`,
+    image: `${speaking}ghana.jpeg`,
     fit: "contain",
   },
   {

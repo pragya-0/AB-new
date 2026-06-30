@@ -1,4 +1,4 @@
-// src/components/books/booksData.ts
+﻿// src/components/books/booksData.ts
 
 export const booksPath = "/assets/books/";
 

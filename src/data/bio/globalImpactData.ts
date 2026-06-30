@@ -1,4 +1,4 @@
-import { bio } from "./bioAssets";
+﻿import { bio } from "./bioAssets";
 
 export const globalImpact = [
   ["World Leader Summit", "A global platform for leadership, investment, innovation and international collaboration.", `${bio}world-leader-summit-panel.jpeg`],
@@ -7,3 +7,4 @@ export const globalImpact = [
   ["Governments & Institutions", "Training, policy-facing platforms, innovation programs and institutional technology conversations.", `${bio}ntpc.jpg.jpeg`],
   ["Corporate & MSME Growth", "Business transformation, finance, MSME growth, banking platforms and entrepreneurship ecosystems.", `${bio}axis-bank-bhub.jpg`],
 ];
+

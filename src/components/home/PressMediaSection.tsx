@@ -1,4 +1,4 @@
-import MediaHeroSection from "./MediaHeroSection";
+﻿import MediaHeroSection from "./MediaHeroSection";
 import FeaturedLogosStrip from "./FeaturedLogosStrip";
 import RecognitionWall from "./RecognitionWall";
 

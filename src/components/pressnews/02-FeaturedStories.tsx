@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, BadgeCheck, Globe2, Newspaper } from "lucide-react";
 import { featuredStories } from "./pressData";
@@ -56,9 +56,9 @@ const storyCopyById: Record<string, StoryCopy> = {
 
   "east-india-startup-showcase-2026": {
     publisher: "East India Startup Showcase",
-    title: "East India Startup Showcase: ₹4.6 Cr Investor Interest",
+  title: "East India Startup Showcase: ₹4.6 Cr Investor Interest",
     summary:
-      "Newspaper coverage from Jamshedpur reporting investor interest of ₹4.6 crore across promising startups at the East India Startup Showcase Day, linked with regional startup growth and entrepreneurship development.",
+   "Newspaper coverage from Jamshedpur reporting investor interest of ₹4.6 crore across promising startups at the East India Startup Showcase Day, linked with regional startup growth and entrepreneurship development.",
     tags: ["Startup Capital", "Jamshedpur", "2026"],
     label: "Newspaper Coverage",
     imageFallbacks: [
@@ -357,3 +357,4 @@ export default function FeaturedStories() {
     </section>
   );
 }
+

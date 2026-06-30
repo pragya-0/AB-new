@@ -1,4 +1,4 @@
-export const featuredThoughtArticle = {
+﻿export const featuredThoughtArticle = {
   category: "AI",
   title: "AI & Future Entrepreneurship",
   description:

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { ArrowRight, Cpu, DatabaseZap, Globe2, Layers3 } from "lucide-react";
 
 import SmartImage from "../bio/SmartImage";

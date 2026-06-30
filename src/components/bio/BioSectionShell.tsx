@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { fadeUp } from "./bioMotion";
 
 type BioSectionShellProps = {
@@ -48,3 +48,4 @@ export default function BioSectionShell({
     </section>
   );
 }
+

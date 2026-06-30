@@ -1,4 +1,4 @@
-import { bio } from "./bioAssets";
+﻿import { bio } from "./bioAssets";
 
 export const stories = [
   ["World Leader Network", `${bio}word16.jpg`],
@@ -12,3 +12,4 @@ export const stories = [
   ["Business Ecosystem", `${bio}word10.jpg`],
   ["Public Conversations", `${bio}mediacollab.jpg`],
 ];
+

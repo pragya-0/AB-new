@@ -1,3 +1,4 @@
+﻿import MetaTags from "../components/common/MetaTags";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
@@ -17,6 +18,12 @@ import ClosingSection from "../components/photography/13-ClosingSection";
 export default function PhotographyPage() {
   return (
     <>
+      <MetaTags
+        title="Photography | Travel, Nature, Food & People | Arijit Bhattacharyya"
+        description="Photography portfolio of Arijit Bhattacharyya featuring travel photography, nature, food, models, people, cultural journeys, Himalayan landscapes, Kuala Lumpur, Silchar, Arabic food stories and visual storytelling."
+        image="/assets/Photography/travelling/finland.jpg"
+      />
+
       <Navbar />
 
       <main className="bg-white text-[#081120] overflow-x-hidden">

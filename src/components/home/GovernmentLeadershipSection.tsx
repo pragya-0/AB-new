@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -8,7 +8,7 @@ const leadershipCards = [
     title: "Ghana Investor Summit with Vice President",
     description:
       "Africa-focused investor and business summit platform with the Vice President, connecting entrepreneurship, global capital and innovation ecosystems.",
-    image: "/assets/speaking/ghana.jpg",
+    image: "/assets/speaking/ghana.jpeg",
   },
   {
     eyebrow: "Global Diplomacy",

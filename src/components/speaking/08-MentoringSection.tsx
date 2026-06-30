@@ -1,124 +1,180 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
+import {
+  BadgeCheck,
+  BriefcaseBusiness,
+  Handshake,
+  Mic2,
+  Network,
+  Rocket,
+  Scale,
+  type LucideIcon,
+} from "lucide-react";
 
 import BioSectionShell from "../bio/BioSectionShell";
-import SmartImage from "../bio/SmartImage";
 import { fadeUp } from "../bio/bioMotion";
 
-const speaking = "/assets/speaking/";
-
-type JourneyItem = {
-  place: string;
+type AuthorityItem = {
   title: string;
+  label: string;
   text: string;
-  image: string;
-  alt: string;
-  fit?: "cover" | "contain";
+  icon: LucideIcon;
 };
 
-const journey: JourneyItem[] = [
+type MetricItem = {
+  value: string;
+  label: string;
+  text: string;
+};
+
+const metrics: MetricItem[] = [
   {
-    place: "Ghana",
-    title: "Business Summit with the Vice President of Ghana",
-    text: "International business, investment and entrepreneurship conversations connecting innovation with national growth priorities.",
-    image: `${speaking}ghana.jpg`,
-    alt: "Arijit Bhattacharyya speaking at Ghana Business Summit with Vice President of Ghana on investment entrepreneurship venture capital and innovation",
-    fit: "cover",
+    value: "7000+",
+    label: "Startups Mentored",
+    text: "Founder support across ideation, validation, pitch direction, growth strategy and investment readiness.",
   },
   {
-    place: "Thailand",
-    title: "Blockchain & Future Finance Forum",
-    text: "Public conversations around blockchain, digital finance, Web3 ecosystems and emerging technology-led business models.",
-    image: `${speaking}Thailand_blockchain.jpg`,
-    alt: "Arijit Bhattacharyya Thailand blockchain forum speaker discussing blockchain technology digital finance Web3 cryptocurrency and innovation",
-    fit: "contain",
+    value: "1998",
+    label: "Founder Since",
+    text: "A long founder journey across technology, gaming, animation, creative IP and entrepreneurship.",
   },
   {
-    place: "Dubai",
-    title: "AI, Investment & Global Business",
-    text: "Leadership platforms across artificial intelligence, entrepreneurship, family offices, investment and future technology.",
-    image: `${speaking}dubai-speaker.png`,
-    alt: "Arijit Bhattacharyya Dubai speaker on AI investment entrepreneurship startup funding angel investment and venture capital",
-    fit: "cover",
+    value: "200+",
+    label: "Founder Conversations",
+    text: "Long-form ecosystem conversations through founder stories, podcast formats and entrepreneurship learning.",
+  },
+];
+
+const authorityItems: AuthorityItem[] = [
+  {
+    title: "Startup Mentoring",
+    label: "Founder Readiness",
+    text: "Guidance across business models, pitch clarity, product direction, market positioning and early-stage execution.",
+    icon: Rocket,
   },
   {
-    place: "South Korea",
-    title: "Technology, DeepTech & Innovation",
-    text: "International technology conversations across innovation, gaming, robotics, deeptech and cross-border collaboration.",
-    image: `${speaking}SKorea.png`,
-    alt: "Arijit Bhattacharyya South Korea technology conference speaker discussing deeptech gaming robotics innovation and future technology",
-    fit: "cover",
+    title: "Accelerator Ecosystems",
+    label: "Techstars • Seedstars",
+    text: "Mentoring exposure across startup and accelerator ecosystems supporting founders, SMEs and innovation teams.",
+    icon: Network,
   },
   {
-    place: "Kazakhstan",
-    title: "Digital Bridge & AI Dialogue",
-    text: "Global innovation forums focused on artificial intelligence, digital ecosystems, entrepreneurship and future economies.",
-    image: `${speaking}kazak.png`,
-    alt: "Arijit Bhattacharyya Kazakhstan Digital Bridge AI forum speaker on artificial intelligence entrepreneurship digital economy and innovation",
-    fit: "cover",
+    title: "Jury & Evaluation",
+    label: "Startup Awards • Hackathons",
+    text: "Founder evaluation credibility across innovation competitions, government-linked startup platforms and institutional jury rooms.",
+    icon: Scale,
   },
   {
-    place: "Finland",
-    title: "Smart Cities & Future Technology",
-    text: "Innovation platforms exploring smart cities, future technology, urban systems and international collaboration.",
-    image: `${speaking}finland.jpg`,
-    alt: "Arijit Bhattacharya Finland smart city speaker discussing IoT smart cities future technology innovation and digital transformation",
-    fit: "cover",
+    title: "Investment Readiness",
+    label: "Capital • Pitch • Growth",
+    text: "Helping founders shape fundraising narratives, business traction, venture positioning and investor communication.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Institutional Advisory",
+    label: "ADB • Global Platforms",
+    text: "Advisory and resource-person credibility across development, innovation, entrepreneurship and future-skills conversations.",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Founder Conversations",
+    label: "Podcast • Community • Learning",
+    text: "Long-form founder storytelling, ecosystem conversations and practical learning around entrepreneurship and technology.",
+    icon: Mic2,
   },
 ];
 
 export default function MentoringSection() {
   return (
     <BioSectionShell
-      id="global-journey"
-      eyebrow="Global Speaking Journey"
-      title="Speaking Across 25+ Countries on Innovation, Entrepreneurship & Future Technology"
-      text="From Ghana, Thailand and Dubai to South Korea, Kazakhstan and Finland, Arijit Bhattacharyya has participated in global forums covering artificial intelligence, blockchain, venture capital, startups, smart cities, deep technology and future innovation ecosystems."
+      id="mentoring-authority"
+      eyebrow="Mentoring & Founder Authority"
+      title="Beyond Keynotes: Founder Mentoring, Jury Rooms & Advisory Platforms"
+      text="Arijit Bhattacharyya’s speaking work extends into founder mentoring, startup evaluation, accelerator ecosystems, investment-readiness conversations and institutional innovation platforms."
       className="bg-gradient-to-br from-white via-[#f5f9ff] to-[#e8f1ff]"
     >
-      <div className="space-y-8">
-        {journey.map((item, index) => {
-          const imageLeft = index % 2 === 0;
+      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
+        <motion.article
+          {...fadeUp}
+          className="overflow-hidden rounded-[36px] border border-[#bdd9ff] bg-[#07101f] shadow-[0_30px_90px_rgba(0,87,255,0.16)]"
+        >
+          <div className="relative flex h-full min-h-[520px] flex-col justify-between overflow-hidden p-7 text-white sm:p-9 lg:p-10">
+            <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#2d74ff]/25 blur-3xl" />
+            <div className="absolute -bottom-28 -left-24 h-72 w-72 rounded-full bg-[#69aaff]/15 blur-3xl" />
 
-          return (
-            <motion.article
-              key={item.place}
-              {...fadeUp}
-              className="overflow-hidden rounded-[34px] border border-[#bdd9ff] bg-white shadow-[0_24px_85px_rgba(0,87,255,0.10)]"
-            >
-              <div className="grid lg:grid-cols-2">
-                <div className={imageLeft ? "" : "lg:order-2"}>
-                  <div className="flex h-[320px] items-center justify-center overflow-hidden bg-[#eef5ff] p-4 sm:h-[400px] md:h-[500px]">
-                    <SmartImage
-                      src={item.image}
-                      alt={item.alt}
-                      className={`h-full w-full rounded-[26px] ${
-                        item.fit === "contain"
-                          ? "object-contain"
-                          : "object-cover object-center"
-                      }`}
-                    />
-                  </div>
-                </div>
-
-                <div className="flex flex-col justify-center p-7 text-[#07101f] sm:p-9 md:p-12">
-                  <div className="mb-7 h-1.5 w-24 rounded-full bg-gradient-to-r from-[#0057ff] to-[#69aaff]" />
-
-                  <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#0057ff]">
-                    {item.place}
-                  </p>
-
-                  <h3 className="text-[32px] font-extrabold leading-[1] tracking-[-0.045em] sm:text-[40px] md:text-[52px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-6 max-w-[700px] text-base font-normal leading-8 text-[#475569]">
-                    {item.text}
-                  </p>
-                </div>
+            <div className="relative">
+              <div className="mb-7 inline-flex h-16 w-16 items-center justify-center rounded-[24px] bg-white text-[#0b4fd8] shadow-[0_20px_70px_rgba(45,116,255,0.22)]">
+                <Handshake className="h-8 w-8" />
               </div>
-            </motion.article>
-          );
-        })}
+
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#8bb8ff]">
+                Founder Support Layer
+              </p>
+
+              <h3 className="max-w-[760px] text-[38px] font-extrabold leading-[0.98] tracking-[-0.055em] text-white sm:text-[52px] md:text-[62px]">
+                Mentoring founders, evaluating ideas and shaping innovation
+                ecosystems.
+              </h3>
+
+              <p className="mt-6 max-w-[720px] text-[16px] font-normal leading-8 text-white/70">
+                From startup rooms and accelerator ecosystems to institutional
+                forums and jury panels, this layer shows the work behind the
+                stage: helping founders think clearly, prepare better and build
+                with stronger direction.
+              </p>
+            </div>
+
+            <div className="relative mt-10 grid gap-3 sm:grid-cols-3">
+              {metrics.map((metric) => (
+                <div
+                  key={metric.label}
+                  className="rounded-[24px] border border-white/10 bg-white/[0.055] p-5"
+                >
+                  <p className="text-[34px] font-extrabold leading-none tracking-[-0.045em] text-white">
+                    {metric.value}
+                  </p>
+
+                  <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8bb8ff]">
+                    {metric.label}
+                  </p>
+
+                  <p className="mt-3 text-[13px] font-normal leading-6 text-white/58">
+                    {metric.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.article>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          {authorityItems.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <motion.article
+                key={item.title}
+                {...fadeUp}
+                className="group rounded-[30px] border border-[#bdd9ff] bg-white p-6 shadow-[0_22px_75px_rgba(0,87,255,0.10)] transition duration-300 hover:-translate-y-1 hover:border-[#2d74ff]/45 hover:shadow-[0_28px_90px_rgba(45,116,255,0.16)]"
+              >
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[20px] bg-[#2d74ff]/10 text-[#0b4fd8] ring-1 ring-[#2d74ff]/15 transition duration-300 group-hover:bg-[#0b4fd8] group-hover:text-white">
+                  <Icon className="h-6 w-6" />
+                </div>
+
+                <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#2d74ff]">
+                  {item.label}
+                </p>
+
+                <h3 className="text-[26px] font-extrabold leading-[1.04] tracking-[-0.04em] text-[#07101f] sm:text-[30px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-[14px] font-normal leading-7 text-[#475569] sm:text-[15px]">
+                  {item.text}
+                </p>
+              </motion.article>
+            );
+          })}
+        </div>
       </div>
     </BioSectionShell>
   );

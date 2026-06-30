@@ -1,4 +1,4 @@
-import { booksPath } from "./bioAssets";
+﻿import { booksPath } from "./bioAssets";
 
 export const books = [
   ["The Future of Entrepreneurship", "The Decade in AI", `${booksPath}entrepreneurship.png`],
@@ -8,3 +8,4 @@ export const books = [
   ["Experts Can Blow It", "Leadership, business and decision-making.", `${booksPath}Blow it.png`],
   ["Empowering Africa", "Innovation and investment in Africa.", `${booksPath}Africa.png`],
 ];
+

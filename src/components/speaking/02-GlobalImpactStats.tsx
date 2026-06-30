@@ -1,131 +1,237 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 
-import BioSectionShell from "../bio/BioSectionShell";
 import SmartImage from "../bio/SmartImage";
 import { fadeUp } from "../bio/bioMotion";
 
 const thought = "/assets/thought-leadership/";
+const blog = "/assets/blog/";
 
-const featured = {
-  title: "AI & Generative Intelligence",
-  description:
-    "Exploring how artificial intelligence is reshaping entrepreneurship, education, governance, creativity and the future of business.",
-  image: `${thought}genai.jpeg`,
-  alt: "Arijit Bhattacharyya AI speaker on generative intelligence entrepreneurship education governance creativity and future business",
+type ThoughtCard = {
+  title: string;
+  label: string;
+  description: string;
+  image: string;
+  alt: string;
+  imageWrapClass: string;
+  imageClass: string;
 };
 
-const topics = [
+const topics: ThoughtCard[] = [
   {
-    title: "Blockchain & Digital Finance",
+    title: "AI & GenAI",
+    label: "Artificial Intelligence",
     description:
-      "Digital economies, decentralized systems, tokenization and future financial ecosystems.",
-    image: `${thought}blockchain.jpeg`,
-    alt: "Arijit Bhattacharyya blockchain speaker on digital finance decentralized systems tokenization and future financial ecosystems",
+      "How artificial intelligence and generative systems are reshaping entrepreneurship, education, governance, creativity and business strategy.",
+    image: `${thought}genai.jpeg`,
+    alt: "Arijit Bhattacharyya speaking on AI and generative intelligence for entrepreneurship education governance and future business",
+    imageWrapClass: "h-[250px] sm:h-[275px] lg:h-[300px]",
+    imageClass:
+      "h-auto max-h-[92%] w-auto max-w-[92%] rounded-[18px] object-contain object-center",
   },
   {
-    title: "Startup Ecosystems",
+    title: "Blockchain & Digital Economies",
+    label: "Digital Economy",
     description:
-      "Founder communities, innovation networks, accelerators and startup growth pathways.",
+      "Digital economies, decentralized systems, tokenization, blockchain adoption and the future of financial ecosystems.",
+    image: `${thought}blockchain.jpeg`,
+    alt: "Arijit Bhattacharyya blockchain speaker on digital economies decentralized systems tokenization and future financial ecosystems",
+    imageWrapClass: "h-[250px] sm:h-[275px] lg:h-[300px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[18px] object-contain object-center",
+  },
+  {
+    title: "Startup & Founder Ecosystems",
+    label: "Startup Ecosystems",
+    description:
+      "Founder communities, innovation networks, accelerators, startup-growth pathways and ecosystem-building for early-stage ventures.",
     image: `${thought}startup.jpeg`,
     alt: "Arijit Bhattacharyya entrepreneur speaking on startup ecosystems founders accelerators and innovation networks",
+    imageWrapClass: "h-[205px] sm:h-[220px] lg:h-[235px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[16px] object-contain object-center",
   },
   {
-    title: "Gaming, IP & Digital Humans",
+    title: "Gaming, IP & Storytelling",
+    label: "Gaming & IP",
     description:
-      "Interactive entertainment, virtual characters, storytelling and next-generation digital experiences.",
+      "Interactive entertainment, intellectual property, digital humans, virtual characters and next-generation storytelling experiences.",
     image: `${thought}gaming-ip-storytelling.jpeg`,
-    alt: "Arijit Bhattacharyya game development speaker on gaming intellectual property storytelling and digital humans",
+    alt: "Arijit Bhattacharyya game development speaker on gaming intellectual property storytelling digital humans and virtual characters",
+    imageWrapClass: "h-[205px] sm:h-[220px] lg:h-[235px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[16px] object-contain object-center",
   },
   {
-    title: "Metaverse, VR & XR",
+    title: "Metaverse & VR",
+    label: "Immersive Tech",
     description:
-      "Immersive technologies transforming learning, collaboration and future experiences.",
+      "Virtual reality, XR, metaverse platforms and immersive technologies transforming learning, collaboration and future experiences.",
     image: `${thought}metaverse-VR.jpg`,
-    alt: "Arijit Bhattacharya virtual reality speaker on metaverse VR XR immersive learning and future experiences",
+    alt: "Arijit Bhattacharyya virtual reality speaker on metaverse VR XR immersive learning and future experiences",
+    imageWrapClass: "h-[205px] sm:h-[220px] lg:h-[235px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[16px] object-contain object-center",
   },
   {
-    title: "Global Business Scaling",
+    title: "Global Business & Scaling",
+    label: "Global Business",
     description:
-      "Cross-border growth, international partnerships and global innovation strategies.",
+      "Cross-border growth, international partnerships, business expansion and global innovation strategies for emerging ventures.",
     image: `${thought}global-business-scaling.jpeg`,
     alt: "Arijit Bhattacharyya global speaker on business scaling international partnerships and innovation strategies",
+    imageWrapClass: "h-[205px] sm:h-[220px] lg:h-[235px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[16px] object-contain object-center",
   },
   {
-    title: "Community & Impact",
+    title: "Community & Diplomacy",
+    label: "Community Impact",
     description:
-      "Technology-enabled communities, inclusion, education and long-term ecosystem development.",
+      "Technology-enabled communities, inclusion, education, diplomacy and long-term ecosystem development across markets.",
     image: `${thought}community.jpeg`,
-    alt: "Arijit Bhattacharjee innovator speaking on community impact education inclusion and ecosystem development",
+    alt: "Arijit Bhattacharyya speaking on community diplomacy education inclusion and ecosystem development",
+    imageWrapClass: "h-[205px] sm:h-[220px] lg:h-[235px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[16px] object-contain object-center",
+  },
+  {
+    title: "Investment & Innovation Ecosystems",
+    label: "Capital Networks",
+    description:
+      "Connecting founders, capital, institutions and innovation platforms into stronger startup and business-growth ecosystems.",
+    image: `${blog}investment.png`,
+    alt: "Arijit Bhattacharyya speaking on investment innovation ecosystems startup capital and founder growth",
+    imageWrapClass: "h-[205px] sm:h-[220px] lg:h-[235px]",
+    imageClass:
+      "h-auto max-h-[94%] w-auto max-w-[94%] rounded-[16px] object-contain object-center",
   },
 ];
 
+const firstRow = topics.slice(0, 2);
+const secondRow = topics.slice(2, 5);
+const thirdRow = topics.slice(5, 8);
+
+function ThoughtLeadershipCard({
+  topic,
+  index,
+}: {
+  topic: ThoughtCard;
+  index: number;
+}) {
+  return (
+    <motion.article
+      variants={fadeUp}
+      custom={index}
+      className="group overflow-hidden rounded-[24px] border border-blue-200 bg-white shadow-[0_16px_48px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_24px_64px_rgba(0,87,255,0.13)]"
+    >
+      <div
+        className={`flex items-center justify-center border-b border-blue-100 bg-gradient-to-br from-white via-[#f6faff] to-[#eaf3ff] ${topic.imageWrapClass}`}
+      >
+        <SmartImage
+          src={topic.image}
+          alt={topic.alt}
+          className={`${topic.imageClass} transition duration-500 group-hover:scale-[1.01]`}
+        />
+      </div>
+
+      <div className="p-5">
+        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#0057ff]">
+          {topic.label}
+        </p>
+
+        <h3 className="text-[22px] font-bold leading-tight tracking-[-0.035em] text-[#07101f]">
+          {topic.title}
+        </h3>
+
+        <p className="mt-3 text-[14.5px] font-normal leading-7 text-[#475569]">
+          {topic.description}
+        </p>
+      </div>
+    </motion.article>
+  );
+}
+
 export default function GlobalImpactStats() {
   return (
-    <BioSectionShell
+    <section
       id="thought-leadership"
-      eyebrow="Thought Leadership"
-      title="Ideas, Industries & Future Technologies"
-      text="The conversations span entrepreneurship, artificial intelligence, gaming, digital economies, investment ecosystems and emerging technologies shaping the future."
-      className="bg-gradient-to-br from-white via-[#f5f9ff] to-[#e8f1ff]"
+      className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6faff] to-[#e8f1ff] px-5 py-12 sm:px-8 sm:py-14 lg:px-12 lg:py-16"
     >
-      <div className="space-y-8">
-        <motion.article
-          {...fadeUp}
-          className="overflow-hidden rounded-[34px] border border-[#bdd9ff] bg-white shadow-[0_32px_100px_rgba(0,87,255,0.14)]"
+      <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-blue-300/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-sky-400/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          variants={fadeUp}
+          className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-end"
         >
-          <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative overflow-hidden bg-[#eef5ff]">
-              <SmartImage
-                src={featured.image}
-                alt={featured.alt}
-                className="h-[320px] w-full object-cover object-top sm:h-[420px] md:h-[520px] lg:h-[620px]"
-              />
-            </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-[#0057ff]">
+              Thought Leadership
+            </p>
 
-            <div className="flex flex-col justify-center bg-white p-7 text-[#07101f] sm:p-9 md:p-12 lg:p-14">
-              <div className="mb-7 h-1.5 w-24 rounded-full bg-gradient-to-r from-[#0057ff] to-[#69aaff]" />
-
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#0057ff]">
-                Featured Topic
-              </p>
-
-              <h3 className="max-w-[560px] text-[32px] font-extrabold leading-[1] tracking-[-0.045em] sm:text-[40px] md:text-[48px]">
-                {featured.title}
-              </h3>
-
-              <p className="mt-6 max-w-[560px] text-base font-normal leading-8 text-[#334155]">
-                {featured.description}
-              </p>
-            </div>
+            <h2 className="mt-3 max-w-3xl text-4xl font-extrabold leading-[1] tracking-[-0.055em] text-[#07101f] sm:text-5xl lg:text-6xl">
+              Ideas, Industries & Future Technologies
+            </h2>
           </div>
-        </motion.article>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {topics.map((topic) => (
-            <motion.article
-              key={topic.title}
-              {...fadeUp}
-              className="overflow-hidden rounded-[30px] border border-[#bdd9ff] bg-white shadow-[0_18px_55px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_75px_rgba(0,87,255,0.14)]"
-            >
-              <SmartImage
-                src={topic.image}
-                alt={topic.alt}
-                className="h-[220px] w-full object-cover object-center sm:h-[250px] lg:h-[270px]"
+          <p className="max-w-3xl text-base font-normal leading-8 text-[#475569] sm:text-lg lg:pb-2">
+            The conversations span entrepreneurship, artificial intelligence,
+            gaming, digital economies, investment ecosystems and emerging
+            technologies.
+          </p>
+        </motion.div>
+
+        <div className="mt-8 space-y-5">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            className="grid gap-5 lg:grid-cols-2"
+          >
+            {firstRow.map((topic, index) => (
+              <ThoughtLeadershipCard
+                key={topic.title}
+                topic={topic}
+                index={index}
               />
+            ))}
+          </motion.div>
 
-              <div className="p-6 text-[#07101f]">
-                <h3 className="text-[23px] font-bold leading-tight tracking-[-0.035em] sm:text-[25px]">
-                  {topic.title}
-                </h3>
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.12 }}
+            className="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {secondRow.map((topic, index) => (
+              <ThoughtLeadershipCard
+                key={topic.title}
+                topic={topic}
+                index={index + firstRow.length}
+              />
+            ))}
+          </motion.div>
 
-                <p className="mt-4 text-[15px] font-normal leading-7 text-[#475569]">
-                  {topic.description}
-                </p>
-              </div>
-            </motion.article>
-          ))}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.12 }}
+            className="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {thirdRow.map((topic, index) => (
+              <ThoughtLeadershipCard
+                key={topic.title}
+                topic={topic}
+                index={index + firstRow.length + secondRow.length}
+              />
+            ))}
+          </motion.div>
         </div>
       </div>
-    </BioSectionShell>
+    </section>
   );
 }

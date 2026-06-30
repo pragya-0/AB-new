@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { BookOpen, BrainCircuit, Rocket } from "lucide-react";
 import { blogPath } from "./blogData";
 

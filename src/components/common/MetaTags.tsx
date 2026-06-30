@@ -31,3 +31,4 @@ export default function MetaTags({ title, description, image = "/assets/bio/heli
 
   return null;
 }
+

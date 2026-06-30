@@ -1,4 +1,4 @@
-export const bio = "/assets/bio/";
+﻿export const bio = "/assets/bio/";
 export const gallery = "/assets/gallery/";
 export const drawing = "/assets/Drawing/";
 export const photography = "/assets/Photography/";
@@ -92,7 +92,7 @@ export const pressArchive = [
 export const speakingProof = [
   ["TEDx Speaker", `${speaking}tedx.jpg.jpeg`],
   ["Dubai AI Blockchain", `${speaking}arijit-dubai-ai-blockchain-.jpg.jpeg`],
-  ["Ghana", `${speaking}ghana.jpg`],
+  ["Ghana", `${speaking}ghana.jpeg`],
   ["Axis Bank", `${speaking}axis-bank-bhub.jpg`],
   ["NTPC", `${speaking}ntpc.jpg.jpeg`],
   ["South Korea", `${speaking}SKorea.png`],

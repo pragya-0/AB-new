@@ -1,4 +1,4 @@
-import {
+﻿import {
   photographyCategories,
   photographyItems,
   type PhotographyItem,

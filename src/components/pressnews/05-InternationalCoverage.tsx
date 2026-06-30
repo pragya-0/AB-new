@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Globe2, MapPin } from "lucide-react";
 
@@ -279,3 +279,4 @@ export default function InternationalCoverage() {
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-const ventures = [
+﻿const ventures = [
   {
     title: "World Leader Summit",
     description: "A global leadership and business ecosystem connecting founders, investors, innovators and decision-makers.",

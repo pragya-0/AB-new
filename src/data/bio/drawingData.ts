@@ -6,3 +6,4 @@ export const drawingStories = [
   ["Digital Art", "Digital imagination connected with AI, games and cinematic IP.", `${drawingPath}digital/1.jpg`],
   ["Comics Creator", "Original comics, superheroes and mythology-led visual worlds.", `${gamePath}comics-img3.jpg`],
 ];
+

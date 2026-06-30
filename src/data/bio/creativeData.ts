@@ -1,4 +1,4 @@
-import { bio, drawingPath, gamePath } from "./bioAssets";
+﻿import { bio, drawingPath, gamePath } from "./bioAssets";
 
 export const creativeTracks = [
   {
@@ -30,3 +30,4 @@ export const creativeTracks = [
     tags: ["Diplomacy", "Global Business"],
   },
 ];
+

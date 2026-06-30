@@ -1,4 +1,4 @@
-export const featuredBook = {
+﻿export const featuredBook = {
   title: "The Power of Generic AI",
   description:
     "A deep dive into the next wave of intelligence. Exploring how Generic AI will transform industries, human potential and the future of innovation.",

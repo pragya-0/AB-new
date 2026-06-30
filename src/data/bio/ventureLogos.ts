@@ -23,3 +23,4 @@ export const ventureLogos = [
   ["Founder Community", `${venturePath}logo (2).png`, "Entrepreneur ecosystem"],
   ["Future Ventures", `${venturePath}logo (3).png`, "New ventures"],
 ];
+

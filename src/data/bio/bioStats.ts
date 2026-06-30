@@ -1,4 +1,4 @@
-export const stats = [
+﻿export const stats = [
   ["29+", "Years of Innovation"],
   ["102+", "Countries Connected"],
   ["7000+", "Startups Mentored"],

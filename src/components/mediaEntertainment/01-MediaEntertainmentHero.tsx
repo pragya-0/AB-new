@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Film, Gamepad2, Globe2, Sparkles } from "lucide-react";
 

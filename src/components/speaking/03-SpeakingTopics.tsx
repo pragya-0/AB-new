@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 
 import BioSectionShell from "../bio/BioSectionShell";
 import SmartImage from "../bio/SmartImage";
@@ -6,149 +6,159 @@ import { fadeUp } from "../bio/bioMotion";
 
 const speaking = "/assets/speaking/";
 
-type ForumItem = {
-  year: string;
+type LatestSpeakItem = {
   title: string;
-  meta: string;
-  description?: string;
+  location: string;
+  role: string;
+  topic: string;
+  description: string;
   image: string;
-  fit?: "cover" | "contain";
-  highlight?: boolean;
+  alt: string;
+  featured?: boolean;
 };
 
-const forums: ForumItem[] = [
+const latestSpeaks: LatestSpeakItem[] = [
   {
-    year: "2022",
-    title: "Ghana Investor Summit",
-    meta: "Vice President of Ghana • Venture Capital • Africa",
+    title: "Digital Bridge Kazakhstan",
+    location: "Kazakhstan • Central Asia",
+    role: "International Speaker",
+    topic: "AI Monetization • Physical-Digital Assets • India-MENA Access",
     description:
-      "Featured keynote session discussing venture capital, startup growth, technology innovation and the future of investment ecosystems with senior government and business leaders.",
-    image: `${speaking}ghana.jpg`,
-    highlight: true,
+      "A high-value international technology platform connected with artificial intelligence, digital economies, physical-digital assets and cross-border innovation access.",
+    image: `${speaking}2025/digital-bridge-kazakhstan.png`,
+    alt: "Arijit Bhattacharyya speaking at Digital Bridge Kazakhstan on AI monetization and digital economy",
+    featured: true,
   },
   {
-    year: "2022",
-    title: "WISE USA",
-    meta: "Future of Venture Capital • Global Innovation",
-    image: `${speaking}2022/WISE.jpg`,
+    title: "Axis Bank Evolve Pune",
+    location: "Pune • India",
+    role: "Speaker",
+    topic: "MSME Digitization • Business Growth • Digital Economy",
+    description:
+      "A business-facing platform focused on MSME transformation, digital adoption, entrepreneurship and growth.",
+    image: `${speaking}2023/Axis-Bank-Pune.jpg`,
+    alt: "Arijit Bhattacharyya speaking at Axis Bank Evolve Pune on MSME digitization",
   },
   {
-    year: "2021",
-    title: "HULT Prize Nepal",
-    meta: "Business Growth • Future Technology • Nepal",
-    image: `${speaking}nepal-next-growth.jpg`,
+    title: "Axis Bank Evolve Bhubaneswar",
+    location: "Bhubaneswar • India",
+    role: "Speaker",
+    topic: "Import Export • MSME Growth • Digital Business",
+    description:
+      "A regional business forum connected with MSME growth, import-export opportunities and digital business transformation.",
+    image: `${speaking}2023/Axis-Bank-Bhubaneswar.jpg`,
+    alt: "Arijit Bhattacharyya speaking at Axis Bank Evolve Bhubaneswar on MSME growth and digital business",
   },
   {
-    year: "2019",
-    title: "Malaysia Blockchain Forum",
-    meta: "Blockchain • Digital Assets • Future Finance",
-    image: `${speaking}maly-blockchain.png`,
-    fit: "contain",
+    title: "XLRI InGenium",
+    location: "XLRI • India",
+    role: "Speaker",
+    topic: "Startup Ecosystem • Founder Competition • Innovation",
+    description:
+      "An academic entrepreneurship platform connected with startup thinking, founder evaluation and student innovation.",
+    image: `${speaking}2023/XLRI.jpg`,
+    alt: "Arijit Bhattacharyya at XLRI InGenium speaking on startups and innovation",
   },
   {
-    year: "2017",
-    title: "Finland Smart City Forum",
-    meta: "IoT • Smart Cities • Future Infrastructure",
-    image: `${speaking}finland.jpg`,
-  },
-  {
-    year: "2021",
-    title: "AI World Summit Singapore",
-    meta: "Artificial Intelligence • Enterprise Innovation",
-    image: `${speaking}2021/AI-world-summit.jpg`,
-  },
-  {
-    year: "2022",
-    title: "Lebanon Business Forum",
-    meta: "Entrepreneurship • Global Markets • Middle East",
-    image: `${speaking}2022/Lebanon.jpg`,
-    fit: "contain",
-  },
-  {
-    year: "2020",
-    title: "Colombia Innovation Dialogue",
-    meta: "Digital Growth • Entrepreneurship • Latin America",
-    image: `${speaking}colombia.jpg`,
-  },
-  {
-    year: "2021",
-    title: "Maldives Sustainability Forum",
-    meta: "Ministers • Tourism • Technology • Sustainability",
-    image: `${speaking}Maldives.jpg`,
+    title: "Vyapaar Jagat USA",
+    location: "USA • Global Business Platform",
+    role: "Keynote Speaker",
+    topic: "Venture Capital • Startup Growth • Global Innovation",
+    description:
+      "A venture-capital and global-business platform discussing founder growth, startup investment and international opportunity.",
+    image: `${speaking}2023/VyparJagat.jpg`,
+    alt: "Arijit Bhattacharyya at Vyapaar Jagat USA speaking on venture capital and startup growth",
   },
 ];
 
 export default function SpeakingTopics() {
+  const featured = latestSpeaks.find((item) => item.featured);
+  const regularItems = latestSpeaks.filter((item) => !item.featured);
+
   return (
     <BioSectionShell
-      id="global-forums"
-      dark
-      eyebrow="Global Forums"
-      title="Global Speaking Timeline Across Innovation, Investment & Technology"
-      text="A curated international timeline preserving the strongest legacy speaking proof — Ghana Investor Summit, WISE USA, HULT Nepal, Malaysia Blockchain, Finland Smart City, Singapore AI World Summit and other global innovation platforms."
+      id="latest-speaking-proof"
+      eyebrow="Latest Speaks"
+      title="Recent Global & Business Speaking Proof"
+      text="Selected recent appearances across international technology platforms, business forums, MSME transformation, venture capital and startup innovation."
     >
-      <div className="relative">
-        <div className="absolute left-5 top-0 hidden h-full w-px bg-gradient-to-b from-[#2d74ff] via-white/20 to-transparent md:block" />
+      <div className="space-y-6">
+        {featured && (
+          <motion.article
+            {...fadeUp}
+            className="overflow-hidden rounded-[34px] border border-[#2d74ff]/20 bg-gradient-to-br from-[#07152f] via-[#0b1d3f] to-[#03070d] shadow-[0_30px_90px_rgba(45,116,255,0.18)]"
+          >
+            <div className="grid gap-0 lg:grid-cols-[1.18fr_0.82fr] lg:items-stretch">
+              <div className="flex min-h-[300px] items-center justify-center bg-[#08182f] p-4 sm:min-h-[390px] lg:min-h-[430px]">
+                <SmartImage
+                  src={featured.image}
+                  alt={featured.alt}
+                  className="h-auto max-h-full w-auto max-w-full rounded-[26px] object-contain object-center"
+                />
+              </div>
 
-        <div className="space-y-8">
-          {forums.map((forum) => (
-            <motion.article key={forum.title} {...fadeUp} className="relative">
-              <div className="absolute left-[11px] top-10 hidden h-5 w-5 rounded-full border-4 border-[#2d74ff] bg-[#03070d] shadow-[0_0_0_8px_rgba(45,116,255,0.12)] md:block" />
-
-              <div
-                className={`grid gap-5 md:pl-16 lg:grid-cols-[420px_1fr] lg:items-center ${
-                  forum.highlight ? "lg:grid-cols-[520px_1fr]" : ""
-                }`}
-              >
-                <div
-                  className={`overflow-hidden rounded-[30px] border bg-white/[0.045] ${
-                    forum.highlight
-                      ? "border-[#2d74ff]/55 shadow-[0_25px_90px_rgba(0,87,255,0.18)]"
-                      : "border-white/10"
-                  }`}
-                >
-                  <div
-                    className={`flex items-center justify-center bg-[#07101f] p-4 ${
-                      forum.highlight ? "h-[360px] sm:h-[420px]" : "h-[280px] sm:h-[320px]"
-                    }`}
-                  >
-                    <SmartImage
-                      src={forum.image}
-                      alt={`Arijit Bhattacharyya keynote speaker at ${forum.title} on ${forum.meta}`}
-                      className={`h-full w-full rounded-[22px] ${
-                        forum.fit === "contain"
-                          ? "object-contain"
-                          : "object-cover object-center"
-                      }`}
-                    />
-                  </div>
+              <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+                <div className="mb-5 flex flex-wrap gap-3">
+                  <span className="rounded-full bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#0b4fd8]">
+                    Highlight
+                  </span>
+                  <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
+                    {featured.role}
+                  </span>
                 </div>
 
-                <div className="rounded-[30px] border border-white/10 bg-white/[0.035] p-6 md:p-8">
-                  <div className="mb-5 inline-flex rounded-full border border-[#2d74ff]/30 bg-[#2d74ff]/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#74adff]">
-                    {forum.year}
-                  </div>
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#8bb8ff]">
+                  {featured.location}
+                </p>
 
-                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#74adff]">
-                    {forum.meta}
-                  </p>
+                <h3 className="max-w-[680px] text-[34px] font-extrabold leading-[1.02] tracking-[-0.045em] text-white sm:text-[46px] md:text-[58px]">
+                  {featured.title}
+                </h3>
 
-                  <h3
-                    className={`font-extrabold leading-[1] tracking-[-0.045em] text-white ${
-                      forum.highlight
-                        ? "text-[34px] sm:text-[44px] md:text-[56px]"
-                        : "text-[30px] sm:text-[38px] md:text-[44px]"
-                    }`}
-                  >
-                    {forum.title}
-                  </h3>
+                <p className="mt-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-white/70">
+                  {featured.topic}
+                </p>
 
-                  {forum.description ? (
-                    <p className="mt-6 max-w-[820px] text-base font-normal leading-8 text-white/68 md:text-[17px]">
-                      {forum.description}
-                    </p>
-                  ) : null}
-                </div>
+                <p className="mt-5 max-w-[680px] text-[15px] font-normal leading-7 text-white/72 md:text-[16px] md:leading-8">
+                  {featured.description}
+                </p>
+              </div>
+            </div>
+          </motion.article>
+        )}
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {regularItems.map((item) => (
+            <motion.article
+              key={item.title}
+              {...fadeUp}
+              className="group flex h-full flex-col overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-[0_20px_70px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#2d74ff]/35 hover:shadow-[0_26px_90px_rgba(45,116,255,0.14)]"
+            >
+              <div className="flex h-[300px] items-center justify-center border-b border-slate-100 bg-gradient-to-br from-slate-50 via-white to-[#eef5ff] p-4 sm:h-[330px] lg:h-[350px]">
+                <SmartImage
+                  src={item.image}
+                  alt={item.alt}
+                  className="h-auto max-h-full w-auto max-w-full rounded-[22px] object-contain object-center transition duration-500"
+                />
+              </div>
+
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+           
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2d74ff]">
+                  {item.location}
+                </p>
+
+                <h3 className="text-[26px] font-extrabold leading-[1.04] tracking-[-0.04em] text-slate-950 sm:text-[30px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  {item.topic}
+                </p>
+
+                <p className="mt-4 text-[14px] font-normal leading-7 text-slate-600 sm:text-[15px]">
+                  {item.description}
+                </p>
               </div>
             </motion.article>
           ))}

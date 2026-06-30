@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 
 type VentureLogo = {
   name: string;
@@ -80,7 +80,7 @@ const ventureGroups: VentureGroup[] = [
       { name: "Power Tree", logo: "/assets/ventures/power-tree.jpg" },
       { name: "Cera Heat", logo: "/assets/ventures/cera-heat.jpg" },
       { name: "Yoga Training 4U", logo: "/assets/ventures/yoga.jpg" },
-      { name: "ÉSAH", logo: "/assets/ventures/tea.jpg" },
+      { name: "Ã‰SAH", logo: "/assets/ventures/tea.jpg" },
     ],
   },
   {

@@ -1,4 +1,4 @@
-const press = "/assets/press/";
+﻿const press = "/assets/press/";
 
 export type PressAsset = [title: string, text: string, image: string];
 

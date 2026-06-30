@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
 import { bio } from "../../data/bio/bioAssets";

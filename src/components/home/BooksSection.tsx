@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -185,7 +185,7 @@ export default function BooksSection() {
             className="group relative min-h-[320px] overflow-hidden rounded-[28px] border border-white/10 shadow-[0_32px_100px_rgba(0,0,0,0.5)] sm:min-h-[420px] sm:rounded-[32px]"
           >
             <img
-              src="/assets/books/speaking Image.jpeg"
+           src="/assets/hero/hero-speaker.jpeg"
               alt="Arijit Bhattacharyya speaking to an audience about books, entrepreneurship and innovation"
               className="h-full min-h-[320px] w-full object-cover object-center transition duration-[7000ms] group-hover:scale-[1.05] sm:min-h-[420px]"
             />
