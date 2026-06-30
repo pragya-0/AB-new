@@ -1,6 +1,7 @@
 ﻿import { lazy, Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter,  Route, Routes } from "react-router-dom";
 import { legacyRedirects } from "./data/legacyRedirects";
+import LegacyHead from "./components/common/LegacyHead";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const BioPage = lazy(() => import("./pages/BioPage"));
@@ -19,6 +20,26 @@ const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogArticlePage = lazy(() => import("./pages/BlogArticlePage"));
 const BooksPage = lazy(() => import("./pages/BooksPage"));
 const ContactRedirect = lazy(() => import("./pages/ContactRedirect"));
+
+
+function LegacyAliasPage({ to }: { to: string }) {
+  if (to === "/" || to === "/index.html" || to === "/home" || to === "/home.html") return <HomePage />;
+  if (to === "/bio" || to === "/bio.html") return <BioPage />;
+  if (to === "/speaking" || to === "/speaking.html" || to.includes("latest-spe")) return <SpeakingPage />;
+  if (to === "/technology" || to === "/technology.html" || to === "/tech-work") return <TechnologyPage />;
+  if (to === "/mentoring" || to === "/mentoring.html") return <MentoringPage />;
+  if (to === "/vr" || to === "/vr.html" || to.includes("virtual-reality")) return <VRPage />;
+  if (to === "/ecosystem" || to === "/ventures" || to === "/investments") return <VenturesPage />;
+  if (to === "/drawing" || to === "/creative") return <DrawingPage />;
+  if (to === "/photography" || to === "/gallery") return <PhotographyPage />;
+  if (to === "/press" || to === "/press-news" || to === "/media") return <PressPage />;
+  if (to === "/books" || to === "/book") return <BooksPage />;
+  if (to === "/contact" || to.includes("contact")) return <ContactRedirect />;
+  if (to === "/blog") return <BlogPage />;
+  if (to.startsWith("/blog/")) return <BlogArticlePage />;
+
+  return <BlogPage />;
+}
 
 function PageLoader() {
   return (
@@ -175,22 +196,12 @@ export default function App() {
           <Route path="/blog.html" element={<BlogPage />} />
 
           {legacyRedirects.map(({ from, to }) => (
-            <Route
-              key={from}
-              path={from}
-              element={<Navigate to={to} replace />}
-            />
+            <Route key={from} path={from} element={<LegacyAliasPage to={to} />} />
           ))}
 
           {/* Final special-character legacy routes */}
-          <Route
-            path="/Blockchain-Technology’s-Impact-Game-Development.html"
-            element={<Navigate to="/technology" replace />}
-          />
-          <Route
-            path="/blog-Shilpo-Abhijan-West Bengal-2013–passion-to-explore-new-verticals-of-business.html"
-            element={<Navigate to="/blog/shilpo-abhijan" replace />}
-          />
+          <Route path="/Blockchain-Technology’s-Impact-Game-Development.html" element={<LegacyAliasPage to="/technology" />} />
+          <Route path="/blog-Shilpo-Abhijan-West Bengal-2013–passion-to-explore-new-verticals-of-business.html" element={<LegacyAliasPage to="/blog/shilpo-abhijan" />} />
 
           <Route path="/blog/:slug" element={<BlogArticlePage />} />
 
@@ -208,6 +219,8 @@ export default function App() {
           <Route path="/contact-me" element={<ContactRedirect />} />
           <Route path="/contact-me.html" element={<ContactRedirect />} />
         </Routes>
+
+        <LegacyHead />
       </Suspense>
     </BrowserRouter>
   );
