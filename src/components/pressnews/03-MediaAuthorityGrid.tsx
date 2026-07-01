@@ -23,7 +23,7 @@ type AuthorityItem = {
 const leadAuthority: AuthorityItem = {
   id: "economic-times-business-media",
   title: "Economic Times Business Media Feature",
-  publisher: "Economic Times",
+  publisher: "The Hindu",
   summary:
     "Economic Times coverage anchors this media-authority section with a business-facing view of Arijit Bhattacharyya’s work across entrepreneurship, technology leadership, startup mentoring, innovation and ecosystem building.",
   image: "/assets/pressnews/Arijit-Bhattacharyya-ECONOMICS.jpg",
@@ -42,19 +42,19 @@ const leadAuthority: AuthorityItem = {
 const authorityItems: AuthorityItem[] = [
   {
     id: "the-hindu-technology-entrepreneurship",
-    title: "Economic Times Business & Technology Coverage",
-    publisher: "Economic Times",
+    title: "The Hindu Technology & Entrepreneurship Coverage",
+    publisher: "The Hindu",
     summary:
       "A national newspaper reference that strengthens the press archive beyond event photographs, connecting Arijit’s work with technology, entrepreneurship and public business discourse.",
-    image: "/assets/pressnews/economic-times.jpg",
+    image: "/assets/pressnews/2019/the-hindu.png",
     fallbackImages: [
       "/assets/pressnews/2019/the-hindu.png",
       "/assets/pressnews/01_images_preserved_structure/the-hindu.png",
       "/assets/pressnews/01_images_preserved_structure/2019/the-hindu.png",
     ],
-    alt: "Economic Times business and technology coverage connected to Arijit Bhattacharyya",
+    alt: "The Hindu technology and entrepreneurship coverage connected to Arijit Bhattacharyya",
     type: "National Press",
-    tags: ["Economic Times", "Business", "Technology"],
+    tags: ["The Hindu", "Technology", "Press"],
   },
   {
     id: "hindustan-times-startup-media",
@@ -359,6 +359,7 @@ export default function MediaAuthorityGrid() {
     </section>
   );
 }
+
 
 
 
