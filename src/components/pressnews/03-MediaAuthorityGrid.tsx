@@ -42,19 +42,19 @@ const leadAuthority: AuthorityItem = {
 const authorityItems: AuthorityItem[] = [
   {
     id: "the-hindu-technology-entrepreneurship",
-    title: "The Hindu Technology & Entrepreneurship Coverage",
-    publisher: "The Hindu",
+    title: "Economic Times Business & Technology Coverage",
+    publisher: "Economic Times",
     summary:
       "A national newspaper reference that strengthens the press archive beyond event photographs, connecting Arijit’s work with technology, entrepreneurship and public business discourse.",
-    image: "/assets/pressnews/the-hindu.png",
+    image: "/assets/pressnews/economic-times.jpg",
     fallbackImages: [
       "/assets/pressnews/2019/the-hindu.png",
       "/assets/pressnews/01_images_preserved_structure/the-hindu.png",
       "/assets/pressnews/01_images_preserved_structure/2019/the-hindu.png",
     ],
-    alt: "The Hindu newspaper coverage connected to Arijit Bhattacharyya",
+    alt: "Economic Times business and technology coverage connected to Arijit Bhattacharyya",
     type: "National Press",
-    tags: ["The Hindu", "Technology", "Entrepreneurship"],
+    tags: ["Economic Times", "Business", "Technology"],
   },
   {
     id: "hindustan-times-startup-media",
@@ -62,7 +62,7 @@ const authorityItems: AuthorityItem[] = [
     publisher: "Hindustan Times",
     summary:
       "Mainstream newspaper coverage associated with startup conversations, entrepreneurship visibility and the wider business ecosystem around Arijit Bhattacharyya’s work.",
-    image: "/assets/pressnews/hindustantimes.png",
+    image: "/assets/pressnews/_hindustan-times-bihar-startup-pad-2016.jpg",
     fallbackImages: [
       "/assets/pressnews/01_images_preserved_structure/hindustantimes.png",
       "/assets/pressnews/_hindustan-times-bihar-startup-pad-2016.jpg",
@@ -359,4 +359,7 @@ export default function MediaAuthorityGrid() {
     </section>
   );
 }
+
+
+
 

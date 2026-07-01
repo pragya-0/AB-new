@@ -25,7 +25,7 @@ const tvCoverageItems: VideoCoverageItem[] = [
     title: "Nepal Television Media Coverage",
     summary:
       "International television coverage from Nepal connected to Arijit Bhattacharyya’s work across startup mentoring, entrepreneurship and regional innovation platforms. This single card represents the Nepal TV / Kantipur media appearance so the same event is not repeated twice.",
-    image: "/assets/pressnews/Nepal_TV_Arijit-Bhattacharyya.png",
+    image: "/assets/pressnews/kantipur_TV.jpg",
     fallbackImages: [
       "/assets/pressnews/Arijit_Bhattacharyya_Nepal.png",
       "/assets/pressnews/2018/kantipur_TV.jpg",
@@ -44,7 +44,7 @@ const tvCoverageItems: VideoCoverageItem[] = [
     title: "TEDx Technology & Innovation Talk",
     summary:
       "A global-stage speaking reference connected to technology, startups, creative industries and future-facing innovation conversations.",
-    image: "/assets/pressnews/tedx.png",
+    image: "/assets/press/tedx.jpg",
     fallbackImages: [
       "/assets/pressnews/tedx.jpg",
       "/assets/pressnews/2019/tedx.jpg",
@@ -289,4 +289,7 @@ export default function TVAndVideoCoverage() {
     </section>
   );
 }
+
+
+
 
