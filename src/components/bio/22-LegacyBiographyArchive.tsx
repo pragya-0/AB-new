@@ -4,7 +4,7 @@ import { fadeUp } from "./bioMotion";
 
 const archiveSections = [
   {
-    title: "Detailed Biography",
+    title: "Legacy Work",
     items: [
       "Serial Entrepreneur since 1998, Technologist, Angel Investor, Public Speaker since 2008, TEDx Speaker, Business Matchmaking Expert, Government Advisor, Jury National Startup Award, Artist, Author and Community Builder since 2010.",
       "Game Programmer since 1998 from legacy systems to latest game engines, Virtual Reality Specialist since 2006 from VRML to C# using game engines, AR Specialist, AI Coder since 2002, Gen AI Developer since 2023 and Blockchain Specialist since 2017 across fintech, crypto and healthtech.",
@@ -323,8 +323,8 @@ export default function LegacyBiographyArchive() {
   return (
     <BioSectionShell
       eyebrow="Legacy Archive"
-      title="Detailed Biography & Legacy Work Since 1998"
-      text="A preserved long-form archive of Arijit Bhattacharyya’s biography, advisory roles, speaking platforms, ventures, education work, technology projects, investment relations, business communities and industry involvement."
+      title="Building Across Industries Since 1998"
+      text="A structured long-form record of Arijit Bhattacharyya’s journey across entrepreneurship, advisory leadership, global speaking platforms, venture building, education, emerging technology, investment networks, business communities and industry transformation."
       dark
     >
       <motion.div
@@ -332,20 +332,7 @@ export default function LegacyBiographyArchive() {
         className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04] md:rounded-[36px]"
       >
         <div className="border-b border-white/10 px-5 py-7 sm:px-6 md:px-10 md:py-9">
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#7fb8ff]">
-            Preserved from Legacy Biography
-          </p>
-
-          <h3 className="max-w-[980px] text-[34px] font-extrabold leading-[1] tracking-[-0.04em] text-white md:text-[46px]">
-            Full credibility, structured for modern reading.
-          </h3>
-
-          <p className="mt-5 max-w-[920px] text-[16px] font-normal leading-[1.8] text-white/66 md:text-[18px]">
-            This archive keeps important legacy information visible for SEO,
-            credibility and completeness without turning the main Bio page into
-            an unreadable wall of text.
-          </p>
-        </div>
+          </div>
 
         <div className="divide-y divide-white/10">
           {archiveSections.map((section, index) => (

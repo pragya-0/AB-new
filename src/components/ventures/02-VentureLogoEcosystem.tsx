@@ -160,7 +160,7 @@ export default function VentureLogoEcosystem() {
 
           <div className="lg:justify-self-end">
             <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              Built over 29+ years, Arijit Bhattacharyya’s venture ecosystem
+              Since 1998, Arijit Bhattacharyya’s venture ecosystem
               brings together companies, platforms and communities across
               technology, investment, media, gaming, education, healthcare,
               sustainability and international business.

@@ -13,7 +13,7 @@ export const genAiMovies = [
 ];
 
 export const modelUniverse = [
-  ["350+ Models", "Models transformed into characters, stories, posters and digital creative IP.", `${galleryPath}model-team-02.jpeg`],
+  ["360+ Models", "Models transformed into characters, stories, posters and digital creative IP.", `${galleryPath}model-team-02.jpeg`],
   ["Photography", "Fashion, people, travel, events and visual storytelling archive.", `${galleryPath}Subhasree_Arijit.jpg`],
   ["Creative Production", "A media universe mixing models, films, games, AI posters and entertainment IP.", `${galleryPath}model-runway-01.jpeg`],
 ];

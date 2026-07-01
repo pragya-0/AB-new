@@ -98,6 +98,7 @@ const journey: JourneyItem[] = [
     tag: "Global Stage",
     meta: "Ghana / Smart Cities / Global Forums",
     chips: ["Global Network", "DeepTech", "Conferences"],
+    artifact: true,
   },
   {
     year: "2024",
@@ -224,5 +225,4 @@ export default function JourneyTimeline() {
     </BioSectionShell>
   );
 }
-
 

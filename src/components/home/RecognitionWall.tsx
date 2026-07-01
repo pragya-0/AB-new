@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -15,7 +15,7 @@ const featuredCard: RecognitionCard = {
   title: "Ideas, Innovation & Impact Recognized Worldwide",
   text:
     "A keynote presence built around technology, entrepreneurship, innovation and the future of global business.",
-  image: "/assets/press/2019/tedx.jpg",
+  image: "/assets/speaking/tedx.jpg.jpeg",
   imageMode: "darkContain",
 };
 

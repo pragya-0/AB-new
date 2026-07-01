@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <div className="bg-gradient-to-r from-[#0052D4] via-[#4364F7] to-[#6FB1FC] px-4 py-1.5 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-white sm:text-[12px] md:text-[13px] md:tracking-[0.18em]">
-        29+ Years of Innovation • Founder of Virtualinfocom • Global Speaker •
+        Since 1998 • Founder of Virtualinfocom • Global Speaker •
         AI • Gaming • DeepTech
       </div>
 

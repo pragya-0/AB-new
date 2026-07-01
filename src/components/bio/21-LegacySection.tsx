@@ -8,7 +8,6 @@ const closingStats = [
   ["7000+", "Startups"],
   ["10,000+", "Students"],
   ["102+", "Countries Connected"],
-  ["60+", "Countries Travelled"],
 ];
 
 export default function LegacySection() {
@@ -35,10 +34,10 @@ export default function LegacySection() {
             and future-facing businesses.
           </p>
 
-          <div className="mt-8 grid max-w-[820px] grid-cols-2 gap-px overflow-hidden rounded-[24px] border border-white/10 bg-white/10 sm:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-8 grid max-w-[820px] grid-cols-2 gap-px overflow-hidden rounded-[24px] border border-white/10 bg-white/10 sm:grid-cols-3 xl:grid-cols-4">
             {closingStats.map(([value, label]) => (
               <div key={label} className="bg-[#07101f] p-5">
-                <p className="text-[34px] font-bold leading-none tracking-[-0.04em] text-white md:text-[44px]">
+                <p className="whitespace-nowrap text-[28px] font-bold leading-none tracking-[-0.035em] text-white sm:text-[31px] md:text-[34px] xl:text-[36px]">
                   {value}
                 </p>
 

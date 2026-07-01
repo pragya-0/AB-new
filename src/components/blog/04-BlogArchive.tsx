@@ -127,7 +127,7 @@ export default function BlogArchive() {
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-blue-700 sm:text-sm">
-              Legacy Blog Archive
+              Knowledge Library
             </p>
 
             <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-[-0.035em] text-[#07111f] sm:text-5xl">
@@ -174,7 +174,7 @@ export default function BlogArchive() {
         </div>
 
         <p className="mt-6 text-sm font-semibold text-slate-500">
-          Showing {filteredPosts.length} of {archivePosts.length} archive entries.
+          Browse selected writing across technology, entrepreneurship, leadership, creativity and innovation.
         </p>
 
         <div className="mt-8 grid gap-6">

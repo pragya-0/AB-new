@@ -1,6 +1,6 @@
 ﻿export const photographyStories = [
   ["Global Travel", "Finland, Korea, Nepal, Bhutan, Dubai and international experiences.", "/assets/Photography/travelling/finland-travel.jpg"],
-  ["Models & Glam World", "350+ models, Glam World projects and visual storytelling.", "/assets/Photography/models/1.jpg"],
+  ["Models & Glam World", "360+ models, Glam World projects and visual storytelling.", "/assets/Photography/models/1.jpg"],
   ["Conferences & Events", "Public stages, founder meets and innovation ecosystems.", "/assets/Photography/travelling/11.jpg"],
   ["Food Experiences", "Cuisine discoveries from different countries and cultures.", "/assets/Photography/food/34.jpg"],
   ["Nature & Landscapes", "Cities, architecture and scenic archives.", "/assets/Photography/nature/finland.jpg"],

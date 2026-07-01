@@ -7,7 +7,7 @@ type Logo = {
 };
 
 const mediaLogos: Logo[] = [
-  { name: "TEDx", image: "/assets/press/tedx.png", height: "h-[42px]" },
+  { name: "TEDx", image: "/assets/speaking/tedx.jpg.jpeg", height: "h-[42px]" },
   { name: "CNBC TV18", image: "/assets/press/cnbc.png", height: "h-[60px]" },
   {
     name: "The Economic Times",

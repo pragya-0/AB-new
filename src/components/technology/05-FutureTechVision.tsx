@@ -49,7 +49,7 @@ const expertiseGroups = [
     points: [
       "Game development since 1998",
       "500+ games, VR & AR projects",
-      "350+ characters & digital humans",
+      "360+ characters & digital humans",
       "Original IP, animation & interactive storytelling",
     ],
   },

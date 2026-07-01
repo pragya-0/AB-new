@@ -105,7 +105,6 @@ export default function MediaEntertainmentHero() {
           transition={{ duration: 0.7 }}
           className="max-w-3xl"
         >
-          
 
           <AnimatePresence mode="wait">
             <motion.div

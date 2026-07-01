@@ -98,7 +98,6 @@ export default function ComicsUniverse() {
 
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/90 to-transparent" />
 
-                
               </div>
             </motion.figure>
           ))}

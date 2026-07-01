@@ -26,7 +26,7 @@ const relevanceCards = [
   {
     icon: GraduationCap,
     title: "Designed for readers",
-    text: "Legacy articles are preserved, but reorganised as a modern knowledge hub so founders, students, institutions and collaborators can discover the ideas with context.",
+    text: "The writing is organised as a modern knowledge hub for founders, students, institutions and collaborators seeking clear ideas on technology, entrepreneurship and innovation.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function CurrentRelevance() {
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-600 sm:text-lg lg:ml-auto">
-            Arijit Bhattacharyya’s blog archive captures the thinking behind years of work across entrepreneurship, artificial intelligence, startup mentoring, gaming, VR/AR, blockchain, education and innovation ecosystems. The page preserves that history while connecting it to his current role as a founder, speaker, mentor, author and technology strategist.
+            Arijit Bhattacharyya’s writing captures years of thinking across entrepreneurship, artificial intelligence, startup mentoring, gaming, VR/AR, blockchain, education and innovation ecosystems, connecting those ideas to his current work as a founder, speaker, mentor, author and technology strategist.
           </p>
         </motion.div>
 

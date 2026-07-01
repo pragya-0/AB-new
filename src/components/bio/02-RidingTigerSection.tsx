@@ -17,7 +17,6 @@ export default function RidingTigerSection() {
             className="h-[320px] w-full rounded-[26px] object-cover object-center md:h-[470px]"
           />
 
-         
         </motion.div>
 
         <motion.div {...fadeUp}>

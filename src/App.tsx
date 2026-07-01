@@ -269,13 +269,13 @@ export default function App() {
           <Route path="/contact-me" element={<ContactRedirect />} />
           <Route path="/contact-me.html" element={<ContactRedirect />} />
 
-          {/* Podcast / YouTube Temporary Safe Routes */}
+          {/* Podcast / YouTube Routes */}
           <Route path="/podcast" element={<HomePage />} />
           <Route path="/podcast.html" element={<HomePage />} />
           <Route path="/youtube" element={<HomePage />} />
           <Route path="/youtube.html" element={<HomePage />} />
 
-          {/* Blog Archive */}
+          {/* Blog Routes */}
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog.html" element={<BlogPage />} />
 

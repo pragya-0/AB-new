@@ -9,7 +9,7 @@ const metrics = [
   ["10,000+", "Students Trained"],
   ["500+", "Games, VR & AR Projects"],
   ["2100+", "Events & Forums"],
-  ["350+", "Models & Character Work"],
+  ["360+", "Models & Character Work"],
 ];
 
 const container = {

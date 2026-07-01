@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import BioSectionShell from "../bio/BioSectionShell";
 import SmartImage from "../bio/SmartImage";
@@ -67,9 +67,9 @@ const milestones: Milestone[] = [
   {
     year: "2016",
     title: "Blockchain, Future Tech & Movie-Based Games",
-    label: "Blockchain • Digital Trust • 350+ IP",
+    label: "Blockchain • Digital Trust • 360+ Character IP",
     text:
-      "The technology direction moved into blockchain and future-tech ecosystems while the creative technology side expanded into movie-based games and 350+ IP and character-led worlds.",
+      "The technology direction moved into blockchain and future-tech ecosystems while the creative technology side expanded into movie-based games and 360+ IP and character-led worlds.",
     image: `${bio}Arijit-Bhattacharyya-blockchain.png`,
     fit: "contain",
   },
@@ -109,7 +109,7 @@ export default function InnovationTimeline() {
       dark
       eyebrow="Technology Evolution"
       title="Technology Evolution Across Key Innovation Waves"
-      text="A safer, sharper timeline built from boss notes: games, software, Python, VRML, VR, blockchain, GenAI, smart cities and future venture ecosystems."
+      text="A sharper timeline built from verified project milestones: games, software, Python, VRML, VR, blockchain, GenAI, smart cities and future venture ecosystems."
       className="bg-[#03070d]"
     >
       <div className="space-y-6 md:space-y-8">

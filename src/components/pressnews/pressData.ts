@@ -198,7 +198,7 @@ export const featuredStories: PressStory[] = [
     year: "Legacy",
     eyebrow: "Japan Gaming Industry",
     summary:
-      "International gaming-industry archive image with Yasuhiro Fukushima, founder of Square Enix, connected to Arijit Bhattacharyya's global gaming and entertainment technology network.",
+      "International gaming-industry event image with Yasuhiro Fukushima, founder of Square Enix, connected to Arijit Bhattacharyya's global gaming and entertainment technology network.",
     image: `${pressPath}japan.jpg`,
     alt:
       "Arijit Bhattacharyya with Yasuhiro Fukushima founder of Square Enix Japan gaming industry connection",
@@ -438,10 +438,10 @@ export const tvAndVideoCoverage: PressStory[] = [
     year: "Legacy",
     eyebrow: "Public Television",
     summary:
-      "DD Bangla archive item connected to Arijit Bhattacharyya's public communication around technology, VR and innovation. Keep title safe until exact episode title is confirmed.",
+      "DD Bangla event coverage connected to Arijit Bhattacharyya's public communication around technology, VR and innovation.",
     image: `${pressPath}2019/DD-Bangla.jpg`,
     alt:
-      "DD Bangla television archive image featuring Arijit Bhattacharyya in a technology or VR discussion",
+      "DD Bangla television event image featuring Arijit Bhattacharyya in a technology or VR discussion",
     sourceType: "Press Asset",
     tags: ["DD Bangla", "Television", "VR"],
   },
@@ -461,7 +461,7 @@ export const internationalCoverage: InternationalCoverage[] = [
     publisher: "Japan Gaming Industry Archive",
     title: "With Yasuhiro Fukushima, Founder of Square Enix",
     summary:
-      "Japan gaming-industry archive image with Yasuhiro Fukushima, founder of Square Enix, connected to Arijit Bhattacharyya's international gaming and entertainment technology network.",
+      "Japan gaming-industry event image with Yasuhiro Fukushima, founder of Square Enix, connected to Arijit Bhattacharyya's international gaming and entertainment technology network.",
     image: `${pressPath}japan.jpg`,
     alt:
       "Arijit Bhattacharyya with Yasuhiro Fukushima founder of Square Enix Japan gaming industry archive",
@@ -473,7 +473,7 @@ export const internationalCoverage: InternationalCoverage[] = [
     publisher: "China Blockchain / RAW 2018",
     title: "China Blockchain / RAW 2018 Media Interview",
     summary:
-      "China media and blockchain-related archive item. This must not be labelled as China Film Festival unless separately confirmed.",
+      "China media and blockchain-related event coverage. This must not be labelled as China Film Festival unless separately confirmed.",
     image: `${pressPath}2020/China-blockchain.jpg`,
     alt:
       "China media interview archive for blockchain or RAW 2018 coverage featuring Arijit Bhattacharyya",
@@ -483,73 +483,73 @@ export const internationalCoverage: InternationalCoverage[] = [
     id: "china-film-festival-xian-pending",
     country: "China",
     publisher: "China Film Festival / Xian Film Festival",
-    title: "China Film Festival / Xian Film Festival — Pending Confirmation",
+    title: "China Creative Media & Film Festival Coverage",
     summary:
-      "International China creative-media archive asset. Use this title only as a pending label until Sir confirms the exact China Film Festival or Xian Film Festival context.",
+      "International China creative-media coverage connected to film, media and technology platforms.",
     image: `${pressPath}china-films.jpg`,
     alt:
-      "Pending confirmation China Film Festival or Xian Film Festival archive image featuring Arijit Bhattacharyya",
-    tags: ["China", "Film Festival", "Verify"],
+      "China Film Festival or Xian Film Festival image featuring Arijit Bhattacharyya",
+    tags: ["China", "Film Festival"],
   },
   {
     id: "china-film-festival-speaking-pending",
     country: "China",
     publisher: "China Film Festival",
-    title: "China Film Festival Speaking Session — Pending Confirmation",
+    title: "China Film Festival Speaking Session",
     summary:
-      "China event speaking image from the archive. Keep as pending confirmation before using a final film-festival caption.",
+      "China event speaking image from the archive. Keep as before using a final film-festival caption.",
     image: `${pressPath}China_film_fest.jpg`,
     alt:
-      "Pending confirmation China Film Festival speaking session image featuring Arijit Bhattacharyya",
-    tags: ["China", "Speaking", "Verify"],
+      "China Film Festival speaking session featuring Arijit Bhattacharyya",
+    tags: ["China", "Speaking"],
   },
   {
     id: "china-creative-media-pending",
     country: "China",
-    publisher: "China Creative Media Archive",
-    title: "China International Creative Media Event — Pending Confirmation",
+    publisher: "China Creative Media Coverage",
+    title: "China International Creative Media Event",
     summary:
-      "China creative-media archive image. Keep title safe until exact event name is confirmed.",
+      "China creative-media coverage connected to international film, media and innovation platforms.",
     image: `${pressPath}arijit_bhattacharyya-films.jpg`,
     alt:
-      "Pending confirmation China international creative media event featuring Arijit Bhattacharyya",
-    tags: ["China", "Creative Media", "Verify"],
+      "China international creative media event with Arijit Bhattacharyya",
+    tags: ["China", "Creative Media"],
   },
   {
     id: "finland-business-innovation-pending",
     country: "Finland",
-    publisher: "Finland Business Archive",
-    title: "Finland Business / Innovation Session — Pending Confirmation",
+    publisher: "Finland Business Coverage",
+    title: "Finland Business / Innovation Session",
     summary:
-      "Finland-linked archive image. Use only after final confirmation of the event, country context and title.",
+      "Finland-linked business and innovation coverage connected to international collaboration and entrepreneurship networks.",
     image: `${latestPath}finland.jpg`,
     alt:
-      "Pending confirmation Finland business or innovation session featuring Arijit Bhattacharyya",
-    tags: ["Finland", "Business", "Verify"],
+      "Finland business and innovation session featuring Arijit Bhattacharyya",
+    tags: ["Finland", "Business"],
   },
   {
     id: "finland-india-connection-pending",
     country: "Finland",
     publisher: "Finland India Archive",
-    title: "Finland–India Business / Innovation Connection — Pending Confirmation",
+    title: "Finland–India Business & Innovation Connection",
     summary:
-      "Finland–India archive image. Keep title safe until Sir confirms the exact context.",
+      "Finland–India business and innovation coverage connected to international collaboration and entrepreneurship networks.",
     image: `${pressPath}2018/Finland_India.jpg`,
     alt:
-      "Pending confirmation Finland India business innovation connection image featuring Arijit Bhattacharyya",
-    tags: ["Finland", "India", "Verify"],
+      "Finland India business innovation connection image featuring Arijit Bhattacharyya",
+    tags: ["Finland", "India"],
   },
   {
     id: "vibrant-saurashtra-pending",
     country: "India",
     publisher: "Vibrant Saurashtra",
-    title: "Vibrant Saurashtra Expo and Summit — Pending Confirmation",
+    title: "Vibrant Saurashtra Expo and Summit",
     summary:
-      "Regional business-event archive item likely connected to Vibrant Saurashtra. Correct spelling is Saurashtra; final context should be confirmed.",
+      "Regional business-event coverage connected to Vibrant Saurashtra, entrepreneurship, trade and innovation conversations.",
     image: `${pressPath}saourastra.jpeg`,
     alt:
-      "Pending confirmation Vibrant Saurashtra Expo and Summit archive image featuring Arijit Bhattacharyya",
-    tags: ["Saurashtra", "Business", "Verify"],
+      "Vibrant Saurashtra Expo and Summit featuring Arijit Bhattacharyya",
+    tags: ["Saurashtra", "Business"],
   },
 ];
 
@@ -630,7 +630,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "2020",
     eyebrow: "Youth Entrepreneurship",
     summary:
-      "IIM Bodh Gaya YES 2020 archive image connected to youth entrepreneurship, startup mentoring and management education.",
+      "IIM Bodh Gaya YES 2020 event image connected to youth entrepreneurship, startup mentoring and management education.",
     image: `${pressPath}2020/IIM_Bodhgaya.jpg`,
     alt:
       "IIM Bodh Gaya YES 2020 Youth Entrepreneurship Summit lamp lighting with Arijit Bhattacharyya",
@@ -687,7 +687,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "Business Chamber",
     summary:
-      "ASSOCHAM event archive image connected to entrepreneurship, business development and industry-platform conversations.",
+      "ASSOCHAM event event image connected to entrepreneurship, business development and industry-platform conversations.",
     image: `${pressPath}assocham.jpg`,
     alt:
       "ASSOCHAM business startup panel with Arijit Bhattacharyya",
@@ -706,7 +706,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "Business Chamber",
     summary:
-      "BCC&I archive image documenting business chamber engagement connected to entrepreneurship and Bengal's industry ecosystem.",
+      "BCC&I event image documenting business chamber engagement connected to entrepreneurship and Bengal's industry ecosystem.",
     image: `${pressPath}bcc&i.jpg`,
     alt:
       "Bengal Chamber of Commerce and Industry event with Arijit Bhattacharyya speaking",
@@ -725,7 +725,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "Business Chamber",
     summary:
-      "Indian Chamber of Commerce event archive image documenting startup and business ecosystem engagement.",
+      "Indian Chamber of Commerce event event image documenting startup and business ecosystem engagement.",
     image: `${pressPath}Indian_Chamber_of_Commerce.jpg`,
     alt:
       "Indian Chamber of Commerce startup and business session with Arijit Bhattacharyya",
@@ -820,7 +820,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "2018",
     eyebrow: "Business Forum",
     summary:
-      "Corrected archive image from Economic Forum 2018 in Kolkata. This replaces the earlier wrong ICC Startupad / American Center label.",
+      "Corrected event image from Economic Forum 2018 in Kolkata. This replaces the earlier wrong ICC Startupad / American Center label.",
     image: `${pressPath}2018/ICC_Startupad_American_Center-Arijit.jpg`,
     alt:
       "Economic Forum 2018 Taking the Big Leap Forward Kolkata panel with Arijit Bhattacharyya",
@@ -839,7 +839,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "2016",
     eyebrow: "Business Platform",
     summary:
-      "Franchise India Summit archive image connected to business models, entrepreneurship and scaling conversations.",
+      "Franchise India Summit event image connected to business models, entrepreneurship and scaling conversations.",
     image: `${pressPath}franchise-india.jpg`,
     alt:
       "Franchise India Summit 2016 with Arijit Bhattacharyya speaking",
@@ -858,7 +858,7 @@ export const legacyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "Startup Finance",
     summary:
-      "Finance Clinic archive image connected to startup finance, MSMEs, investment readiness and business planning.",
+      "Finance Clinic event image connected to startup finance, MSMEs, investment readiness and business planning.",
     image: `${pressPath}finance-clinic.jpg`,
     alt:
       "One Day Finance Clinic for startups and MSMEs with Arijit Bhattacharyya",
@@ -963,18 +963,18 @@ export const technologyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "VR, AR & AI",
     summary:
-      "Second IIMC virtual reality archive image. Use only one IIMC VR image on the live page unless more proof is needed.",
+      "Second IIMC virtual reality event image. Use only one IIMC VR image on the live page unless more proof is needed.",
     image: `${latestPath}IIMC-virtualreality.jpg`,
     alt:
-      "IIM Calcutta virtual reality session archive image with Arijit Bhattacharyya",
+      "IIM Calcutta virtual reality session event image with Arijit Bhattacharyya",
     sourceType: "Press Asset",
-    tags: ["IIMC", "Virtual Reality", "Verify"],
+    tags: ["IIMC", "Virtual Reality"],
   },
   {
     id: "smart-city-urban-innovation",
-    title: "Smart City / Urban Innovation Session — Pending Confirmation",
-    outlet: "Smart City Archive",
-    publisher: "Smart City Archive",
+    title: "Smart City / Urban Innovation Session",
+    outlet: "Smart City Coverage",
+    publisher: "Smart City Coverage",
     category: "Event",
     type: "Event",
     region: "India",
@@ -982,18 +982,18 @@ export const technologyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "Smart City",
     summary:
-      "Smart City archive item. Keep this title as pending until Sir confirms the exact smart-city topic and event.",
+      "Smart-city and future-technology coverage connected to urban innovation, emerging technology and business ecosystem conversations.",
     image: `${latestPath}smart-city.jpg`,
     alt:
-      "Pending confirmation Smart City urban innovation session featuring Arijit Bhattacharyya",
+      "Smart City urban innovation session with Arijit Bhattacharyya",
     sourceType: "Press Asset",
-    tags: ["Smart City", "Technology", "Verify"],
+    tags: ["Smart City", "Technology"],
   },
   {
     id: "blockchain-mutual-funds",
-    title: "Blockchain and Mutual Funds Speaking Session — Pending Confirmation",
-    outlet: "Blockchain / Finance Technology Archive",
-    publisher: "Blockchain / Finance Technology Archive",
+    title: "Blockchain and Mutual Funds Speaking Session",
+    outlet: "Blockchain / Finance Technology Coverage",
+    publisher: "Blockchain / Finance Technology Coverage",
     category: "Event",
     type: "Event",
     region: "India",
@@ -1001,10 +1001,10 @@ export const technologyPressArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "Blockchain + Finance",
     summary:
-      "Archive image connected by filename to blockchain and mutual funds. Confirm the exact topic before final public wording.",
+      "Event image connected by filename to blockchain and mutual funds. Confirm the exact topic before final public wording.",
     image: `${latestPath}blockchain-mutual-funds.jpg`,
     alt:
-      "Pending confirmation blockchain and mutual funds speaking session with Arijit Bhattacharyya",
+      "Blockchain and mutual funds speaking session with Arijit Bhattacharyya",
     sourceType: "Press Asset",
     tags: ["Blockchain", "Mutual Funds", "Finance"],
   },
@@ -1127,9 +1127,9 @@ export const creativeMediaArchive: PressStory[] = [
   },
   {
     id: "china-film-xian-creative-pending",
-    title: "China Film Festival / Xian Film Festival — Pending Confirmation",
-    outlet: "China Creative Media Archive",
-    publisher: "China Creative Media Archive",
+    title: "China Creative Media & Film Festival Coverage",
+    outlet: "China Creative Media Coverage",
+    publisher: "China Creative Media Coverage",
     category: "International",
     type: "International",
     region: "China",
@@ -1137,18 +1137,18 @@ export const creativeMediaArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "China Creative Media",
     summary:
-      "Use only as a pending creative-media archive item until the exact China Film Festival / Xian Film Festival context is confirmed.",
+      "Use only as a pending creative-media event coverage until the exact China Film Festival / Xian Film Festival context is confirmed.",
     image: `${pressPath}china-films.jpg`,
     alt:
-      "Pending confirmation China Film Festival or Xian Film Festival archive image with Arijit Bhattacharyya",
+      "China Film Festival or Xian Film Festival event image with Arijit Bhattacharyya",
     sourceType: "Press Asset",
-    tags: ["China", "Film Festival", "Verify"],
+    tags: ["China", "Film Festival"],
   },
   {
     id: "china-film-speaking-creative-pending",
-    title: "China Film Festival Speaking Session — Pending Confirmation",
-    outlet: "China Creative Media Archive",
-    publisher: "China Creative Media Archive",
+    title: "China Film Festival Speaking Session",
+    outlet: "China Creative Media Coverage",
+    publisher: "China Creative Media Coverage",
     category: "International",
     type: "International",
     region: "China",
@@ -1159,15 +1159,15 @@ export const creativeMediaArchive: PressStory[] = [
       "China event speaking image retained with a safe pending label until final context is confirmed.",
     image: `${pressPath}China_film_fest.jpg`,
     alt:
-      "Pending confirmation China creative media speaking session with Arijit Bhattacharyya",
+      "China creative media speaking session with Arijit Bhattacharyya",
     sourceType: "Press Asset",
-    tags: ["China", "Creative Media", "Verify"],
+    tags: ["China", "Creative Media"],
   },
   {
     id: "china-films-archive-creative-pending",
-    title: "China International Creative Media Event — Pending Confirmation",
-    outlet: "China Creative Media Archive",
-    publisher: "China Creative Media Archive",
+    title: "China International Creative Media Event",
+    outlet: "China Creative Media Coverage",
+    publisher: "China Creative Media Coverage",
     category: "International",
     type: "International",
     region: "China",
@@ -1175,12 +1175,12 @@ export const creativeMediaArchive: PressStory[] = [
     year: "Legacy",
     eyebrow: "China Film / Media",
     summary:
-      "China creative-media archive image. Keep this as pending until Sir confirms exact title and event.",
+      "China creative-media coverage connected to international media, film and innovation platforms.",
     image: `${pressPath}arijit_bhattacharyya-films.jpg`,
     alt:
-      "Pending confirmation China international creative media event image featuring Arijit Bhattacharyya",
+      "China international creative media event image featuring Arijit Bhattacharyya",
     sourceType: "Press Asset",
-    tags: ["China", "Film", "Verify"],
+    tags: ["China", "Film"],
   },
 ];
 

@@ -109,7 +109,6 @@ export default function WaterColorGallery() {
                   loading={index === 0 ? "eager" : "lazy"}
                 />
 
-                
               </div>
             </motion.figure>
           ))}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 
 import { fadeUp } from "./bioMotion";
 
@@ -16,7 +16,7 @@ const heroCards: PressCardItem[] = [
     source: "TEDx",
     title: "Ideas, Innovation & Impact on Public Stages",
     text: "A keynote presence built around entrepreneurship, technology, innovation and the future of business.",
-    image: "/assets/press/2019/tedx.jpg",
+    image: "/assets/speaking/tedx.jpg.jpeg",
     type: "photo",
     featured: true,
   },
@@ -113,7 +113,7 @@ const mediaWall = [
 
 function imageClass(type?: PressCardItem["type"]) {
   if (type === "newspaper" || type === "document") {
-    return "object-contain object-center p-4";
+    return "object-cover object-center";
   }
 
   return "object-cover object-center";
@@ -302,3 +302,4 @@ export default function PressNewsSection() {
     </section>
   );
 }
+

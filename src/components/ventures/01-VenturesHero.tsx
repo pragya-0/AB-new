@@ -82,7 +82,6 @@ export default function VenturesHero() {
               ))}
             </div>
 
-            
           </motion.div>
 
           <motion.div

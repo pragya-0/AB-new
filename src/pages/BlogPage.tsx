@@ -129,8 +129,8 @@ export default function BlogPage() {
   return (
     <>
       <MetaTags
-        title="Arijit Bhattacharyya Blog Archive | AI, VR, AR, Startups, Entrepreneurship"
-        description="Explore legacy blog articles by Arijit Bhattacharyya on entrepreneurship, artificial intelligence, virtual reality, augmented reality, startups, innovation, gaming, technology and leadership."
+        title="Arijit Bhattacharyya Ideas & Insights | AI, VR, AR, Startups, Entrepreneurship"
+        description="Explore selected writing by Arijit Bhattacharyya on entrepreneurship, artificial intelligence, virtual reality, augmented reality, startups, innovation, gaming, technology and leadership."
         image={`${blogPath}arijit-bhattacharyya.jpg`}
       />
 
@@ -145,30 +145,17 @@ export default function BlogPage() {
             <div className="grid gap-10 lg:grid-cols-[1fr_0.82fr] lg:items-end">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">
-                  Blog Archive
+                  Ideas & Insights
                 </p>
 
                 <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] sm:text-5xl lg:text-7xl">
-                  Legacy Articles on Technology, Startups & Innovation
+                  Ideas on Technology, Startups & Innovation
                 </h1>
 
                 <p className="mt-6 max-w-2xl text-base font-normal leading-8 text-slate-300 sm:text-lg">
-                  Preserved archive of Arijit Bhattacharyya’s original blog
-                  writing across AI, VR, AR, entrepreneurship, leadership,
-                  gaming, investments and the future of digital ecosystems.
+                  Selected writing by Arijit Bhattacharyya across AI, VR, AR, entrepreneurship, leadership, gaming, investments and the future of digital ecosystems.
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="rounded-full border border-white/10 bg-white/[0.07] px-4 py-2 text-sm font-semibold text-blue-100">
-                    {archivePosts.length}+ Legacy Articles
-                  </span>
-                  <span className="rounded-full border border-white/10 bg-white/[0.07] px-4 py-2 text-sm font-semibold text-blue-100">
-                    Old HTML Routes Preserved
-                  </span>
-                  <span className="rounded-full border border-white/10 bg-white/[0.07] px-4 py-2 text-sm font-semibold text-blue-100">
-                    SEO Archive Restored
-                  </span>
-                </div>
               </div>
 
               {featuredPost && (
@@ -249,9 +236,8 @@ export default function BlogPage() {
                   Articles
                 </p>
                 <h2 className="mt-2 text-2xl font-extrabold tracking-[-0.03em] sm:text-3xl">
-                  {filteredPosts.length} article
-                  {filteredPosts.length === 1 ? "" : "s"} found
-                </h2>
+          Explore the Writing
+        </h2>
               </div>
             </div>
 
@@ -298,7 +284,7 @@ export default function BlogPage() {
             ) : (
               <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.06] p-10 text-center">
                 <p className="text-lg font-bold text-white">
-                  No articles found.
+                  No matching posts yet.
                 </p>
                 <p className="mt-2 text-sm text-slate-400">
                   Try another keyword or category.

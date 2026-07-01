@@ -34,9 +34,7 @@ export default function FeaturedInsights() {
           </div>
 
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-600 sm:text-lg lg:ml-auto">
-            These featured essays introduce the larger legacy blog archive — leadership
-            in the age of technology, capital decisions for founders, and the shift
-            toward immersive digital worlds.
+            These featured essays introduce Arijit Bhattacharyya’s thinking on leadership in the age of technology, capital decisions for founders, and the shift toward immersive digital worlds.
           </p>
         </motion.div>
 

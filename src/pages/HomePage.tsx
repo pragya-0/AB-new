@@ -122,7 +122,6 @@ export default function HomePage() {
 
       {/* Speaking & Government */}
       <GlobalEventsSection />
-      
 
       {/* Creative Universe */}
       <CreativeUniverseSection />

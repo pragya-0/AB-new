@@ -15,7 +15,7 @@ const impactPillars = [
   },
   {
     title: "Women & Youth",
-    text: "Community-led participation, women’s groups and youth-focused social initiatives.",
+    text: "Community participation, women’s groups and youth-focused social initiatives.",
   },
 ];
 
@@ -31,10 +31,10 @@ const impactPhotos = [
     text: "Supporting participation, learning and local leadership through community engagement.",
     image: `${philanthropyPath}6.jpg`,
   },
-  {
-    title: "Students & Future Founders",
-    text: "Building confidence, curiosity and entrepreneurial thinking among young learners.",
-    image: `${philanthropyPath}8.jpg`,
+    {
+    title: "Student Mentorship & Learning",
+    text: "Supporting students through learning, confidence-building and early entrepreneurship guidance.",
+    image: `${philanthropyPath}1.jpg`,
   },
 ];
 
@@ -53,7 +53,7 @@ function ImpactPhoto({
     return (
       <motion.article
         {...fadeUp}
-        className="group overflow-hidden rounded-[30px] border border-[#bdd9ff] bg-white shadow-[0_18px_60px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(0,87,255,0.13)] lg:col-span-2"
+        className="group overflow-hidden bg-[#eef5ff] rounded-[30px] border border-[#bdd9ff] bg-white shadow-[0_18px_60px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(0,87,255,0.13)] lg:col-span-2"
       >
         <div className="grid lg:grid-cols-[1.08fr_0.92fr]">
           <div className="relative h-[360px] overflow-hidden bg-[#eef5ff] md:h-[430px]">
@@ -61,7 +61,7 @@ function ImpactPhoto({
               src={image}
               fallbacks={[`${philanthropyPath}4.jpg`, `${philanthropyPath}8.jpg`]}
               alt={title}
-              className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105"
+              className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-105"
             />
           </div>
 
@@ -82,7 +82,7 @@ function ImpactPhoto({
   return (
     <motion.article
       {...fadeUp}
-      className="group overflow-hidden rounded-[28px] border border-[#bdd9ff] bg-white shadow-[0_18px_60px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(0,87,255,0.13)]"
+      className="group overflow-hidden bg-[#eef5ff] rounded-[28px] border border-[#bdd9ff] bg-white shadow-[0_18px_60px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(0,87,255,0.13)]"
     >
  <div className="relative aspect-[16/9] overflow-hidden bg-[#eef5ff]">
   <SmartImage
@@ -121,7 +121,7 @@ export default function PhilanthropySection() {
                 src={`${philanthropyPath}4.jpg`}
                 fallbacks={[`${philanthropyPath}3.jpg`, `${philanthropyPath}8.jpg`]}
                 alt="Community impact and social initiatives"
-                className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-105"
+                className="h-full w-full object-contain object-center transition duration-500"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/8 to-transparent" />

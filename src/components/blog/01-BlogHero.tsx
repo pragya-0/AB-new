@@ -10,7 +10,7 @@ const fadeUp = {
 const heroImages = [
   {
     src: `${blogPath}Arijit_Bhattacharyya-blog.jpg`,
-    alt: "Arijit Bhattacharyya blog archive portrait",
+    alt: "Arijit Bhattacharyya writing and insights portrait",
   },
   {
     src: `${blogPath}Arijit_Bhattacharyya-cyber.jpg`,
@@ -18,11 +18,11 @@ const heroImages = [
   },
   {
     src: `${blogPath}arijit-bhattacharyya.jpg`,
-    alt: "Arijit Bhattacharyya portrait for blog archive",
+    alt: "Arijit Bhattacharyya portrait for ideas and insights",
   },
   {
     src: `${blogPath}kolkata-businessmen.jpg`,
-    alt: "Arijit Bhattacharyya Kolkata businessman blog archive",
+    alt: "Arijit Bhattacharyya Kolkata business and leadership photograph",
   },
   {
     src: `${blogPath}Arijit-life-story.jpg`,
@@ -30,7 +30,7 @@ const heroImages = [
   },
   {
     src: `${blogPath}leadership-arijit.jpg`,
-    alt: "Arijit Bhattacharyya leadership blog archive",
+    alt: "Arijit Bhattacharyya leadership and entrepreneurship portrait",
   },
 ];
 export default function BlogHero() {
@@ -60,7 +60,7 @@ export default function BlogHero() {
           className="max-w-3xl"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-blue-300">
-            Blog Archive
+            Ideas & Insights
           </p>
 
           <h1 className="mt-5 text-4xl font-extrabold leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl xl:text-[82px]">
@@ -70,7 +70,7 @@ export default function BlogHero() {
           </h1>
 
           <p className="mt-7 max-w-2xl text-base font-normal leading-8 text-slate-300 sm:text-lg">
-            The original blog archive of Arijit Bhattacharyya — covering
+            Selected writing by Arijit Bhattacharyya — covering
             entrepreneurship, artificial intelligence, venture capital, virtual reality,
             blockchain, gaming, leadership, culture, society and life stories.
           </p>
@@ -79,7 +79,7 @@ export default function BlogHero() {
             {[
               { icon: Rocket, text: "Founder Since 1998" },
               { icon: BrainCircuit, text: "AI • Entrepreneurship • Innovation" },
-              { icon: BookOpen, text: "Legacy Blog Content Preserved" },
+              { icon: BookOpen, text: "Selected Founder Writing" },
             ].map((item) => {
               const Icon = item.icon;
 
@@ -131,7 +131,7 @@ export default function BlogHero() {
 
           <div className="relative mt-4 grid gap-3 sm:grid-cols-3">
             {[
-              "Founder reflections",
+              "Founder insights",
               "Technology notes",
               "Life stories",
             ].map((item) => (

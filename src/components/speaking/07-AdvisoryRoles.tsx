@@ -276,7 +276,6 @@ export default function AdvisoryRoles() {
           ))}
         </motion.div>
 
-        
       </div>
     </section>
   );

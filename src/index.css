@@ -9,25 +9,27 @@ body {
   font-family: Inter, system-ui, Arial, sans-serif;
   background: #000;
 }
-/* Ghana Business Summit flyer fix - prevents cropping in Bio Global Stages */
-img[src*="ghana.jpeg"],
-img[src*="Ghana"],
+/* Ghana Business Summit flyer fix - scoped only to Bio Global Stages card */
 img[alt*="Ghana Business Summit"],
 img[alt*="Vice President of Ghana"] {
   object-fit: contain !important;
   object-position: center !important;
   transform: none !important;
   padding: 8px !important;
+  max-height: 390px !important;
+  width: auto !important;
+  max-width: 100% !important;
 }
 
-div:has(> img[src*="ghana.jpeg"]),
 div:has(> img[alt*="Ghana Business Summit"]),
 div:has(> img[alt*="Vice President of Ghana"]) {
-  min-height: 380px !important;
+  min-height: 360px !important;
+  max-height: 430px !important;
   height: auto !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: #05070b !important; max-height: 430px !important;
+  background: #05070b !important;
 }
+
 

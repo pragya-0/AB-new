@@ -10,7 +10,6 @@ import {
   type BlogPost,
 } from "../components/blog/blogData";
 
-
 function safeDecode(value = "") {
   try {
     return decodeURIComponent(value);
@@ -38,7 +37,6 @@ function normalizeBlogKey(value = "") {
 function getPostSlug(post: BlogPost) {
   return post.slug || post.id;
 }
-
 
 function postMatchesRoute(post: BlogPost, routeValue = "") {
   const currentKey = normalizeBlogKey(routeValue);
@@ -141,7 +139,7 @@ export default function BlogArticlePage() {
               className="inline-flex items-center text-sm font-bold text-blue-200 transition hover:text-white"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog Archive
+              Back to Ideas & Insights
             </Link>
 
             <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">

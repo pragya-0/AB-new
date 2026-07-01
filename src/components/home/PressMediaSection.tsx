@@ -2,7 +2,6 @@
 import FeaturedLogosStrip from "./FeaturedLogosStrip";
 import RecognitionWall from "./RecognitionWall";
 
-
 export default function PressMediaSection() {
   return (
     <>
