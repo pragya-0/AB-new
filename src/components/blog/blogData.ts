@@ -11,6 +11,7 @@ export type BlogCategory =
 export type ImageAspect = "landscape" | "portrait" | "square" | "wide";
 
 export type BlogPost = {
+  originalFile?: string;
   id: string;
   slug: string;
   title: string;
@@ -3143,6 +3144,7 @@ export const blogSeo = {
   keywords:
     "Arijit Bhattacharyya blog, entrepreneurship, startup funding, artificial intelligence, virtual reality, blockchain, game development, leadership, mentor, business coach, startup India, venture capital, metaverse, cybersecurity, Indian superheroes",
 };
+
 
 
 

@@ -31,7 +31,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "startup, business, jobs, employees, startup, mentor"
   },
   "/bio.html": {
-    "title": "Arijit Bhattacharyya Gen AI Developer Kolkata| entrepreneur in Europe, Australia, Bengal, Kolkata, India, USA",
+    "title": "Indian businessman, entrepreneur from kolkata | Arijit Bhattacharyya Gen AI Developer Kolkata",
     "description": "entrepreneur, angel investor, business developer, bengali entrepreneur",
     "keywords": "entrepreneur, angel investor, business developer"
   },
@@ -826,7 +826,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "business coach kolkata, Indian startups, funding, investors"
   },
   "/blog.html": {
-    "title": "Arijit Bhattacharyya | virtual reality coder | business coach | mentor startups, India",
+    "title": "arijit bhattacharyya, international business development, market entry support, mentor | Blog",
     "description": "virtual reality, game development, blockchain, ai, ml, coder",
     "keywords": "virtual reality, game development, blockchain, ai, ml, coder, mentor"
   },
@@ -856,7 +856,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "block chain, Data capture"
   },
   "/drawing.html": {
-    "title": "top painters in kolkata bengali painters | Drawing | famous painters in kolkata",
+    "title": "Artist of India, famous painters in kolkata, top painters in kolkata bengali painters",
     "description": "Indian artist, top painters in kolkata bengali painters list artists from kolkata famous painters name in kolkata face painting artist in kolkata",
     "keywords": "art, drawing, top painters in kolkata, bengali painters list, artists from kolkata, famous painters name in kolkata"
   },
@@ -916,12 +916,12 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "angel investor kolkata, investor connect, startup investment, Global Scale-up Program, business developer"
   },
   "/investments.html": {
-    "title": "Angel investment, investor | Investments | angel investors in kolkata",
+    "title": "angel investors in kolkata, angel investor, early stage investor, calcutta angels kolkata, west bengal, angel investors india",
     "description": "angel investor, calcutta angels kolkata, west bengal, angel investors india Venture Capital Investors‎ startup bengal",
     "keywords": "angel investors in kolkata, angel investor, calcutta angels kolkata, west bengal, angel investors india"
   },
   "/latest-speeks.html": {
-    "title": "public speakers in india | latest speeks, china, nepal, bhutan, India, Dubai, Singapore, Ukraine, UK, Kualalampur",
+    "title": "public speakers in india, top 10 motivational technology speakers in india | Arijit Bhattacharyya",
     "description": "public speakers in india, virtual reality, game development, blockchain, ai, ml, top 10 motivational speakers in india best motivational speakers in india top motivational speakers in india motivational speakers in india for students",
     "keywords": "public speakers in india, virtual reality, game development, blockchain, ai, ml, top 10 motivational speakers in india"
   },
@@ -966,7 +966,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "machine learning, game development, blockchain, ai, ml, coder, mentor"
   },
   "/media-entertainment.html": {
-    "title": "movie producers in india | Media Entertainment, web series production kolkata, how to find producers for a movie in kolkata, bollywood producer contact number",
+    "title": "movie producer, investor, movie producers in india | Media Entertainment",
     "description": "movie producers in india movie producer, arijit bhattacharyya",
     "keywords": "movie producers in india, arijit bhattacharyya, movie producer, web series production kolkata, how to find producers for a movie in kolkata, bollywood producer contact number"
   },
@@ -976,7 +976,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "medical simulation equipment, medical simulator | safety training certification Robotic surgery, medical simulation, game development, blockchain, ai, ml, coder, mentor"
   },
   "/mentoring.html": {
-    "title": "startup mentor in kolkata, west bengal| startup ideas India | business mentors",
+    "title": "incubation programme, business mentors for startups, startup mentor in kolkata | Arijit Bhattacharyya",
     "description": "entrepreneur, angel investor, Startup Ideas India, Business Mentors startup incubators in kolkata incubation programme business mentors for startups startup events in kolkata local investor in kolkata startup mentors india",
     "keywords": "entrepreneur, angel investor, Startup Ideas India, Business Mentors"
   },
@@ -996,12 +996,12 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "philanthropist of Kolkata, international business development, market entry support, mentor"
   },
   "/photography.html": {
-    "title": "Arijit Bhattacharyya | Photography",
+    "title": "photographer, best photographer in west bengal, best photographer in the world, rig photography price, kolkata street photography, best photographer in india",
     "description": "passionate photographer best photographer in west bengal best fashion photographer in kolkata wedding photography bengali best photographer in the world best photographer in india",
     "keywords": "photographer, passion, best photographer in west bengal, best food photographer in kolkata, fashion photography bengali, best photographer in the world, kolkata street photography, best photographer in india"
   },
   "/press-news.html": {
-    "title": "Arijit Bhattacharyya | Press News | entrepreneurs from kolkata",
+    "title": "arijit bhattacharyya, entrepreneurs from kolkata, international business development, market entry support, mentor",
     "description": "arijit bhattacharyya, international business development, entrepreneurs from kolkata mentor",
     "keywords": "arijit bhattacharyya, international business development, market entry support, mentor, entrepreneurs from kolkata"
   },
@@ -1031,7 +1031,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "kids learning, How can I teach my child to read at home?, what is common core education, what is the purpose of education, blockchain, ai, ml, coder, mentor, why is physical education important, how to educate yourself, what is primary education, discovery education, continuing medical education, department of education, education cities, school education, education quotes, education galaxy"
   },
   "/technology.html": {
-    "title": "technology entrepreneurs in india | technical entrepreneur in kolkata",
+    "title": "technology entrepreneurs in india, kolkata, calcutta | technical entrepreneur in kolkata",
     "description": "technology entrepreneurs in india, west bengal, calcutta, kolkata technical entrepreneur in india top 50 entrepreneurs in india youngest indian entrepreneur indian entrepreneurs success stories",
     "keywords": "technology entrepreneurs in india, investment banking, technical entrepreneur in kolkata"
   },
@@ -1051,7 +1051,7 @@ export const legacySeoByPath: Record<string, LegacySeoEntry> = {
     "keywords": "gym, Triceps workout, health, nutrition"
   },
   "/virtual-reality.html": {
-    "title": "mixed reality gaming India | virtual reality game developer in kolkata | VR investor, publisher",
+    "title": "virtual reality game developer kolkata, mixed reality gaming, VR investor | VR AR AI",
     "description": "virtual reality game developer in kolkata, India, USA, international business development, virtual reality, mixed reality, game development, game development company in kolkata, game development courses in kolkata, virtual infocom kolkata west bengal",
     "keywords": "virtual reality game developer kolkata, mixed reality, game development, game development company in kolkata, game development courses in kolkata, virtual infocom kolkata west bengal"
   },

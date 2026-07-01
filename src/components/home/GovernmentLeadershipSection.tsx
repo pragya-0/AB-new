@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -111,13 +111,11 @@ export default function GovernmentLeadershipSection() {
             </p>
 
             <h3 className="max-w-[760px] text-[32px] font-extrabold leading-[1.03] tracking-[-0.055em] text-white sm:text-[42px] md:text-[52px]">
-              Union Government Innovation Ecosystem
+              Startup India Innovation Ecosystem
             </h3>
 
             <p className="mt-6 max-w-[620px] text-[16px] font-normal leading-8 text-white/64 sm:text-[18px]">
-              Participation in national innovation and startup ecosystem
-              conversations connected with India’s technology, entrepreneurship
-              and Startup India growth.
+              Arijit Bhattacharyya as National Startup India Award Jury Member run by Government of India — helping Indian startups go global.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -136,7 +134,7 @@ export default function GovernmentLeadershipSection() {
 
           <LeadershipImage
             src="/assets/speaking/15thJan-2022-goyel.jpg.jpeg"
-            alt="Arijit Bhattacharyya at Union Government Innovation Ecosystem event"
+            alt="Arijit Bhattacharyya at Startup India Innovation Ecosystem event"
             large
           />
         </motion.article>

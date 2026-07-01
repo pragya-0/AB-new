@@ -20,10 +20,10 @@ type FeatureItem = SpeakItem & {
 };
 
 const featuredSpeak: SpeakItem = {
-  title: "Speaking Across Continents Since 2008",
+  title: "Speaking Across Continents",
   text: "Speaker in more than 2100 events worldwide across entrepreneurship, future technology, innovation, game development, virtual reality, augmented reality, NFT, blockchain, artificial intelligence, digital banking, SDG goals, creativity, arts and media.",
   image: `${speaking}axis-pune.jpg`,
-  meta: "Global Keynotes • Institutions • Business Forums",
+  meta: "Global Keynotes / Institutions / Business Forums",
   position: "object-center",
 };
 
@@ -32,21 +32,21 @@ const signaturePlatforms: SpeakItem[] = [
     title: "TEDx Speaker",
     text: "Ideas, innovation, entrepreneurship and future technology storytelling on a public stage.",
     image: `${speaking}tedx.jpg.jpeg`,
-    meta: "TEDx • Ideas Worth Sharing",
+    meta: "TEDx / Ideas Worth Sharing",
     position: "object-center",
   },
   {
     title: "IIT, IIM, NIT & XLRI Platforms",
     text: "Speaker across IITs, IIMs, NITs, XLRI and universities on innovation, startups, technology, funding, game development and future skills.",
     image: `${speaking}IIT_Hydrabad.jpg`,
-    meta: "IIT • IIM • NIT • XLRI",
+    meta: "IIT / IIM / NIT / XLRI",
     position: "object-center",
   },
   {
     title: "Dubai AI & Blockchain",
     text: "AI, blockchain, digital finance, crypto, future technology and international business conversations.",
     image: `${speaking}dubai-speaker.png`,
-    meta: "AI • Blockchain • Future Tech",
+    meta: "AI / Blockchain / Future Tech",
     position: "object-center",
   },
 ];
@@ -57,7 +57,7 @@ const featureMoments: FeatureItem[] = [
     title: "Ghana Business Summit with Vice President of Ghana",
     text: "International business, investment and leadership platform connected with global entrepreneurship, innovation and business diplomacy.",
     image: `${speaking}ghana.jpeg`,
-    meta: "Ghana • Vice President • Business Summit",
+    meta: "Ghana / Vice President / Business Summit",
     tone: "gold",
     fit: "contain",
     position: "object-center",
@@ -67,7 +67,7 @@ const featureMoments: FeatureItem[] = [
     title: "Thailand Blockchain Forum",
     text: "Blockchain, digital finance, crypto ecosystem, fintech and international technology conversations in Southeast Asia.",
     image: `${speaking}Thailand_blockchain.jpg`,
-    meta: "Thailand • Blockchain • Digital Finance",
+    meta: "Thailand / Blockchain / Digital Finance",
     tone: "blue",
     fit: "cover",
     position: "object-left",
@@ -79,42 +79,42 @@ const archiveMoments: SpeakItem[] = [
     title: "China VR Film Festival",
     text: "Virtual reality, immersive media, film technology and international creative-technology conversations.",
     image: `${speaking}china.jpg.jpeg`,
-    meta: "China • VR • Film Technology",
+    meta: "China / VR / Film Technology",
     position: "object-center",
   },
   {
     title: "Finland Smart City",
     text: "Smart city, global business collaboration, innovation networks and technology-led urban development conversations.",
     image: `${speaking}Finland.jpg`,
-    meta: "Finland • Smart City • Global Business",
+    meta: "Finland / Smart City / Global Business",
     position: "object-center",
   },
   {
-    title: "Next Growth Nepal",
+    title: "Nepal TV",
     text: "Product development, startups, founder growth and entrepreneurship ecosystem conversations.",
     image: `${speaking}Nepal.jpg`,
-    meta: "Nepal • Product Development • Startups",
+    meta: "Nepal TV / Product Development / Startups",
     position: "object-center",
   },
   {
     title: "Axis Bank Bhubaneswar",
     text: "MSME growth, banking, business strategy, digital transformation and entrepreneurship development.",
     image: `${speaking}axis-bank-bhub.jpg`,
-    meta: "MSME • Banking • Growth",
+    meta: "MSME / Banking / Growth",
     position: "object-center",
   },
   {
     title: "South Korea DeepTech",
     text: "Deeptech, gaming, creative technology and international collaboration with innovation communities.",
     image: `${speaking}SKorea.png`,
-    meta: "South Korea • DeepTech • Gaming",
+    meta: "South Korea / DeepTech / Gaming",
     position: "object-center",
   },
   {
     title: "XLRI Jamshedpur",
     text: "Startup ecosystem, innovation, future business and founder growth conversations.",
     image: `${speaking}xlri.jpeg`,
-    meta: "XLRI • Startups • Innovation",
+    meta: "XLRI / Startups / Innovation",
     position: "object-center",
   },
 ];
@@ -128,7 +128,7 @@ const speakingProof = [
   "China VR Film Festival",
   "Thailand Blockchain Forum",
   "Go International Finland",
-  "Next Growth Nepal",
+  "Nepal TV",
   "CNBC India",
   "DD National",
   "DD Bangla",
@@ -194,8 +194,8 @@ function SpeakingCard({ item }: { item: SpeakItem }) {
           className={`h-full w-full ${
             item.fit === "contain"
               ? "object-contain object-center"
-              : `object-cover ${item.position ?? "object-center"}`
-          } transition duration-700 group-hover:scale-[1.025]`}
+              : `object-contain ${item.position ?? "object-center"}`
+          } transition duration-700`}
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/24 to-transparent" />
@@ -275,7 +275,7 @@ function FeatureSplit({ item }: { item: FeatureItem }) {
             className={`h-full w-full ${
               item.fit === "contain"
                 ? "object-contain object-center"
-                : `object-cover ${item.position ?? "object-center"}`
+                : `object-contain ${item.position ?? "object-center"}`
             } transition duration-700 hover:scale-[1.02]`}
           />
 
@@ -308,13 +308,13 @@ export default function LatestSpeaksSection() {
                   `${speaking}Pune.jpg`,
                 ]}
                 alt="Arijit Bhattacharyya speaking across continents since 2008 at global keynotes institutions and business forums"
-                className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.025]"
+                className="h-full w-full object-contain object-center transition duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/8 to-transparent" />
             </div>
 
             <div className="flex flex-col justify-center bg-[#07101f] p-6 sm:p-7 md:p-10 lg:p-12">
-              <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.34em] text-[#58a0ff]">
+              <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#58a0ff]">
                 {featuredSpeak.meta}
               </p>
 
@@ -329,7 +329,7 @@ export default function LatestSpeaksSection() {
               <div className="mt-7 h-px w-full bg-white/10" />
 
               <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.24em] text-white/45">
-                Entrepreneurship • AI • Gaming • DeepTech • Innovation • SDG
+                Entrepreneurship / AI / Gaming / DeepTech / Innovation / SDG
               </p>
             </div>
           </div>
@@ -378,3 +378,5 @@ export default function LatestSpeaksSection() {
     </BioSectionShell>
   );
 }
+
+

@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const applications = [
   {
@@ -9,7 +9,7 @@ const applications = [
   {
     category: "Defence",
     title: "Defence Simulation",
-    text: "Physics-based recoil, tactical environments, training scenarios, interactive weapon systems, defence training modules and real-world simulation experiences.",
+    text: "Tactical training environments, scenario-based learning, safety workflows, simulation modules and immersive defence-readiness experiences.",
   },
   {
     category: "Banking",
@@ -78,7 +78,7 @@ export default function IndustryApplications() {
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-300 sm:text-sm">
-              Industry Applications
+              Built for Real-World Industries
             </p>
 
             <h2 className="mt-4 max-w-4xl text-[34px] font-extrabold leading-[1.02] tracking-[-0.04em] sm:text-[44px] md:text-[52px] lg:text-[58px]">
@@ -87,7 +87,7 @@ export default function IndustryApplications() {
           </div>
 
           <p className="max-w-2xl text-base leading-8 text-slate-300 sm:text-lg lg:justify-self-end">
-            Arijit’s VR, AR, AI and simulation work spans entertainment,
+            Arijit’s immersive technology and AI-powered simulation work spans entertainment,
             healthcare, defence, banking, recruitment, ship and oil-rig
             training, tourism, real estate, education, manufacturing, smart
             cities and enterprise transformation.

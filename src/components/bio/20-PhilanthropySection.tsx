@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
@@ -66,7 +66,7 @@ function ImpactPhoto({
           </div>
 
           <div className="flex flex-col justify-center p-7 md:p-9">
-            <h3 className="text-[34px] font-black leading-[0.92] tracking-[-0.06em] text-[#07101f] md:text-[48px]">
+            <h3 className="text-[34px] font-extrabold leading-[0.92] tracking-[-0.06em] text-[#07101f] md:text-[48px]">
               {title}
             </h3>
 
@@ -93,7 +93,7 @@ function ImpactPhoto({
 </div>
 
       <div className="p-6">
-        <h3 className="text-[26px] font-black leading-tight tracking-[-0.045em] text-[#07101f]">
+        <h3 className="text-[26px] font-extrabold leading-tight tracking-[-0.045em] text-[#07101f]">
           {title}
         </h3>
 
@@ -127,14 +127,14 @@ export default function PhilanthropySection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/8 to-transparent" />
 
               <div className="absolute bottom-7 left-7 right-7">
-                <h3 className="max-w-[720px] text-[34px] font-black leading-[0.92] tracking-[-0.06em] text-white md:text-[48px]">
+                <h3 className="max-w-[720px] text-[34px] font-extrabold leading-[0.92] tracking-[-0.06em] text-white md:text-[48px]">
                   Extending innovation beyond the boardroom.
                 </h3>
               </div>
             </div>
 
             <div className="flex flex-col justify-center bg-[#f7faff] p-7 md:p-10">
-              <h3 className="max-w-[720px] text-[34px] font-black leading-[0.92] tracking-[-0.06em] text-[#07101f] md:text-[48px]">
+              <h3 className="max-w-[720px] text-[34px] font-extrabold leading-[0.92] tracking-[-0.06em] text-[#07101f] md:text-[48px]">
                 Technology becomes meaningful when it creates opportunities beyond business.
               </h3>
 
@@ -154,7 +154,7 @@ export default function PhilanthropySection() {
               {...fadeUp}
               className="rounded-[26px] border border-[#bdd9ff] bg-white p-6 shadow-[0_18px_60px_rgba(0,87,255,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(0,87,255,0.13)]"
             >
-              <h3 className="text-[26px] font-black leading-tight tracking-[-0.045em] text-[#07101f]">
+              <h3 className="text-[26px] font-extrabold leading-tight tracking-[-0.045em] text-[#07101f]">
                 {pillar.title}
               </h3>
 

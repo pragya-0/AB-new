@@ -1,79 +1,79 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Film, PlayCircle, Sparkles } from "lucide-react";
 
 const mediaEntertainmentRoute = "/media-entertainment";
 
-const genAIPlaylist =
-  "https://www.youtube.com/playlist?list=PLuNg6vVH-PWlC_wHYewKy_he-yydjsPp0";
+const genAIMoviesPlaylist =
+  "https://www.youtube.com/playlist?list=PLqxGT4eSUWHE3cVQIV705v84oVgAXjUrL";
 
-const genAICreations = [
+type GenAICreation = {
+  title: string;
+  universe: string;
+  image: string;
+  youtubeUrl: string;
+  description: string;
+};
+
+const genAICreations: GenAICreation[] = [
   {
     title: "KARNA",
-    universe: "Mythological Universe",
+    universe: "Indian Epic Universe",
     image: "/assets/gallery/karna-poster-vertical.png",
-    youtubeUrl:
-      "https://www.youtube.com/results?search_query=Karna+Arijit+Bhattacharyya+Gen+AI",
+    youtubeUrl: "https://www.youtube.com/watch?v=LSchEFVs_bs",
+    description:
+      "AI-led epic sci-fi story world connecting Indian epic characters, cinema, future warfare and original GenAI entertainment.",
+  },
+  {
+    title: "The 4th Dimension",
+    universe: "Multiverse Adventure",
+    image: "/assets/gallery/time-traveller-poster-vertical.png",
+    youtubeUrl: "https://www.youtube.com/watch?v=s-NadEiPO_o",
+    description:
+      "AI-led cinematic story world blending time, science fiction, epic storytelling and future entertainment.",
   },
   {
     title: "NADA",
     universe: "Fantasy Universe",
     image: "/assets/gallery/nada-poster-vertical.png",
-    youtubeUrl: genAIPlaylist,
+    youtubeUrl: genAIMoviesPlaylist,
+    description:
+      "AI-led fantasy story world connecting warrior legends, temple mysteries, cinematic action and future entertainment.",
   },
   {
     title: "BROKEN",
     universe: "Sci-Fi Universe",
     image: "/assets/gallery/broken-poster-vertical.png",
     youtubeUrl: "https://www.youtube.com/shorts/KiW-rtz9GeM",
+    description:
+      "AI-led science fiction superhero story connected with Ashwathama’s gem, emotion, action and cinematic world-building.",
   },
   {
     title: "ASHWATHAMA",
     universe: "Epic Saga",
     image: "/assets/gallery/ashwathama-poster-vertical.png",
-    youtubeUrl:
-      "https://www.youtube.com/results?search_query=Ashwathama+Arijit+Bhattacharyya+Gen+AI",
-  },
-  {
-    title: "TIME TRAVELER",
-    universe: "Multiverse Adventure",
-    image: "/assets/gallery/time-traveller-poster-vertical.png",
-    youtubeUrl: "https://www.youtube.com/watch?v=s-NadEiPO_o",
+    youtubeUrl: genAIMoviesPlaylist,
+    description:
+      "AI-led epic saga expanding Ashwathama the Immortal into a larger cinematic and character-driven universe.",
   },
 ];
 
-const upcomingWorlds = [
-  "Crave",
-  "Hanuman",
-  "Parde Ke Peeche",
-  "Heal The Earth",
-  "AI Cinema",
-  "Story Worlds",
-];
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
   show: { opacity: 1, y: 0 },
 };
 
-function PosterCard({
-  item,
-  index,
-}: {
-  item: (typeof genAICreations)[number];
-  index: number;
-}) {
-  const gridSpan =
-    index < 3 ? "lg:col-span-2" : "lg:col-span-3";
-
+function PosterCard({ item }: { item: GenAICreation }) {
   return (
     <motion.article
       variants={fadeUp}
       whileHover={{ y: -7 }}
       transition={{ type: "spring", stiffness: 230, damping: 22 }}
-      className={`group ${gridSpan} flex h-full flex-col overflow-hidden rounded-[26px] border border-[#0057ff]/15 bg-white shadow-[0_24px_90px_rgba(0,87,255,0.12)] transition duration-500 hover:border-[#0057ff]/55 hover:shadow-[0_0_80px_rgba(0,87,255,0.22)]`}
+      className="group flex h-full min-h-[620px] flex-col overflow-hidden rounded-[26px] border border-[#0057ff]/15 bg-white shadow-[0_24px_90px_rgba(0,87,255,0.12)] transition duration-500 hover:border-[#0057ff]/55 hover:shadow-[0_0_80px_rgba(0,87,255,0.22)]"
     >
-      <div className="relative flex h-[300px] items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#05070c_0%,#07162b_100%)] p-3 sm:h-[350px] lg:h-[370px] xl:h-[390px]">
+      <div className="relative flex h-[320px] items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#05070c_0%,#07162b_100%)] p-3 sm:h-[360px] xl:h-[390px]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(0,87,255,0.28),transparent_45%)]" />
 
         <img
@@ -93,8 +93,7 @@ function PosterCard({
         </h3>
 
         <p className="mt-4 flex-1 text-[14px] font-normal leading-6 text-black/58 sm:text-[15px] sm:leading-7">
-          AI-led story world blending mythology, cinema and future
-          entertainment.
+          {item.description}
         </p>
 
         <a
@@ -102,7 +101,7 @@ function PosterCard({
           target="_blank"
           rel="noreferrer"
           aria-label={`Watch ${item.title} GenAI story on YouTube`}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0057ff] transition duration-300 group-hover:translate-x-1"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0057ff] transition duration-300 group-hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
           <PlayCircle size={16} />
           Watch
@@ -149,15 +148,15 @@ export default function CreativeUniverseSection() {
             variants={fadeUp}
             className="max-w-[660px] text-[16px] font-normal leading-8 text-black/62 sm:text-[18px] lg:justify-self-end"
           >
-            Mythology, science fiction and cinematic imagination brought
+            Epic storytelling, science fiction and cinematic imagination brought
             together through AI-led storytelling, character design and future
             entertainment universes.
           </motion.p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
-          {genAICreations.map((item, index) => (
-            <PosterCard key={item.title} item={item} index={index} />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {genAICreations.map((item) => (
+            <PosterCard key={item.title} item={item} />
           ))}
         </div>
 
@@ -173,8 +172,7 @@ export default function CreativeUniverseSection() {
               </p>
 
               <h3 className="max-w-[900px] text-[28px] font-extrabold leading-tight tracking-[-0.05em] text-black sm:text-[36px]">
-                A wider cinematic and entertainment universe is being built
-                around AI, mythology, fantasy and future storytelling.
+                A wider cinematic and entertainment universe is being built around AI, Indian epic worlds, fantasy, science fiction and future-facing IP.
               </h3>
             </div>
 
@@ -186,17 +184,6 @@ export default function CreativeUniverseSection() {
               Explore Media Entertainment
               <ArrowUpRight size={17} />
             </Link>
-          </div>
-
-          <div className="mt-7 flex flex-wrap gap-3">
-            {upcomingWorlds.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-[#0057ff]/15 bg-[#0057ff]/7 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#0057ff]"
-              >
-                {tag}
-              </span>
-            ))}
           </div>
         </motion.div>
       </motion.div>

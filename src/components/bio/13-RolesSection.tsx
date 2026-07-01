@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import { fadeUp } from "./bioMotion";
 
@@ -180,7 +180,7 @@ export default function RolesSection() {
         {...fadeUp}
         className="mb-6 overflow-hidden rounded-[28px] border border-[#58a0ff]/25 bg-[linear-gradient(135deg,rgba(0,87,255,0.18),rgba(255,255,255,0.03))] p-5 sm:p-6 md:mb-8 md:rounded-[34px] md:p-8"
       >
-        <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.34em] text-[#8bb7ff]">
+        <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#8bb7ff]">
           Career Highlights
         </p>
 
@@ -241,7 +241,7 @@ export default function RolesSection() {
       >
         <div className="mb-6 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <div>
-            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.34em] text-[#58a0ff]">
+            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#58a0ff]">
               Extended Trust Network
             </p>
 

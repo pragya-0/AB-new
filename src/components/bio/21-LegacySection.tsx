@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
 import { bio } from "../../data/bio/bioAssets";
@@ -20,7 +20,7 @@ export default function LegacySection() {
 
       <div className="relative z-10 mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
         <motion.div {...fadeUp}>
-          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.35em] text-[#7fb8ff] md:text-[12px]">
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#7fb8ff] md:text-[12px]">
             The Work Continues
           </p>
 

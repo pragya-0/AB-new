@@ -1,4 +1,4 @@
-﻿import { bio, drawingPath, gamePath } from "./bioAssets";
+import { bio, drawingPath, gamePath } from "./bioAssets";
 
 export const creativeTracks = [
   {
@@ -10,7 +10,7 @@ export const creativeTracks = [
   },
   {
     title: "Comics",
-    text: "Superheroes, IPs, comics, mythology-led characters and original Indian storytelling universe.",
+    text: "Superheroes, IPs, comics, epic-led characters and original Indian storytelling universe.",
     image: `${gamePath}comics.jpg`,
     fallbacks: [`${gamePath}comics-img3.jpg`, `${gamePath}comics-img6.jpg`],
     tags: ["Comics", "Superheroes", "IP"],

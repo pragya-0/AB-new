@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const me = "/assets/media-entertainment/";
 
@@ -77,8 +77,8 @@ const timeline = [
   },
   {
     period: "Future Media",
-    title: "AI Films & Mythology-Led Storytelling",
-    text: "The newest chapter moves into GenAI cinema, mythology-led film universes, AI-assisted visuals, digital characters and future entertainment formats.",
+    title: "AI Films & Epic-Led Storytelling",
+    text: "The newest chapter moves into GenAI cinema, epic-led film universes, AI-assisted visuals, digital characters and future entertainment formats.",
     image: `${me}WhatsApp Image 2026-06-16 at 19.28.41.jpeg`,
     tag: "GenAI Films",
     alt: "Ashwathama future media and AI film universe poster by Arijit Bhattacharyya",

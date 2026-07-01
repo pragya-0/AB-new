@@ -75,7 +75,7 @@ const timelineItems: TimelineItem[] = [
     text: "A global AI platform focused on enterprise innovation, practical AI adoption and the future direction of intelligent systems.",
     image: "/assets/speaking/2021/AI-world-summit.jpg",
     fallbacks: [
-      "/assets/speaking/AI-world-summit.jpg",
+      "/assets/speaking/2021/AI-world-summit.jpg",
       "/assets/speaking/2021/AI-blockchain.jpg",
     ],
     alt: "Arijit Bhattacharyya speaking at AI World Summit Singapore on artificial intelligence and enterprise innovation",
@@ -216,7 +216,7 @@ export default function SpeakingTimeline() {
       <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial="hidden"
-          whileInView="show"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
           variants={fadeUp}
           className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-end"
@@ -240,7 +240,7 @@ export default function SpeakingTimeline() {
 
         <motion.div
           initial="hidden"
-          whileInView="show"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.12 }}
           className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
         >

@@ -1,4 +1,4 @@
-﻿// src/components/books/booksData.ts
+// src/components/books/booksData.ts
 
 export const booksPath = "/assets/books/";
 
@@ -113,7 +113,7 @@ export const books: BookItem[] = [
     title: "The Legend Comes Alive",
     subtitle: "Part One",
     description:
-      "A mythology-inspired adventure that combines storytelling, heroes, fantasy worlds and original intellectual property developed through comics and entertainment.",
+      "A epic-inspired adventure that combines storytelling, heroes, fantasy worlds and original intellectual property developed through comics and entertainment.",
     image: `${booksPath}Alive.png`,
     amazon: "https://www.amazon.com/Archer-legend-comes-alive-Book-ebook/dp/B011UYF1RG",
     year: "2015",
@@ -121,7 +121,7 @@ export const books: BookItem[] = [
     alt: "The Legend Comes Alive Part One by Arijit Bhattacharyya",
     seoTitle: "The Legend Comes Alive",
     seoDescription:
-      "Fantasy adventure and mythology graphic novel by Arijit Bhattacharyya."
+      "Fantasy adventure and epic graphic novel by Arijit Bhattacharyya."
   }
 ];
 
@@ -154,7 +154,7 @@ export const knowledgeAreas = [
   {
     title: "Creative IP",
     description:
-      "Original stories, mythology and entertainment innovation."
+      "Original stories, epic storytelling and entertainment innovation."
   }
 ];
 
@@ -163,7 +163,7 @@ export const booksTimeline = [
     year: "2015",
     title: "Storytelling & Original IP",
     description:
-      "Publishing begins with mythology-inspired storytelling and original intellectual property."
+      "Publishing begins with epic-inspired storytelling and original intellectual property."
   },
   {
     year: "2023",

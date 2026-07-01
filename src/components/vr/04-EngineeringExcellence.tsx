@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const techGroups = [
   {
@@ -49,7 +49,7 @@ const techGroups = [
 ];
 
 const engineeringNotes = [
-  "Building AI, VR, AR and simulation platforms since the early days of immersive computing.",
+  "Building immersive technology and simulation platforms since the early days of immersive computing.",
   "Experience across Microsoft technologies, .NET, C#, enterprise software and large-scale application architecture.",
   "Research and development in GPU programming, PowerVR hardware ray tracing, OpenGL, CUDA and advanced rendering pipelines.",
   "Development spanning blockchain ecosystems, digital twins, IoT, robotics, smart cities and predictive maintenance solutions.",
@@ -70,7 +70,7 @@ export default function EngineeringExcellence() {
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-700 sm:text-sm">
-              Engineering Excellence
+              Engineering Depth Behind Immersive Innovation
             </p>
 
             <h2 className="mt-4 max-w-4xl text-[34px] font-extrabold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:text-[44px] md:text-[52px] lg:text-[58px]">

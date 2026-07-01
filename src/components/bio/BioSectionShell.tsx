@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeUp } from "./bioMotion";
 
 type BioSectionShellProps = {
@@ -28,10 +28,10 @@ export default function BioSectionShell({
       <div className="mx-auto max-w-[1500px]">
         <motion.div {...fadeUp} className="mb-10 grid gap-7 lg:grid-cols-[0.72fr_1fr] lg:items-end">
           <div>
-            <p className="mb-4 text-[11px] font-black uppercase tracking-[0.38em] text-[#1262ff]">
+            <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#1262ff]">
               {eyebrow}
             </p>
-            <h2 className="max-w-[760px] text-[38px] font-black leading-[0.9] tracking-[-0.07em] md:text-[58px]">
+            <h2 className="max-w-[760px] text-[38px] font-extrabold leading-[0.9] tracking-[-0.055em] md:text-[58px]">
               {title}
             </h2>
           </div>

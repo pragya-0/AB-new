@@ -1,13 +1,13 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import SmartImage from "../bio/SmartImage";
 
 const stats = [
-  "29+ Years",
   "Since 1998",
-  "AI Since 2002",
-  "VRML Since 2006",
-  "500+ Games • VR • AR",
+  "Founder-led innovation journey",
+  "Digital Humans",
+  "Simulation Systems",
+  "Smart City Systems",
 ];
 
 export default function VRHero() {
@@ -22,36 +22,27 @@ export default function VRHero() {
           transition={{ duration: 0.7 }}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-300 sm:text-sm">
-            VR • AR • AI • GenAI • Digital Humans • Immersive Technologies
+            Immersive Technology • Digital Humans • Future-Ready Systems
           </p>
 
           <h1 className="mt-5 max-w-5xl text-[40px] font-extrabold leading-[1.04] tracking-[-0.04em] sm:text-[50px] lg:text-[58px] xl:text-[64px]">
             VR, AR & AI Before They Became Mainstream.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Arijit Bhattacharyya has been building immersive technologies since
-            the early days of game development, 3D graphics and VRML. His work
-            spans Virtual Reality, Augmented Reality, XR, Artificial
-            Intelligence, Digital Humans, simulation systems and interactive
-            experiences across entertainment, enterprise and education.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl sm:leading-9">
+            Arijit Bhattacharyya has been building immersive and intelligent
+            technology systems since the early days of game development, 3D
+            graphics and VRML. His work connects Virtual Reality, Augmented
+            Reality, Artificial Intelligence, Digital Humans, simulation systems
+            and interactive experiences across entertainment, enterprise,
+            education and future-city innovation.
           </p>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Through Virtualinfocom, he has delivered VR, AR and AI-driven
-            solutions for healthcare, defence, banking, manufacturing,
-            education, tourism, real estate, recruitment, digital training,
-            movies and global technology ecosystems. His work includes
-            transforming real actors, models and celebrities into digital humans
-            for games, films and immersive experiences.
-          </p>
-
-          <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            The technology journey spans AI since 2002, VRML since 2006, Unity,
-            Unreal, motion capture, digital twins, robotics, blockchain,
-            smart-city technologies, enterprise simulations, Microsoft
-            technologies, Nokia collaborations and modern GenAI-powered
-            immersive systems.
+            Through Virtualinfocom, his founder-led technology journey spans
+            healthcare, defence training, banking, manufacturing, education,
+            tourism, real estate, recruitment, digital training, movies,
+            smart-city systems, Nokia collaborations and global technology ecosystems.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -86,7 +77,7 @@ export default function VRHero() {
 
               <div className="absolute bottom-6 left-6 right-6 rounded-[1.4rem] border border-white/10 bg-[#03070d]/70 p-5 backdrop-blur">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-300">
-                  VR • AR • AI • GenAI
+                  Immersive Technology
                 </p>
 
                 <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">

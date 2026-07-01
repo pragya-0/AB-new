@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import { fadeUp } from "./bioMotion";
 
@@ -77,7 +77,7 @@ const archiveSections = [
       "Lead Director, Avaluglobal Investments — Australia.",
       "Founder, Cosplayseller — India’s first ecommerce portal for cosplay items.",
       "Founder, Virtualgamedeveloper — one of India’s early VR, AR and mixed reality solution studios since 2006.",
-      "Founder, 8metals — non-profit initiative exploring culture, science and mythology.",
+      "Founder, 8metals — non-profit initiative exploring culture, science and Indian epic traditions.",
       "Director and Advisor, PhoneQuad LLC — USA.",
       "Founder, Healthplaneta, Artncraftmarket and PropertyPlaneta.",
     ],
@@ -125,7 +125,7 @@ const archiveSections = [
       "Produced Bengal’s first movie-based game Boss 2 with Actor Jeet.",
       "Created India’s first real actor and actress based RPG game.",
       "Produced Bengal’s first movie-based game Boss 2, Bangladesh superhero movie-based game Bizli, Nepal’s first 3D racing game and Bhutan’s first 3D game.",
-      "Produced India’s first RPG mythology-based game Ashwathama the Immortal, where in 2007 he used kalari fighters and real-life shooting of models to create 3D game characters.",
+      "Produced India’s first RPG epic-based game Ashwathama the Immortal, where in 2007 he used kalari fighters and real-life shooting of models to create 3D game characters.",
       "Produced Shaktimaan the game and Shaktimaan the Battle with superstar Mukesh Khanna.",
       "Created game titles and character work connected with Subhashree Ganguly, Priyanka Sarkar, Mainak Banerjee, Arjun Chakraborty, Amrita and other regional actors and models.",
       "Produced Fight of the Legends, a superhero-based fighting game series where since 2008 more than 200 models and actors around the world were recruited as 3D game characters, later moving into NFT and metaverse worlds.",
@@ -137,7 +137,7 @@ const archiveSections = [
       "Created copyright and IP around virtual reality simulation in the medical segment and 3D model-making software.",
       "Marketed several blockchain and crypto projects around the world.",
       "Made several local actors and artists popular globally in TV series and international movie markets in Asia.",
-      "The creative research includes digging into science behind mythology and culture, exploring fighting styles from different parts of the world and putting those ideas into gamification and animation.",
+      "The creative research includes digging into science behind Indian epic traditions and culture, exploring fighting styles from different parts of the world and putting those ideas into gamification and animation.",
     ],
   },
   {
@@ -262,7 +262,7 @@ const archiveSections = [
       "Achievers and Innovator Award from Education Minister in 2012.",
       "Top 10 Asian Company from Red Herring in 2012.",
       "Ranked among top 50 blockchain thought leaders, listed at number 14 by Thinkers360.",
-      "Creator of first Indian mythology-led 3D games, original superhero IP, comics, gaming club and online training initiatives.",
+      "Creator of first Indian epic-led 3D games, original superhero IP, comics, gaming club and online training initiatives.",
       "Writer of books on animation, game development, Object C, OpenGL and creative technology.",
       "Creator of first Indian gaming club, first Indian game store on resources and early cloud-based classroom for mobile apps, animation and game development.",
       "Pioneer in online training on mobile apps, animation, website design and game development across West Bengal, Rajasthan and Nigeria.",
@@ -279,7 +279,7 @@ const archiveSections = [
       "Copyright and IP on 3D model-making software that translates 2D drawing into 3D polygon.",
       "First company to make characters using real people to become game characters.",
       "Responsible for 200+ games for iOS, Android, Microsoft and VR platforms with 3D characters motion captured and created by his team.",
-      "Created mythology-based science fiction comics series released on Amazon Kindle.",
+      "Created epic-based science fiction comics series released on Amazon Kindle.",
       "Worked on VFX and co-production of Spanish films and event hosting for entrepreneurs.",
     ],
   },
@@ -332,7 +332,7 @@ export default function LegacyBiographyArchive() {
         className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04] md:rounded-[36px]"
       >
         <div className="border-b border-white/10 px-5 py-7 sm:px-6 md:px-10 md:py-9">
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.34em] text-[#7fb8ff]">
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#7fb8ff]">
             Preserved from Legacy Biography
           </p>
 

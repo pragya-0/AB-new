@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { fadeUp } from "./bioMotion";
 
@@ -91,7 +91,7 @@ const regionalCards: PressCardItem[] = [
   },
   {
     source: "ABP Bangla",
-    title: "Regional Recognition & Public Platform Presence",
+    title: "Regional Media Recognition & Public Visibility",
     image: "/assets/press/ABP_Arijit.jpg",
     type: "video",
   },
@@ -152,7 +152,7 @@ function PressCard({
       <div className={`absolute inset-0 ${overlayClass(card.type)}`} />
 
       <div className="absolute bottom-6 left-6 right-6 z-10 md:bottom-7 md:left-7 md:right-7">
-        <p className="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-[#8bb7ff]">
+        <p className="mb-3 text-[10px] font-extrabold uppercase tracking-[0.3em] text-[#8bb7ff]">
           {card.type === "newspaper"
             ? "National Media"
             : card.type === "document"
@@ -163,7 +163,7 @@ function PressCard({
         </p>
 
         <h3
-          className={`font-black leading-[0.9] tracking-[-0.065em] text-white ${
+          className={`font-extrabold leading-[0.9] tracking-[-0.05em] text-white ${
             large ? "text-[42px] md:text-[64px]" : "text-[30px] md:text-[42px]"
           }`}
         >
@@ -190,7 +190,7 @@ function MediaWall() {
       {...fadeUp}
       className="rounded-[34px] border border-white/10 bg-white/[0.04] p-5 md:p-6"
     >
-      <p className="mb-5 text-[10px] font-black uppercase tracking-[0.34em] text-[#58a0ff]">
+      <p className="mb-5 text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#58a0ff]">
         Seen Across
       </p>
 
@@ -200,7 +200,7 @@ function MediaWall() {
             key={item}
             className="flex min-h-[86px] items-center justify-center rounded-[20px] border border-white/10 bg-black/20 px-4 text-center transition duration-300 hover:-translate-y-1 hover:border-[#58a0ff]/45 hover:bg-white/[0.06]"
           >
-            <p className="text-[12px] font-black uppercase leading-5 tracking-[0.16em] text-white/72">
+            <p className="text-[12px] font-extrabold uppercase leading-5 tracking-[0.16em] text-white/72">
               {item}
             </p>
           </div>
@@ -225,11 +225,11 @@ function PressBlock({
       className="rounded-[36px] border border-white/10 bg-[#05080d] p-5 md:p-7"
     >
       <div className="mb-7 grid gap-5 lg:grid-cols-[0.55fr_1fr] lg:items-end">
-        <p className="text-[10px] font-black uppercase tracking-[0.36em] text-[#58a0ff]">
+        <p className="text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#58a0ff]">
           {eyebrow}
         </p>
 
-        <h3 className="max-w-[980px] text-[34px] font-black leading-[0.92] tracking-[-0.065em] text-white md:text-[54px]">
+        <h3 className="max-w-[980px] text-[34px] font-extrabold leading-[0.92] tracking-[-0.05em] text-white md:text-[54px]">
           {title}
         </h3>
       </div>
@@ -253,11 +253,11 @@ export default function PressNewsSection() {
         >
           <div className="mb-8 grid gap-6 lg:grid-cols-[0.82fr_1fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.36em] text-[#58a0ff]">
+              <p className="mb-4 text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#58a0ff]">
                 Recognition & Media Presence
               </p>
 
-              <h3 className="max-w-[860px] text-[40px] font-black leading-[0.9] tracking-[-0.07em] text-white md:text-[68px]">
+              <h3 className="max-w-[860px] text-[40px] font-extrabold leading-[0.9] tracking-[-0.055em] text-white md:text-[68px]">
                 Recognized across media, forums and public stages.
               </h3>
             </div>

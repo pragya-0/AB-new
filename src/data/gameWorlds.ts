@@ -1,10 +1,8 @@
-﻿import {
+import {
   Clapperboard,
-  Gamepad2,
   ScanFace,
   Shield,
   Sparkles,
-  Trophy,
 } from "lucide-react";
 
 export const gameWorldCards = [
@@ -38,27 +36,6 @@ export const gameWorldCards = [
   },
 ];
 
-export const gameWorldStats = [
-  {
-    value: "43+",
-    label: "Superhero Characters",
-    icon: Shield,
-  },
-  {
-    value: "2007",
-    label: "India’s First RPG 3D Game",
-    icon: Trophy,
-  },
-  {
-    value: "2001",
-    label: "First PC 3D Racing Game",
-    icon: Gamepad2,
-  },
-  {
-    value: "Official",
-    label: "Shaktimaan • Boss2 • Bizli",
-    icon: Clapperboard,
-  },
-];
+export const gameWorldStats = [];
 
 

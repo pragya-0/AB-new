@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -75,9 +75,9 @@ const timeline: TimelineItem[] = [
     year: "2006",
     title: "Ashwathama the Immortal and Platform Game Development",
     size: "wide",
-    text: "Arijit Bhattacharyya created Ashwathama the Immortal, positioned as India’s first role-playing game, while expanding mythology-led storytelling into mobile and platform-based game development.",
+    text: "Arijit Bhattacharyya created Ashwathama the Immortal, positioned as India’s first role-playing game, while expanding epic-led storytelling into mobile and platform-based game development.",
     detail:
-      "This became a major mythology-led gaming milestone, bringing Indian storytelling, original characters, platform development and early game innovation into one ambitious creative-technology direction.",
+      "This became a major epic-led gaming milestone, bringing Indian storytelling, original characters, platform development and early game innovation into one ambitious creative-technology direction.",
     icon: Gamepad2,
   },
   {
@@ -95,7 +95,7 @@ const timeline: TimelineItem[] = [
     size: "wide",
     text: "Virtualinfocom established broader platform and company connections with Intel, Microsoft, Opera, Amazon and LG.",
     detail:
-      "This period gave the work stronger technology-market credibility and practical skill alignment. It also strengthened Arijit Bhattacharyya’s larger creation engine across Indian games, celebrity-led virtual reality, augmented reality games with large-scale downloads, mythology-led entertainment, cinema-linked game intellectual property and original character development.",
+      "This period gave the work stronger technology-market credibility and practical skill alignment. It also strengthened Arijit Bhattacharyya’s larger creation engine across Indian games, celebrity-led virtual reality, augmented reality games with large-scale downloads, epic-led entertainment, cinema-linked game intellectual property and original character development.",
     icon: Cpu,
   },
   {
@@ -118,11 +118,11 @@ const timeline: TimelineItem[] = [
   },
   {
     year: "2014",
-    title: "Original Superhero and Mythology Game Universe",
+    title: "Original Superhero and Epic Game Universe",
     size: "wide",
     text: "The creative universe strengthened through Indian character properties including Fight of the Legends, Katya, Lalkamal Neelkamal, Banglar Dakat, Sukhu Dukhu and Shaktimaan.",
     detail:
-      "This phase deepened his work in Indian character intellectual property, mythology-led storytelling and superhero game universes. It was not only about making games; it was about building characters, worlds and recognisable story systems for Indian audiences.",
+      "This phase deepened his work in Indian character intellectual property, epic-led storytelling and superhero game universes. It was not only about making games; it was about building characters, worlds and recognisable story systems for Indian audiences.",
     icon: Sparkles,
   },
   {
@@ -208,9 +208,9 @@ const timeline: TimelineItem[] = [
   },
   {
     year: "2026",
-    title: "12 Products Across 12 Industries, IIT and XLRI Direction",
+    title: "12 Products and IP Across 12 Industries",
     size: "wide",
-    text: "The current direction is toward building 12 products across 12 industries, with partnership directions involving IIT and XLRI.",
+    text: "The 2026 direction focuses on 12 products and intellectual properties across 12 industries, with partnership directions involving IIT, a 102-country global network, and a Make in India vision to create impact for humanity.",
     detail:
       "This marks the next direction of the journey: moving from education, games, media, technology and investment into product-led innovation across multiple industries.",
     icon: Layers3,

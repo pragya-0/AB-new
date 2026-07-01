@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const me = "/assets/media-entertainment/";
 
@@ -10,17 +10,17 @@ const fadeUp = {
 const films = [
   {
     title: "Ashwathama",
-    category: "Mythology • Future Cinema",
+    category: "Epic • Future Cinema",
     text: "A mythological future-media title positioned around immortal-warrior storytelling, cinematic scale and AI-assisted visual imagination.",
     image: `${me}WhatsApp Image 2026-06-16 at 19.28.41.jpeg`,
-    alt: "Ashwathama mythology future cinema poster by Arijit Bhattacharyya",
+    alt: "Ashwathama epic storytelling future cinema poster by Arijit Bhattacharyya",
   },
   {
     title: "Karna",
-    category: "Mythology • Digital Storytelling",
-    text: "A mythology-led cinematic concept exploring heroic memory, destiny and Indian epic storytelling through a future media lens.",
+    category: "Epic • Digital Storytelling",
+    text: "A epic-led cinematic concept exploring heroic memory, destiny and Indian epic storytelling through a future media lens.",
     image: `${me}WhatsApp Image 2026-06-16 at 19.23.53 (26).jpeg`,
-    alt: "Karna mythology digital storytelling poster by Arijit Bhattacharyya",
+    alt: "Karna epic storytelling digital storytelling poster by Arijit Bhattacharyya",
   },
   {
     title: "Time Traveller",
@@ -31,10 +31,10 @@ const films = [
   },
   {
     title: "Hanuman",
-    category: "Mythology • Future Cinema",
-    text: "A mythology-driven visual universe built around devotion, strength, heroism and Indian cultural imagination for next-generation cinema.",
+    category: "Epic • Future Cinema",
+    text: "A epic-driven visual universe built around devotion, strength, heroism and Indian cultural imagination for next-generation cinema.",
     image: `${me}WhatsApp Image 2026-06-16 at 19.25.21.jpeg`,
-    alt: "Hanuman mythology future cinema poster by Arijit Bhattacharyya",
+    alt: "Hanuman epic storytelling future cinema poster by Arijit Bhattacharyya",
   },
   {
     title: "Broken",
@@ -75,7 +75,7 @@ const films = [
 
 const futurePillars = [
   "AI-Based Films",
-  "Mythology Universes",
+  "Epic Universes",
   "Sci-Fi Cinema",
   "Climate Storytelling",
   "Experimental Films",
@@ -104,13 +104,13 @@ export default function FutureMedia() {
             </p>
 
             <h2 className="mt-4 max-w-4xl text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              AI cinema, mythology worlds and future-ready screen stories.
+              AI cinema, epic worlds and future-ready screen stories.
             </h2>
           </div>
 
           <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg lg:justify-self-end">
             The next chapter moves from movie-based games into AI-assisted
-            films, mythology-led universes, sci-fi storytelling, climate cinema,
+            films, epic-led universes, sci-fi storytelling, climate cinema,
             experimental screen language and digital-first entertainment IP.
           </p>
         </motion.div>

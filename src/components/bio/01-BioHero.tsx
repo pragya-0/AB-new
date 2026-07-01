@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
 import { bio } from "../../data/bio/bioAssets";
@@ -11,7 +11,7 @@ export default function BioHero() {
 
       <div className="relative z-10 mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-center xl:gap-14">
         <motion.div {...fadeUp}>
-          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.35em] text-[#7fb8ff] md:text-[12px]">
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#7fb8ff] md:text-[12px]">
             Biography
           </p>
 
@@ -79,7 +79,7 @@ export default function BioHero() {
             <div className="absolute inset-2 rounded-[22px] bg-gradient-to-t from-black/82 via-black/20 to-transparent md:rounded-[30px]" />
 
             <div className="absolute bottom-6 left-5 right-5 md:bottom-8 md:left-8 md:right-8">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-[#8bb7ff]">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#8bb7ff]">
                 Since 1998
               </p>
 

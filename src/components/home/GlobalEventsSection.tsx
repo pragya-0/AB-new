@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight, PlayCircle } from "lucide-react";
 
@@ -182,7 +182,7 @@ export default function GlobalEventsSection() {
           </div>
         </motion.article>
 
-        <SectionLabel>Global Events</SectionLabel>
+        <SectionLabel>Speaker in Global Events</SectionLabel>
 
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
           {globalEvents.slice(0, 2).map((event) => (

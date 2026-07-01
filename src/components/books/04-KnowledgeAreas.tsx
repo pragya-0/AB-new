@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Blocks,
@@ -35,8 +35,8 @@ const pillars = [
   {
     icon: Gamepad2,
     title: "Storytelling & Original IP",
-    kicker: "Mythology • Characters • Media Worlds",
-    text: "The Legend Comes Alive connects Arijit’s creative universe with mythology-inspired characters, comics, games, animation and future entertainment IP.",
+    kicker: "Epic • Characters • Media Worlds",
+    text: "The Legend Comes Alive connects Arijit’s creative universe with epic-inspired characters, comics, games, animation and future entertainment IP.",
     bookIds: ["legend-comes-alive"],
     accent: Blocks,
   },

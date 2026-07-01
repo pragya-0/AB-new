@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -73,13 +73,13 @@ const proofCards: RecognitionCard[] = [
   },
   {
     source: "ABP Bangla",
-    title: "Regional Recognition & Public Platform Presence",
+    title: "Regional Media Recognition & Public Visibility",
     image: "/assets/press/ABP_Arijit.jpg",
     imageMode: "darkContain",
   },
   {
     source: "Anandabazar",
-    title: "Bengali Press Coverage & Public Recognition",
+    title: "Bengal Media Coverage & Public Recognition",
     image: "/assets/press/2024/anandabazar-B.jpg",
     imageMode: "darkContain",
   },

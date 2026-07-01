@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
@@ -26,10 +26,10 @@ export default function InfluenceSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/18 to-transparent" />
               <div className="absolute bottom-7 left-7 right-7">
-                <p className="mb-3 text-[10px] font-black uppercase tracking-[0.32em] text-[#8bb7ff]">
+                <p className="mb-3 text-[10px] font-extrabold uppercase tracking-[0.32em] text-[#8bb7ff]">
                   Ecosystem
                 </p>
-                <h3 className="text-[40px] font-black leading-[0.9] tracking-[-0.06em] text-white">
+                <h3 className="text-[40px] font-extrabold leading-[0.9] tracking-[-0.06em] text-white">
                   {title}
                 </h3>
                 <p className="mt-4 text-[15px] leading-7 text-white/70">{text}</p>

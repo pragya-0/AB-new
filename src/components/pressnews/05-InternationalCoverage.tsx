@@ -98,7 +98,7 @@ const internationalCoverageItems: InternationalItem[] = [
     fallbackImages: [
       "/assets/pressnews/international/dubai-ai-startups-family-office-panel.jpg",
       "/assets/pressnews/Dubai-Arijit.jpg",
-      "/assets/pressnews/dubai-arijit.jpg",
+      
     ],
     alt: "Arijit Bhattacharyya on stage at a Dubai AI startups and family office investment panel",
     tags: ["Dubai", "AI Startups", "Investment"],

@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
 import { bio } from "../../data/bio/bioAssets";
@@ -21,11 +21,11 @@ export default function RidingTigerSection() {
         </motion.div>
 
         <motion.div {...fadeUp}>
-          <p className="mb-5 text-[11px] font-black uppercase tracking-[0.4em] text-[#0057ff]">
+          <p className="mb-5 text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#0057ff]">
             Positioning
           </p>
 
-          <h2 className="max-w-[840px] text-[42px] font-black leading-[0.92] tracking-[-0.065em] text-[#07101f] md:text-[68px]">
+          <h2 className="max-w-[840px] text-[42px] font-extrabold leading-[0.92] tracking-[-0.05em] text-[#07101f] md:text-[68px]">
             Where Technology Meets Imagination.
           </h2>
 
@@ -45,7 +45,7 @@ export default function RidingTigerSection() {
           </div>
 
           <div className="mt-10 border-l-4 border-[#0057ff] pl-6">
-            <p className="max-w-[760px] text-[28px] font-black leading-[1.02] tracking-[-0.055em] text-[#07101f] md:text-[42px]">
+            <p className="max-w-[760px] text-[28px] font-extrabold leading-[1.02] tracking-[-0.055em] text-[#07101f] md:text-[42px]">
               One journey.
               <br />
               Multiple worlds.

@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
@@ -40,11 +40,11 @@ function StoryCard({
         <div className="absolute inset-x-0 bottom-0 h-[26%] bg-gradient-to-t from-black/95 via-black/55 to-transparent" />
 
         <div className="absolute bottom-6 left-6 right-6">
-          <p className="mb-3 text-[10px] font-black uppercase tracking-[0.3em] text-[#8bb7ff]">
+          <p className="mb-3 text-[10px] font-extrabold uppercase tracking-[0.3em] text-[#8bb7ff]">
             {storyTags[title] ?? "Archive"}
           </p>
 
-          <h3 className="max-w-[760px] text-[28px] font-black leading-[0.92] tracking-[-0.06em] text-white md:text-[40px]">
+          <h3 className="max-w-[760px] text-[28px] font-extrabold leading-[0.92] tracking-[-0.06em] text-white md:text-[40px]">
             {title}
           </h3>
         </div>

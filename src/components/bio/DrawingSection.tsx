@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
@@ -16,18 +16,18 @@ const featured = [
 ];
 
 const pencilWorks = [
-  ["Portrait Study", `${pencil}2.jpg`],
+  ["Portrait Study", `${pencil}1.jpg`],
   ["Female Portrait", `${pencil}3.jpg`],
   ["Sketch Work", `${pencil}4.jpg`],
   ["Expression Study", `${pencil}5.jpg`],
   ["Mother & Child", `${pencil}6.jpg`],
   ["Face Study", `${pencil}7.jpg`],
-  ["Actor Sketch", `${pencil}8.jpg`],
-  ["Character Face", `${pencil}9.jpg`],
   ["Emotional Sketch", `${pencil}10.jpg`],
-  ["Classic Face", `${pencil}11.jpg`],
-  ["1996 Archive", `${pencil}12.jpg`],
-  ["Portrait Memory", `${pencil}13.jpg`],
+  ["Actor Sketch", `${pencil}SRk Actor.jpg`],
+  ["Character Face", `${pencil}Mithun Actor.jpg`],
+  ["Classic Face", `${pencil}susmita-sen.jpg`],
+  ["1996 Archive", `${pencil}14.jpg`],
+  ["Portrait Memory", `${pencil}Mother Teresa.jpg`],
 ];
 
 const digitalWorks = [
@@ -50,7 +50,7 @@ function ArtCard({
   title,
   image,
   className = "",
-  height = "h-[380px]",
+  height = "h-[320px] sm:h-[360px]",
   imageMode = "contain",
 }: {
   title: string;
@@ -59,23 +59,28 @@ function ArtCard({
   height?: string;
   imageMode?: "contain" | "cover";
 }) {
+  const imageClass =
+    imageMode === "cover"
+      ? "object-cover object-center"
+      : "object-contain object-center p-4 sm:p-5";
+
   return (
     <motion.article
       {...fadeUp}
-      className={`${className} group overflow-hidden rounded-[28px] border border-[#bdd9ff] bg-white shadow-[0_24px_80px_rgba(0,87,255,0.10)] transition duration-500 hover:-translate-y-2`}
+      className={`${className} group overflow-hidden rounded-[24px] border border-[#bdd9ff] bg-white shadow-[0_18px_55px_rgba(0,87,255,0.09)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(0,87,255,0.13)]`}
     >
-      <div className={`relative ${height} overflow-hidden bg-white`}>
+      <div
+        className={`relative ${height} overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f7fbff_54%,#eef6ff_100%)]`}
+      >
         <SmartImage
           src={image}
           alt={title}
-          className={`h-full w-full transition duration-700 group-hover:scale-[1.06] ${
-            imageMode === "cover"
-              ? "object-cover object-center"
-              : "scale-[1.18] object-contain object-center"
-          }`}
+          className={`h-full w-full transition duration-700 group-hover:scale-[1.025] ${imageClass}`}
         />
-        <div className="absolute inset-x-0 bottom-0 h-[46%] bg-gradient-to-t from-black/78 to-transparent" />
-        <h3 className="absolute bottom-6 left-6 right-6 text-[30px] font-black leading-[0.95] tracking-[-0.055em] text-white md:text-[40px]">
+      </div>
+
+      <div className="border-t border-[#d9e9ff] bg-white px-5 py-4">
+        <h3 className="text-[18px] font-bold leading-tight tracking-[-0.025em] text-[#07101f] md:text-[20px]">
           {title}
         </h3>
       </div>
@@ -88,7 +93,7 @@ export default function DrawingSection() {
     <BioSectionShell
       eyebrow="Artist • Drawing • Comics"
       title="Drawing, Comics and Storytelling"
-      text="Before the large technology ecosystem, there is also the artist: pencil portraits, digital characters, mythology research and original visual storytelling."
+      text="Before the large technology ecosystem, there is also the artist: pencil portraits, digital characters, epic research and original visual storytelling."
     >
       <div className="space-y-8">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -96,54 +101,64 @@ export default function DrawingSection() {
             title={featured[0][0]}
             image={featured[0][1]}
             className="lg:row-span-2"
-            height="h-[620px]"
+            height="h-[420px] sm:h-[520px] lg:h-[640px]"
           />
 
           {featured.slice(1).map(([title, image]) => (
-            <ArtCard key={title} title={title} image={image} height="h-[300px]" />
+            <ArtCard
+              key={title}
+              title={title}
+              image={image}
+              height="h-[260px] sm:h-[300px]"
+            />
           ))}
         </div>
 
         <motion.div
           {...fadeUp}
-          className="rounded-[34px] border border-[#bdd9ff] bg-white p-5 shadow-[0_24px_80px_rgba(0,87,255,0.08)] md:p-7"
+          className="rounded-[30px] border border-[#bdd9ff] bg-white p-5 shadow-[0_20px_65px_rgba(0,87,255,0.08)] md:p-7"
         >
           <div className="mb-7">
-            <p className="mb-4 text-[10px] font-black uppercase tracking-[0.34em] text-[#0057ff]">
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#0057ff]">
               Pencil Archive
             </p>
-            <h3 className="max-w-[920px] text-[36px] font-black leading-[0.92] tracking-[-0.06em] text-[#07101f] md:text-[54px]">
+            <h3 className="max-w-[920px] text-[32px] font-extrabold leading-[0.98] tracking-[-0.045em] text-[#07101f] md:text-[46px]">
               Hand-drawn portraits and early visual studies.
             </h3>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {pencilWorks.map(([title, image]) => (
-              <ArtCard key={title} title={title} image={image} height="h-[380px]" />
+              <ArtCard
+                key={title}
+                title={title}
+                image={image}
+                height="h-[260px] sm:h-[310px] md:h-[340px]"
+              />
             ))}
           </div>
         </motion.div>
 
         <motion.div
           {...fadeUp}
-          className="rounded-[34px] border border-[#bdd9ff] bg-[#f4f8ff] p-5 shadow-[0_24px_80px_rgba(0,87,255,0.08)] md:p-7"
+          className="rounded-[30px] border border-[#bdd9ff] bg-[#f4f8ff] p-5 shadow-[0_20px_65px_rgba(0,87,255,0.08)] md:p-7"
         >
           <div className="mb-7">
-            <p className="mb-4 text-[10px] font-black uppercase tracking-[0.34em] text-[#0057ff]">
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#0057ff]">
               Digital Characters
             </p>
-            <h3 className="max-w-[920px] text-[36px] font-black leading-[0.92] tracking-[-0.06em] text-[#07101f] md:text-[54px]">
+            <h3 className="max-w-[920px] text-[32px] font-extrabold leading-[0.98] tracking-[-0.045em] text-[#07101f] md:text-[46px]">
               Digital art, characters and game-world concepts.
             </h3>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {digitalWorks.map(([title, image]) => (
               <ArtCard
                 key={title}
                 title={title}
                 image={image}
-                height="h-[330px]"
+                height="h-[280px] sm:h-[320px]"
                 imageMode="cover"
               />
             ))}
@@ -152,7 +167,12 @@ export default function DrawingSection() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {colorWorks.map(([title, image]) => (
-            <ArtCard key={title} title={title} image={image} height="h-[430px]" />
+            <ArtCard
+              key={title}
+              title={title}
+              image={image}
+              height="h-[320px] sm:h-[380px]"
+            />
           ))}
         </div>
       </div>

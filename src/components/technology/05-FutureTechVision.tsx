@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import BioSectionShell from "../bio/BioSectionShell";
 import SmartImage from "../bio/SmartImage";
@@ -45,7 +45,7 @@ const expertiseGroups = [
     image: `${bio}speech.jpeg`,
     alt: "Arijit Bhattacharyya entrepreneur and game development innovator building animation original IP and interactive storytelling platforms",
     text:
-      "Building games since 1998 across PC, mobile, VR, AR and emerging platforms. The focus has been on original characters, mythology-inspired worlds, superheroes, animation pipelines, interactive storytelling and creative intellectual property.",
+      "Building games since 1998 across PC, mobile, VR, AR and emerging platforms. The focus has been on original characters, epic-inspired worlds, superheroes, animation pipelines, interactive storytelling and creative intellectual property.",
     points: [
       "Game development since 1998",
       "500+ games, VR & AR projects",

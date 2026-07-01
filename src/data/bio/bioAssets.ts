@@ -1,4 +1,4 @@
-﻿export const bio = "/assets/bio/";
+export const bio = "/assets/bio/";
 export const gallery = "/assets/gallery/";
 export const drawing = "/assets/Drawing/";
 export const photography = "/assets/Photography/";
@@ -23,7 +23,7 @@ export const genAiFilms = [
   ["Ashwathama", `${gallery}ashwathama-poster-vertical.png`],
   ["Broken", `${gallery}broken-poster-vertical.png`],
   ["Karna", `${gallery}karna-poster-vertical.png`],
-  ["Time Traveler", `${gallery}time-traveller-poster-vertical.png`],
+  ["The 4th Dimension", `${gallery}time-traveller-poster-vertical.png`],
   ["Nada", `${gallery}nada-poster-vertical.png`],
   ["Crave", `${gallery}WhatsApp Image 2026-06-16 at 19.23.53 (1).jpeg`],
   ["Hanuman", `${gallery}WhatsApp Image 2026-06-16 at 19.23.53 (2).jpeg`],

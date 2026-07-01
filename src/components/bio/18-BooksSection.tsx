@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
@@ -28,7 +28,7 @@ export default function BooksSection() {
     <BioSectionShell
       eyebrow="Author Library"
       title="Books Across AI, Entrepreneurship, VR & Creative Worlds"
-      text="A published author library spanning artificial intelligence, entrepreneurship, virtual reality, leadership, Africa and mythology-inspired creative storytelling."
+      text="A published author library spanning artificial intelligence, entrepreneurship, virtual reality, leadership, Africa and epic-inspired creative storytelling."
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {books.map(([title, subtitle, image]) => (
@@ -46,11 +46,11 @@ export default function BooksSection() {
             </div>
 
             <div className="flex flex-1 flex-col">
-              <p className="mt-5 text-[10px] font-black uppercase tracking-[0.28em] text-[#0057ff]">
+              <p className="mt-5 text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#0057ff]">
                 Published Book
               </p>
 
-              <h3 className="mt-3 text-[20px] font-black leading-tight tracking-[-0.045em] text-[#07101f]">
+              <h3 className="mt-3 text-[20px] font-extrabold leading-tight tracking-[-0.045em] text-[#07101f]">
                 {title}
               </h3>
 
@@ -62,7 +62,7 @@ export default function BooksSection() {
                 href={getBookLink(title)}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-5 inline-flex w-fit rounded-full border border-[#bdd9ff] bg-[#0057ff] px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#07101f]"
+                className="mt-5 inline-flex w-fit rounded-full border border-[#bdd9ff] bg-[#0057ff] px-5 py-3 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#07101f]"
               >
                 View on Amazon →
               </a>

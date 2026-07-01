@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 
 type BioPillProps = {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ export default function BioPill({
         inline-flex items-center justify-center
         rounded-full border
         px-4 py-2
-        text-[10px] font-black uppercase tracking-[0.2em]
+        text-[10px] font-extrabold uppercase tracking-[0.2em]
         transition-all duration-300
         ${dark
           ? "border-white/14 bg-white/[0.045] text-[#9fc3ff]"

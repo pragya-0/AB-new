@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import SmartImage from "./SmartImage";
 import BioPill from "./BioPill";
@@ -32,11 +32,11 @@ export default function CreativeTracksSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/86 via-black/16 to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="mb-3 text-[10px] font-black uppercase tracking-[0.32em] text-[#8bb7ff]">
+                <p className="mb-3 text-[10px] font-extrabold uppercase tracking-[0.32em] text-[#8bb7ff]">
                   Journey Dimension
                 </p>
 
-                <h3 className="text-[34px] font-black leading-[0.9] tracking-[-0.06em] text-white md:text-[46px]">
+                <h3 className="text-[34px] font-extrabold leading-[0.9] tracking-[-0.06em] text-white md:text-[46px]">
                   {item.title}
                 </h3>
               </div>

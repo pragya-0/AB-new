@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -36,7 +36,7 @@ const featuredVentures: Venture[] = [
 const secondaryVentures: Venture[] = [
   {
     title: "Coinnovate Ventures",
-    description: "Blockchain and Web3 innovation platform investing in future.",
+    description: "Blockchain and Web3 innovation platform investing in the future.",
     image: "/assets/ventures/venture-coininnovate.png",
     fit: "contain",
   },

@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -97,7 +97,7 @@ function StaticBookCard({
 
       <div className="flex flex-1 flex-col pt-5">
         <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#0057ff]">
-          Publication
+          Book
         </p>
 
         <h3
@@ -214,7 +214,7 @@ export default function BooksSection() {
               className="flex flex-col justify-center rounded-[28px] border border-black/10 bg-white/82 p-6 shadow-[0_30px_95px_rgba(15,23,42,0.07)] backdrop-blur sm:rounded-[32px] sm:p-8 md:p-12"
             >
               <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.34em] text-[#0057ff] sm:text-sm">
-                Books & Publications
+                Books & Author Library
               </p>
 
               <h2 className="max-w-[660px] text-[34px] font-extrabold leading-[1.03] tracking-[-0.06em] text-black sm:text-[44px] md:text-[56px]">
@@ -225,7 +225,7 @@ export default function BooksSection() {
               <p className="mt-6 max-w-[560px] text-[16px] font-normal leading-8 text-black/60 sm:text-[17px]">
                 A curated author library exploring AI, entrepreneurship,
                 virtual reality, global development, leadership and
-                mythology-inspired storytelling.
+                epic-inspired storytelling.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">

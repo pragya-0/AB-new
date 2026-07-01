@@ -1,4 +1,4 @@
-﻿import { Link, useParams } from "react-router-dom";
+﻿import { Link, useLocation, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import Navbar from "../components/layout/Navbar";
@@ -10,8 +10,49 @@ import {
   type BlogPost,
 } from "../components/blog/blogData";
 
+
+function safeDecode(value = "") {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+function normalizeBlogKey(value = "") {
+  return safeDecode(value)
+    .trim()
+    .replace(/^\/+/, "")
+    .replace(/^blog\//i, "")
+    .replace(/\.html$/i, "")
+    .replace(/[’]/g, "")
+    .replace(/â€™/g, "")
+    .replace(/&/g, " and ")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase();
+}
+
 function getPostSlug(post: BlogPost) {
   return post.slug || post.id;
+}
+
+
+function postMatchesRoute(post: BlogPost, routeValue = "") {
+  const currentKey = normalizeBlogKey(routeValue);
+
+  const possibleKeys = [
+    post.slug,
+    post.id,
+    post.legacyUrl,
+    post.originalFile,
+  ].filter(Boolean);
+
+  return possibleKeys.some(
+    (key) => normalizeBlogKey(String(key)) === currentKey
+  );
 }
 
 function getArticleContent(post: BlogPost): string[] {
@@ -26,9 +67,15 @@ function getReadingTime(post: BlogPost) {
 
 export default function BlogArticlePage() {
   const { slug } = useParams();
+  const location = useLocation();
 
-  const postIndex = archivePosts.findIndex(
-    (item) => getPostSlug(item) === slug
+  const routeValue =
+    slug ||
+    location.pathname.split("/").filter(Boolean).pop() ||
+    location.pathname;
+
+  const postIndex = archivePosts.findIndex((item) =>
+    postMatchesRoute(item, routeValue)
   );
 
   const post = postIndex >= 0 ? archivePosts[postIndex] : undefined;
@@ -71,7 +118,7 @@ export default function BlogArticlePage() {
   const image =
     post.images?.[0] ||
     post.image ||
-    `${blogPath}Arijit_Bhattacharyya-blog.jpg`;
+   `${blogPath}arijit-bhattacharyya.jpg`;
 
   return (
     <>
@@ -116,7 +163,7 @@ export default function BlogArticlePage() {
               <div className="mx-auto w-full max-w-[520px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-4 shadow-2xl shadow-black/30 backdrop-blur lg:mx-0 lg:ml-auto">
                 <img
                   src={image}
-                  alt={post.alt}
+                  alt={post.alt ?? ""}
                   className="max-h-[360px] w-full rounded-[1.5rem] object-contain object-center"
                 />
               </div>

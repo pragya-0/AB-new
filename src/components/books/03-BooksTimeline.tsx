@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   BrainCircuit,
   Gamepad2,
@@ -16,10 +16,10 @@ const fadeUp = {
 const ideaJourney = [
   {
     icon: Gamepad2,
-    label: "Mythology • IP • Storytelling",
+    label: "Epic • IP • Storytelling",
     title: "Building original worlds, not just writing stories.",
     description:
-      "The Legend Comes Alive connects Arijit’s long-running work in characters, mythology-led storytelling, comics, games and entertainment IP. It reflects the creative side of his technology journey — where stories become worlds, and worlds can expand into games, films and digital experiences.",
+      "The Legend Comes Alive connects Arijit’s long-running work in characters, epic-led storytelling, comics, games and entertainment IP. It reflects the creative side of his technology journey — where stories become worlds, and worlds can expand into games, films and digital experiences.",
   },
   {
     icon: Landmark,

@@ -1,4 +1,4 @@
-﻿export const featuredThoughtArticle = {
+export const featuredThoughtArticle = {
   category: "AI",
   title: "AI & Future Entrepreneurship",
   description:
@@ -11,7 +11,7 @@ export const sideThoughtArticles = [
     category: "Gaming",
     title: "Gaming & Storytelling",
     description:
-      "Games, characters, digital humans, comics and mythology-inspired creative IP universes.",
+      "Games, characters, digital humans, comics and epic-inspired creative IP universes.",
     image: "/assets/thought-leadership/gaming-ip-storytelling.jpeg",
   },
   {

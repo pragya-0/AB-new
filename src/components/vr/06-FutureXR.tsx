@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const futureAreas = [
   "Artificial Intelligence",
@@ -29,11 +29,11 @@ export default function FutureXR() {
           className="text-center"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-blue-700 sm:text-sm">
-            Looking Ahead
+            The Next Era of AI-Powered Immersion
           </p>
 
           <h2 className="mx-auto mt-5 max-w-5xl text-[34px] font-extrabold leading-[1.05] tracking-[-0.04em] text-slate-950 sm:text-[46px] lg:text-[58px]">
-            The future belongs to AI-powered VR, AR and immersive computing.
+            The future belongs to AI-powered immersive computing.
           </h2>
 
           <p className="mx-auto mt-8 max-w-4xl text-[17px] leading-9 text-slate-600">
@@ -47,7 +47,7 @@ export default function FutureXR() {
           </p>
 
           <p className="mx-auto mt-6 max-w-4xl text-[17px] leading-9 text-slate-600">
-            The next generation of products will combine AI, VR, AR, robotics,
+            The next generation of products will combine AI, robotics,
             digital twins, real-time simulation and spatial computing to
             transform healthcare, manufacturing, education, banking, smart
             cities, defence, entertainment and Industry 4.0.
@@ -79,11 +79,11 @@ export default function FutureXR() {
           className="mx-auto mt-16 max-w-5xl rounded-[2rem] border border-blue-100 bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-12 text-center text-white shadow-[0_30px_80px_rgba(37,99,235,0.18)]"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-100">
-            Vision
+            Building the Future of Immersive Technology
           </p>
 
           <h3 className="mt-4 text-[30px] font-extrabold leading-tight md:text-[42px]">
-            Building the next generation of AI, VR, AR and immersive
+            Building the next generation of AI-powered immersive
             technologies.
           </h3>
 

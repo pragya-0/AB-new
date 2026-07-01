@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import { fadeUp } from "./bioMotion";
 
@@ -24,7 +24,7 @@ const identities = [
   {
     title: "Creator",
     line: "Turning imagination into books, characters, stories and visual worlds.",
-    text: "Beyond business, the creative side includes books, drawings, comics, superheroes, game characters, model-to-superhero IP, digital humans, mythology research, AI films and original storytelling universes.",
+    text: "Beyond business, the creative side includes books, drawings, comics, superheroes, game characters, model-to-superhero IP, digital humans, epic research, AI films and original storytelling universes.",
     roles: "Books • Art • Comics • Superheroes • Gen AI Films • Creative IP",
   },
 ];

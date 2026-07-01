@@ -1,5 +1,5 @@
 ﻿import { lazy, Suspense } from "react";
-import { BrowserRouter,  Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { legacyRedirects } from "./data/legacyRedirects";
 import LegacyHead from "./components/common/LegacyHead";
 
@@ -21,22 +21,132 @@ const BlogArticlePage = lazy(() => import("./pages/BlogArticlePage"));
 const BooksPage = lazy(() => import("./pages/BooksPage"));
 const ContactRedirect = lazy(() => import("./pages/ContactRedirect"));
 
+function normalizeLegacyTarget(to: string) {
+  return to.trim().replace(/\/$/, "");
+}
 
 function LegacyAliasPage({ to }: { to: string }) {
-  if (to === "/" || to === "/index.html" || to === "/home" || to === "/home.html") return <HomePage />;
-  if (to === "/bio" || to === "/bio.html") return <BioPage />;
-  if (to === "/speaking" || to === "/speaking.html" || to.includes("latest-spe")) return <SpeakingPage />;
-  if (to === "/technology" || to === "/technology.html" || to === "/tech-work") return <TechnologyPage />;
-  if (to === "/mentoring" || to === "/mentoring.html") return <MentoringPage />;
-  if (to === "/vr" || to === "/vr.html" || to.includes("virtual-reality")) return <VRPage />;
-  if (to === "/ecosystem" || to === "/ventures" || to === "/investments") return <VenturesPage />;
-  if (to === "/drawing" || to === "/creative") return <DrawingPage />;
-  if (to === "/photography" || to === "/gallery") return <PhotographyPage />;
-  if (to === "/press" || to === "/press-news" || to === "/media") return <PressPage />;
-  if (to === "/books" || to === "/book") return <BooksPage />;
-  if (to === "/contact" || to.includes("contact")) return <ContactRedirect />;
-  if (to === "/blog") return <BlogPage />;
-  if (to.startsWith("/blog/")) return <BlogArticlePage />;
+  const target = normalizeLegacyTarget(to);
+
+  if (
+    target === "" ||
+    target === "/" ||
+    target === "/index.html" ||
+    target === "/home" ||
+    target === "/home.html"
+  ) {
+    return <HomePage />;
+  }
+
+  if (target === "/bio" || target === "/bio.html") {
+    return <BioPage />;
+  }
+
+  if (
+    target === "/speaking" ||
+    target === "/speaking.html" ||
+    target === "/latest-speaks" ||
+    target === "/latest-speaks.html" ||
+    target === "/latest-speeks" ||
+    target === "/latest-speeks.html" ||
+    target.includes("latest-spe")
+  ) {
+    return <SpeakingPage />;
+  }
+
+  if (
+    target === "/technology" ||
+    target === "/technology.html" ||
+    target === "/tech-work" ||
+    target === "/tech-work.html"
+  ) {
+    return <TechnologyPage />;
+  }
+
+  if (target === "/mentoring" || target === "/mentoring.html") {
+    return <MentoringPage />;
+  }
+
+  if (
+    target === "/vr" ||
+    target === "/vr.html" ||
+    target === "/virtual-reality" ||
+    target === "/virtual-reality.html" ||
+    target.includes("virtual-reality")
+  ) {
+    return <VRPage />;
+  }
+
+  if (
+    target === "/ecosystem" ||
+    target === "/ecosystem.html" ||
+    target === "/ventures" ||
+    target === "/ventures.html" ||
+    target === "/investments" ||
+    target === "/investments.html"
+  ) {
+    return <VenturesPage />;
+  }
+
+  if (
+    target === "/media-entertainment" ||
+    target === "/media-entertainment.html" ||
+    target === "/games" ||
+    target === "/games.html" ||
+    target === "/animation" ||
+    target === "/animation.html"
+  ) {
+    return <MediaEntertainmentPage />;
+  }
+
+  if (
+    target === "/drawing" ||
+    target === "/drawing.html" ||
+    target === "/creative" ||
+    target === "/creative.html"
+  ) {
+    return <DrawingPage />;
+  }
+
+  if (
+    target === "/photography" ||
+    target === "/photography.html" ||
+    target === "/gallery" ||
+    target === "/gallery.html"
+  ) {
+    return <PhotographyPage />;
+  }
+
+  if (
+    target === "/press" ||
+    target === "/press.html" ||
+    target === "/press-news" ||
+    target === "/press-news.html" ||
+    target === "/media" ||
+    target === "/media.html"
+  ) {
+    return <PressPage />;
+  }
+
+  if (target === "/books" || target === "/books.html") {
+    return <BooksPage />;
+  }
+
+  if (
+    target === "/contact" ||
+    target === "/contact.html" ||
+    target.includes("contact")
+  ) {
+    return <ContactRedirect />;
+  }
+
+  if (target === "/blog" || target === "/blog.html") {
+    return <BlogPage />;
+  }
+
+  if (target.startsWith("/blog/")) {
+    return <BlogArticlePage />;
+  }
 
   return <BlogPage />;
 }
@@ -75,41 +185,12 @@ export default function App() {
           <Route path="/latest-speaks.html" element={<SpeakingPage />} />
           <Route path="/latest-speeks" element={<SpeakingPage />} />
           <Route path="/latest-speeks.html" element={<SpeakingPage />} />
-          <Route
-            path="/the-art-of-public-speaking.html"
-            element={<SpeakingPage />}
-          />
 
-          {/* Technology / Tech Work / AI / Blockchain Legacy */}
+          {/* Technology / Tech Work */}
           <Route path="/technology" element={<TechnologyPage />} />
           <Route path="/technology.html" element={<TechnologyPage />} />
           <Route path="/tech-work" element={<TechnologyPage />} />
           <Route path="/tech-work.html" element={<TechnologyPage />} />
-          <Route path="/ai-game-development.html" element={<TechnologyPage />} />
-          <Route
-            path="/ARTIFICIAL-INTELLIGENCE-HR-TECHNOLOGY.html"
-            element={<TechnologyPage />}
-          />
-          <Route
-            path="/WHAT-IS-ARTIFICIAL-INTELLIGENCE-IN-HEALTHCARE.html"
-            element={<TechnologyPage />}
-          />
-          <Route
-            path="/machine-learning-in-gaming.html"
-            element={<TechnologyPage />}
-          />
-          <Route
-            path="/what-is-cryptocurrency.html"
-            element={<TechnologyPage />}
-          />
-          <Route
-            path="/India-witnessing-digital-payments.html"
-            element={<TechnologyPage />}
-          />
-          <Route
-            path="/global-mutual-fund-blockchain.html"
-            element={<TechnologyPage />}
-          />
 
           {/* Mentoring / Entrepreneurship Legacy */}
           <Route path="/mentoring" element={<MentoringPage />} />
@@ -119,13 +200,12 @@ export default function App() {
             element={<MentoringPage />}
           />
 
-          {/* VR / Virtual Reality / Mixed Reality Legacy */}
+          {/* VR / Virtual Reality Legacy */}
           <Route path="/vr" element={<VRPage />} />
           <Route path="/vr.html" element={<VRPage />} />
           <Route path="/virtual-reality" element={<VRPage />} />
           <Route path="/virtual-reality.html" element={<VRPage />} />
           <Route path="/datascience-virtual-reality.html" element={<VRPage />} />
-          <Route path="/mixed-reality.html" element={<VRPage />} />
           <Route
             path="/how-to-make-money-from-virtualreality.html"
             element={<VRPage />}
@@ -145,7 +225,7 @@ export default function App() {
           <Route path="/animation" element={<MediaEntertainmentPage />} />
           <Route path="/animation.html" element={<MediaEntertainmentPage />} />
 
-          {/* Ecosystem / Ventures / Investments / International Business Legacy */}
+          {/* Ecosystem / Ventures / Investments */}
           <Route path="/ecosystem" element={<VenturesPage />} />
           <Route path="/ecosystem.html" element={<VenturesPage />} />
           <Route path="/ventures" element={<VenturesPage />} />
@@ -153,15 +233,7 @@ export default function App() {
           <Route path="/investments" element={<VenturesPage />} />
           <Route path="/investments.html" element={<VenturesPage />} />
           <Route
-            path="/international-business-matchmaking.html"
-            element={<VenturesPage />}
-          />
-          <Route
             path="/international-partnership.html"
-            element={<VenturesPage />}
-          />
-          <Route
-            path="/scaleup-your-business-globally.html"
             element={<VenturesPage />}
           />
 
@@ -185,31 +257,9 @@ export default function App() {
           <Route path="/media" element={<PressPage />} />
           <Route path="/media.html" element={<PressPage />} />
 
-          {/* Podcast / YouTube Temporary Safe Routes */}
-          <Route path="/podcast" element={<HomePage />} />
-          <Route path="/podcast.html" element={<HomePage />} />
-          <Route path="/youtube" element={<HomePage />} />
-          <Route path="/youtube.html" element={<HomePage />} />
-
-          {/* Blog */}
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog.html" element={<BlogPage />} />
-
-          {legacyRedirects.map(({ from, to }) => (
-            <Route key={from} path={from} element={<LegacyAliasPage to={to} />} />
-          ))}
-
-          {/* Final special-character legacy routes */}
-          <Route path="/Blockchain-Technology’s-Impact-Game-Development.html" element={<LegacyAliasPage to="/technology" />} />
-          <Route path="/blog-Shilpo-Abhijan-West Bengal-2013–passion-to-explore-new-verticals-of-business.html" element={<LegacyAliasPage to="/blog/shilpo-abhijan" />} />
-
-          <Route path="/blog/:slug" element={<BlogArticlePage />} />
-
           {/* Books */}
           <Route path="/books" element={<BooksPage />} />
           <Route path="/books.html" element={<BooksPage />} />
-          <Route path="/book" element={<BooksPage />} />
-          <Route path="/book.html" element={<BooksPage />} />
 
           {/* Contact */}
           <Route path="/contact" element={<ContactRedirect />} />
@@ -218,6 +268,82 @@ export default function App() {
           <Route path="/contact-arijit.html" element={<ContactRedirect />} />
           <Route path="/contact-me" element={<ContactRedirect />} />
           <Route path="/contact-me.html" element={<ContactRedirect />} />
+
+          {/* Podcast / YouTube Temporary Safe Routes */}
+          <Route path="/podcast" element={<HomePage />} />
+          <Route path="/podcast.html" element={<HomePage />} />
+          <Route path="/youtube" element={<HomePage />} />
+          <Route path="/youtube.html" element={<HomePage />} />
+
+          {/* Blog Archive */}
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog.html" element={<BlogPage />} />
+
+          {/* Blog Article: modern + legacy URL support */}
+          <Route path="/blog/:slug" element={<BlogArticlePage />} />
+          <Route path="/blog/:slug.html" element={<BlogArticlePage />} />
+
+          {/* Known old blog .html URLs that were previously mapped to other pages */}
+          <Route
+            path="/the-art-of-public-speaking.html"
+            element={<BlogArticlePage />}
+          />
+          <Route path="/ai-game-development.html" element={<BlogArticlePage />} />
+          <Route
+            path="/ARTIFICIAL-INTELLIGENCE-HR-TECHNOLOGY.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/WHAT-IS-ARTIFICIAL-INTELLIGENCE-IN-HEALTHCARE.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/machine-learning-in-gaming.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/what-is-cryptocurrency.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/India-witnessing-digital-payments.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/global-mutual-fund-blockchain.html"
+            element={<BlogArticlePage />}
+          />
+          <Route path="/mixed-reality.html" element={<BlogArticlePage />} />
+          <Route
+            path="/international-business-matchmaking.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/scaleup-your-business-globally.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/Blockchain-Technology’s-Impact-Game-Development.html"
+            element={<BlogArticlePage />}
+          />
+          <Route
+            path="/blog-Shilpo-Abhijan-West Bengal-2013–passion-to-explore-new-verticals-of-business.html"
+            element={<BlogArticlePage />}
+          />
+
+          {/* Legacy redirect table */}
+          {legacyRedirects.map(({ from, to }) => (
+            <Route
+              key={from}
+              path={from}
+              element={<LegacyAliasPage to={to} />}
+            />
+          ))}
+
+          {/* Root-level legacy .html blog articles.
+              Keep this LAST so static page routes above stay safe.
+              Do not add /:slug because it can hijack /blog, /books, /contact, etc. */}
+          <Route path="/:slug.html" element={<BlogArticlePage />} />
         </Routes>
 
         <LegacyHead />

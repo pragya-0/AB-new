@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type DigitalArtwork = {
   src: string;
@@ -21,7 +21,7 @@ const topArtworks: DigitalArtwork[] = [
   },
   {
     src: "/assets/Drawing/digital/surpanakha.jpg",
-    alt: "Surpanakha digital mythology artwork by Arijit Bhattacharyya",
+    alt: "Surpanakha digital epic storytelling artwork by Arijit Bhattacharyya",
   },
   {
     src: "/assets/Drawing/digital/tiger-lilly.jpg",
@@ -113,7 +113,7 @@ export default function DigitalArt() {
           <p className="max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8 lg:justify-self-end">
             Drawing naturally evolved into digital illustration, character
             development and visual storytelling. These concepts later influenced
-            animation, games, comics, mythology-inspired universes and original
+            animation, games, comics, epic-inspired universes and original
             creative IP developed across multiple projects.
           </p>
         </motion.div>

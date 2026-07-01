@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SmartImage from "./SmartImage";
 import { fadeUp } from "./bioMotion";
 import { bio } from "../../data/bio/bioAssets";
@@ -41,11 +41,11 @@ export default function OriginStory() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/10 to-transparent" />
 
             <div className="absolute bottom-7 left-7 right-7">
-              <p className="text-[10px] font-black uppercase tracking-[0.34em] text-[#8bb7ff]">
+              <p className="text-[10px] font-extrabold uppercase tracking-[0.28em] text-[#8bb7ff]">
                 Kolkata • 1998
               </p>
 
-              <h3 className="mt-3 max-w-[620px] text-[32px] font-black leading-[0.95] tracking-[-0.055em] text-white md:text-[46px]">
+              <h3 className="mt-3 max-w-[620px] text-[32px] font-extrabold leading-[0.95] tracking-[-0.055em] text-white md:text-[46px]">
                 From one early technology studio to a global innovation
                 ecosystem.
               </h3>
@@ -54,11 +54,11 @@ export default function OriginStory() {
         </motion.div>
 
         <motion.div {...fadeUp}>
-          <p className="mb-5 text-[11px] font-black uppercase tracking-[0.4em] text-[#0057ff]">
+          <p className="mb-5 text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#0057ff]">
             Origin Story
           </p>
 
-          <h2 className="max-w-[850px] text-[40px] font-black leading-[0.92] tracking-[-0.065em] text-[#07101f] md:text-[60px]">
+          <h2 className="max-w-[850px] text-[40px] font-extrabold leading-[0.92] tracking-[-0.05em] text-[#07101f] md:text-[60px]">
             From Kolkata to a global innovation ecosystem.
           </h2>
 
@@ -88,7 +88,7 @@ export default function OriginStory() {
                 key={card.title}
                 className="rounded-[24px] border border-[#dbe7f7] bg-[#f8fbff] p-5 shadow-[0_18px_50px_rgba(15,23,42,0.06)]"
               >
-                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#0057ff]">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#0057ff]">
                   {card.title}
                 </p>
 

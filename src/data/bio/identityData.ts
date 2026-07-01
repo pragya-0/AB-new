@@ -1,4 +1,4 @@
-﻿export const identityCards = [
+export const identityCards = [
   ["Serial Entrepreneur", "Building technology, media, education, startup and global innovation platforms since 1998."],
   ["Angel Investor", "Connected with startup investment, founder mentoring and business matchmaking ecosystems."],
   ["Global VC", "Working with global startup, investor and innovation networks across countries."],
@@ -7,7 +7,7 @@
   ["AI Coder", "Working across AI products, systems, creative tools and future-skills education."],
   ["Govt Advisor", "Advisory presence around startup, innovation and technology ecosystem building."],
   ["Artist", "Creating drawings, comics, characters, superheroes and visual storytelling universes."],
-  ["Author", "Author of books across AI, entrepreneurship, VR, Africa, mythology and leadership."],
+  ["Author", "Author of books across AI, entrepreneurship, VR, Africa, epic storytelling and leadership."],
   ["Community Builder", "Building founder, student, creative, technology and global business communities."],
   ["Technologist", "Working across AI, VR, AR, blockchain, gaming, digital humans and deep technology."],
   ["Consultant", "Supporting businesses, institutions and founders with strategy, technology and growth."],

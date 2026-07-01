@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Film, Gamepad2, Globe2, Sparkles } from "lucide-react";
 
@@ -35,8 +35,8 @@ const slides = [
   },
   {
     label: "Future Media",
-    title: "AI cinema, mythology worlds and digital humans.",
-    text: "The newest chapter moves toward GenAI films, AI-assisted visuals, sci-fi worlds, mythology-led cinema, virtual characters and interactive screen experiences.",
+    title: "AI cinema, epic worlds and digital humans.",
+    text: "The newest chapter moves toward GenAI films, AI-assisted visuals, sci-fi worlds, epic-led cinema, virtual characters and interactive screen experiences.",
     image: `${me}WhatsApp Image 2026-06-16 at 19.28.41.jpeg`,
     alt: "Ashwathama AI film and future media poster from Arijit Bhattacharyya entertainment universe",
   },

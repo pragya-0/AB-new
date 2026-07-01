@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   BrainCircuit,
   Gamepad2,
@@ -19,7 +19,7 @@ const icons = {
   "AI, DeepTech & Future Technology": BrainCircuit,
   "VR, Gaming & Metaverse": Gamepad2,
   "Leadership & Founder Psychology": Lightbulb,
-  "Creative IP, Mythology & Culture": Landmark,
+  "Creative IP, Epic & Culture": Landmark,
   "Society, Economy & Life": Globe2,
 };
 
@@ -52,10 +52,10 @@ const topicMap: Record<string, string[]> = {
     "Decision Making",
     "Purpose",
   ],
-  "Creative IP, Mythology & Culture": [
+  "Creative IP, Epic & Culture": [
     "Superheroes",
     "Cosplay",
-    "Mythology",
+    "Epic",
     "Culture",
     "Storytelling",
   ],
@@ -109,7 +109,7 @@ export default function KnowledgeTracks() {
           <p className="max-w-2xl text-base font-normal leading-8 text-slate-300 sm:text-lg lg:ml-auto">
             The legacy blog is broad, so this section gives visitors a quick
             mental map before they enter the full archive below — from startup
-            capital and AI to leadership, mythology, gaming and life stories.
+            capital and AI to leadership, epic storytelling, gaming and life stories.
           </p>
         </motion.div>
 

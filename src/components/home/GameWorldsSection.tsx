@@ -1,14 +1,14 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Gamepad2 } from "lucide-react";
 
-import { gameWorldCards, gameWorldStats } from "../../data/gameWorlds";
+import { gameWorldCards } from "../../data/gameWorlds";
 
 const timeline = [
   "2001 Racing Game",
   "2006 VR Era",
   "2007 RPG Game",
-  "43+ Superheroes",
+  "59+ Superhero Characters",
   "56 Comics",
   "Gen AI Worlds",
 ];
@@ -96,20 +96,6 @@ export default function GameWorldsSection() {
             A connected entertainment-tech ecosystem across games, comics,
             superheroes, movie-based IP, VR, AR and GenAI story worlds.
           </motion.p>
-
-          <motion.div
-            variants={fadeUp}
-            className="mt-7 flex flex-wrap justify-center gap-3"
-          >
-            {gameWorldStats.map((item) => (
-              <span
-                key={item.label}
-                className="rounded-full border border-[#4d8cff]/30 bg-[#0057ff]/10 px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#8bb7ff]"
-              >
-                {item.value} {item.label}
-              </span>
-            ))}
-          </motion.div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">

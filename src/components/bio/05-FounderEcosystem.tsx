@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import BioSectionShell from "./BioSectionShell";
 import { fadeUp } from "./bioMotion";
 
@@ -20,7 +20,7 @@ const pillars = [
   {
     title: "Creative Storytelling",
     line: "Turning ideas into worlds, characters and IP.",
-    text: "Films, superheroes, comics, characters, models, digital humans and visual worlds form the creative side of the ecosystem — where technology meets imagination, mythology research, original IP and Gen AI-led storytelling.",
+    text: "Films, superheroes, comics, characters, models, digital humans and visual worlds form the creative side of the ecosystem — where technology meets imagination, epic research, original IP and Gen AI-led storytelling.",
     meta: "Films • Characters • Comics • Superheroes • Creative IP",
     large: true,
   },
@@ -131,7 +131,7 @@ const ventures = [
   {
     name: "8metals",
     role: "Founder",
-    text: "A non-profit initiative exploring the culture, science and mythology behind traditional knowledge systems.",
+    text: "A non-profit initiative exploring the culture, science and Indian epic traditions behind traditional knowledge systems.",
   },
   {
     name: "PhoneQuad LLC",

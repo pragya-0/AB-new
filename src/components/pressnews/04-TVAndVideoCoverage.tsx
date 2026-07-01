@@ -100,7 +100,7 @@ const tvCoverageItems: VideoCoverageItem[] = [
     image: "/assets/pressnews/TV9-2.png",
     fallbackImages: [
       "/assets/pressnews/latest-speaks/TV9.jpg",
-      "/assets/pressnews/TV9.jpg",
+      
       "/assets/pressnews/tv9.jpg",
       "/assets/pressnews/2022/TV9-games.jpg",
       "/assets/pressnews/01_images_preserved_structure/TV9-2.png",
