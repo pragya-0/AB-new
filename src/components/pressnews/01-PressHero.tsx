@@ -149,10 +149,7 @@ export default function PressHero() {
             animate="visible"
             transition={{ duration: 0.7 }}
           >
-            <p className="inline-flex rounded-full border border-blue-400/25 bg-blue-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-blue-200 sm:tracking-[0.28em]">
-              Press News & Media Coverage
-            </p>
-
+        
             <h1 className="mt-6 max-w-4xl text-5xl font-extrabold leading-[0.95] tracking-[-0.04em] sm:text-6xl xl:text-[82px]">
               Press, Interviews
               <br />
@@ -180,7 +177,7 @@ export default function PressHero() {
                 href="/contact"
                 className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-7 py-4 text-sm font-bold backdrop-blur transition hover:-translate-y-1 hover:bg-white/10"
               >
-                Media / Speaking Enquiry
+                Media Enquiry
               </a>
             </div>
           </motion.div>
